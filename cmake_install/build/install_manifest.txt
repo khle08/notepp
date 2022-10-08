@@ -1,0 +1,4 @@
+/home/jet/Documents/TOSHIBA/C++/_learn/cmake_install/build/doc/COPYRIGHT
+/home/jet/Documents/TOSHIBA/C++/_learn/cmake_install/build/doc/README
+/home/jet/Documents/TOSHIBA/C++/_learn/cmake_install/build/bin/runhello.sh
+/home/jet/Documents/TOSHIBA/C++/_learn/cmake_install/build/doc/hello.txt

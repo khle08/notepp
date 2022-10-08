@@ -1,0 +1,5 @@
+/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/install/lib/libsay-hello.1.2.dylib
+/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/install/lib/libsay-hello.3.dylib
+/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/install/lib/libsay-hello.dylib
+/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/install/lib/libsay-hello.a
+/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/install/include/hello/hello.hpp

@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/exeName.dir/main.cpp.o -o ../bin/exeName   -L/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/lib  -Wl,-rpath,/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/lib ../lib/libsay-hello.1.2.dylib 

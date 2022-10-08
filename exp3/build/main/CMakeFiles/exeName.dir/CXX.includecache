@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/src/say-hello/hello.hpp
+
+/home/jet/Documents/TOSHIBA/C++/_learn/exp3/main/main.cpp
+iostream
+-
+src/say-hello/hello.hpp
+/home/jet/Documents/TOSHIBA/C++/_learn/exp3/main/src/say-hello/hello.hpp
+

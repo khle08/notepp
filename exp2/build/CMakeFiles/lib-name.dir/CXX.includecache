@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pa01/桌面/C++/_learn/exp2/hello.cpp
+hello.hpp
+/home/pa01/桌面/C++/_learn/exp2/hello.hpp
+iostream
+-
+
+/home/pa01/桌面/C++/_learn/exp2/hello.hpp
+
