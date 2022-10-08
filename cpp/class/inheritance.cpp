@@ -12,6 +12,7 @@ class Entity
 public:
     float x, y;
 
+    // ": x(x) ..." this will save the input parameter as the attribute of this class.
     Entity(const float& x, const float& y): x(x), y(y) {}
     // Entity(const float& a, const float& b) {x = a, y = b}
 
@@ -42,18 +43,20 @@ public:
 
 int main()
 {
+    print(" ");
+
     // instantiate a class in stack memory (栈内存).
     Entity eStack(10, 11);
     eStack.Move(100, 200);
     // things in the class can only be accessed by "."
     print("Move to: " << eStack.x << " " << eStack.y);
-    print(" ");
 
     // instantiate a class using "new" in heap memory (堆内存).
     Entity* eHeap = new Entity(3, 5);
     eHeap->Move(10, 20);
     // things in the class can only be accessed by "->"
     print("Move to: " << eHeap->x << " " << eHeap->y);
+
     print(" ");
 
     // private parameters can not be accessed.
@@ -64,7 +67,7 @@ int main()
     // print(p->Name);
 
     // data-type can be specified using template.
-    Print<int>(5);
+    // Print<int>(5);
 
     return 0;
 }
