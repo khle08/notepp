@@ -20,7 +20,7 @@ add_subdirectory(src)
 # ${PROJECT_SOURCE_DIR}
 # ${PROJECT_BINARY_DIR}
 
-# include_directories
+# include_directories           # 添加头文件目录
 
 # link_directories
 
@@ -32,5 +32,5 @@ add_subdirectory(src)
 # set_target_properties
 
 # add_subdirectory
-# add_library
+# add_library                   # 添加相关的 .so 库
 # add_executable
