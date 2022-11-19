@@ -24,6 +24,9 @@ int main()
 
 
     // Method No.2  <-- Use this instead of the 1st method
+    // ref: https://www.jianshu.com/p/0ccbf45491de
+    // where "auto" is "std::chrono::time_point"
+
     // auto t1 = std::chrono::system_clock::now();
     auto t1 = std::chrono::high_resolution_clock::now();
 
