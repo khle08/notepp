@@ -50,8 +50,8 @@ int main()
     auto nanos = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1);
     print("use " << diff.count() << " s\n");
 
-	std::chrono::duration<double, std::nano> fp_nanos = t2 - t1;
-	print("use " << diff.count() << " s\n");
+    std::chrono::duration<double, std::nano> fp_nanos = t2 - t1;
+    print("use " << diff.count() << " s\n");
 
 
     return 0;
