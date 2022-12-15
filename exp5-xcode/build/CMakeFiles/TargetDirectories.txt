@@ -1,0 +1,8 @@
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/CMakeFiles/install.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/CMakeFiles/ALL_BUILD.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/CMakeFiles/ZERO_CHECK.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/CMakeFiles/say-hello.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/CMakeFiles/say-hello_static.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/CMakeFiles/install.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/src/CMakeFiles/exeName.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/src/CMakeFiles/install.dir

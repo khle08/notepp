@@ -1,0 +1,1219 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		58F40C873F7A45BB8CFFE950 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 15F0587B7BB646CEBB65560A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				721B8052A42D4AE485D0B283 /* CMake Rules */,
+			);
+			dependencies = (
+				2683A264DB8546EB95F6D0F0 /* PBXTargetDependency */,
+				60425CE99F83444987D738DD /* PBXTargetDependency */,
+				5E28887855B9495D89B07404 /* PBXTargetDependency */,
+				60098B0B97224BE4AD6E7D6F /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		7632C918EDD84B0A84D0546F /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5952D22251FA41C9BE961E39 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				332E3E32137D41088723C6F3 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				C41DFA7106614E4C9EE569A5 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		C9D3B50048B84F3ABC82655B /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0F151C9B0BD04A88B22BAAAB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				D0EBC63A7FB64900A598A39C /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2491A9E5D35C4166B01E9AE4 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D3DE65BA3F774DD58683FD93 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/CMakeLists.txt */; };
+		4CAB922D04574D3C8123990F /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */ = {isa = PBXBuildFile; fileRef = BA646EC333E94CE2AA20E94B /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */; };
+		4D9FFB30ECB34756A445A130 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 30942B645151452A94DCFE06 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */; };
+		724FC127D77A445089B7A1B5 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6E074A2EDB434BFAB311AC88 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */; };
+		D400E9E754054F4D8050B172 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/main.cpp */ = {isa = PBXBuildFile; fileRef = CD0227D6925444C0996EE515 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/main.cpp */; };
+		E88F3A74F1F34B578B89E9D1 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */ = {isa = PBXBuildFile; fileRef = 6F4F9C62D49142C5B199EF42 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		25658374CC0F488C93D2C586 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		3916895AED774415A00AE99E /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		8C89F8EBA5FA4918AA8A740B /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		BD9AF00CDD714926B960E78E /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0DC97A21AD1541FC9BF01A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43132AF85DF24BDB9F212C7E;
+			remoteInfo = exeName;
+		};
+		5CDFA146899A4BAA88194D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58F40C873F7A45BB8CFFE950;
+			remoteInfo = ALL_BUILD;
+		};
+		5EB2D34D27D84E99A593AB91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D3B50048B84F3ABC82655B;
+			remoteInfo = ZERO_CHECK;
+		};
+		916E7DCAC99449328A203304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D3B50048B84F3ABC82655B;
+			remoteInfo = ZERO_CHECK;
+		};
+		9C517896F95149C999040A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BB0F0A977BF487D812D73E9;
+			remoteInfo = "say-hello_static";
+		};
+		AE0F7C394F99411C80AECC9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D3B50048B84F3ABC82655B;
+			remoteInfo = ZERO_CHECK;
+		};
+		CABFC49CFDB24B35977C038B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8CD6744ED984BDEA8BB9352;
+			remoteInfo = "say-hello";
+		};
+		D9F14557AE384C349F8C41F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8CD6744ED984BDEA8BB9352;
+			remoteInfo = "say-hello";
+		};
+		FC088D2711024F49A14566BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D3B50048B84F3ABC82655B;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30942B645151452A94DCFE06 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3F4931620B3B4CB9BAEB7EE5 /* say-hello_static */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libsay-hello.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E074A2EDB434BFAB311AC88 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6F4F9C62D49142C5B199EF42 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = hello.cpp; path = "lib/say-hello/hello.cpp"; sourceTree = SOURCE_ROOT; };
+		80AD4D2F8A8A4B949DD669AD /* say-hello */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libsay-hello.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA646EC333E94CE2AA20E94B /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = hello.cpp; path = "lib/say-hello/hello.cpp"; sourceTree = SOURCE_ROOT; };
+		CD0227D6925444C0996EE515 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		D3DE65BA3F774DD58683FD93 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DE4ADD07AAB7493AA8D2EED0 /* exeName */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = exeName; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA7CABABEFB4D22822CD531 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A978CEE2EA9425E87C4A3A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FAC187E35164111A554C339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849BC843742D484199353EF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15AC9B9AA880497A86D12A8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE4ADD07AAB7493AA8D2EED0 /* exeName */,
+				80AD4D2F8A8A4B949DD669AD /* say-hello */,
+				3F4931620B3B4CB9BAEB7EE5 /* say-hello_static */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		248BD185D8994307B3734DCC /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		28F30EC658184B7890F867F0 /* exeName */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EF19E1F614D8794817397 /* Source Files */,
+				D3DE65BA3F774DD58683FD93 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/CMakeLists.txt */,
+			);
+			name = exeName;
+			sourceTree = "<group>";
+		};
+		2F65202B07AF42F5BA920BB0 = {
+			isa = PBXGroup;
+			children = (
+				3268F2664E2F4DE9A1122009 /* ALL_BUILD */,
+				CB2DAE08959D4E1DB7B978BD /* say-hello */,
+				C0B4CB18310D4CEFBA72FB14 /* say-hello_static */,
+				28F30EC658184B7890F867F0 /* exeName */,
+				15AC9B9AA880497A86D12A8A /* Products */,
+				45066D277E0A4E24BE3F11D8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3268F2664E2F4DE9A1122009 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				248BD185D8994307B3734DCC /* CMake Rules */,
+				EBA7CABABEFB4D22822CD531 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		3A3EF19E1F614D8794817397 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD0227D6925444C0996EE515 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		413966434DE14916B22E6913 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA646EC333E94CE2AA20E94B /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		45066D277E0A4E24BE3F11D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0B4CB18310D4CEFBA72FB14 /* say-hello_static */ = {
+			isa = PBXGroup;
+			children = (
+				F3DBAF112A93483FA6FB8A83 /* Source Files */,
+				6E074A2EDB434BFAB311AC88 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */,
+			);
+			name = "say-hello_static";
+			sourceTree = "<group>";
+		};
+		CB2DAE08959D4E1DB7B978BD /* say-hello */ = {
+			isa = PBXGroup;
+			children = (
+				413966434DE14916B22E6913 /* Source Files */,
+				30942B645151452A94DCFE06 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/CMakeLists.txt */,
+			);
+			name = "say-hello";
+			sourceTree = "<group>";
+		};
+		F3DBAF112A93483FA6FB8A83 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F4F9C62D49142C5B199EF42 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43132AF85DF24BDB9F212C7E /* exeName */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C169EFACBD4E6CAAD5572B /* Build configuration list for PBXNativeTarget "exeName" */;
+			buildPhases = (
+				0EF9B95728E343E68E2E92F1 /* Sources */,
+				6FAC187E35164111A554C339 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCC04BC6571A4EC597BD0FE1 /* PBXTargetDependency */,
+				DB435195F12748AB8DCBAD4D /* PBXTargetDependency */,
+			);
+			name = exeName;
+			productName = exeName;
+			productReference = DE4ADD07AAB7493AA8D2EED0 /* exeName */;
+			productType = "com.apple.product-type.tool";
+		};
+		9BB0F0A977BF487D812D73E9 /* say-hello_static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F64330438A94F6AA533C4AA /* Build configuration list for PBXNativeTarget "say-hello_static" */;
+			buildPhases = (
+				B1407A55A62544BABCD09EB1 /* Sources */,
+				2A978CEE2EA9425E87C4A3A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C932CBF79F714C6FB9B01D1B /* PBXTargetDependency */,
+			);
+			name = "say-hello_static";
+			productName = "say-hello_static";
+			productReference = 3F4931620B3B4CB9BAEB7EE5 /* say-hello_static */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B8CD6744ED984BDEA8BB9352 /* say-hello */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989D020225424F628AAE42CA /* Build configuration list for PBXNativeTarget "say-hello" */;
+			buildPhases = (
+				3AE57245D934474CB2EE1E44 /* Sources */,
+				849BC843742D484199353EF5 /* Frameworks */,
+				724EDEADCC044166BAAC9249 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3689B472721D4DA099C9B0A8 /* PBXTargetDependency */,
+			);
+			name = "say-hello";
+			productName = "say-hello";
+			productReference = 80AD4D2F8A8A4B949DD669AD /* say-hello */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F7616DB387A45D1BE4E6ABB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = D65743FE813940E4941DF831 /* Build configuration list for PBXProject "justAName" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				25658374CC0F488C93D2C586 /* Debug */,
+				3916895AED774415A00AE99E /* Release */,
+				8C89F8EBA5FA4918AA8A740B /* MinSizeRel */,
+				BD9AF00CDD714926B960E78E /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 2F65202B07AF42F5BA920BB0;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				58F40C873F7A45BB8CFFE950 /* ALL_BUILD */,
+				C9D3B50048B84F3ABC82655B /* ZERO_CHECK */,
+				43132AF85DF24BDB9F212C7E /* exeName */,
+				7632C918EDD84B0A84D0546F /* install */,
+				B8CD6744ED984BDEA8BB9352 /* say-hello */,
+				9BB0F0A977BF487D812D73E9 /* say-hello_static */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		332E3E32137D41088723C6F3 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build -f /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		721B8052A42D4AE485D0B283 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build -f /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		724EDEADCC044166BAAC9249 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib -f /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/CMakeScripts/say-hello_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D0EBC63A7FB64900A598A39C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build -f /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EF9B95728E343E68E2E92F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D400E9E754054F4D8050B172 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/src/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE57245D934474CB2EE1E44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAB922D04574D3C8123990F /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1407A55A62544BABCD09EB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E88F3A74F1F34B578B89E9D1 /* /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib/say-hello/hello.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2683A264DB8546EB95F6D0F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8CD6744ED984BDEA8BB9352 /* say-hello */;
+			targetProxy = CABFC49CFDB24B35977C038B /* PBXContainerItemProxy */;
+		};
+		3689B472721D4DA099C9B0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D3B50048B84F3ABC82655B /* ZERO_CHECK */;
+			targetProxy = 5EB2D34D27D84E99A593AB91 /* PBXContainerItemProxy */;
+		};
+		5E28887855B9495D89B07404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43132AF85DF24BDB9F212C7E /* exeName */;
+			targetProxy = 0DC97A21AD1541FC9BF01A16 /* PBXContainerItemProxy */;
+		};
+		60098B0B97224BE4AD6E7D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D3B50048B84F3ABC82655B /* ZERO_CHECK */;
+			targetProxy = FC088D2711024F49A14566BB /* PBXContainerItemProxy */;
+		};
+		60425CE99F83444987D738DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BB0F0A977BF487D812D73E9 /* say-hello_static */;
+			targetProxy = 9C517896F95149C999040A2A /* PBXContainerItemProxy */;
+		};
+		C41DFA7106614E4C9EE569A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58F40C873F7A45BB8CFFE950 /* ALL_BUILD */;
+			targetProxy = 5CDFA146899A4BAA88194D10 /* PBXContainerItemProxy */;
+		};
+		C932CBF79F714C6FB9B01D1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D3B50048B84F3ABC82655B /* ZERO_CHECK */;
+			targetProxy = 916E7DCAC99449328A203304 /* PBXContainerItemProxy */;
+		};
+		CCC04BC6571A4EC597BD0FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8CD6744ED984BDEA8BB9352 /* say-hello */;
+			targetProxy = D9F14557AE384C349F8C41F6 /* PBXContainerItemProxy */;
+		};
+		DB435195F12748AB8DCBAD4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D3B50048B84F3ABC82655B /* ZERO_CHECK */;
+			targetProxy = AE0F7C394F99411C80AECC9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		043286C3BA9E4FD993CF76D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		0F2E6AA0478A4EA0AE073370 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1104E185921C4D6FA0E71724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		13834C33BCDB414EAE4EAF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		14A3765BDA134FD6B30381E9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1C6FB15D0A924D00A9F7CF6A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2249C51A814F447AB7EE879B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2FCCC0D267F14000B7BF85EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		31D2F19047FB4E71990BD8E0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		37FE99CE7E084FCD90D1DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/build";
+			};
+			name = Release;
+		};
+		38F0F44E69934ED58FEAE11A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/RelWithDebInfo","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/RelWithDebInfo/libsay-hello.1.2.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = exeName;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		459DB6F5643B4C47B63B8409 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5399D1067D664EAA8C0F4FFD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		5F44015B22E542A6BA9F31B5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		60747BDA9FF84310AE882C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		61CF15C19C8346F4BDF20C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3.0.0;
+				DYLIB_CURRENT_VERSION = 1.2.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",say_hello_EXPORTS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC ";
+				OTHER_LDFLAGS = (" -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libsay-hello.3.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello.1.2";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		7247089240BF4262A553FBFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		736F720DA101410B8AC41984 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3.0.0;
+				DYLIB_CURRENT_VERSION = 1.2.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",say_hello_EXPORTS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC ";
+				OTHER_LDFLAGS = (" -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libsay-hello.3.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello.1.2";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		83B2010B27224D65886D6087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		8B4717FDE6F147F0B373E96A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/build";
+			};
+			name = MinSizeRel;
+		};
+		BBCA882560414F55AFA9900D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3.0.0;
+				DYLIB_CURRENT_VERSION = 1.2.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",say_hello_EXPORTS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC ";
+				OTHER_LDFLAGS = (" -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libsay-hello.3.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello.1.2";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E55C4B4E918B4F59835B7134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/Release","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/Release/libsay-hello.1.2.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = exeName;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		E5BDE364A0DE4F1ABB43432C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3.0.0;
+				DYLIB_CURRENT_VERSION = 1.2.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",say_hello_EXPORTS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC ";
+				OTHER_LDFLAGS = (" -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libsay-hello.3.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "say-hello.1.2";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E8ACE4D5710F46C2B014B86B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		E966A440B50441D89B4B8B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/Debug","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/Debug/libsay-hello.1.2.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = exeName;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		F3AAE37ADADA49758B4C5E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/build";
+			};
+			name = Debug;
+		};
+		F675D1D3DF95426193577724 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/lib","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/MinSizeRel","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/lib/MinSizeRel/libsay-hello.1.2.dylib","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = exeName;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FE0286A156F14BC1B2BEE266 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp5-xcode/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F151C9B0BD04A88B22BAAAB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13834C33BCDB414EAE4EAF46 /* Debug */,
+				E8ACE4D5710F46C2B014B86B /* Release */,
+				14A3765BDA134FD6B30381E9 /* MinSizeRel */,
+				2249C51A814F447AB7EE879B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		15F0587B7BB646CEBB65560A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60747BDA9FF84310AE882C27 /* Debug */,
+				2FCCC0D267F14000B7BF85EA /* Release */,
+				459DB6F5643B4C47B63B8409 /* MinSizeRel */,
+				5F44015B22E542A6BA9F31B5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2F64330438A94F6AA533C4AA /* Build configuration list for PBXNativeTarget "say-hello_static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1104E185921C4D6FA0E71724 /* Debug */,
+				7247089240BF4262A553FBFF /* Release */,
+				1C6FB15D0A924D00A9F7CF6A /* MinSizeRel */,
+				0F2E6AA0478A4EA0AE073370 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5952D22251FA41C9BE961E39 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B2010B27224D65886D6087 /* Debug */,
+				043286C3BA9E4FD993CF76D6 /* Release */,
+				FE0286A156F14BC1B2BEE266 /* MinSizeRel */,
+				31D2F19047FB4E71990BD8E0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		76C169EFACBD4E6CAAD5572B /* Build configuration list for PBXNativeTarget "exeName" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E966A440B50441D89B4B8B1C /* Debug */,
+				E55C4B4E918B4F59835B7134 /* Release */,
+				F675D1D3DF95426193577724 /* MinSizeRel */,
+				38F0F44E69934ED58FEAE11A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		989D020225424F628AAE42CA /* Build configuration list for PBXNativeTarget "say-hello" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCA882560414F55AFA9900D /* Debug */,
+				61CF15C19C8346F4BDF20C42 /* Release */,
+				736F720DA101410B8AC41984 /* MinSizeRel */,
+				E5BDE364A0DE4F1ABB43432C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D65743FE813940E4941DF831 /* Build configuration list for PBXProject "justAName" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3AAE37ADADA49758B4C5E3E /* Debug */,
+				37FE99CE7E084FCD90D1DE41 /* Release */,
+				8B4717FDE6F147F0B373E96A /* MinSizeRel */,
+				5399D1067D664EAA8C0F4FFD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F7616DB387A45D1BE4E6ABB /* Project object */;
+}
