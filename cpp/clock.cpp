@@ -1,6 +1,7 @@
 
 #include <ctime>
-#include <chrono> 
+#include <chrono>
+#include <iomanip> 
 #include <unistd.h>    // for "usleep"
 #include <iostream>
 
@@ -56,6 +57,10 @@ int main()
     std::chrono::duration<double, std::nano> fp_nanos = t2 - t1;
     print("use " << diff.count() << " s\n");
 
+    print("======= get time stamp ======");
+    auto t = std::time(nullptr);
+    auto tm = *std::localtime(&t);
+    print(std::put_time(&tm, "%Y/%m/%d %H:%M:%S"));
 
     return 0;
 }
