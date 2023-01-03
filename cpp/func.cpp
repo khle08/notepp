@@ -47,47 +47,97 @@ int power(int a, int b)
 }
 
 
+int pointer1(int* a)
+{
+	// 此函数接收的是一个 int 指针，如果要取值得再次 *a 才行
+	print("[pointer1] a: " << a);
+	print("[pointer1] *a: " << *a);
+
+	// For "p2" testing below
+	a[0] = 100;
+	a[1] = 110;
+	a[2] = 220;
+	a[3] = 330;
+	a[4] = 440;
+	a[5] = 550;
+	a[6] = 660;
+	a[7] = 770;
+	a[8] = 880;
+	a[9] = 990;
+	a[10] = 1000;
+	a[11] = 1111;
+	// a[15] = 1555;
+	return 0;
+}
+
+
 int main()
 {
-	double arr[4] = {3.3, 5.2, 6.2, 2.9};
-	print(arr);
-	testing(arr, 4);
-	print("");
+	// int p1 = 10;
+	// // 传入 p1 的地址，如 pointer1 函数的参数需求
+	// pointer1(&p1);
+	// print(p1);
 
-	// 函数指针定义方式
-	print(power(3, 4));
-	int (*ptrPower)(int, int);
-	ptrPower = power;
-	// both calling method is fine to use.
-	print(ptrPower(3, 5));
-	print((*ptrPower)(3, 3));
-	print("");
+	// 虽然声明了一个长度 10 的整数数组，但因为在堆内存里，长度可以随着临时需要自动扩充
+	// int* p2;    // 这个定义是会报错的，因为
+	int* p2 = new int[10];
+	pointer1(p2);
+	print("sizeof(p2): " << sizeof(p2));
+	print("p2: " << p2);
+	print("*p2: " << *p2);
+	print("p2[0]: " << p2[0]);
+	print("p2[1]: " << p2[1]);
+	print("p2[2]: " << p2[2]);
+	print("p2[3]: " << p2[3]);
+	print("p2[4]: " << p2[4]);
+	print("p2[5]: " << p2[5]);
+	print("p2[6]: " << p2[6]);
+	print("p2[7]: " << p2[7]);
+	print("p2[8]: " << p2[8]);
+	print("p2[9]: " << p2[9]);
+	print("p2[10]: " << p2[10]);
+	print("p2[11]: " << p2[11]);
+	print("p2[12]: " << p2[12]);
+
+	// double arr[4] = {3.3, 5.2, 6.2, 2.9};
+	// print(arr);
+	// testing(arr, 4);
+	// print("");
+
+	// // 函数指针定义方式
+	// print(power(3, 4));
+	// int (*ptrPower)(int, int);
+	// ptrPower = power;
+	// // both calling method is fine to use.
+	// print(ptrPower(3, 5));
+	// print((*ptrPower)(3, 3));
+	// print("");
 
 
-	int res = sum(5, 6);
-	print(res);
-	change(res);
-	print(res);
+	// int res = sum(5, 6);
+	// print(res);
+	// change(res);
+	// print(res);
 
-	// when "while" condition is not 0, the loop will keep going on.
-	int choice = -1;
-	while (choice)
-	{
-		print("1. Cube");
-		print("2. Cylinder");
-		print("0. Exit");
+	// // when "while" condition is not 0, the loop will keep going on.
+	// int choice = -1;
+	// while (choice)
+	// {
+	// 	print("1. Cube");
+	// 	print("2. Cylinder");
+	// 	print("0. Exit");
 
-		std::cin >> choice;
-		switch (choice)
-		{
-		case 1:
-			calcCube();
-			break;
-		case 2:
-			calcCylinder();
-			break;
-		}
-	}
+	// 	std::cin >> choice;
+	// 	switch (choice)
+	// 	{
+	// 	case 1:
+	// 		calcCube();
+	// 		break;
+	// 	case 2:
+	// 		calcCylinder();
+	// 		break;
+	// 	}
+	// }
 	return 0;
 }
 

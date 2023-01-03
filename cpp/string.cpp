@@ -30,7 +30,7 @@ int main()
 
     // Concate the string list altogether
     // std::vector<std::string> sv = {"1920", "x", "1080"};
-    std::string s1 = strConcat({"1920", "x", "1080"});
+    std::string s1 = strConcat({1920, "x", 1080});
 
     print(s1.c_str());
 
