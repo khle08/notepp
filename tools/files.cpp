@@ -31,6 +31,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <sstream>     // for "std::stringstream"
 #include <iostream>
 #include <dirent.h>
 
@@ -121,6 +122,16 @@ int strReplace(std::string& str, const std::string& from, const std::string& to)
         return 0;
     str.replace(start_pos, from.length(), to);
     return 0;
+}
+
+
+std::string strConcat(std::vector<std::string> strVec)
+{
+    std::stringstream stream;
+    for (auto s: strVec) {
+        stream << s;
+    }
+    return stream.str();
 }
 
 
