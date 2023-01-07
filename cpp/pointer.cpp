@@ -1,3 +1,5 @@
+// Note: 部分指针测试在 func.cpp 代码中
+
 #include <iostream>
 #include <string>
 #include <vector>
