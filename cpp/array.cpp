@@ -12,6 +12,7 @@ int main()
 	double scores[ROW][COL];
 
 	for (int i = 0; i < ROW; i++){
+
 		for  (int j = 0; j < COL; j++){
 			std::cout << stuNames[i] << "'s " << courseNames[j] << "grade: ";
 			std::cin >> scores[i][j];
