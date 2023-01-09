@@ -11,12 +11,11 @@
  *  with the python syntax.
  */
 
-
 #include <thread>
 #include <iostream>
-#include "ob/test.h"
+#include "class_with_thread/class_with_thread.h"
 
 int main(){
-    test a;
+    class_with_thread a;
     return 0;
 }

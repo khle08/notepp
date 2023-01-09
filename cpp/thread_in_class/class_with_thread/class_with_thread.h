@@ -8,9 +8,9 @@
 #include <thread>
 #include <iostream>
 
-class test{
+class class_with_thread{
 public:
-    test(){
+    class_with_thread(){
         t = new std::thread(fun,10, this);
 //        t_non = new std::thread(non_fun,this,10, this);
         t->join();
@@ -20,8 +20,8 @@ public:
     std::thread * t_non;
     int m=100;
     int n=140;
-    static void fun(int a, test *tet);
-    void non_fun(int a, test *tet);
+    static void fun(int a, class_with_thread *tet);
+    void non_fun(int a, class_with_thread *tet);
 };
 
 

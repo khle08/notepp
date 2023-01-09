@@ -3,5 +3,4 @@ project(structure_test)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(structure_test main.cpp)
-add_executable(structure_test2 main2.cpp ./ob/test.cpp)
+add_executable(class_with_thread main.cpp class_with_thread/class_with_thread.cpp)
