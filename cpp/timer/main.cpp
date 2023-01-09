@@ -5,13 +5,9 @@
  */
 
 #include <iostream>
-#include <iomanip>
-#include <vector>
-#include <numeric>
 #include <chrono>
 // example for thread::join
 #include <thread>         // std::thread, std::this_thread::sleep_for
-volatile int sink;
 
 std::chrono::duration<double> sum;
 
@@ -23,7 +19,7 @@ void draw(std::chrono::time_point<std::chrono::system_clock> t1){
 }
 
 
-void pause_thread1()
+[[noreturn]] void pause_thread1()
 {
     while(1){
         auto start = std::chrono::system_clock::now();
@@ -41,7 +37,7 @@ void pause_thread1()
     }
 }
 
-void pause_thread2(){
+[[noreturn]] void pause_thread2(){
     while(1){
         auto start = std::chrono::system_clock::now();
         std::this_thread::sleep_for (std::chrono::microseconds (5000000));
