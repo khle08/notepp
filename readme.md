@@ -13,8 +13,8 @@
 
 ### 1. With Clion
 
-1. Click  the "Menu colum -> Tool -> CMake -> Unload CMake project" to detach the current CMake target.
-2. Click your target CMakeLists file and then run "Menu colum -> Tool -> CMake -> Reload CMake project"
+1. Click  the "Menu column -> Tool -> CMake -> Unload CMake project" to detach the current CMake target.
+2. Click your target CMakeLists file and then run "Menu column -> Tool -> CMake -> Reload CMake project"
 
 ### 2. With terminal / bash only
 
