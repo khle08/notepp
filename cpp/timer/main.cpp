@@ -1,7 +1,11 @@
-
 /***
  * this project helps to demonstrate the performance of the <chrono_timer> in different threads
  * and the topological structure of the main_therad, t1 and t2 thread is similar with the ADAS program.
+ *
+ * 预定义通用属性[[noreturn]]和[[carries_dependency]]
+ *
+ * [[noreturn]]用于标识不会返回的函数(在被调用后完成后，后续的代码不会再被执行)
+ *
  */
 
 #include <iostream>
