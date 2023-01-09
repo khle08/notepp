@@ -1,3 +1,4 @@
+
 # To run the .cpp file, make sure the following 2 things:
 
 #### 1. The file contains a function called "main"
@@ -5,8 +6,6 @@
 #### 2. Use the CMD to compile code "g++ name.cpp -o exeName"
 
 #### 3. Use the CMD to run code "./exeName"
-
-
 
 
 
