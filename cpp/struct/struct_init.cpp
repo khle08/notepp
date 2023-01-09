@@ -5,8 +5,10 @@
 /***
  *  This project declares a structure named crop_info.
  *  This project shows two fast ways to define a temporary crop_info structure in the line No.31 and 39.
- *  Also, this project shows how to define an array in a fast way.
- *  Also, using nullptr is a literally safe way to initialize a pointer pointing to a class (like the std::vector in this project).
+ *  1. Also, this project shows how to define an array in a fast way.
+ *  2. Also, using nullptr is a literally safe way to initialize a pointer pointing to a class (like the std::vector in this project).
+ *  3. nullptr provides a more explicit and safer way to represent a null pointer than using the NULL macro, which is simply a #define for the integer 0.
+ *  4. line No.53 shows the example given by chatGPT about some advantages of using nullptr.
  */
 
 #include <iostream>
@@ -27,6 +29,7 @@ int main() {
 
     std::vector<crop_info> *m = nullptr;
     if(m == nullptr){std::cout<<"-----------------"<<std::endl;}
+    std::cout<<"NULL:"<<NULL<<std::endl;
     m = new std::vector<struct crop_info>;
 
     m->push_back(crop_info{.ip = "",
@@ -46,3 +49,22 @@ int main() {
             1440});
     return 0;
 }
+
+//int* p = nullptr;  // p is a null pointer
+//
+//if (p == nullptr)  // check if p is a null pointer
+//{
+//// do something
+//}
+//
+//void foo(int* p)
+//{
+//    // do something with p
+//}
+//
+//void foo(std::nullptr_t p)  // overload foo for null pointers
+//{
+//    // do something different when p is a null pointer
+//}
+//
+//foo(nullptr);  // call the overload for null pointers
