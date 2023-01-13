@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# In order to 
+# ref: https://docs.opencv.org/4.x/db/d05/tutorial_config_reference.html
+#      In order to include videostab, flann / features2d / calib3d, and ...
+#      ... the contrib EXTRA MODULES should be included
 
 echo "build opencv for macOS"
 
@@ -66,6 +68,8 @@ function build_opencv_modules
     -DWITH_WEBP=OFF \
     -DOPENCV_EXTRA_MODULES_PATH=${EXTRA_MODULES} \
     -DBUILD_opencv_videostab=ON \
+    -DBUILD_opencv_freetype=OFF \
+    -DBUILD_opencv_fuzzy=OFF \
     -DBUILD_opencv_aruco=OFF \
     -DBUILD_opencv_bgsegm=OFF \
     -DBUILD_opencv_hfs=OFF \
