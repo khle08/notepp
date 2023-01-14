@@ -1,5 +1,6 @@
 # For MAC (not sure if the needed libraries are included yet)
-brew install ffmpeg@4
+# brew install ffmpeg@4
+
 # ==> Fetching dependencies for ffmpeg@4: nasm, cmake, highway, imath, jpeg-turbo, libpng, 
 # openexr, lz4, xz, libtiff, webp, jpeg-xl, ca-certificates, openssl@1.1, readline, sqlite, 
 # libffi, python@3.11, ninja, meson, libvmaf, aom, dav1d, freetype, gdbm, python, fontconfig, 
@@ -128,4 +129,5 @@ brew install asciidoctor
 brew install gnu-getopt
 brew install xmlto
 brew install libsodium
-brew install zeromq and zimg
+brew install zeromq
+brew install zimg
