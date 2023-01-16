@@ -5,6 +5,8 @@
 #include <vector>
 #include <algorithm>
 #include <typeinfo>
+
+#include <memory>    // For shared pointer
 // #include <opencv2/core/core.hpp>
 
 #define print(x) std::cout << x << std::endl
@@ -25,121 +27,141 @@
 
 int main()
 {
-	// init a variable under int type.
-	int num = 1024;
-	// init a pointer under int type.
-	int* pointer;
-	// extract the RAM address of the variable and assign to pointer.
-	pointer = &num;
-	// show the value behind the address. *name 是一个取值写法
-	print(*pointer);
-	// show the address of the value.
-	print(pointer << "\n");
+    // init a variable under int type.
+    int num = 1024;
+    // init a pointer under int type.
+    int* pointer;
+    // extract the RAM address of the variable and assign to pointer.
+    pointer = &num;
+    // show the value behind the address. *name 是一个取值写法
+    print(*pointer);
+    // show the address of the value.
+    print(pointer << "\n");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	// modify the value according to the address instead of the variable name.
-	*pointer = 10000;
-	// show the original variable "num" to see if the value is changed or not.
-	print(num);
-	// show the address of the modified num to see if the address remains the same.
-	print(pointer << "\n");
+    // modify the value according to the address instead of the variable name.
+    *pointer = 10000;
+    // show the original variable "num" to see if the value is changed or not.
+    print(num);
+    // show the address of the modified num to see if the address remains the same.
+    print(pointer << "\n");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	char ch = 'a';
-	char* ptr_ch = &ch;
-	// 有时候如果是字符串类型的指针打印的时候可能回传的不是个一般格式的地址，得强制转换以下地址
-	print((void*)ptr_ch);
-	// 不过打印出来格式跑偏并不影响一般我们用指针改变量的操作
-	*ptr_ch = 'b';
-	print(ch << "\n");
+    char ch = 'a';
+    char* ptr_ch = &ch;
+    // 有时候如果是字符串类型的指针打印的时候可能回传的不是个一般格式的地址，得强制转换以下地址
+    print((void*)ptr_ch);
+    // 不过打印出来格式跑偏并不影响一般我们用指针改变量的操作
+    *ptr_ch = 'b';
+    print(ch << "\n");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	// when a pointer is created, make sure that it has some controllable value.
-	// or... it might link to some very dangerous value that crash your computer.
-	double* ptr = nullptr;
-	print(ptr << "\n");
+    // when a pointer is created, make sure that it has some controllable value.
+    // or... it might link to some very dangerous value that crash your computer.
+    double* ptr = nullptr;
+    print(ptr << "\n");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	// mind that if the pointer is "void" type, it can only save the address
-	void* ptr_void = &num;
-	print(ptr_void << "\n");
-	// but it can not obtain value from the address.
-	
-	////////////////////////////////////////////////////////////////////
-	
-	// 动态分配指的是在运行到该句代码的时候才会分配内存出来，并对应到指针去
-	int arr[5];
-	int* ptr_arr = arr;
-	int* ptr_new = new int[5];
-	delete ptr_new;    // 表示释放内存而不是把这个变量删了
-	print(ptr_new << "\n");
+    // mind that if the pointer is "void" type, it can only save the address
+    void* ptr_void = &num;
+    print(ptr_void << "\n");
+    // but it can not obtain value from the address.
+    
+    ////////////////////////////////////////////////////////////////////
+    
+    // 动态分配指的是在运行到该句代码的时候才会分配内存出来，并对应到指针去
+    int arr[5];
+    int* ptr_arr = arr;
+    int* ptr_new = new int[5];
+    delete ptr_new;    // 表示释放内存而不是把这个变量删了
+    print(ptr_new << "\n");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	// 通过指针遍历打印数组里面的值
-	int arrays[] {15, 23, 30, 40, 50};
-	int* ptr_arrs = arrays;
+    // 通过指针遍历打印数组里面的值
+    int arrays[] {15, 23, 30, 40, 50};
+    int* ptr_arrs = arrays;
 
-	for (int i = 0; i < 5; i++){
-		print(*(ptr_arrs + i));
-	}
-	print("");
+    for (int i = 0; i < 5; i++){
+        print(*(ptr_arrs + i));
+    }
+    print("");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	// 创建二维数组，通过指针控制
-	int* p1 = new int[10];
-	int (*p2)[3] = new int[5][3];
-	p2[3][2] = 9876;
+    // 创建二维数组，通过指针控制
+    int* p1 = new int[10];
+    int (*p2)[3] = new int[5][3];
+    p2[3][2] = 9876;
 
-	for (int i = 0; i < 5; i++){
-		for (int j = 0; j < 3; j++){
-			print(p2[i][j] << "\t" << *(*(p2 + i) + j));
-		}
-	}
-	print(p2[0] << "\n");
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 3; j++){
+            print(p2[i][j] << "\t" << *(*(p2 + i) + j));
+        }
+    }
+    print(p2[0] << "\n");
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	char str[] = {'t', 'h', 'i', 's', 'i', 's', 'm', 'e'};
-	print("string: " << str);
+    char str[] = {'t', 'h', 'i', 's', 'i', 's', 'm', 'e'};
+    print("string: " << str);
 
-	char arr2[] = "that is great";
-	print(arr2[5]);
+    char arr2[] = "that is great";
+    print(arr2[5]);
 
-	char* p_str[] = {"first", "second", "third"};
-	print("after warning: " << p_str[0]);
-	
-	const char* aaa = "abc";
-	char b[2] = {'a', 'b'};
-	print(b);	
+    char* p_str[] = {"first", "second", "third"};
+    print("after warning: " << p_str[0]);
+    
+    const char* aaa = "abc";
+    char b[2] = {'a', 'b'};
+    print(b);    
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	int a = 100;
-	
-	int *pt1 = &a;
-	int **pt2 = &pt1;
-	int ***pt3 = &pt2;
-	int ****pt4 = &pt3;
-	int *****pt5 = &pt4;
-	int ******pt6 = &pt5;
-	int *******pt7 = &pt6;
-	int ********pt8 = &pt7;
-	int *********pt9 = &pt8;
-	int **********pt10 = &pt9;
+    int a = 100;
+    
+    int *pt1 = &a;
+    int **pt2 = &pt1;
+    int ***pt3 = &pt2;
+    int ****pt4 = &pt3;
+    int *****pt5 = &pt4;
+    int ******pt6 = &pt5;
+    int *******pt7 = &pt6;
+    int ********pt8 = &pt7;
+    int *********pt9 = &pt8;
+    int **********pt10 = &pt9;
 
-	print(**********pt10);
+    print(**********pt10);
 
-	////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
 
-	// 
+    std::string* pNorm = new std::string("normal");
+    std::vector<std::string*> container2;
+    container2.push_back(pNorm);
+    container2.push_back(pNorm);
 
-	////////////////////////////////////////////////////////////////////
+    for (auto i: container2) {
+        print(*i);
+    }
 
-	return 0;
+    *pNorm = "changed";
+
+    for (auto i: container2) {
+        print(*i);
+    }
+
+    ////////////////////////////////////////////////////////////////////
+    print("\n========== Smart pointer [start] ==========");
+
+    // Please reference to "smartPointer.cpp"
+
+    print("========== Smart pointer  [end]  ==========\n");
+    ////////////////////////////////////////////////////////////////////
+
+    return 0;
 }
+
