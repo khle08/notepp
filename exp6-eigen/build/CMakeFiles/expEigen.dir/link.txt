@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11   CMakeFiles/expEigen.dir/main.cpp.o  -o expEigen  -L/home/kcl/Documents/cpp_notes/exp6-eigen/../library -Wl,-rpath,/home/kcl/Documents/cpp_notes/exp6-eigen/../library -lpthread 
