@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+// this can only be used since C++14
 #include <memory>    // For shared pointer
 
 #define print(x) std::cout << x << std::endl
