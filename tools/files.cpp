@@ -59,29 +59,28 @@ int getFileList(std::string dirent, std::vector<std::string> &FileList){
 }
 
 
-int writeFile(std::string fileName, std::vector<std::string> &stringList)
+template<typename T>
+int writeFile(std::string fileName, std::vector<T> &dataList)
 {
-	// ref: https://www.cnblogs.com/helinsen/archive/2012/07/26/2609251.html
-	// std::ios::in             读
-	// std::ios::out            写
-	// std::ios::app            从文件末尾开始写
-	// std::ios::binary         二进制模式
-	// std::ios::nocreate       打开一个文件时，如果文件不存在，不创建文件。
-	// std::ios::noreplace      打开一个文件时，如果文件不存在，创建该文件
-	// std::ios::trunc          打开一个文件，然后清空内容
-	// std::ios::ate            打开一个文件时，将位置移动到文件尾
+    // ref: https://www.cnblogs.com/helinsen/archive/2012/07/26/2609251.html
+    // std::ios::in             读
+    // std::ios::out            写
+    // std::ios::app            从文件末尾开始写
+    // std::ios::binary         二进制模式
+    // std::ios::nocreate       打开一个文件时，如果文件不存在，不创建文件。
+    // std::ios::noreplace      打开一个文件时，如果文件不存在，创建该文件
+    // std::ios::trunc          打开一个文件，然后清空内容
+    // std::ios::ate            打开一个文件时，将位置移动到文件尾
 
-	// write something to the fileName.
-	std::ofstream outFile(fileName, std::ios::out);
+    // write something to the fileName.
+    std::ofstream outFile(fileName, std::ios::out);
 
-	for (std::string str : stringList)
-	{
-		outFile << str << " "
-                << "1233333";
-        print("!!!!!!!! " << str);
-	}
-	outFile.close();
-	return 0;
+    for (T data : dataList)
+    {
+        outFile << data << "\n";
+    }
+    outFile.close();
+    return 0;
 }
 
 
