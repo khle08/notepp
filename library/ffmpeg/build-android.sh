@@ -1,7 +1,7 @@
 # ref: https://blog.csdn.net/Kennethdroid/article/details/106956601
 
 # 配置 NDK 路径
-export NDK=/root/workspace/android-ndk-r20b
+export NDK=/home/khle08/Android/Sdk/ndk/21.4.7075529
 TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
 
 
@@ -42,10 +42,9 @@ make clean
 make -8
 make install
 
-echo "========== build android arm64-v8a success =========="
 }
 
-#arm64-v8a
+# arm64-v8a
 ARCH=arm64
 CPU=armv8-a
 API=21
@@ -57,3 +56,22 @@ PREFIX=$(pwd)/android/$CPU
 OPTIMIZE_CFLAGS="-march=$CPU"
 
 build_android
+
+echo "========== build android arm64-v8a success =========="
+
+
+# armeabi-v7a
+ARCH=armeabi
+CPU=armv7-a
+API=21
+CC=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang
+CXX=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang++
+SYSROOT=$NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot
+CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi-
+PREFIX=$(pwd)/android/$CPU
+OPTIMIZE_CFLAGS="-march=$CPU"
+
+build_android
+
+echo "========== build android armeabi-v7a success =========="
+
