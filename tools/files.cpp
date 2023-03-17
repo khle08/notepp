@@ -38,23 +38,36 @@
 #define print(x) std::cout << x << std::endl
 // using namespace std;
 
+
 // ref: https://blog.csdn.net/m0_37263637/article/details/79443429
-int getFileList(std::string dirent, std::vector<std::string> &FileList){
+int getFileList(std::string dirent, std::vector<std::string> &FileList, 
+                bool fullPth, std::string key)
+{
     DIR *p_dir;
     struct dirent *p_dirent;
 
     if((p_dir = opendir((dirent).c_str())) == nullptr){
-    	print("check pir path: " << (dirent).c_str() << " failed");
-        // cout << "check pir path:" << (dirent).c_str() << "failed" <<endl;
+        print("check pir path: " << (dirent).c_str() << " failed");
         return -1;
     }
     while((p_dirent=readdir(p_dir)))
     {
         std::string s(p_dirent->d_name);
-        if(s != "." && s != "..")
-            FileList.push_back(s);
+        if(s != "." && s != "..") {
+            std::size_t found = s.find(key);
+            if (found == std::string::npos) {
+                continue;
+            }
+
+            if (fullPth) {
+                FileList.push_back(dirent + s);
+            } else {
+                FileList.push_back(s);
+            }
+        }
     }
     closedir(p_dir);
+    std::sort(FileList.begin(), FileList.end());
     return FileList.size();
 }
 
