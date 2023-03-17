@@ -26,8 +26,13 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 # Option 2. cv::imread load empty image
 # [!] Settings for the directory of OpenCV library
-set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/build455/stereo-triangulate)
-# set(opencv_dir /home/kcl/Documents/libs/opencv/opencv-4.6.0/ubuntu/stereo)
+set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/build460/stereo-triangulate)
+# set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/opencv-4.6.0/triangulate/install)
+
+# Bug fixed: cv::imread load empty image
+#   - when compiling opencv from scratch, mind to build with 'jpeg' & 'png' and
+#   - other formats that we want to use in our project. Mind that not only
+#   - DBUILD_JPEG should be ON, but also DWITH_JPEG should also be ON.
 
 include_directories(${opencv_dir}/include/opencv4)
 link_directories(${opencv_dir}/lib)
@@ -49,12 +54,12 @@ target_link_libraries(expOpencv PRIVATE
                       opencv_core
                       # opencv_features2d
                       # opencv_flann
-                      # opencv_gapi
+                      opencv_gapi
                       opencv_highgui
                       # opencv_img_hash
                       opencv_imgcodecs
                       # opencv_optflow
-                      # opencv_photo
+                      opencv_photo
                       opencv_video
                       opencv_videoio
                       # opencv_videostab
