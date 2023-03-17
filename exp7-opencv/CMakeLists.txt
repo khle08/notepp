@@ -50,6 +50,7 @@ add_executable(expOpencv ${SOURCE})
 
 target_link_libraries(expOpencv PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
+                      ${EXTRA_LIBS}
                       opencv_calib3d
                       opencv_core
                       # opencv_features2d
