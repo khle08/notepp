@@ -17,20 +17,22 @@ else()
     message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++14 support. Please use a different C++ compiler.")
 endif()
 
-list(APPEND EXTRA_LIBS "-lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui")
-
 # Setup where the compiled libraries will be installed
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 
+# # Option 1. cv::imread load image successfully
+# find_package(OpenCV REQUIRED)
 
+# Option 2. cv::imread load empty image
 # [!] Settings for the directory of OpenCV library
-set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/build460/stereo-triangulate)
+set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/build455/stereo-triangulate)
 # set(opencv_dir /home/kcl/Documents/libs/opencv/opencv-4.6.0/ubuntu/stereo)
 
 include_directories(${opencv_dir}/include/opencv4)
 link_directories(${opencv_dir}/lib)
 
+list(APPEND EXTRA_LIBS "-lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui")
 
 
 find_package(Threads REQUIRED)

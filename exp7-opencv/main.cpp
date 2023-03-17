@@ -12,13 +12,14 @@ int main(int argc, char const *argv[])
 {
 
     print("\n===== OpenCV testing [start] =====");
-    print("OpenCV included !!!");
 
-    std::string pth = "/Users/kcl/Desktop/black.png";
+    std::string pth = "/Users/kcl/Desktop/family.jpg";
 
     cv::Mat img = cv::imread(pth, 1);
     if (img.empty()) {
 		print("[ERROR] Failed to load image: " << pth << " " << img.size());
+	} else {
+		print("[ERROR] image size: " << img.size());
 	}
 
     print(  "===== OpenCV testing [ end ] =====\n");
