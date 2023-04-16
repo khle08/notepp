@@ -30,11 +30,19 @@ int main()
 		print("operator : " << vec3.operator[](i));
 	}
 
-	for ()
-
+	print("");
 
 	std::vector<double> vecDouble = {98.5, 67.9, 43.6, 32.9};
 	vecDouble.push_back(100.8);
+
+	for (int i = 0; i < vecDouble.size(); i++){
+		print("vecDouble[" << i << "] : " << vecDouble[i]);
+	}
+
+	print("");
+
+	// vecDouble.erase(vecDouble.begin());
+	std::remove(vecDouble.begin(), vecDouble.end(), vecDouble[0]);
 
 	for (int i = 0; i < vecDouble.size(); i++){
 		print("vecDouble[" << i << "] : " << vecDouble[i]);

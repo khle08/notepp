@@ -1,4 +1,4 @@
-/home/pa01/桌面/C++/_learn/exp2/build/CMakeFiles/edit_cache.dir
-/home/pa01/桌面/C++/_learn/exp2/build/CMakeFiles/exeName.dir
-/home/pa01/桌面/C++/_learn/exp2/build/CMakeFiles/rebuild_cache.dir
-/home/pa01/桌面/C++/_learn/exp2/build/CMakeFiles/lib-name.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp2/build/CMakeFiles/lib-name.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp2/build/CMakeFiles/exeName.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp2/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp2/build/CMakeFiles/rebuild_cache.dir

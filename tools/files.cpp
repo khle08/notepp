@@ -34,6 +34,7 @@
 #include <sstream>     // for "std::stringstream"
 #include <iostream>
 #include <dirent.h>
+#include <sys/stat.h>
 
 #define print(x) std::cout << x << std::endl
 // using namespace std;
@@ -174,6 +175,37 @@ std::string dirName(std::string dir, bool full_path = true)
 
 	strReplace(dir, folders[folders.size() - 1], "");
 	return dir;
+}
+
+
+bool fileExist(const std::string& name)
+{
+    struct stat buffer;
+    return (stat (name.c_str(), &buffer) == 0);
+}
+
+
+int makedirs(std::string pth)
+{
+    std::vector<std::string> strVec;
+    strSplit(pth, "/", strVec);
+
+    int res;
+    int count = 0;
+    std::string recursive = "";
+    for (int i = 0; i < strVec.size(); i++) {
+        if (strVec[i] != ".") {
+            recursive += strVec[i] + "/";
+            res = mkdir(recursive.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+            count += 1;
+        }
+    }
+
+    if (count == 0) {
+        print("[ERROR] Invalid path");
+        return -1;
+    }
+    return 0;
 }
 
 

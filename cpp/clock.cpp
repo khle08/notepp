@@ -1,4 +1,5 @@
-
+#include <sys/time.h>
+#include <stdio.h>
 #include <ctime>
 #include <chrono>
 #include <iomanip> 
@@ -7,29 +8,48 @@
 
 #include <thread>
 
-
 #define print(x) std::cout << x << std::endl
+
+typedef std::chrono::high_resolution_clock::time_point chtime;
+
+
+float timedifference_msec(struct timeval t0, struct timeval t1)
+{
+    return (t1.tv_sec - t0.tv_sec) * 1000.0f + (t1.tv_usec - t0.tv_usec) / 1000.0f;
+}
 
 
 int main()
 {
-    // Method No.1  <-- Do not know why ... it is not accurate !!
-    clock_t start = clock();
+    // // Method No.1  <-- Do not know why ... it is not accurate !!
+    // clock_t start = clock();
 
-    // do something...
-    usleep(0.001 * 1000 * 1000);    // 1s
+    // // do something...
+    // usleep(0.001 * 1000 * 1000);    // 1s
 
-    clock_t end   = clock();
+    // clock_t end   = clock();
 
-    print("花费了" << (double)(end - start) / CLOCKS_PER_SEC << "秒");
+    // print("花费了" << (double)(end - start) / CLOCKS_PER_SEC << "秒");
 
+
+    struct timeval t1_sys;
+    struct timeval t2_sys;
+    float elapsed;
+
+    gettimeofday(&t1_sys, 0);
+    usleep(1 * 1000 * 1000);
+    gettimeofday(&t2_sys, 0);
+
+    elapsed = timedifference_msec(t1_sys, t2_sys);
+
+    printf("Code executed in %f milliseconds.\n", elapsed);
 
     // Method No.2  <-- Use this instead of the 1st method
     // ref: https://www.jianshu.com/p/0ccbf45491de
     // where "auto" is "std::chrono::time_point"
 
     // auto t1 = std::chrono::system_clock::now();
-    auto t1 = std::chrono::high_resolution_clock::now();
+    chtime t1 = std::chrono::high_resolution_clock::now();
 
     // do something...
     usleep(0.314 * 1000 * 1000);    // 0.314 s
@@ -50,6 +70,8 @@ int main()
 
     std::chrono::duration<double> diff = t2 - t1;
     print("use " << diff.count() << " s\n");
+    bool res = diff.count() > 0.0;
+    print(res);
 
     auto nanos = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1);
     print("use " << diff.count() << " s\n");
