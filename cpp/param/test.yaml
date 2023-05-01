@@ -4,7 +4,7 @@
 # Check if parameters are going to be modified by program (true / false)
 CONFIG_UPDATE : false
 # Decide if the Param class accepts new added value
-CONFIG_FIX_PARAM_NUM : true
+# CONFIG_FIX_PARAM_NUM : true
 
 
 # [Additional parameters (customized)]
@@ -15,7 +15,7 @@ FIX_SEND : 0
 
 BATCH : 1
 # MODEL_NAME: "abc.engine"
-MODEL_NAME : "sport.engine"
+MODEL_NAME : another name
 
 
 IS_SHOW : 1

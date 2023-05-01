@@ -12,6 +12,7 @@ int main()
         print("failed to update value");
     }
     print(p->getValue("MODEL_NAME"));
+    print("totalParam: " << p->totalParam);
     print("\n");
 
 
