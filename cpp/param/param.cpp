@@ -66,11 +66,14 @@ Param::Param(std::string file, bool save)
             getline(inFile, line);
             std::vector<std::string> p; strSplit(line, ":", p);
             if (p[0].find("#") != std::string::npos) {
+                // Ignore the line if there are "#" has key
                 continue;
             }
 
             // =========================================================
+            // If the value behind ":" is not empty
             if (p[0] != "") {
+                // Get rid of "space" and ' " ' here
                 strip(p[0]); strip(p[1]);
                 params[p[0]] = (p[1] == "") ? "null" : p[1];
                 totalParam += 1;
@@ -92,7 +95,7 @@ Param::Param(std::string file, bool save)
 
         if (line == prev) {
             repeat += 1;
-            // if there are more than 20 repeated things, stop reading file
+            // if there are more than maxSpace repeated things, stop reading file
             if (repeat > maxSpace) {
                 break;
             }
@@ -101,6 +104,7 @@ Param::Param(std::string file, bool save)
 
         std::vector<std::string> p; strSplit(line, ":", p);
         if (p[0].find("#") != std::string::npos) {
+            // Ignore the line if there are "#" has key
             continue;
         }
 
