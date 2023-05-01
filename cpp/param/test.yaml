@@ -1,0 +1,20 @@
+
+# [Hyperparameters (defaule)]
+
+# Check if parameters are going to be modified by program (true / false)
+CONFIG_UPDATE : false
+
+
+# [Additional parameters (customized)]
+TOPIC : null
+MODE : 1
+FIX_SEND : 0
+
+
+BATCH : 1
+# MODEL_NAME: "abc.engine"
+MODEL_NAME : abc
+
+
+IS_SHOW : 1
+
