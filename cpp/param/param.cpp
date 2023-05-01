@@ -131,10 +131,7 @@ Param::Param(std::string file, bool save)
 
 Param::~Param()
 {
-    std::string upd = "";
-    if (keyExist("CONFIG_UPDATE")) {
-        upd = getValue("CONFIG_UPDATE");
-    }
+    std::string upd = getValue("CONFIG_UPDATE");
 
     if (saveBack || upd == "true") {
         std::vector<std::string> outLines;
@@ -254,11 +251,16 @@ int Param::setValue(std::string key, std::string value)
 {
     int res = keyExist(key);
     if (res == -1) {
+        if (getValue("CONFIG_FIX_PARAM_NUM") == "true") {
+            // Refuse to add new parameter to the class
+            return -1;
+        }
+
         params[key] = value;
+        totalParam += 1;
         return 0;
     }
 
-    totalParam += 1;
     // key already exists, failed to setup value
     return -1;
 }
