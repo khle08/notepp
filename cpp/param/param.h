@@ -28,6 +28,8 @@ public:
     int setValue(std::string key, std::string value);
     int updateValue(std::string key, std::string value);
 
+    int saveParams();
+
 private:
     int maxSpace = 50;
     std::map<std::string, std::string> params;

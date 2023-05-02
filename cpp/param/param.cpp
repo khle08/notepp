@@ -131,6 +131,64 @@ Param::Param(std::string file, bool save)
 
 Param::~Param()
 {
+    saveParams();
+}
+
+
+int Param::keyExist(std::string key)
+{
+    int res = std::distance(params.begin(), params.find(key));
+    if (res == params.size()) {
+        return -1;
+    }
+    return res;
+}
+
+
+std::string Param::getValue(std::string key)
+{
+    int res = keyExist(key);
+    if (res == -1) {
+        return "null";
+    }
+
+    return params[key];
+}
+
+
+int Param::updateValue(std::string key, std::string value)
+{
+    int res = keyExist(key);
+    if (res == -1) {
+        return -1;  // key does not exist, failed to update
+    }
+
+    params[key] = value;
+    return 0;
+}
+
+
+int Param::setValue(std::string key, std::string value)
+{
+    int res = keyExist(key);
+    if (res == -1) {
+        if (getValue("CONFIG_FIX_PARAM_NUM") == "true") {
+            // Refuse to add new parameter to the class
+            return -1;
+        }
+
+        params[key] = value;
+        totalParam += 1;
+        return 0;
+    }
+
+    // key already exists, failed to setup value
+    return -1;
+}
+
+
+int Param::saveParams()
+{
     std::string upd = getValue("CONFIG_UPDATE");
 
     if (saveBack || upd == "true") {
@@ -211,56 +269,7 @@ Param::~Param()
         }
         outFile.close();
     }
-}
 
-
-int Param::keyExist(std::string key)
-{
-    int res = std::distance(params.begin(), params.find(key));
-    if (res == params.size()) {
-        return -1;
-    }
-    return res;
-}
-
-
-std::string Param::getValue(std::string key)
-{
-    int res = keyExist(key);
-    if (res == -1) {
-        return "null";
-    }
-
-    return params[key];
-}
-
-
-int Param::updateValue(std::string key, std::string value)
-{
-    int res = keyExist(key);
-    if (res == -1) {
-        return -1;  // key does not exist, failed to update
-    }
-
-    params[key] = value;
     return 0;
 }
 
-
-int Param::setValue(std::string key, std::string value)
-{
-    int res = keyExist(key);
-    if (res == -1) {
-        if (getValue("CONFIG_FIX_PARAM_NUM") == "true") {
-            // Refuse to add new parameter to the class
-            return -1;
-        }
-
-        params[key] = value;
-        totalParam += 1;
-        return 0;
-    }
-
-    // key already exists, failed to setup value
-    return -1;
-}
