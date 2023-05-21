@@ -29,13 +29,13 @@ int Time::getTime()
     std::vector<std::string> YMDHMS;
     strSplit(stm, ":", YMDHMS);
 
-    Y = std::stoi(YMDHMS[0]);
-    M = std::stoi(YMDHMS[1]);
-    D = std::stoi(YMDHMS[2]);
+    Y = std::stoi(YMDHMS[0]);  // year
+    M = std::stoi(YMDHMS[1]);  // month
+    D = std::stoi(YMDHMS[2]);  // day
 
-    h = std::stoi(YMDHMS[3]);
-    m = std::stoi(YMDHMS[4]);
-    s = std::stoi(YMDHMS[5]);
+    h = std::stoi(YMDHMS[3]);  // hour
+    m = std::stoi(YMDHMS[4]);  // minute
+    s = std::stoi(YMDHMS[5]);  // second
     return 0;
 }
 
