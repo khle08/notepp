@@ -1,0 +1,4 @@
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/file/build/CMakeFiles/files.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/file/build/CMakeFiles/exe.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/file/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/file/build/CMakeFiles/rebuild_cache.dir

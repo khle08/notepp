@@ -1,43 +1,5 @@
-// #include <stdio.h>
-// #include <dirent.h>
 
-
-// ref: http://www.lucasgabrieltutors.weinode.com/articles/71
-// int main(int argc, const char * argv[]) {
-    
-//     struct dirent *dirp;
-    
-//     DIR* dir = opendir("./");
-    
-//     while ((dirp = readdir(dir)) != nullptr) {
-//         if (dirp->d_type == DT_REG) {
-//             // 文件
-//             printf("file %s\n", dirp->d_name);
-            
-//         } else if (dirp->d_type == DT_DIR) {
-//             // 文件夹
-//             printf("dir %s\n", dirp->d_name);
-//         }
-//     }
-    
-//     closedir(dir);
-    
-    
-//     return 0;
-// }
-
-
-#include <regex>
-#include <vector>
-#include <string>
-#include <fstream>
-#include <sstream>     // for "std::stringstream"
-#include <iostream>
-#include <dirent.h>
-#include <sys/stat.h>
-
-#define print(x) std::cout << x << std::endl
-// using namespace std;
+#include "files.h"
 
 
 // ref: https://blog.csdn.net/m0_37263637/article/details/79443429
@@ -73,8 +35,8 @@ int getFileList(std::string dirent, std::vector<std::string> &FileList,
 }
 
 
-template<typename T>
-int writeFile(std::string fileName, std::vector<T> &dataList)
+// template<typename T>
+int writeFile(std::string fileName, std::vector<std::string> &dataList)
 {
     // ref: https://www.cnblogs.com/helinsen/archive/2012/07/26/2609251.html
     // std::ios::in             读
@@ -89,7 +51,7 @@ int writeFile(std::string fileName, std::vector<T> &dataList)
     // write something to the fileName.
     std::ofstream outFile(fileName, std::ios::out);
 
-    for (T data : dataList)
+    for (std::string data : dataList)
     {
         outFile << data << "\n";
     }
@@ -164,7 +126,7 @@ int strSplit(std::string& str, std::string delim, std::vector<std::string>& strV
 }
 
 
-std::string dirName(std::string dir, bool full_path = true)
+std::string dirName(std::string dir, bool full_path)
 {
 	std::vector<std::string> folders;
 	strSplit(dir, "/", folders);
@@ -208,58 +170,3 @@ int makedirs(std::string pth)
     return 0;
 }
 
-
-int main(int argc, char** argv)
-{
-	std::string cmd = "mkdir ";
-	std::string f = "output";
-	std::string c = cmd + f;
-	std::system((cmd + f).c_str());
-
-	std::vector<std::string> strlist(5);
-	strlist.push_back("this is great\n");
-	strlist.push_back("you look good");
-
-	writeFile("test.txt", strlist);
-    readFile("test.txt");
-    print(" ");
-
-    std::string strTest = "this/is/one/path.csv";
-    print(dirName(strTest, true));
-    strReplace(strTest, ".csv", ".txt");
-    print(strTest);
-    strTest = std::regex_replace(strTest, std::regex("/one"), "/two");
-    print(strTest);
-
-    std::vector<std::string> split;
-    strSplit(strTest, "/", split);
-    print(split.size());
-    print(" ");
-
-    std::string filePath;
-    int ret = 0;
-    if(argc > 1){
-        filePath= argv[1];//.c_str();
-        print("filePath: " << filePath);
-        // cout << "filePath:" << filePath << endl;
-    }
-    else{
-    	print("please input file path.");
-        // cout << "please input file path." << endl;
-        return -1;
-    } 
-    std::vector<std::string> fileList;
-    ret = getFileList(filePath, fileList);
-    if(ret < 0)
-        return -1;
-
-    print("fileList:");
-    // cout << "fileList:" << endl;
-    for(auto imageName : fileList)
-    {
-        std::string imagePath = filePath + imageName;
-        print(imagePath);
-        // cout << imagePath << endl;
-    }
-    return 0;
-}
