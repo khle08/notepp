@@ -1,10 +1,11 @@
-
 mkdir build
 cd build
 
-# rm -rf *    # delete all contents in this "build" folder
+if [[ $1 == "rm" ]]; then
+	rm -rf *
+fi
 
 cmake ..
-make -j4
+make -j2
 
 ./expJson

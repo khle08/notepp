@@ -1,6 +1,10 @@
+mkdir build
 cd build
 
-rm -rf *
+if [[ $1 == "rm" ]]; then
+	rm -rf *
+fi
+
 cmake ..
 make -j2
 

@@ -2,7 +2,11 @@
 mkdir build
 cd build
 
-# rm -rf *    # delete all contents in this "build" folder
+
+if [[ $1 == "rm" ]]; then
+	rm -rf *    # delete all contents in this "build" folder
+fi
+
 
 cmake ..
 make -j4
