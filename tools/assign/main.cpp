@@ -1,4 +1,5 @@
 
+#include <chrono>
 #include <iostream>
 
 #include "munkres.h"
@@ -56,8 +57,16 @@ int main()
     };
 
     Munkres<double> munkres;
-    munkres.solve(mat);
-    mat.show(3);
+
+    auto t1 = std::chrono::high_resolution_clock::now();
+
+    munkres.solve(mat2);
+
+    auto t2 = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> diff = t2 - t1;
+    print("proc: " << diff.count() << " s");
+
+    mat2.show(3);
     return 0;
 }
 
