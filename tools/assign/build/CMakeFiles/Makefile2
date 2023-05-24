@@ -54,10 +54,10 @@ RM = /usr/local/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign
+CMAKE_SOURCE_DIR = /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build
+CMAKE_BINARY_DIR = /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -98,14 +98,14 @@ lib/clean: lib/CMakeFiles/munkres.dir/clean
 CMakeFiles/exe.dir/all: lib/CMakeFiles/munkres.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles --progress-num=1,2 "Built target exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles --progress-num=1,2 "Built target exe"
 .PHONY : CMakeFiles/exe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/exe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/exe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles 0
 .PHONY : CMakeFiles/exe.dir/rule
 
 # Convenience name for target.
@@ -124,14 +124,14 @@ CMakeFiles/exe.dir/clean:
 lib/CMakeFiles/munkres.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles --progress-num=3,4 "Built target munkres"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles --progress-num=3,4 "Built target munkres"
 .PHONY : lib/CMakeFiles/munkres.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/munkres.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/munkres.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/munkres.dir/rule
 
 # Convenience name for target.

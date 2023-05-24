@@ -1,7 +1,7 @@
 lib/CMakeFiles/munkres.dir/munkres.cpp.o: \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib/munkres.cpp \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib/munkres.h \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib/matrix.h \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib/munkres.cpp \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib/munkres.h \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib/matrix.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstddef \
@@ -160,7 +160,7 @@ lib/CMakeFiles/munkres.dir/munkres.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/math.h \
   /usr/include/math.h \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib/matrix.cpp \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib/matrix.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cassert \
   /usr/include/assert.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/list

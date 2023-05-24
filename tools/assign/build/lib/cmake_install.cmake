@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib
+# Install script for directory: /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/lib/libmunkres.1.0.dylib"
-    "/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/lib/libmunkres.1.dylib"
+    "/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/lib/libmunkres.1.0.dylib"
+    "/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/lib/libmunkres.1.dylib"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmunkres.1.0.dylib"
@@ -56,7 +56,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/lib/libmunkres.dylib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/lib/libmunkres.dylib")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmunkres.dylib" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmunkres.dylib")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -67,8 +67,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib/munkres.h"
-    "/Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/lib/matrix.h"
+    "/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib/munkres.h"
+    "/Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/lib/matrix.h"
     )
 endif()
 

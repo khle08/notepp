@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign
+CMAKE_SOURCE_DIR = /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build
+CMAKE_BINARY_DIR = /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/lib//CMakeFiles/progress.marks
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build/CMakeFiles 0
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/lib//CMakeFiles/progress.marks
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/CMakeFiles/munkres.dir/rule:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/munkres.dir/rule
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/munkres.dir/rule
 .PHONY : lib/CMakeFiles/munkres.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ munkres: lib/CMakeFiles/munkres.dir/rule
 
 # fast build rule for target.
 munkres/fast:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/build
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/build
 .PHONY : munkres/fast
 
 munkres.o: munkres.cpp.o
@@ -180,7 +180,7 @@ munkres.o: munkres.cpp.o
 
 # target to build an object file
 munkres.cpp.o:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/munkres.cpp.o
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/munkres.cpp.o
 .PHONY : munkres.cpp.o
 
 munkres.i: munkres.cpp.i
@@ -188,7 +188,7 @@ munkres.i: munkres.cpp.i
 
 # target to preprocess a source file
 munkres.cpp.i:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/munkres.cpp.i
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/munkres.cpp.i
 .PHONY : munkres.cpp.i
 
 munkres.s: munkres.cpp.s
@@ -196,7 +196,7 @@ munkres.s: munkres.cpp.s
 
 # target to generate assembly for a file
 munkres.cpp.s:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/munkres.cpp.s
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/munkres.dir/build.make lib/CMakeFiles/munkres.dir/munkres.cpp.s
 .PHONY : munkres.cpp.s
 
 # Help Target
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/tools/assign/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/assign/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

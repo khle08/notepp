@@ -55,6 +55,7 @@ int main()
         {90, 85, 85, 80, 85, 99},
         {65, 75, 80, 75, 68, 96}
     };
+    mat2.show(1);
 
     Munkres<double> munkres;
 
@@ -66,7 +67,7 @@ int main()
     std::chrono::duration<double> diff = t2 - t1;
     print("proc: " << diff.count() << " s");
 
-    mat2.show(3);
+    mat2.show(1);
     return 0;
 }
 
