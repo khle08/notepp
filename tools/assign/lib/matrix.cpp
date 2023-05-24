@@ -228,14 +228,14 @@ Matrix<T>::show(int precision)
     std::string content = "\n";
     for ( size_t i = 0 ; i < m_rows ; i++ ) {
         std::stringstream s;
-        s << std::fixed << std::setprecision(precision) << " [";
+        s << std::fixed << std::setprecision(precision) << " [  ";
 
         for ( size_t j = 0 ; j < m_columns ; j++ ) {
             std::string delim;
             if (j == m_columns - 1) {
                 delim = ",";   // If this is the end of the line
             } else {
-                delim = ", ";  // otherwise, use this
+                delim = ",  ";  // otherwise, use this
             }
             s << m_matrix[i][j] << delim;
         }
