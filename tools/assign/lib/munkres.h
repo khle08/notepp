@@ -5,10 +5,11 @@
 #include "matrix.h"
 
 #include <list>
+#include <cmath>
+#include <vector>
+#include <limits>
 #include <utility>
 #include <iostream>
-#include <cmath>
-#include <limits>
 
 template<typename Data> class Munkres
 {
@@ -118,6 +119,19 @@ public:
 
         delete [] row_mask;
         delete [] col_mask;
+    }
+
+    std::vector<std::pair<int, int>> pair(Matrix<Data> &m) {
+      std::vector< std::pair<int, int>> matches(m.rows());
+
+      for (int r = 0; r < m.rows(); r++) {
+        for (int c = 0; c < m.columns(); c++) {
+          if (m(r, c) == 0) {
+            matches[r] = std::make_pair(r, c);
+          }
+        }
+      }
+      return matches;
     }
 
     static void replace_infinites(Matrix<Data> &matrix) {

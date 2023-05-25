@@ -1,5 +1,5 @@
 CMakeFiles/expOpencv.dir/main.cpp.o: \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp7-opencv/main.cpp \
+  /Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view \

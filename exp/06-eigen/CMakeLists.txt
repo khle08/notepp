@@ -21,10 +21,9 @@ endif()
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 
+set(EIGEN_LIB_DIR "/Users/kcl/Documents/Cpp_Projects/notepp/library")
 
-
-
-file(GLOB Eigen_directory_files "../library/Eigen/*")
+file(GLOB Eigen_directory_files "${EIGEN_LIB_DIR}/Eigen/*")
 
 foreach(f ${Eigen_directory_files})
     if(NOT f MATCHES "\\.txt" AND NOT f MATCHES "${ESCAPED_CMAKE_CURRENT_SOURCE_DIR}/[.].+" AND NOT f MATCHES "${ESCAPED_CMAKE_CURRENT_SOURCE_DIR}/src")
@@ -32,16 +31,19 @@ foreach(f ${Eigen_directory_files})
     endif()
 endforeach(f ${Eigen_directory_files})
 
-install(FILES ${Eigen_directory_files_to_install}
-        DESTINATION lib/Eigen COMPONENT Devel)
-
-
-
-
+# install(FILES ${Eigen_directory_files_to_install}
+#         DESTINATION lib/Eigen COMPONENT Devel)
 
 # Define where to start "#include" XX.h and XX.cpp files from the library, i.e., Eigen
-include_directories(BEFORE ../library)
-link_directories(../library)
+include_directories(BEFORE ${EIGEN_LIB_DIR})
+link_directories(${EIGEN_LIB_DIR})
+
+
+# If this (below) is defined in lib/CMakeLists.txt, exe will not know how to include
+include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/lib/assign)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/assign)
+add_subdirectory(lib)
+
 
 find_package(Threads REQUIRED)
 
@@ -53,4 +55,5 @@ add_executable(expEigen ${SOURCE})
 
 target_link_libraries(expEigen PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
+                      assign
                       )

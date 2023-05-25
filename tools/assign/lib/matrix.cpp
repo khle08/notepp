@@ -29,7 +29,7 @@ Matrix<T>::Matrix(const std::initializer_list<std::initializer_list<T>> init) {
 
     size_t i = 0, j;
     for ( auto row = init.begin() ; row != init.end() ; ++row, ++i ) {
-        assert ( row->size() == m_columns && "All rows must have the same number of columns." );
+        // assert ( row->size() == m_columns && "All rows must have the same number of columns." );
         j = 0;
         for ( auto value = row->begin() ; value != row->end() ; ++value, ++j ) {
             m_matrix[i][j] = *value;
@@ -218,6 +218,88 @@ Matrix<T>::max() const {
     }
 
     return max;
+}
+
+
+template <class T>
+void
+Matrix<T>::swap(T &a, T &b){
+    T t = a;
+    a = b;
+    b = t;
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::transpose_()
+{
+    for ( size_t i = 0 ; i < m_rows ; i++ ) {
+        for ( size_t j = i + 1 ; j < m_columns ; j++ ) {
+            swap(m_matrix[i][j], m_matrix[j][i]);
+        }
+    }
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::transpose()
+{
+    if (m_rows == m_columns) {
+        transpose_();
+
+    } else {
+        size_t r = m_rows;
+        size_t c = m_columns;
+
+        int dim = (m_rows > m_columns ? m_rows: m_columns);
+        resize(dim, dim);
+        transpose_();
+        resize(c, r);
+    }
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::vertical()
+{
+    for ( size_t i = 0 ; i < m_rows / 2 ; i++ ) {
+        for ( size_t j = 0 ; j < m_columns ; j++ ) {
+            swap(m_matrix[i][j], m_matrix[m_rows-1-i][j]);
+        }
+    }
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::horizontal()
+{
+    for ( size_t j = 0 ; j < m_columns / 2 ; j++ ) {
+        for ( size_t i = 0 ; i < m_rows ; i++ ) {
+            swap(m_matrix[i][j], m_matrix[i][m_columns-1-j]);
+        }
+    }
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::clockwise()
+{
+    transpose();
+    horizontal();
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::contrarotate()
+{
+    transpose();
+    vertical();
 }
 
 

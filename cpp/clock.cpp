@@ -21,15 +21,22 @@ float timedifference_msec(struct timeval t0, struct timeval t1)
 
 int main()
 {
-    // // Method No.1  <-- Do not know why ... it is not accurate !!
-    // clock_t start = clock();
+    // Method No.1  <-- Do not know why ... it is not accurate !!
+    clock_t start, end;
+    float elapsedTime;
 
-    // // do something...
-    // usleep(0.001 * 1000 * 1000);    // 1s
+    // random seed
+    srand((unsigned)time(0));
 
-    // clock_t end   = clock();
+    start = clock();
 
-    // print("花费了" << (double)(end - start) / CLOCKS_PER_SEC << "秒");
+    // do something...
+    usleep(4 * 1000 * 1000);    // 1s
+
+    end = clock();
+
+    elapsedTime = (float)(end - start) / CLOCKS_PER_SEC;
+    print("花费了" << elapsedTime << "秒");
 
 
     struct timeval t1_sys;

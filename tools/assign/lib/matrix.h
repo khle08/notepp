@@ -49,11 +49,20 @@ public:
     }
 
     void show(int precision);
+    void transpose();
+    void vertical();
+    void horizontal();
+
+    void clockwise();
+    void contrarotate();
 
 private:
     T **m_matrix;
     size_t m_rows;
     size_t m_columns;
+
+    void swap(T &a, T &b);
+    void transpose_();
 };
 
 

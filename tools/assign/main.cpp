@@ -10,6 +10,11 @@
 int main()
 {
     print("success");
+    Matrix<double> matTest(4, 2);
+    matTest.show(1);
+    matTest.transpose();
+    matTest.show(1);
+    print("col: " << matTest.columns() << ", row: " << matTest.rows());
 
     Matrix<double> mat{
         { 4.0,  2.0,  5.0,  7.0},
@@ -17,6 +22,10 @@ int main()
         {12.0,  5.0,  4.0,  5.0},
         { 6.0,  3.0,  7.0, 12.0}
     };
+    mat.show(1);
+    mat.transpose();
+    // mat.clockwise();
+    // // mat.contrarotate();
     mat.show(1);
 
     // print("col: " << mat.columns() << ", row: " << mat.rows());
@@ -68,6 +77,12 @@ int main()
     print("proc: " << diff.count() << " s");
 
     mat2.show(1);
+
+    print("pair: \n");
+    std::vector<std::pair<int, int>> p = munkres.pair(mat2);
+    for (int i = 0; i < p.size(); i++) {
+        print(p[i].first << " -> " << p[i].second);
+    }
     return 0;
 }
 
