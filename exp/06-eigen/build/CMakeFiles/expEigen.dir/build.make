@@ -92,7 +92,7 @@ expEigen_EXTERNAL_OBJECTS =
 
 expEigen: CMakeFiles/expEigen.dir/main.cpp.o
 expEigen: CMakeFiles/expEigen.dir/build.make
-expEigen: lib/libassign.1.0.dylib
+expEigen: lib/libtestlibs.dylib
 expEigen: CMakeFiles/expEigen.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable expEigen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/expEigen.dir/link.txt --verbose=$(VERBOSE)

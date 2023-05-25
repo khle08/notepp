@@ -187,6 +187,19 @@ assign/fast:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/assign.dir/build.make lib/CMakeFiles/assign.dir/build
 .PHONY : assign/fast
 
+#=============================================================================
+# Target rules for targets named testlibs
+
+# Build rule for target.
+testlibs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testlibs
+.PHONY : testlibs
+
+# fast build rule for target.
+testlibs/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/testlibs.dir/build.make lib/CMakeFiles/testlibs.dir/build
+.PHONY : testlibs/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -225,6 +238,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... assign"
 	@echo "... expEigen"
+	@echo "... testlibs"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/lib/assign -I/Users/kcl/Documents/Cpp_Projects/notepp/library
+CXX_INCLUDES = -I/Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/lib -I/Users/kcl/Documents/Cpp_Projects/notepp/library
 
 CXX_FLAGS =  -std=c++11
 

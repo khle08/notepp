@@ -234,6 +234,9 @@ expEigen_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 expEigen_SOURCE_DIR:STATIC=/Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen
 
+//Dependencies for the target
+testlibs_LIB_DEPENDS:STATIC=general;assign;
+
 
 ########################
 # INTERNAL cache entries

@@ -40,8 +40,8 @@ link_directories(${EIGEN_LIB_DIR})
 
 
 # If this (below) is defined in lib/CMakeLists.txt, exe will not know how to include
-include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/lib/assign)
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/assign)
+include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 add_subdirectory(lib)
 
 
@@ -55,5 +55,6 @@ add_executable(expEigen ${SOURCE})
 
 target_link_libraries(expEigen PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
-                      assign
+                      # assign
+                      testlibs
                       )

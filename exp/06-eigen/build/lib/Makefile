@@ -175,6 +175,20 @@ assign/fast:
 	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/assign.dir/build.make lib/CMakeFiles/assign.dir/build
 .PHONY : assign/fast
 
+# Convenience name for target.
+lib/CMakeFiles/testlibs.dir/rule:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/testlibs.dir/rule
+.PHONY : lib/CMakeFiles/testlibs.dir/rule
+
+# Convenience name for target.
+testlibs: lib/CMakeFiles/testlibs.dir/rule
+.PHONY : testlibs
+
+# fast build rule for target.
+testlibs/fast:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/testlibs.dir/build.make lib/CMakeFiles/testlibs.dir/build
+.PHONY : testlibs/fast
+
 assign/munkres.o: assign/munkres.cpp.o
 .PHONY : assign/munkres.o
 
@@ -199,6 +213,30 @@ assign/munkres.cpp.s:
 	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/assign.dir/build.make lib/CMakeFiles/assign.dir/assign/munkres.cpp.s
 .PHONY : assign/munkres.cpp.s
 
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/testlibs.dir/build.make lib/CMakeFiles/testlibs.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/testlibs.dir/build.make lib/CMakeFiles/testlibs.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/06-eigen/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/testlibs.dir/build.make lib/CMakeFiles/testlibs.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,9 +250,13 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... assign"
+	@echo "... testlibs"
 	@echo "... assign/munkres.o"
 	@echo "... assign/munkres.i"
 	@echo "... assign/munkres.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 
