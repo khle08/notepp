@@ -12,8 +12,8 @@ int main()
     print("success");
     Matrix<double> matTest(4, 2);
     matTest.show(1);
-    matTest.transpose();
-    matTest.show(1);
+    // matTest.transpose();
+    // matTest.show(1);
     print("col: " << matTest.columns() << ", row: " << matTest.rows());
 
     Matrix<double> mat{
@@ -22,11 +22,23 @@ int main()
         {12.0,  5.0,  4.0,  5.0},
         { 6.0,  3.0,  7.0, 12.0}
     };
+
+    Matrix<double> math{
+        { 1.0,  5.0},
+        { 2.0,  6.0},
+        { 3.0,  7.0},
+        { 4.0,  8.0}
+    };
     mat.show(1);
-    mat.transpose();
+    // mat.transpose();
     // mat.clockwise();
     // // mat.contrarotate();
-    mat.show(1);
+    // mat.show(1);
+
+    // // mat.hstack(mat11);
+    // math.transpose();
+    // mat.vstack(math);
+    // mat.show(1);
 
     // print("col: " << mat.columns() << ", row: " << mat.rows());
     // print("idx[0][1]: " << mat(0, 1));

@@ -22,4 +22,5 @@ and the compilation and executable file will be automatically done and generated
 # Other References
 
 + [Eigen Tutorial pdf](https://cs2240.graphics/assignments/eigen_tutorial.pdf)
++ [ Eigen库矩阵运算使用方法](https://www.cnblogs.com/dzw2017/p/8427677.html)
 

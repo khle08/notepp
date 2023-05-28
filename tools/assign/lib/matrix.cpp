@@ -221,6 +221,42 @@ Matrix<T>::max() const {
 }
 
 
+/*export*/ template <class T>
+void
+Matrix<T>::hstack(const Matrix<T> &other) {
+    assert ( m_matrix != nullptr );
+    assert ( m_rows > 0 );
+    assert ( m_columns > 0 );
+    assert ( m_rows == other.rows());
+
+    size_t c = m_columns;
+    resize(m_rows, m_columns + other.columns());
+    for ( size_t i = 0 ; i < m_rows ; i++ ) {
+        for ( size_t j = m_columns - other.columns() ; j < m_columns ; j++ ) {
+            m_matrix[i][j] = other.m_matrix[i][j - c];
+        }
+    }
+}
+
+
+/*export*/ template <class T>
+void
+Matrix<T>::vstack(const Matrix<T> &other) {
+    assert ( m_matrix != nullptr );
+    assert ( m_rows > 0 );
+    assert ( m_columns > 0 );
+    assert ( m_columns == other.columns());
+
+    size_t r = m_rows;
+    resize(m_rows + other.rows(), m_columns);
+    for ( size_t j = 0 ; j < m_columns ; j++ ) {
+        for ( size_t i = m_rows - other.rows() ; i < m_rows ; i++ ) {
+            m_matrix[i][j] = other.m_matrix[i - r][j];
+        }
+    }
+}
+
+
 template <class T>
 void
 Matrix<T>::swap(T &a, T &b){
@@ -246,6 +282,10 @@ Matrix<T>::transpose_()
 void
 Matrix<T>::transpose()
 {
+    assert( m_matrix != nullptr );
+    assert ( m_rows > 0 );
+    assert ( m_columns > 0 );
+
     if (m_rows == m_columns) {
         transpose_();
 

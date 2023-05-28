@@ -55,6 +55,8 @@ public:
 
     void clockwise();
     void contrarotate();
+    void hstack(const Matrix<T> &other);
+    void vstack(const Matrix<T> &other);
 
 private:
     T **m_matrix;

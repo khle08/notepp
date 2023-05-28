@@ -1,9 +1,12 @@
 #ifndef KALMAN_H_
 #define KALMAN_H_
-#include "../Eigen/Dense"
+
+#include "Eigen/Dense"
 #include "tools.h"
 
-class KalmanFilter {
+
+class KalmanFilter
+{
 public:
 
     // state vector

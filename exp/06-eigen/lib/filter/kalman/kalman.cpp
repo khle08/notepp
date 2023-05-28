@@ -1,6 +1,5 @@
 #include <math.h>
 #include "kalman.h"
-#include "tools.h"
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
