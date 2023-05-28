@@ -52,9 +52,9 @@ list(APPEND SOURCE
     main.cpp
 )
 
-add_executable(expEigen ${SOURCE})
+add_executable(exe ${SOURCE})
 
-target_link_libraries(expEigen PRIVATE 
+target_link_libraries(exe PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
                       # assign
                       testlibs

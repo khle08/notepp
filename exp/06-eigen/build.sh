@@ -9,4 +9,4 @@ fi
 cmake ..
 make -j4
 
-./expEigen
+./exe
