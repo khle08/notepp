@@ -14,6 +14,23 @@ TestLibs::~TestLibs()
 }
 
 
+int TestLibs::matrixTest()
+{
+    // ref: https://www.cnblogs.com/dzw2017/p/8427677.html
+    MatrixXd m(6, 6);
+    m << 62, 75, 80, 93, 95, 97,
+         75, 80, 82, 85, 71, 97,
+         80, 75, 81, 98, 90, 97,
+         78, 82, 84, 80, 50, 98,
+         90, 85, 85, 80, 85, 99,
+         65, 75, 80, 75, 68, 96;
+
+    print(m);
+
+    return 0;
+}
+
+
 int TestLibs::munkres()
 {
     // MatrixXd m1(4, 4);

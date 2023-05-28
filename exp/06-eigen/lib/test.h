@@ -12,6 +12,7 @@
 #include <chrono>
 #include <iostream>
 
+#include "Eigen/Dense"
 #include "assign/munkres.h"
 
 #define print(x) std::cout << x << std::endl;
@@ -24,6 +25,8 @@ class TestLibs
 public:
     TestLibs();
     ~TestLibs();
+
+    int matrixTest();
 
     int munkres();
 
