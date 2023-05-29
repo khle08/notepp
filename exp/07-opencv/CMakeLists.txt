@@ -46,9 +46,9 @@ list(APPEND SOURCE
     main.cpp
 )
 
-add_executable(expOpencv ${SOURCE})
+add_executable(exe ${SOURCE})
 
-target_link_libraries(expOpencv PRIVATE 
+target_link_libraries(exe PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
                       ${EXTRA_LIBS}
                       opencv_calib3d

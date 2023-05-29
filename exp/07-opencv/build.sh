@@ -11,4 +11,4 @@ fi
 cmake ..
 make -j4
 
-./expOpencv
+./exe
