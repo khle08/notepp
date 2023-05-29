@@ -17,15 +17,36 @@ TestLibs::~TestLibs()
 int TestLibs::matrixTest()
 {
     // ref: https://www.cnblogs.com/dzw2017/p/8427677.html
+    
+    // Matrix initialization
     MatrixXd m(6, 6);
-    m << 62, 75, 80, 93, 95, 97,
-         75, 80, 82, 85, 71, 97,
-         80, 75, 81, 98, 90, 97,
-         78, 82, 84, 80, 50, 98,
-         90, 85, 85, 80, 85, 99,
-         65, 75, 80, 75, 68, 96;
+    // Matrix<int, 6, 6, RowMajor> m;
 
-    print(m);
+    m << 11, 12, 13, 14, 15, 16,
+         21, 22, 23, 24, 25, 26,
+         31, 32, 33, 34, 35, 36,
+         41, 42, 43, 44, 45, 46,
+         51, 52, 53, 54, 55, 56,
+         61, 62, 63, 64, 65, 66;
+
+    // MatrixXd m = MatrixXd::Random(3,3);
+    // MatrixXd m = MatrixXd::Constant(3, 3, 1.2);
+    // MatrixXd m = MatrixXd::Identity(3, 3);
+    // MatrixXd m = MatrixXd::Zero(3, 3);
+    MatrixXd m2 = MatrixXd::Ones(6, 2);
+
+    // print("idx[0][3]: " << m(0, 3));
+    // print("\nsize: " << m.size());  // 36
+    // print("row: " << m.rows() << ", col: " << m.cols());
+
+    MatrixXd md = m * m2;  // dot product
+    print(md);
+
+    VectorXf v(10);
+    print(v);
+
+    // m.resize(3, 12);
+    // print(m);
 
     return 0;
 }
