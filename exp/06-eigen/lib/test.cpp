@@ -19,31 +19,40 @@ int TestLibs::matrixTest()
     // ref: https://www.cnblogs.com/dzw2017/p/8427677.html
     
     // Matrix initialization
-    MatrixXd m(6, 6);
+    MatrixXd mat_xd66(6, 6);
     // Matrix<int, 6, 6, RowMajor> m;
 
-    m << 11, 12, 13, 14, 15, 16,
-         21, 22, 23, 24, 25, 26,
-         31, 32, 33, 34, 35, 36,
-         41, 42, 43, 44, 45, 46,
-         51, 52, 53, 54, 55, 56,
-         61, 62, 63, 64, 65, 66;
+    mat_xd66 << 11, 12, 13, 14, 15, 16,
+                21, 22, 23, 24, 25, 26,
+                31, 32, 33, 34, 35, 36,
+                41, 42, 43, 44, 45, 46,
+                51, 52, 53, 54, 55, 56,
+                61, 62, 63, 64, 65, 66;
 
-    // MatrixXd m = MatrixXd::Random(3,3);
-    // MatrixXd m = MatrixXd::Constant(3, 3, 1.2);
-    // MatrixXd m = MatrixXd::Identity(3, 3);
-    // MatrixXd m = MatrixXd::Zero(3, 3);
-    MatrixXd m2 = MatrixXd::Ones(6, 2);
+    MatrixXd mat_rand = MatrixXd::Random(3,3);
+    MatrixXd mat_cont = MatrixXd::Constant(3, 3, 1.2);
+    MatrixXd mat_idnt = MatrixXd::Identity(3, 3);
+    MatrixXd mat_zero = MatrixXd::Zero(3, 3);
+    MatrixXd mat_ones = MatrixXd::Ones(6, 2);
 
-    // print("idx[0][3]: " << m(0, 3));
-    // print("\nsize: " << m.size());  // 36
-    // print("row: " << m.rows() << ", col: " << m.cols());
+    print(mat_xd66);
+    print("idx[0][3]: " << mat_xd66(0, 3) << "\n");
+    print("size: " << mat_xd66.size());  // 36
+    print("row: " << mat_xd66.rows() << ", col: " << mat_xd66.cols() << "\n");
+    print("row[2]:\n" << mat_xd66.row(2) << "\n");
+    print("col[3]:\n" << mat_xd66.col(3) << "\n");
 
-    MatrixXd md = m * m2;  // dot product
-    print(md);
+    // The value that saved in matrix can be modified
+    mat_xd66.row(2)[3] = 999;
+    print(mat_xd66 << "\n");
+    print("row[2]:\n" << mat_xd66.row(2) << "\n");
 
-    VectorXf v(10);
-    print(v);
+    // MatrixXd mat_prod = mat_xd66 * mat_ones;  // dot product
+    // print(mat_prod);
+
+    // VectorXf v(10);
+    // v.fill(0);
+    // print(v);
 
     // m.resize(3, 12);
     // print(m);
