@@ -1,6 +1,8 @@
 
 #include "test.h"
 
+typedef Eigen::Matrix<float, 1, 10, Eigen::RowMajor> FEATURE;
+
 
 TestLibs::TestLibs()
 {
@@ -56,6 +58,15 @@ int TestLibs::matrixTest()
 
     // m.resize(3, 12);
     // print(m);
+
+    FEATURE ft;
+    float f[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11};
+
+    for (int i = 0; i < sizeof(f) / 4; i++) {
+        ft[i] = f[i];
+    }
+
+    print(ft);
 
     return 0;
 }

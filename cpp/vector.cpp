@@ -71,5 +71,28 @@ int main()
 
 	double arrs[3][2][4];
 	print(arrs[0][0][0]);
+
+	print("");
+
+	std::vector<int> vvv = {1, 2, 3, 4, 5};
+	std::vector<int> vee = {11, 12, 13, 14};
+	vvv.assign(vee.begin(), vee.end());
+	for (int v: vvv) {
+		print(v);
+	}
+
+	print("");
+
+	static float fff[3 * 3 * 1];
+	for (int i = 0; i < sizeof(fff) / 4; i++) {
+		fff[i] = i + 1;
+	}
+	fff[6] = 99;
+
+	std::vector<float> vf(fff, fff + 1 * 3 * 4);
+	for (float f: vf) {
+		print(f);
+	}
+
 	return 0;
 }
