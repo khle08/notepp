@@ -21,6 +21,7 @@ function build_macos
 	-DMNN_ONEDNN=OFF \
 	-DMNN_AVX512=OFF \
 	-DMNN_OPENCL=OFF \
+        -DMNN_OPENGL=OFF \
 	-DMNN_VULKAN=OFF \
 	-DMNN_CUDA=OFF \
 	-DMNN_TENSORRT=OFF \
@@ -31,6 +32,10 @@ function build_macos
 
 # PREFIX=/usr/local
 PREFIX=$(pwd)/mac
+mkdir build
+cd build
+rm -rf *
+
 build_macos
 
 echo "MNN compiled successfully !"
