@@ -37,11 +37,31 @@ int ImgReader::read(std::string src, int inputId, std::map<int, std::vector<cv::
     } else {
         cap = cv::VideoCapture(src);
     }
-    assert(cap.isOpened());
 
-    while (cap.read(frame)) {
+    while (true) {
+        int res;
+        if (!cap.isOpened()) {
+            if (isInt(src)) {
+                cap = cv::VideoCapture(std::stoi(src));
+            } else {
+                cap = cv::VideoCapture(src);
+            }
+        }
+
+        if (!cap.read(frame)) {
+            if (isInt(src)) {
+                cap = cv::VideoCapture(std::stoi(src));
+            } else {
+                cap = cv::VideoCapture(src);
+            }
+        }
+
         if (frame.data == NULL) {
-            break;
+            if (isInt(src)) {
+                cap = cv::VideoCapture(std::stoi(src));
+            } else {
+                cap = cv::VideoCapture(src);
+            }
         }
 
         if (cnt == 1) {
