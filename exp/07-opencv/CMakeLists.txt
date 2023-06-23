@@ -40,6 +40,12 @@ link_directories(${opencv_dir}/lib)
 list(APPEND EXTRA_LIBS "-lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui")
 
 
+# If this (below) is defined in lib/CMakeLists.txt, exe will not know how to include
+include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+add_subdirectory(lib)
+
+
 find_package(Threads REQUIRED)
 
 list(APPEND SOURCE
@@ -51,6 +57,7 @@ add_executable(exe ${SOURCE})
 target_link_libraries(exe PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
                       ${EXTRA_LIBS}
+                      imgReader
                       opencv_calib3d
                       opencv_core
                       # opencv_features2d

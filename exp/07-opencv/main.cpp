@@ -1,11 +1,13 @@
 
+#include <map>
+#include <thread>
 #include <string>
 #include <iostream>
+#include <unistd.h>    // for "usleep"
 
 #include <opencv2/opencv.hpp>
 
-
-#define print(x) std::cout << x << std::endl;
+#include "imgReader.h"
 
 
 struct Object
@@ -27,7 +29,7 @@ int main(int argc, char const *argv[])
     if (img.empty()) {
         print("[ERROR] Failed to load image: " << pth << " " << img.size());
     } else {
-        print("[ERROR] image size: " << img.size());
+        print("[SUCCESS] image size: " << img.size());
     }
 
     cv::Rect_<double> rect1(0.3, 0.4, 3.11, 3.22);
@@ -51,6 +53,42 @@ int main(int argc, char const *argv[])
     // 2 ways to init a struct
     Object obj1 = Object{rect1, 1, 0.88};
     Object obj2{rect1, 1, 0.99};
+
+    print("\n===== OpenCV thread [ start ] =====\n");
+    
+    std::map<int, std::vector<cv::Mat>> images = {};
+    std::vector<cv::Mat> imgVec = {img};
+
+    std::vector<std::string> srcVec = {"/Users/kcl/Desktop/ADAS.mov", "1"};
+    for (int i = 0; i < srcVec.size(); i++) {
+        ImgReader imr(srcVec[i], i + 1, images);
+    }
+    usleep(3 * 1000 * 1000);    // 1s
+
+    std::map<int, std::vector<cv::Mat>>::iterator it;
+    for (it = images.begin(); it != images.end(); it++) {
+        print("first: " << it->first << " || second: " << it->second.size());
+    }
+
+    usleep(1 * 1000 * 1000);    // 1s
+
+    std::map<int, std::vector<cv::Mat>>::iterator it2;
+    for (it2 = images.begin(); it2 != images.end(); it2++) {
+        print("first: " << it2->first << " || second: " << it2->second.size());
+    }
+
+    usleep(1 * 1000 * 1000);    // 1s
+
+    std::map<int, std::vector<cv::Mat>>::iterator it_debug;
+    for (it_debug = images.begin(); it_debug != images.end(); it_debug++) {
+        print("first: " << it_debug->first << " || second: " << it_debug->second.size());
+    }
+
+    // 3 ways to put element into map.
+    // images[0] = imgVec;
+    // images.insert({1, imgVec});  // if the key is the same, value will be replaced
+    // images.insert(std::map<int, std::vector<cv::Mat>>::value_type(2, imgVec));
+    print("\n===== OpenCV thread [  end  ] =====\n");
 
     print(  "===== OpenCV testing [ end ] =====\n");
 
