@@ -12,10 +12,19 @@
 #define print(x) std::cout << x << std::endl;
 
 
+typedef struct Camera
+{
+    int width;
+    int height;
+    cv::Mat frame;
+    bool took;
+}Cam;
+
+
 class ImgReader
 {
 public:
-    ImgReader(std::string src, int inputId, std::map<int, std::vector<cv::Mat>>& images);
+    ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images);
     ~ImgReader();
 
     std::thread reader;
@@ -27,7 +36,7 @@ private:
     // static must be defined here or ...
     // error: reference to non-static member function must be called;
     static bool isInt(std::string s);
-    static int read(std::string src, int inputId, std::map<int, std::vector<cv::Mat>>& images);
+    static int read(std::string src, int inputId, std::map<int, std::vector<Cam>>& images);
 };
 
 

@@ -2,7 +2,7 @@
 #include "imgReader.h"
 
 
-ImgReader::ImgReader(std::string src, int inputId, std::map<int, std::vector<cv::Mat>>& images)
+ImgReader::ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images)
         : src(src), inputId(inputId)
 {
     reader = std::thread(this->read, src, inputId, std::ref(images));
@@ -27,7 +27,7 @@ bool ImgReader::isInt(std::string s)
 }
 
 
-int ImgReader::read(std::string src, int inputId, std::map<int, std::vector<cv::Mat>>& images)
+int ImgReader::read(std::string src, int inputId, std::map<int, std::vector<Cam>>& images)
 {
     int cnt = 1;
     cv::Mat frame;
@@ -64,11 +64,12 @@ int ImgReader::read(std::string src, int inputId, std::map<int, std::vector<cv::
             }
         }
 
+        Cam cam = {-1, -1, frame, false};
         if (cnt == 1) {
-            images[inputId] = {frame};
+            images[inputId] = {cam};
         } else {
-            images[inputId] = {frame};
-            // images[inputId].push_back(frame);
+            images[inputId] = {cam};
+            // images[inputId].push_back(cam);
         }
 
         print("get frame: " << cnt);
