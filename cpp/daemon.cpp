@@ -29,9 +29,8 @@ Steps:
 #include <sys/types.h>
 #include <syslog.h>
 #include <signal.h>
-
-
-#define LOGGING "Start Logging my task = %d\n"
+#include <fcntl.h>
+#include <cstring>
 
 
 int main()
@@ -75,7 +74,7 @@ int main()
     }
 
     // 5. Set the new file permissions that is created by daemon
-    umask(077);
+    umask(0);
 
     // Change the working directory to the root directory
     // if the current directory is on some mounted file system
@@ -90,13 +89,28 @@ int main()
     }
 
     // 8. Logging errors/info in the syslog system
+    int fd = 0;
     int count = 0;
+    // 8-1. Either write log in syslog
     openlog("Logs", LOG_PID, LOG_USER);
+    // use the following command to check 
+    // CMD: tail -f /var/log/syslog
+
+    // 8-2. Or write log in self-defined file
+    fd = open("/tmp/daemon.log", O_CREAT | O_WRONLY | O_APPEND);
+    if (fd < 0) {
+        exit(EXIT_FAILURE);
+    }
+
     while (1) {
         sleep(2);
-        syslog(LOG_INFO, LOGGING, count++);
+        syslog(LOG_INFO, "Start Logging task = %d\n", count++);
+
+        std::string info = "Start Logging task =\n";
+        write(fd, info.c_str(), strlen(info.c_str()));
     }
     closelog();
+    close(fd);
     return 1;
 
 }
