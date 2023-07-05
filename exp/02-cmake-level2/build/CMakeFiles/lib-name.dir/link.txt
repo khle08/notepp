@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc liblib-name.a "CMakeFiles/lib-name.dir/hello.cpp.o"
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib liblib-name.a
+/usr/bin/ar qc liblib-name.a "CMakeFiles/lib-name.dir/hello.cpp.o"
+/usr/bin/ranlib liblib-name.a

@@ -21,8 +21,8 @@ endif()
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 
-set(EIGEN_LIB_DIR "/Users/kcl/Documents/Cpp_Projects/notepp/library")
-# set(EIGEN_LIB_DIR "/home/khle08/Documents/c++/notepp/library")
+# set(EIGEN_LIB_DIR "/Users/kcl/Documents/Cpp_Projects/notepp/library")
+set(EIGEN_LIB_DIR "/home/ubt/Documents/notepp/library")
 
 file(GLOB Eigen_directory_files "${EIGEN_LIB_DIR}/Eigen/*")
 
