@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/hello.hpp
+
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/main.cpp
+string
+-
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+syslog.h
+-
+signal.h
+-
+fcntl.h
+-
+cstring
+-
+iostream
+-
+hello.hpp
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/hello.hpp
+

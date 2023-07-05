@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/hello.cpp
+hello.hpp
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/hello.hpp
+iostream
+-
+
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/hello.hpp
+

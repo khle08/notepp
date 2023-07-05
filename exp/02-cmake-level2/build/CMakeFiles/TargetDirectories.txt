@@ -1,4 +1,4 @@
-/home/ubt/Documents/c++/notepp/exp/02-cmake-level2/build/CMakeFiles/lib-name.dir
-/home/ubt/Documents/c++/notepp/exp/02-cmake-level2/build/CMakeFiles/exeName.dir
-/home/ubt/Documents/c++/notepp/exp/02-cmake-level2/build/CMakeFiles/edit_cache.dir
-/home/ubt/Documents/c++/notepp/exp/02-cmake-level2/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/build/CMakeFiles/edit_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/build/CMakeFiles/lib-name.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/02-cmake-level2/build/CMakeFiles/exeName.dir

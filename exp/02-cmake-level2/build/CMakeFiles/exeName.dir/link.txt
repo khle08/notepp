@@ -1,1 +1,1 @@
-/usr/bin/c++  -std=c++11 CMakeFiles/exeName.dir/main.cpp.o -o exeName  liblib-name.a 
+/usr/bin/c++   -std=c++14   CMakeFiles/exeName.dir/main.cpp.o  -o exeName liblib-name.a 
