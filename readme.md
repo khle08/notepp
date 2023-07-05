@@ -7,6 +7,9 @@
 
 3. Use the CMD to run code "./exeName"
 
+```bash
+g++ async.cpp -o async -std=c++11 -pthread
+```
 
 
 # To run the CMakeLists project file:
