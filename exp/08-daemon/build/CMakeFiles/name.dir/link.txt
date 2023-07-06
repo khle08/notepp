@@ -1,2 +1,2 @@
-/usr/bin/ar qc libname.a  CMakeFiles/name.dir/hello.cpp.o CMakeFiles/name.dir/daemon/source/daemon.cpp.o
+/usr/bin/ar qc libname.a CMakeFiles/name.dir/hello.cpp.o CMakeFiles/name.dir/daemon/source/daemon.cpp.o
 /usr/bin/ranlib libname.a

@@ -1,3 +1,0 @@
-/etc/daemon-template/daemon-template.conf
-/etc/systemd/system/exeName.service
-/usr/bin/exeName
