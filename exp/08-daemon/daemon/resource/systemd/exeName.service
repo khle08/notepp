@@ -1,0 +1,14 @@
+[Unit]
+Description=abcdef
+After=network.taget
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/exeName --config /etc/daemon-template/daemon-template.conf
+ExecReload=/bin/kill -HUP $MAINPID
+User=root
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

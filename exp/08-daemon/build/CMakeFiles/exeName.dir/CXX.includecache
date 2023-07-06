@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../daemon/include/daemon.hpp
+csignal
+-
+functional
+-
+
+../daemon/include/log.hpp
+chrono
+-
+iomanip
+-
+iostream
+-
+sstream
+-
+type_traits
+-
+
+/home/ubt/Documents/algorithm/C++/cmake-daemon/hello.hpp
+
+/home/ubt/Documents/algorithm/C++/cmake-daemon/main.cpp
+chrono
+-
+thread
+-
+iostream
+-
+hello.hpp
+/home/ubt/Documents/algorithm/C++/cmake-daemon/hello.hpp
+log.hpp
+/home/ubt/Documents/algorithm/C++/cmake-daemon/log.hpp
+daemon.hpp
+/home/ubt/Documents/algorithm/C++/cmake-daemon/daemon.hpp
+
