@@ -27,7 +27,7 @@ void Daemon::signalHandler(int signal) {
     switch (signal) {
         case SIGINT:
         case SIGTERM: {
-            Daemon::instance().m_isRunning = false;
+            Daemon::instance().m_isRunning = true;  // default: false
             break;
         }
         case SIGHUP: {
