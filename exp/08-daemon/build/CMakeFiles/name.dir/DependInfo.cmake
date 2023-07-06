@@ -1,19 +1,21 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ubt/Documents/algorithm/C++/notepp/exp/08-daemon/daemon/source/daemon.cpp" "/home/ubt/Documents/algorithm/C++/notepp/exp/08-daemon/build/CMakeFiles/name.dir/daemon/source/daemon.cpp.o"
+  "/home/ubt/Documents/algorithm/C++/notepp/exp/08-daemon/hello.cpp" "/home/ubt/Documents/algorithm/C++/notepp/exp/08-daemon/build/CMakeFiles/name.dir/hello.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../daemon/include"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubt/Documents/c++/notepp/exp/08-daemon/daemon/source/daemon.cpp" "CMakeFiles/name.dir/daemon/source/daemon.cpp.o" "gcc" "CMakeFiles/name.dir/daemon/source/daemon.cpp.o.d"
-  "/home/ubt/Documents/c++/notepp/exp/08-daemon/hello.cpp" "CMakeFiles/name.dir/hello.cpp.o" "gcc" "CMakeFiles/name.dir/hello.cpp.o.d"
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
