@@ -1,4 +1,8 @@
 
+// There are many other signals in UNIX that can be used to control the behavior of the program
+// ref 1: https://dsa.cs.tsinghua.edu.cn/oj/static/unix_signal.html
+// ref 2: https://zh.wikipedia.org/zh-tw/Unix%E4%BF%A1%E5%8F%B7
+
 #include "daemon.hpp"
 #include "log.hpp"
 
@@ -31,7 +35,7 @@ void Daemon::signalHandler(int signal) {
             break;
         }
         case SIGHUP: {
-            Daemon::instance().m_reload = true;
+            Daemon::instance().m_isRunning = true;  // default: m_reload
             break;
         }
     }
