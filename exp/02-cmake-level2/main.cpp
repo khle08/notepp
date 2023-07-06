@@ -17,9 +17,9 @@
 #define print(x) std::cout << x << std::endl
 
 int main() {
-	hello::say_hello();
+    hello::say_hello();
 
-	pid_t pid;
+    pid_t pid;
     int x_fd;
 
     // 1. fork off the parent process
@@ -101,5 +101,5 @@ int main() {
     }
     closelog();
     close(fd);
-	return 0;
+    return 0;
 }

@@ -36,8 +36,8 @@ public:
 	}
 
 private:
-	std::vector<int> vec;
 	std::string str;
+	std::vector<int> vec;
 };
 
 
