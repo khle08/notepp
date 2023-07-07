@@ -23,6 +23,19 @@ std::string strConcat(std::vector<std::string> strVec)
 }
 
 
+std::string zeroFmt(int num, int n)
+{
+    // input: zeroFmt(4, 23); output: "0023"
+
+    std::string s = std::to_string(n);
+    if (num > s.length()) {
+        return std::string(num - s.length(), '0') + s;
+    } else {
+        return std::to_string(n);
+    }
+}
+
+
 int strFind()
 {
     std::string str ("There are two needles in this haystack with needles.");
@@ -55,6 +68,10 @@ int strFind()
 
 int main()
 {
+    const char *e = "char";
+    std::string s = "string";
+    print(s + e);  // can add them together
+
     char buffer[100];
     int age = 23;
 
