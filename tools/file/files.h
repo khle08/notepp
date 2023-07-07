@@ -51,8 +51,11 @@ int readFile(std::string fileName);
 int strReplace(std::string& str, const std::string& from, const std::string& to);
 std::string strConcat(std::vector<std::string> strVec);
 int strSplit(std::string& str, std::string delim, std::vector<std::string>& strVec);
+int strip(std::string& str);
+
 std::string dirName(std::string dir, bool full_path = true);
 bool fileExist(const std::string& name);
+bool dirExist(const std::string& name);
 int makedirs(std::string pth);
 
 

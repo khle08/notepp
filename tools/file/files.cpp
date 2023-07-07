@@ -126,6 +126,19 @@ int strSplit(std::string& str, std::string delim, std::vector<std::string>& strV
 }
 
 
+int strip(std::string& str)
+{
+    while (str.find(" ") != std::string::npos) {
+        strReplace(str, " ", "");  // get rid of all space
+    }
+
+    while (str.find("\"") != std::string::npos) {
+        strReplace(str, "\"", "");  // get rid of all "
+    }
+    return 0;
+}
+
+
 std::string dirName(std::string dir, bool full_path)
 {
 	std::vector<std::string> folders;
@@ -144,6 +157,22 @@ bool fileExist(const std::string& name)
 {
     struct stat buffer;
     return (stat (name.c_str(), &buffer) == 0);
+}
+
+
+bool dirExist(const std::string& name)
+{
+    struct stat info;
+    if (stat(name.c_str(), &info) != 0) {
+        // cannot access
+        return false;
+    } else if (info.st_mode & S_IFDIR) {
+        // dir exists
+        return true;
+    } else {
+        // dir not exists
+        return false;
+    }
 }
 
 
