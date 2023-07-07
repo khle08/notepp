@@ -18,7 +18,7 @@ int strSplit(std::string& str, std::string delim, std::vector<std::string>& strV
 }
 
 
-int Time::getTime()
+std::string Time::getTime()
 {
     std::time_t t = std::time(nullptr);
     struct std::tm *ptm = std::localtime(&t);
@@ -36,7 +36,10 @@ int Time::getTime()
     h = std::stoi(YMDHMS[3]);  // hour
     m = std::stoi(YMDHMS[4]);  // minute
     s = std::stoi(YMDHMS[5]);  // second
-    return 0;
+
+    std::string info = zeroFmt(4, Y) + "-" + zeroFmt(2, M) + "-" + zeroFmt(2, D);
+    info += "_" + zeroFmt(2, h) + "-" + zeroFmt(2, m) + "-" + zeroFmt(2, s);
+    return info;
 }
 
 
@@ -75,3 +78,13 @@ double Time::getMicroSeconds()
               (t_end.tv_usec - t_start.tv_usec);
     return (double)t;
 }
+
+
+std::string Time::zeroFmt(int num, int n)
+{
+    std::string s = std::to_string(n);
+    if (num > s.length()) {
+        return std::string(num - s.length(), '0') + s;
+    } else {
+        return std::to_string(n);
+    }

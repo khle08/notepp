@@ -19,12 +19,14 @@ class Time
 public:
     int Y, M, D, h, m, s;
 
-    int getTime();
     int getSeconds();
+    std::string getTime();
 
     int now(std::string mode);
     double getMilliSeconds();
     double getMicroSeconds();
+
+    std::string zeroFmt(int num, int n);
 
 private:
     int sec = 0;
