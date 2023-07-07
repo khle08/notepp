@@ -1,0 +1,2 @@
+/usr/bin/ar qc libname.a CMakeFiles/name.dir/daemon/daemon.cpp.o
+/usr/bin/ranlib libname.a
