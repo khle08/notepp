@@ -1,5 +1,6 @@
 
 #include <map>
+#include <mutex>
 #include <thread>
 #include <string>
 #include <iostream>
@@ -58,12 +59,13 @@ int main(int argc, char const *argv[])
     Cam cam = {-1, -1, img, false};
     std::vector<Cam> imgVec = {cam};
 
-
+    std::mutex imgMutex;
+    std::condition_variable cvMutex;
     std::map<int, std::vector<Cam>> images = {};
 
     std::vector<std::string> srcVec = {"/Users/kcl/Desktop/ADAS.mov", "1"};
     for (int i = 0; i < srcVec.size(); i++) {
-        ImgReader imr(srcVec[i], i + 1, images);
+        ImgReader imr(srcVec[i], i + 1, images, imgMutex);
     }
     usleep(3 * 1000 * 1000);    // 1s
 
