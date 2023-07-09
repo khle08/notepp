@@ -1,3 +1,7 @@
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/socket/build/CMakeFiles/exe.dir
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/socket/build/CMakeFiles/edit_cache.dir
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/socket/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/tcpSer.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/tcpCli.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/edit_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/udpCli.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/udpSer.dir
+/home/ubt/Documents/algorithm/C++/notepp/tools/socket/build/CMakeFiles/exe.dir

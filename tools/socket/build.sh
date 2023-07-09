@@ -6,6 +6,6 @@ if [[ $1 == "rm" ]]; then
 fi
 
 cmake ..
-make -j2
+make -j4
 
-./exe
+# ./exe

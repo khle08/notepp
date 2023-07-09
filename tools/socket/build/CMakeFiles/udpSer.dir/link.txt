@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14   CMakeFiles/udpSer.dir/examples/udp-server.cpp.o  -o udpSer -pthread 

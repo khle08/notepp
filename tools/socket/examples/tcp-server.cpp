@@ -15,7 +15,9 @@ int server(int port)
 
         newClient->onMessageReceived = [newClient](std::string msg) {
             std::cout << "[MSG] " << newClient->remoteAddress() << ":" << newClient->remotePort() << " => " << msg << std::endl;
-            newClient->Send("OK!");
+            if (msg == "OK?") {
+                newClient->Send("OK!");
+            }
         };
         
         // // If you want to use raw bytes
