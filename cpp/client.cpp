@@ -20,7 +20,11 @@ int client_receiver() {
     serverAddress.sin_port = htons(8080);
 
     // Convert IP address from text to binary form
+<<<<<<< HEAD
     if (inet_pton(AF_INET, "192.168.110.64", &(serverAddress.sin_addr)) <= 0) {
+=======
+    if (inet_pton(AF_INET, "127.0.0.1", &(serverAddress.sin_addr)) <= 0) {
+>>>>>>> bee7c01a27a3c13648beb2e9113e120b5243503c
         std::cerr << "Failed to convert IP address." << std::endl;
         return 1;
     }
