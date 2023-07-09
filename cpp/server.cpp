@@ -33,31 +33,37 @@ int server_sender() {
 
     std::cout << "Server is listening for incoming connections..." << std::endl;
 
-    // Accept a client connection
-    sockaddr_in clientAddress{};
-    socklen_t clientAddressLength = sizeof(clientAddress);
-    int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLength);
-    if (clientSocket == -1) {
-        std::cerr << "Failed to accept client connection." << std::endl;
-        return 1;
-    }
-
-    std::cout << "Client connected." << std::endl;
-
-    int i = 0;
     while (true) {
-        // Send a message to the client
-        const char *message = std::to_string(i).c_str();
-        if (send(clientSocket, message, strlen(message), 0) == -1) {
-            std::cerr << "Failed to send message to client." << std::endl;
+        // Accept a client connection
+        sockaddr_in clientAddress{};
+        socklen_t clientAddressLength = sizeof(clientAddress);
+        int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLength);
+        if (clientSocket == -1) {
+            std::cerr << "Failed to accept client connection." << std::endl;
+            continue;
         }
-        i++;
-        usleep(1 * 1000 * 1000);
-    }
-        
 
-    // Close the sockets
-    close(clientSocket);
+        std::cout << "Client connected." << std::endl;
+
+        
+        int i = 0;
+        while (true) {
+            // Send a message to the client
+            const char *message = std::to_string(i).c_str();
+            std::cout << clientSocket << std::endl;
+            if (send(clientSocket, message, strlen(message), 0) == -1) {
+                std::cerr << "Failed to send message to client." << std::endl;
+                break;
+            }
+            i++;
+            usleep(1 * 1000 * 1000);
+        }
+
+        // Close the client socket
+        close(clientSocket);
+    }
+
+    // Close the server socket
     close(serverSocket);
 
     return 0;

@@ -19,11 +19,11 @@ int client_receiver() {
     serverAddress.sin_family = AF_INET;
     serverAddress.sin_port = htons(8080);
 
-    // // Convert IP address from text to binary form
-    // if (inet_pton(AF_INET, "127.0.0.1", &(serverAddress.sin_addr)) <= 0) {
-    //     std::cerr << "Failed to convert IP address." << std::endl;
-    //     return 1;
-    // }
+    // Convert IP address from text to binary form
+    if (inet_pton(AF_INET, "127.0.0.1", &(serverAddress.sin_addr)) <= 0) {
+        std::cerr << "Failed to convert IP address." << std::endl;
+        return 1;
+    }
 
     // Connect to the server
     if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
