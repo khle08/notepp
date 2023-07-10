@@ -1,0 +1,7 @@
+build/*
+
+!build/exe
+!buid/tcpCli
+!build/tcpSer
+!build/udpCli
+!build/udpSer
