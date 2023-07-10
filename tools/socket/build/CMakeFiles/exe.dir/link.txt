@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++14   CMakeFiles/exe.dir/main.cpp.o  -o exe -pthread 

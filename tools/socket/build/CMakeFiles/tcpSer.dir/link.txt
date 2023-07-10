@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++14   CMakeFiles/tcpSer.dir/examples/tcp-server.cpp.o  -o tcpSer -pthread 
