@@ -68,8 +68,8 @@ public:
         }
 
         this->address.sin_family = AF_INET;
-        this->address.sin_addr.s_addr = INADDR_ANY;
         this->address.sin_port = htons(port);
+        // this->address.sin_addr.s_addr = INADDR_ANY;  // not necessary
 
         if (bind(this->sock, (const sockaddr*)&this->address, sizeof(this->address)) == -1)
         {
