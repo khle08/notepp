@@ -53,8 +53,10 @@ int client_receiver() {
 
 
 int client_sender() {
+    // TCP: SOCK_STREAM ; UDP: SOCK_DGRAM
+
     // Create a socket
-    int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+    int clientSocket = socket(AF_INET, SOCK_DGRAM, 0);
     if (clientSocket == -1) {
         std::cerr << "Failed to create socket." << std::endl;
         return 1;
@@ -63,7 +65,7 @@ int client_sender() {
     // Set up server address
     sockaddr_in serverAddress{};
     serverAddress.sin_family = AF_INET;
-    serverAddress.sin_port = htons(8080);
+    serverAddress.sin_port = htons(8888);
 
     // Convert IP address from text to binary form
     if (inet_pton(AF_INET, "127.0.0.1", &(serverAddress.sin_addr)) <= 0) {
@@ -71,15 +73,23 @@ int client_sender() {
         return 1;
     }
 
-    // Connect to the server
-    if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
-        std::cerr << "Failed to connect to server." << std::endl;
-        return 1;
-    }
+    // // Connect to the server (TCP only)
+    // if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
+    //     std::cerr << "Failed to connect to server." << std::endl;
+    //     return 1;
+    // }
 
-    // Send a message to the server
-    const char *message = "Hello, server!";
-    if (send(clientSocket, message, strlen(message), 0) == -1) {
+    // // Send a message to the server (TCP)
+    // const char *message = "Hello, server!";
+    // if (send(clientSocket, message, strlen(message), 0) == -1) {
+    //     std::cerr << "Failed to send message to server." << std::endl;
+    // }
+
+    // Send a message to the server (UDP)
+    uint8_t msg[] = {0xFF, 0xAA};
+    size_t length = sizeof(msg);
+
+    if (sendto(clientSocket, msg, length, 0, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
         std::cerr << "Failed to send message to server." << std::endl;
     }
 
@@ -92,8 +102,8 @@ int client_sender() {
 
 int main()
 {
-    client_receiver();
-    // client_sender();
+    // client_receiver();
+    client_sender();
 
     return 0;
 }

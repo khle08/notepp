@@ -17,6 +17,11 @@ public:
 
     explicit TCPSocket(FDR_ON_ERROR, int socketId = -1) : BaseSocket(onError, TCP, socketId){}
 
+    // =================================================================
+    // "char" equals to "uint8_t"
+    ssize_t Send(uint8_t hex[], size_t length) { return send(this->sock, hex, length, 0); }
+    // =================================================================
+
     // Send raw bytes
     ssize_t Send(const char* bytes, size_t byteslength) { return send(this->sock, bytes, byteslength, 0); }
     // Send std::string

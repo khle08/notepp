@@ -81,6 +81,11 @@ public:
         return this->SendTo(message.c_str(), message.length(), host.c_str(), port, onError);
     }
 
+    // =================================================================
+    // "char" equals to "uint8_t"
+    ssize_t Send(uint8_t hex[], size_t length) { return send(this->sock, hex, length, 0); }
+    // =================================================================
+
     // Send raw bytes to the `Connect()`ed server.
     ssize_t Send(const char* bytes, size_t byteslength) { return send(this->sock, bytes, byteslength, 0); }
     // Send std::string to the `Connect()`ed server.
