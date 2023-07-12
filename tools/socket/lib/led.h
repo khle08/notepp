@@ -104,7 +104,7 @@ BUFFER_INFO interCodeBuffer(int uid, const char* content, std::string language)
     // Encode UID in GB2312 format
     const char* _uid = zeroFmt(9, uid).c_str();
     int len_uid = (int)strlen(_uid);
-    print("uid: " << len_uid);
+    // print("uid: " << len_uid);
     char buf_uid[len_uid];          // <= encoded data
     rc = u2g(_uid, strlen(_uid), buf_uid, len_uid);
 

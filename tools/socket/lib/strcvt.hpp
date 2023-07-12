@@ -34,7 +34,6 @@ int code_convert(const char *from_charset, const char *to_charset,
     if (cc::iconv(cd, pin, &inlen, pout, &outlen)==-1)
         return -1;
 
-    print(*outbuf);
     cc::iconv_close(cd); 
     return 0; 
 } 

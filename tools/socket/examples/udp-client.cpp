@@ -17,7 +17,7 @@ using namespace std;
 int main()
 {
     // Our constants:
-    constexpr const char* IP = "192.168.110.64";
+    constexpr const char* IP = "192.168.110.25";
     constexpr uint16_t PORT = 8888;
 
     // Initialize socket.
