@@ -1,5 +1,15 @@
 #include "udpserver.hpp"
 #include <iostream>
+#include <string>
+
+#include <vector>
+#include <cerrno>
+#include <stdlib.h>
+
+#include "led.h"
+#include "strcvt.hpp"
+
+#define print(x) std::cout << x << std::endl;
 
 using namespace std;
 
@@ -36,12 +46,15 @@ int main()
         cout << errorCode << " : " << errorMessage << endl;
     });
 
+    BUFFER_INFO b = interCodeBuffer(1, "testing", "eng");
+
     // You should do an input loop, so the program won't terminate immediately
     string input;
     getline(cin, input);
     while (input != "exit")
     {
-        udpServer.SendTo(input, ip, pt);
+        // udpServer.SendTo(input, ip, pt);
+        udpServer.SendTo(b.arrchBuffer, b.nLen, ip, pt);
         getline(cin, input);
     }
 

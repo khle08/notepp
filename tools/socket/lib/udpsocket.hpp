@@ -24,6 +24,47 @@ public:
             t.detach();
         }
     }
+
+    // Send raw bytes to a spesific `host` & `port` with no connection
+    ssize_t SendTo(uint8_t hex[], size_t byteslength, const char* host, uint16_t port, FDR_ON_ERROR)
+    {
+        sockaddr_in hostAddr;
+
+        struct addrinfo hints, *res, *it;
+        memset(&hints, 0, sizeof(hints));
+        hints.ai_family = AF_INET;
+        hints.ai_socktype = SOCK_DGRAM;
+
+        int status;
+        if ((status = getaddrinfo(host, NULL, &hints, &res)) != 0)
+        {
+            onError(errno, "Invalid address." + std::string(gai_strerror(status)));
+            return -1;
+        }
+
+        for (it = res; it != NULL; it = it->ai_next)
+        {
+            if (it->ai_family == AF_INET)
+            { // IPv4
+                memcpy((void* )(&hostAddr), (void* )it->ai_addr, sizeof(sockaddr_in));
+                break; // for now, just get first ip (ipv4).
+            }
+        }
+
+        freeaddrinfo(res);
+
+        hostAddr.sin_port = htons(port);
+        hostAddr.sin_family = AF_INET;
+        
+        ssize_t sent_length = sendto(this->sock, hex, byteslength, 0, (sockaddr*)&hostAddr, sizeof(hostAddr));
+        if (sent_length == -1)
+        {
+            onError(errno, "Cannot send message to the address.");
+            return -1;
+        }
+
+        return sent_length;
+    }
     
     // Send raw bytes to a spesific `host` & `port` with no connection
     ssize_t SendTo(const char* bytes, size_t byteslength, const char* host, uint16_t port, FDR_ON_ERROR)
@@ -83,6 +124,11 @@ public:
 
     // =================================================================
     // "char" equals to "uint8_t"
+    ssize_t SendTo(uint8_t hex[], size_t byteslength, const std::string& host, uint16_t port, FDR_ON_ERROR)
+    {
+        return this->SendTo(hex, byteslength, host.c_str(), port, onError);
+    }
+
     ssize_t Send(uint8_t hex[], size_t length) { return send(this->sock, hex, length, 0); }
     // =================================================================
 

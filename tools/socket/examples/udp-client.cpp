@@ -6,6 +6,7 @@
 #include <cerrno>
 #include <stdlib.h>
 
+#include "led.h"
 #include "strcvt.hpp"
 
 #define print(x) std::cout << x << std::endl;
@@ -38,36 +39,31 @@ int main()
     };
     */
 
+    ////////////////////////////////////////////////////////////////////
     // std::vector<uint8_t> v = {0xFe, 0xAB};
     // uint8_t msg[v.size()];
     // for (int i = 0; i < v.size(); i++) {
     //     msg[i] = v[i];
     // }
-    // ==========
-    unsigned char ii = 0;
-    char msg[11];// = { 0 };
-    msg[ii++] = (char)0xFF;
-    msg[ii++] = 0x5c;
-    msg[ii++] = 0x4B;
+    // ================================================================
+    // unsigned char ii = 0;
+    // // msg[ii++] = (char)0xFF;
+    // // msg[ii++] = 0x5c;
+    // // msg[ii++] = 0x4B;
 
-
-    const char *in_utf8 = "静态模式";
-    print(strlen(in_utf8));
-    char out[16];
-    int rc = u2g(in_utf8, strlen(in_utf8), out, 16);
-    for (int i = 0; i < 8; i++) {
-        msg[ii++] = out[i];
-    }
-
-
-    // uint8_t data[v.size() + 16];
-    // for (int i = 0; i < v.size() + 16; i++) {
-    //     if (i < v.size()) {
-    //         data[i] = v[i];
-    //     } else {
-    //     data[i] = (uint8_t)out[i];
-    //     }
+    // // number or english: string length == strlen()
+    // // chinese or others: string length == strlen() * 2 / 3
+    // const char *in_utf8 = zeroFmt(9, 1).c_str();
+    // int t = (int)strlen(in_utf8);// * 2 / 3;
+    // char msg[t];// = { 0 };
+    // char out[t];
+    // int rc = u2g(in_utf8, strlen(in_utf8), out, t);
+    // for (int i = 0; i < t; i++) {
+    //     msg[ii++] = out[i];
     // }
+    // ================================================================
+    // BUFFER_INFO b = interCodeBuffer(1, "testing", "eng");
+    ////////////////////////////////////////////////////////////////////
 
     // You should do an input loop, so the program won't terminate immediately
     string input;
@@ -78,10 +74,11 @@ int main()
         
 
         // uint8_t msg[3000] = {0xFe, 0x5c, 93, 0, 0, 0};
-        size_t length = sizeof(msg);
-        print(length);
+        // size_t length = sizeof(msg);
+        // udpSocket.Send(msg, length);
 
-        udpSocket.Send(msg, length);
+        BUFFER_INFO b = interCodeBuffer(1, input.c_str(), "eng");
+        udpSocket.Send(b.arrchBuffer, b.nLen);
         getline(cin, input);
     }
 
