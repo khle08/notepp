@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 #include "led.h"
+#include "buzzer.h"
 #include "strcvt.hpp"
 
 #define print(x) std::cout << x << std::endl;
@@ -41,20 +42,48 @@ int main()
     
 
     // Bind the server to a port.
-    udpServer.Bind(8888, [](int errorCode, string errorMessage) {
+    udpServer.Bind(19999, [](int errorCode, string errorMessage) {
         // BINDING FAILED:
         cout << errorCode << " : " << errorMessage << endl;
     });
-
-    BUFFER_INFO b = interCodeBuffer(1, "testing", "eng");
 
     // You should do an input loop, so the program won't terminate immediately
     string input;
     getline(cin, input);
     while (input != "exit")
     {
+        BUFFER_INFO b = interCodeBuffer(168111100, input.c_str(), "chi");
+        BUFFER_INFO bzon = buzzer_on();
+        BUFFER_INFO bzof = buzzer_off();
+
         // udpServer.SendTo(input, ip, pt);
-        udpServer.SendTo(b.arrchBuffer, b.nLen, ip, pt);
+
+        // Corner
+        udpServer.SendTo(b.arrchBuffer, b.nLen, "192.168.111.100", 8800);
+
+        // udpServer.SendTo(bzon.arrchBuffer, bzon.nLen, "192.168.111.62", 19999);
+        // usleep(2.0 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.62", 19999);
+        // usleep(0.2 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.62", 19999);
+        // usleep(0.2 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.62", 19999);
+        // usleep(0.2 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.62", 19999);
+
+        // // Side wall
+        // udpServer.SendTo(b.arrchBuffer, b.nLen, "192.168.111.102", 8800);
+
+        // udpServer.SendTo(bzon.arrchBuffer, bzon.nLen, "192.168.111.63", 19999);
+        // usleep(2.0 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.63", 19999);
+        // usleep(0.2 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.63", 19999);
+        // usleep(0.2 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.63", 19999);
+        // usleep(0.2 * 1000 * 1000);
+        // udpServer.SendTo(bzof.arrchBuffer, bzof.nLen, "192.168.111.63", 19999);
+
         getline(cin, input);
     }
 

@@ -91,7 +91,7 @@ BUFFER_INFO interCodeBuffer(int uid, const char* content, std::string language)
     BUFFER_INFO b;
 
     int ledColor = 49;    // 屏幕基色，单基色=49、双基色=50、三基色=51
-    int showWidth = 128;  // 区域宽度，需要与模板的一致
+    int showWidth = 144;  // 区域宽度，需要与模板的一致
     int showHeight = 32;  // 区域宽度，需要与模板的一致
     int showFont = 1;     // 显示字体，1=宋体、2=黑体、3=楷体
     int showSize = 2;     // 显示字体大小，0=12x12、1=16x16、2=32x32、3=48x48

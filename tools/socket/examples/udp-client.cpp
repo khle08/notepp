@@ -17,8 +17,8 @@ using namespace std;
 int main()
 {
     // Our constants:
-    constexpr const char* IP = "192.168.110.25";
-    constexpr uint16_t PORT = 8888;
+    constexpr const char* IP = "192.168.111.254";
+    constexpr uint16_t PORT = 19999;
 
     // Initialize socket.
     UDPSocket<100> udpSocket(true); // "true" to use Connection on UDP. Default is "false".
