@@ -1,3 +1,6 @@
+
+// examples in 03_cmake shows more things but is not finished yet
+
 #include <iostream>
 #include <vector>
 #include <string>
