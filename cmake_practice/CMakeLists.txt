@@ -102,3 +102,9 @@ endfunction()
 
 sum(value 9 71)
 message(STATUS "Sum num: ${value}")
+
+
+set(condition MNN)
+if (${condition} MATCHES "MNN")
+    message(STATUS "MNN framework")
+endif()

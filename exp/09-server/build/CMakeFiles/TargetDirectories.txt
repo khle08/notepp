@@ -1,0 +1,14 @@
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/install/strip.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/edit_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/exe.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/list_install_components.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/install/local.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/CMakeFiles/install.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/install/strip.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/edit_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/uSockets.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/list_install_components.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/install/local.dir
+/home/ubt/Documents/algorithm/C++/notepp/exp/09-server/build/lib/CMakeFiles/install.dir

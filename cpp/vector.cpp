@@ -58,6 +58,7 @@ int main()
 	std::vector<double>::iterator it;
 	for (it = vecDouble.begin(); it != vecDouble.end(); ++it){
 		print(&it << " : " << *it);
+		print(&it << " : " << *(it+1));
 	}
 
 	print("");

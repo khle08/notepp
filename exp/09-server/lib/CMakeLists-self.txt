@@ -1,0 +1,66 @@
+
+if(NOT LIBUV_INCLUDE_DIR)
+    find_path(LIBUV_INCLUDE_DIR uv.h)
+endif()
+if(NOT LIBUV_LIBRARY)
+    find_library(LIBUV_LIBRARY NAMES uv uv1)
+endif()
+
+
+# ======================================================================
+set(ssl_dir ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/boringssl/install)
+set(crypto_dir ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/boringssl/install)
+set(lsquic_dir ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/lsquic/install)
+# ======================================================================
+
+
+find_package(Threads REQUIRED)
+
+include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/src)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/uSockets/src)
+
+
+add_library(openssl STATIC IMPORTED)
+set_target_properties(openssl PROPERTIES VERSION 1.0 SOVERSION 1
+                      IMPORTED_LOCATION ${ssl_dir}/lib/libssl.a
+                      INTERFACE_INCLUDE_DIRECTORIES ${ssl_dir}/include)
+
+
+add_library(crypto STATIC IMPORTED)
+set_target_properties(crypto PROPERTIES VERSION 1.0 SOVERSION 1
+                      IMPORTED_LOCATION ${crypto_dir}/lib/libcrypto.a
+                      INTERFACE_INCLUDE_DIRECTORIES ${crypto_dir}/include)
+
+
+add_library(lsquic STATIC IMPORTED)
+set_target_properties(lsquic PROPERTIES VERSION 1.0 SOVERSION 1
+                      IMPORTED_LOCATION ${lsquic_dir}/lib/liblsquic.a
+                      INTERFACE_INCLUDE_DIRECTORIES ${lsquic_dir}/include)
+
+
+file(GLOB USOCKETS_SRC uSockets/src/*.c* uSockets/src/eventing/*.c* uSockets/src/crypto/*.c*)
+add_library(uSockets ${USOCKETS_SRC})
+target_compile_definitions(uSockets PRIVATE -DUSE_OPENSSL -DLIBUS_USE_OPENSSL -DLIBUS_USE_LIBUV)
+target_include_directories(uSockets PUBLIC ${ssl_dir}/include ${crypto_dir}/include ${lsquic_dir}/include 
+                                    PRIVATE ${CMAKE_CURRENT_LIST_DIR}/uSockets/src)
+target_link_libraries(uSockets PUBLIC
+                      openssl
+                      crypto
+                      lsquic
+                      ${LIBUV_LIBRARY}
+                      -lpthread
+                      )
+
+
+install(TARGETS uSockets
+    RUNTIME DESTINATION bin
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+)
+
+if(INSTALL_HEADERS)
+    file(GLOB HEADERS uSockets/src/*.h)
+    install(FILES ${HEADERS} DESTINATION include)
+    file(GLOB HEADERS uSockets/src/interfaces/*.h)
+    install(FILES ${HEADERS} DESTINATION include/interfaces)
+endif()

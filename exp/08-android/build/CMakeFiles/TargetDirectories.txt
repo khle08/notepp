@@ -1,0 +1,14 @@
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/exe.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/list_install_components.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/install.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/install/local.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/CMakeFiles/install/strip.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/imgReader.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/list_install_components.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/install.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/install/local.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/07-opencv/build/lib/CMakeFiles/install/strip.dir
