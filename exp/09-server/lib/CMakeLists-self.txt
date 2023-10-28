@@ -12,6 +12,7 @@ set(ssl_dir ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/boringssl/install)
 set(crypto_dir ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/boringssl/install)
 set(lsquic_dir ${CMAKE_CURRENT_SOURCE_DIR}/uSockets/lsquic/install)
 # ======================================================================
+# file(GLOB name ${ssl_dir}/**/*.h*)
 
 
 find_package(Threads REQUIRED)
