@@ -1,0 +1,4 @@
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/polygon/build/CMakeFiles/polygon.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/polygon/build/CMakeFiles/exe.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/polygon/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/polygon/build/CMakeFiles/rebuild_cache.dir
