@@ -1,14 +1,10 @@
 #ifndef _POLYGON_H_
 #define _POLYGON_H_
 
+#include <cmath>
 #include <vector>
 #include <string>
-#include <iomanip>
-#include <sstream>
-#include <fstream>
 #include <iostream>
-#include <sys/stat.h>
-#include <sys/time.h>
 
 
 #define print(x) std::cout << x << std::endl
@@ -17,7 +13,11 @@
 class Polygon
 {
 public:
-    int Y, M, D, h, m, s;
+    Polygon();
+    ~Polygon();
+
+    bool isInArea(std::vector<std::vector<double>>& ps, 
+                  std::vector<double>& p, int num_corner);
 
 private:
     int sec = 0;
