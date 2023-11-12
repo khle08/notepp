@@ -8,9 +8,10 @@ if [[ $1 == "rm" ]]; then
 fi
 
 
-# These options only support ms version of CMakeLists.txt
+# These options only support ms version (ms/self) of lib/CMakeLists.txt
+# OpenSSL version must be 1.1.X or error occurrs when compiling
 cmake \
--DCMAKE_USE_OPENSSL=ON \
+-DCMAKE_USE_OPENSSL=OFF \
 -DCMAKE_USE_EVENT=ON \
 -DCMAKE_USE_NETWORK=ON \
 -DCMAKE_C_COMPILER=/usr/local/bin/gcc-12 \
