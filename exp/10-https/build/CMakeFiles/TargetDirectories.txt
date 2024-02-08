@@ -1,0 +1,3 @@
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/exe.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/rebuild_cache.dir
