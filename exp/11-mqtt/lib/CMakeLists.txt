@@ -1,31 +1,24 @@
 
-add_library(imgReader SHARED imgReader.cpp)
-target_link_libraries(imgReader PRIVATE
-	                  ${CMAKE_THREAD_LIBS_INIT}
-                      ${EXTRA_LIBS}
-	                  opencv_calib3d
-                      opencv_core
-                      # opencv_features2d
-                      # opencv_flann
-                      opencv_gapi
-                      opencv_highgui
-                      # opencv_img_hash
-                      opencv_imgcodecs
-                      # opencv_optflow
-                      opencv_photo
-                      opencv_video
-                      opencv_videoio
-                      # opencv_videostab
-                      # opencv_xfeatures2d
-                      # opencv_ximgproc)
-                      )
+# add_library(pahoMqtt SHARED IMPORTED)
 
-set_target_properties(imgReader PROPERTIES VERSION 1.0 SOVERSION 1)
-# If versions are setup, 3 libs will be generated:
-# libcalibration.1.0.so / libcalibration.1.so / libcalibration.so
+# # If versions are setup, 3 libs will be generated:
+# # libcalibration.1.0.so / libcalibration.1.so / libcalibration.so
+# set_target_properties(pahoMqtt PROPERTIES
+#     # VERSION 1.0 SOVERSION 1
+#     IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/paho/libpaho-mqtt3c.so
+#     # IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/paho/libpaho-mqtt3c.so
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTAsync.h
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTClient.h
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTClientPersistence.h
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTExportDeclarations.h
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTProperties.h
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTReasonCodes.h
+#     PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/lib/paho/include/MQTTSubscribeOpts.h
+# )
 
-install(TARGETS imgReader
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib)
-install(FILES imgReader.h DESTINATION include)
+
+# install(TARGETS pahoMqtt
+#         LIBRARY DESTINATION lib/paho
+#         ARCHIVE DESTINATION lib/paho)
+# install(FILES imgReader.h DESTINATION include)
 

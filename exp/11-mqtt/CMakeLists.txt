@@ -21,6 +21,22 @@ endif()
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 
+########################################################################
+# [!] Setup where Paho is compiled
+# set(paho_dir /home/ubt/Documents/library/paho.mqtt.c/ubuntu)
+set(paho_dir ${CMAKE_CURRENT_SOURCE_DIR}/lib/paho)
+
+if (APPLE)
+    file(GLOB PAHO_LIBS ${paho_dir}/lib/*.dylib)
+elseif (WIN32)
+    file(GLOB PAHO_LIBS ${paho_dir}/lib/*.dll)
+else()
+    file(GLOB PAHO_LIBS ${paho_dir}/lib/*.so)
+endif()
+
+include_directories(${paho_dir}/include)
+link_directories(${paho_dir}/lib)
+########################################################################
 
 
 # If this (below) is defined in lib/CMakeLists.txt, exe will not know how to include
@@ -39,5 +55,6 @@ add_executable(exe ${SOURCE})
 
 target_link_libraries(exe PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
-                      imgReader
+                      ${PAHO_LIBS}
+                      # pahoMqtt
                       )

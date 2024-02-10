@@ -1,0 +1,5 @@
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/exe.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/edit_cache.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/edit_cache.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/rebuild_cache.dir
