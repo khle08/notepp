@@ -59,4 +59,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/exe.dir/DependInfo.cmake"
+  "lib/CMakeFiles/mqtt.dir/DependInfo.cmake"
   )

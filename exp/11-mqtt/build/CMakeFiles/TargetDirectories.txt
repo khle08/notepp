@@ -1,5 +1,14 @@
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/exe.dir
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/edit_cache.dir
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/list_install_components.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/install.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/install/local.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles/install/strip.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/mqtt.dir
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/edit_cache.dir
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/rebuild_cache.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/list_install_components.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/install.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/install/local.dir
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/CMakeFiles/install/strip.dir

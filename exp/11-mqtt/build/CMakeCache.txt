@@ -239,6 +239,9 @@ expMqtt_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 expMqtt_SOURCE_DIR:STATIC=/home/ubt/Documents/c++/notepp/exp/11-mqtt
 
+//Dependencies for the target
+mqtt_LIB_DEPENDS:STATIC=general;/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/lib/libpaho-mqtt3a.so;general;/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/lib/libpaho-mqtt3c.so;
+
 
 ########################
 # INTERNAL cache entries

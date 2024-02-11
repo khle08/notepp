@@ -56,5 +56,6 @@ add_executable(exe ${SOURCE})
 target_link_libraries(exe PRIVATE 
                       ${CMAKE_THREAD_LIBS_INIT}
                       ${PAHO_LIBS}
-                      # pahoMqtt  # Failed to compile (err: -lpahoMqtt not found)
+                      # pahoMqtt  # Failed to compile this way (err: -lpahoMqtt not found)
+                      mqtt
                       )

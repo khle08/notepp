@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/snap/cmake/1366/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/snap/cmake/1366/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/snap/cmake/1366/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/snap/cmake/1366/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/snap/cmake/1366/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/snap/cmake/1366/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles /home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib//CMakeFiles/progress.marks
@@ -116,6 +161,44 @@ depend:
 	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+lib/CMakeFiles/mqtt.dir/rule:
+	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/mqtt.dir/rule
+.PHONY : lib/CMakeFiles/mqtt.dir/rule
+
+# Convenience name for target.
+mqtt: lib/CMakeFiles/mqtt.dir/rule
+.PHONY : mqtt
+
+# fast build rule for target.
+mqtt/fast:
+	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/mqtt.dir/build.make lib/CMakeFiles/mqtt.dir/build
+.PHONY : mqtt/fast
+
+mqtt.o: mqtt.cpp.o
+.PHONY : mqtt.o
+
+# target to build an object file
+mqtt.cpp.o:
+	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/mqtt.dir/build.make lib/CMakeFiles/mqtt.dir/mqtt.cpp.o
+.PHONY : mqtt.cpp.o
+
+mqtt.i: mqtt.cpp.i
+.PHONY : mqtt.i
+
+# target to preprocess a source file
+mqtt.cpp.i:
+	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/mqtt.dir/build.make lib/CMakeFiles/mqtt.dir/mqtt.cpp.i
+.PHONY : mqtt.cpp.i
+
+mqtt.s: mqtt.cpp.s
+.PHONY : mqtt.s
+
+# target to generate assembly for a file
+mqtt.cpp.s:
+	cd /home/ubt/Documents/c++/notepp/exp/11-mqtt/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/mqtt.dir/build.make lib/CMakeFiles/mqtt.dir/mqtt.cpp.s
+.PHONY : mqtt.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -123,7 +206,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... mqtt"
+	@echo "... mqtt.o"
+	@echo "... mqtt.i"
+	@echo "... mqtt.s"
 .PHONY : help
 
 

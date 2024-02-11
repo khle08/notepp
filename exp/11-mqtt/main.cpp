@@ -1,4 +1,5 @@
 
+#include <string>
 #include "stdlib.h"
 #include "string.h"
 #include "unistd.h"
@@ -13,7 +14,7 @@
 #define TOPIC       "1234"
 #define TIMEOUT     10000L
 
-void publish(MQTTClient client, char *topic, char *payload) {
+void publish(MQTTClient client, const char *topic, char *payload) {
     MQTTClient_message message = MQTTClient_message_initializer;
     message.payload = payload;
     message.payloadlen = strlen(payload);
@@ -37,10 +38,15 @@ int main(int argc, char *argv[]) {
     int rc;
     MQTTClient client;
 
-    MQTTClient_create(&client, ADDRESS, CLIENTID, 0, NULL);
+    const char* address = "tcp://guardingeyeai.com:8883";
+    const char* clientid = "mqttx_38c419c3";
+    const char* username = "emqx";
+    const char* password = "public";
+
+    MQTTClient_create(&client, address, clientid, 0, NULL);
     MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
-    conn_opts.username = USERNAME;
-    conn_opts.password = PASSWORD;
+    conn_opts.username = username;
+    conn_opts.password = password;
     MQTTClient_setCallbacks(client, NULL, NULL, on_message, NULL);
     if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS) {
         printf("Failed to connect, return code %d\n", rc);
@@ -48,13 +54,19 @@ int main(int argc, char *argv[]) {
     } else {
         printf("Connected to MQTT Broker!\n");
     }
+
+    const char* topic = "1234";
+    int qos = 0;
+    int timeout = 10000L;
+
     // subscribe topic
-    MQTTClient_subscribe(client, TOPIC, QOS);
+    MQTTClient_subscribe(client, topic, qos);
     char payload[16];
     for (int i = 0; i < 100; i += 1) {
         // publish message to broker
+        // std::string payload = "message-" + std::to_string(i);
         snprintf(payload, 16, "message-%d", i);
-        publish(client, TOPIC, payload);
+        publish(client, topic, payload);
         sleep(1);
     }
     MQTTClient_disconnect(client, TIMEOUT);

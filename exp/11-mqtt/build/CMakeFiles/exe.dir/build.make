@@ -94,6 +94,7 @@ exe: CMakeFiles/exe.dir/main.cpp.o
 exe: CMakeFiles/exe.dir/build.make
 exe: /home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/lib/libpaho-mqtt3a.so
 exe: /home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/lib/libpaho-mqtt3c.so
+exe: lib/libmqtt.so.1.0
 exe: CMakeFiles/exe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exe.dir/link.txt --verbose=$(VERBOSE)
