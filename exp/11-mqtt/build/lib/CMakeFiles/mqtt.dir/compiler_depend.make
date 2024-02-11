@@ -138,25 +138,19 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/time.h \
-  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
@@ -200,7 +194,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
@@ -291,14 +284,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
-
 /usr/include/c++/9/bits/streambuf.tcc:
 
 /usr/include/c++/9/ext/string_conversions.h:
@@ -313,9 +298,15 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /usr/include/c++/9/bits/stl_raw_storage_iter.h:
 
+/usr/include/c++/9/cerrno:
+
 /usr/include/c++/9/bits/stl_iterator.h:
 
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
 /usr/include/c++/9/bits/postypes.h:
+
+/usr/include/c++/9/string:
 
 /usr/include/c++/9/bits/shared_ptr.h:
 
@@ -405,6 +396,8 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/include/MQTTProperties.h:
 
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
 /usr/include/c++/9/bits/locale_classes.h:
 
 /usr/include/c++/9/ratio:
@@ -436,10 +429,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h:
 
 /usr/include/c++/9/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/include/MQTTClient.h:
 
 /usr/include/wctype.h:
 
@@ -513,8 +502,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /usr/include/c++/9/bits/invoke.h:
 
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:
 
 /usr/include/c++/9/bits/uses_allocator.h:
@@ -530,8 +517,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 /home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/include/MQTTClientPersistence.h:
 
 /usr/include/c++/9/ctime:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -559,7 +544,9 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /usr/include/c++/9/ext/type_traits.h:
 
-/usr/include/unistd.h:
+/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/include/MQTTClient.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/c++/9/initializer_list:
 
@@ -581,13 +568,11 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /usr/include/c++/9/memory:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/c++/9/mutex:
-
 /usr/include/c++/9/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/9/new:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/9/ostream:
 
@@ -637,25 +622,13 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 
 /usr/include/stdio.h:
 
-/usr/include/c++/9/string:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
 /usr/include/c++/9/bits/unique_lock.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
 /usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/c++/9/cerrno:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/c++/9/cstdlib:
 
@@ -674,3 +647,9 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /home/ubt/Documents/c++/notepp/exp/11-mqtt/l
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/c++/9/mutex:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:

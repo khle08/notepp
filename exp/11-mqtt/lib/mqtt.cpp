@@ -5,17 +5,12 @@
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password)
         : address(address), clientID(clientID), username(username), password(password)
 {
-    // reader = std::thread(this->read, src, inputId, std::ref(images), std::ref(m));
-    // reader.detach();
-
     MQTTClient_create(&client, address, clientID, 0, NULL);
 
     message = MQTTClient_message_initializer;
     connOpts = MQTTClient_connectOptions_initializer;
     connOpts.username = username;
     connOpts.password = password;
-
-    MQTTClient_setCallbacks(client, NULL, NULL, callBack, NULL);
 }
 
 
@@ -29,21 +24,22 @@ MqttCli::~MqttCli()
 
 int MqttCli::connect()
 {
+    MQTTClient_setCallbacks(client, NULL, NULL, callBack, NULL);
+
     int rc = MQTTClient_connect(client, &connOpts);
     if (rc != MQTTCLIENT_SUCCESS) {
-        print("Failed to connect, return code: " << rc);
-        exit(-1);
+        print("[X] Failed to connect, return code: " << rc);
         return -1;
     }
 
-    print("Connected to MQTT Broker");
+    print("[O] Connected to MQTT Broker");
     return 0;
 }
 
 
 int MqttCli::subscribe(const char* topic)
 {
-    topic = topic;
+    this->topic = topic;
     MQTTClient_subscribe(client, topic, QoS);
 
     return 0;
@@ -52,10 +48,10 @@ int MqttCli::subscribe(const char* topic)
 
 int MqttCli::publish(char* payload)
 {
-    message.payload = payload;
-    message.payloadlen = strlen(payload);
     message.qos = QoS;
+    message.payload = payload;
     message.retained = 0;
+    message.payloadlen = strlen(payload);
 
     MQTTClient_publishMessage(client, topic, &message, &token);
     MQTTClient_waitForCompletion(client, token, timeout);
@@ -67,7 +63,10 @@ int MqttCli::publish(char* payload)
 
 int MqttCli::callBack(void* context, char* topic, int topicLen, MQTTClient_message* message)
 {
-
+    char* payload = (char*)message->payload;
+    printf("Received `%s` from `%s` topic \n", payload, topic);
+    MQTTClient_freeMessage(&message);
+    MQTTClient_free(topic);
     return 0;
 }
 

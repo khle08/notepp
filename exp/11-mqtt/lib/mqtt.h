@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>    // for "strlen"
-#include <unistd.h>    // for "usleep"
+#include <unistd.h>    // for "usleep" & "sleep"
 #include <iostream>
 
 #include "MQTTClient.h"
@@ -35,8 +35,6 @@ public:
     int connect();
     int subscribe(const char* topic);
     int publish(char* payload);
-
-    std::thread worker;
 
 private:
     int QoS = 0;
