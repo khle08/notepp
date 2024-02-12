@@ -10,28 +10,33 @@
 // #define USERNAME    "emqx"
 // #define PASSWORD    "public"
 // #define CLIENTID    "mqttx_38c419c3"
-#define QOS         0
-#define TOPIC       "1234"
+// #define QOS         0
+// #define TOPIC       "1234"
 #define TIMEOUT     10000L
 
-void publish(MQTTClient client, const char *topic, char *payload, 
-             MQTTClient_message &message, MQTTClient_deliveryToken &token) {
+
+void publish(MQTTClient client, const char *topic, char *payload, int qos,
+             MQTTClient_message &message, MQTTClient_deliveryToken &token)
+{
     message.payload = payload;
     message.payloadlen = strlen(payload);
-    message.qos = QOS;
+    message.qos = qos;
     message.retained = 0;
     MQTTClient_publishMessage(client, topic, &message, &token);
     MQTTClient_waitForCompletion(client, token, TIMEOUT);
-    printf("Send `%s` to topic `%s` \n", payload, TOPIC);
+    printf("Send `%s` to topic `%s` \n", payload, topic);
 }
 
-int on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message) {
+
+int on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message)
+{
     char *payload = (char*)message->payload;
     printf("Received `%s` from `%s` topic \n", payload, topicName);
     MQTTClient_freeMessage(&message);
     MQTTClient_free(topicName);
     return 1;
 }
+
 
 int main(int argc, char *argv[])
 {
@@ -78,7 +83,7 @@ int main(int argc, char *argv[])
         // publish message to broker
         // std::string payload = "message-" + std::to_string(i);
         snprintf(payload, 16, "message-%d", i);
-        publish(client, topic, payload, message, token);
+        publish(client, topic, payload, qos, message, token);
         sleep(1);
     }
 
