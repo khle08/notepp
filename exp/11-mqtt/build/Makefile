@@ -187,29 +187,29 @@ mqtt/fast:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/mqtt.dir/build.make lib/CMakeFiles/mqtt.dir/build
 .PHONY : mqtt/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+example.o: example.cpp.o
+.PHONY : example.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/main.cpp.o
-.PHONY : main.cpp.o
+example.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/example.cpp.o
+.PHONY : example.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+example.i: example.cpp.i
+.PHONY : example.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/main.cpp.i
-.PHONY : main.cpp.i
+example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/example.cpp.i
+.PHONY : example.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+example.s: example.cpp.s
+.PHONY : example.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/main.cpp.s
-.PHONY : main.cpp.s
+example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/example.cpp.s
+.PHONY : example.cpp.s
 
 # Help Target
 help:
@@ -225,9 +225,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... exe"
 	@echo "... mqtt"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... example.o"
+	@echo "... example.i"
+	@echo "... example.s"
 .PHONY : help
 
 

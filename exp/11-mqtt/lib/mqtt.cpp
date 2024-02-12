@@ -5,34 +5,34 @@
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password)
         : address(address), clientID(clientID), username(username), password(password)
 {
-    MQTTClient_create(&client, address, clientID, 0, NULL);
+    MQTTClient_create(&this->client, address, clientID, 0, NULL);
 
-    message = MQTTClient_message_initializer;
-    connOpts = MQTTClient_connectOptions_initializer;
-    connOpts.username = username;
-    connOpts.password = password;
+    this->message = MQTTClient_message_initializer;
+    this->connOpts = MQTTClient_connectOptions_initializer;
+    this->connOpts.username = username;
+    this->connOpts.password = password;
 }
 
 
 MqttCli::~MqttCli()
 {
-    MQTTClient_unsubscribe(client, topic);
-    MQTTClient_disconnect(client, timeout);
-    MQTTClient_destroy(&client);
+    MQTTClient_unsubscribe(this->client, this->topic);
+    MQTTClient_disconnect(this->client, this->timeout);
+    MQTTClient_destroy(&this->client);
 }
 
 
 int MqttCli::connect()
 {
-    MQTTClient_setCallbacks(client, NULL, NULL, callBack, NULL);
+    MQTTClient_setCallbacks(this->client, NULL, NULL, callBack, NULL);
 
-    int rc = MQTTClient_connect(client, &connOpts);
+    int rc = MQTTClient_connect(this->client, &this->connOpts);
     if (rc != MQTTCLIENT_SUCCESS) {
-        print("[X] Failed to connect, return code: " << rc);
+        print("-- [X] Failed to connect, return code: " << rc);
         return -1;
     }
 
-    print("[O] Connected to MQTT Broker");
+    print("-- [O] Connected to MQTT Broker");
     return 0;
 }
 
@@ -40,7 +40,7 @@ int MqttCli::connect()
 int MqttCli::subscribe(const char* topic)
 {
     this->topic = topic;
-    MQTTClient_subscribe(client, topic, QoS);
+    MQTTClient_subscribe(this->client, topic, this->QoS);
 
     return 0;
 }
@@ -48,13 +48,14 @@ int MqttCli::subscribe(const char* topic)
 
 int MqttCli::publish(char* payload)
 {
-    message.qos = QoS;
-    message.payload = payload;
-    message.retained = 0;
-    message.payloadlen = strlen(payload);
+    // ??? bug should be here !
+    this->message.qos = this->QoS;
+    this->message.payload = payload;
+    this->message.retained = 0;
+    this->message.payloadlen = strlen(payload);
 
-    MQTTClient_publishMessage(client, topic, &message, &token);
-    MQTTClient_waitForCompletion(client, token, timeout);
+    MQTTClient_publishMessage(this->client, this->topic, &this->message, &this->token);
+    MQTTClient_waitForCompletion(this->client, this->token, this->timeout);
 
     print("Send " << payload << " to topic " << topic);
     return 0;

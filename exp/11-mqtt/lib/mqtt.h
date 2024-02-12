@@ -25,9 +25,9 @@ public:
 
     // The core objects in order to send or receive msg
     MQTTClient client;
-    MQTTClient_connectOptions connOpts;
     MQTTClient_message message;
     MQTTClient_deliveryToken token;
+    MQTTClient_connectOptions connOpts;
 
     const char* address;
     const char* clientID;
@@ -35,6 +35,8 @@ public:
     int connect();
     int subscribe(const char* topic);
     int publish(char* payload);
+
+    int receive();
 
 private:
     int QoS = 0;

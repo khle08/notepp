@@ -48,7 +48,8 @@ add_subdirectory(lib)
 find_package(Threads REQUIRED)
 
 list(APPEND SOURCE
-    main.cpp
+    # main.cpp
+    example.cpp
 )
 
 add_executable(exe ${SOURCE})
