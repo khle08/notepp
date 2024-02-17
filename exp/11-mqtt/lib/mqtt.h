@@ -13,6 +13,7 @@
 
 #include "MQTTClient.h"
 
+// #define USE_SSL
 #define print(x) std::cout << x << std::endl;
 
 

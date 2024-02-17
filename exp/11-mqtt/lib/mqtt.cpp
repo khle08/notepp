@@ -11,6 +11,14 @@ MqttCli::MqttCli(const char* address, const char* clientID, const char* username
     connOpts = MQTTClient_connectOptions_initializer;
     connOpts.username = username;
     connOpts.password = password;
+
+#ifdef USE_SSL
+    MQTTClient_SSLOptions ssl_opts = MQTTClient_SSLOptions_initializer;
+    ssl_opts.enableServerCertAuth = 1;
+    // The path of server CA
+    // ssl_opts.trustStore = CA_CERTIFICATE_FILE_PATH;
+    connOpts.ssl = ssl_opts;
+#endif
 }
 
 
@@ -48,7 +56,6 @@ int MqttCli::subscribe(const char* topic)
 
 int MqttCli::publish(char* payload)
 {
-    // ??? bug should be here !
     message.qos = QoS;
     message.payload = payload;
     message.retained = 0;
