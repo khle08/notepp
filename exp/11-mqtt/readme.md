@@ -1,5 +1,5 @@
 
-# What is httplib?
+# What is paho?
 
 `paho.mqtt` is a library widely used in applications related to MQTT protocol. 
 
