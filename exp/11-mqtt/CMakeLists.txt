@@ -23,8 +23,8 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 ########################################################################
 # [!] Setup where Paho is compiled
-# set(paho_dir /home/ubt/Documents/library/paho.mqtt.c/ubuntu)
-set(paho_dir ${CMAKE_CURRENT_SOURCE_DIR}/lib/paho)
+set(paho_dir /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac)
+# set(paho_dir ${CMAKE_CURRENT_SOURCE_DIR}/lib/paho)
 
 if (APPLE)
     file(GLOB PAHO_LIBS ${paho_dir}/lib/*.dylib)

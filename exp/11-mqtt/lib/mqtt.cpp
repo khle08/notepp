@@ -7,10 +7,13 @@ MqttCli::MqttCli(const char* address, const char* clientID, const char* username
 {
     MQTTClient_create(&client, address, clientID, 0, NULL);
 
-    message = MQTTClient_message_initializer;
+    // Attrs in: "include/MQTTAsync.h"
     connOpts = MQTTClient_connectOptions_initializer;
     connOpts.username = username;
     connOpts.password = password;
+    connOpts.connectTimeout = 3;
+
+    message = MQTTClient_message_initializer;
 
 #ifdef USE_SSL
     MQTTClient_SSLOptions ssl_opts = MQTTClient_SSLOptions_initializer;

@@ -9,6 +9,8 @@
 
 int main(int argc, char *argv[])
 {
+    print("compiled successfully");
+    
     MqttCli* client = new MqttCli("tcp://guardingeyeai.com:8883",
                                   "mqttx_38c419c3",
                                   "emqx",

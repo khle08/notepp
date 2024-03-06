@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubt/Documents/c++/notepp/exp/11-mqtt/lib
+# Install script for directory: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/install")
+  set(CMAKE_INSTALL_PREFIX "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,11 +27,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -39,47 +34,46 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.so.1"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/libmqtt.so.1.0"
-    "/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/libmqtt.so.1"
+    "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/build/lib/libmqtt.1.0.dylib"
+    "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/build/lib/libmqtt.1.dylib"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.so.1"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.1.0.dylib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.1.dylib"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/paho/lib:/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib:"
-           NEW_RPATH "")
+      execute_process(COMMAND /usr/bin/install_name_tool
+        -delete_rpath "/Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib"
+        -delete_rpath "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/lib"
+        "${file}")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
+        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "${file}")
       endif()
     endif()
   endforeach()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ubt/Documents/c++/notepp/exp/11-mqtt/build/lib/libmqtt.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/build/lib/libmqtt.dylib")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.dylib" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.dylib")
+    execute_process(COMMAND /usr/bin/install_name_tool
+      -delete_rpath "/Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib"
+      -delete_rpath "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/lib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.dylib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmqtt.dylib")
+    endif()
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/ubt/Documents/c++/notepp/exp/11-mqtt/lib/mqtt.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/lib/mqtt.h")
 endif()
 
