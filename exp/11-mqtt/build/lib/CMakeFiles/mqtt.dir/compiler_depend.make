@@ -227,12 +227,13 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
-  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTClient.h \
+  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTAsync.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTReasonCodes.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTSubscribeOpts.h \
-  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTClientPersistence.h
+  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTClientPersistence.h \
+  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTClient.h
 
 
 /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTClientPersistence.h:
@@ -336,6 +337,8 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:
+
+/Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTAsync.h:
 
 /usr/include/sys/_types/_fd_isset.h:
 
