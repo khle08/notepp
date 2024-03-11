@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 
-// #define DEBUG_PRINT_LOG
+#define DEBUG_PRINT_LOG
 
 
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
@@ -83,13 +83,21 @@ MqttCli::~MqttCli()
 int MqttCli::connect()
 {
     if (isAsync) {
+        MQTTAsync_setCallbacks(aclient, aclient, disconnect, areceived, NULL);
 
+        int rc = MQTTAsync_connect(aclient, &aconnOpts);
+        if (rc != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
+#ifdef DEBUG_PRINT_LOG
+            print("-- [X] Failed to connect, return code: " << rc);
+#endif
+            return -1;
+        }
 
     } else {
         MQTTClient_setCallbacks(client, NULL, disconnect, received, NULL);
 
         int rc = MQTTClient_connect(client, &connOpts);
-        if (rc != MQTTCLIENT_SUCCESS) {
+        if (rc != MQTTCLIENT_SUCCESS) {  // MQTTCLIENT_SUCCESS == 0
 #ifdef DEBUG_PRINT_LOG
             print("-- [X] Failed to connect, return code: " << rc);
 #endif
@@ -111,11 +119,26 @@ int MqttCli::subscribe(const char* topic)
     int res = 0;
     if (isAsync) {
         res = MQTTAsync_subscribe(aclient, topic, QoS, &aresOpts);
+        if (res != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
+#ifdef DEBUG_PRINT_LOG
+            print("-- [X] Failed to connect aclient, return code: " << res);
+#endif
+        }
 
     } else {
         res = MQTTClient_subscribe(client, topic, QoS);
+        if (res != MQTTCLIENT_SUCCESS) { // MQTTCLIENT_SUCCESS == 0
+#ifdef DEBUG_PRINT_LOG
+            print("-- [X] Failed to connect client, return code: " << res);
+#endif
+        }
     }
 
+    if (res == MQTTCLIENT_SUCCESS) {  // MQTTCLIENT_SUCCESS == 0
+#ifdef DEBUG_PRINT_LOG
+        print("-- [O] Successful subscribe");
+#endif
+    }
     return res;
 }
 
@@ -123,7 +146,6 @@ int MqttCli::subscribe(const char* topic)
 int MqttCli::publish(char* payload)
 {
     if (isAsync) {
-
 
     } else {
         message.qos = QoS;
@@ -150,6 +172,22 @@ void MqttCli::disconnect(void* context, char* cause)
 }
 
 
+void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
+{
+#ifdef DEBUG_PRINT_LOG
+    printf("-- [O] Successful connection\n");
+#endif
+}
+
+
+void MqttCli::onConnectFailure(void* context, MQTTAsync_failureData* response)
+{
+#ifdef DEBUG_PRINT_LOG
+    printf("-- [X] Connect failed, rc: %d\n", response->code);
+#endif
+}
+
+
 void MqttCli::onDisconnect(void* context, MQTTAsync_successData* response)
 {
 #ifdef DEBUG_PRINT_LOG
@@ -161,7 +199,7 @@ void MqttCli::onDisconnect(void* context, MQTTAsync_successData* response)
 void MqttCli::onDisconnectFailure(void* context, MQTTAsync_failureData* response)
 {
 #ifdef DEBUG_PRINT_LOG
-    printf("-- [X] Disconnect failed\n");
+    printf("-- [X] Disconnect failed, rc: %d\n", response->code);
 #endif
 }
 
@@ -177,7 +215,7 @@ void MqttCli::onSubscribe(void* context, MQTTAsync_successData* response)
 void MqttCli::onSubscribeFailure(void* context, MQTTAsync_failureData* response)
 {
 #ifdef DEBUG_PRINT_LOG
-    printf("-- [X] Subscribe failed\n");
+    printf("-- [X] Subscribe failed, rc: %d\n", response->code);
 #endif
 }
 
@@ -191,6 +229,19 @@ int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_m
 
     MQTTClient_freeMessage(&message);
     MQTTClient_free(topicName);
+    return 1;  // 0: topic will be erased after one request; 1: topic will keep alive
+}
+
+
+int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_message* amessage)
+{
+#ifdef DEBUG_PRINT_LOG
+    char* payload = (char*)amessage->payload;
+    printf("Received `%s` from `%s` topic \n", payload, topicName);
+#endif
+
+    MQTTAsync_freeMessage(&amessage);
+    MQTTAsync_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive
 }
 

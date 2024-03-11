@@ -17,26 +17,30 @@ int main(int argc, char *argv[])
                                   "public",
                                   true);
 
-    // int res = client->connect();
-    // if (res < 0) {
+    int res = client->connect();
+    if (res != 0) {
+        delete client;
+        return -1;
+    }
+
+    char payload[16];
+    res = client->subscribe("1234");
+    // if (res != 0) {
     //     delete client;
     //     return -1;
     // }
 
-    // char payload[16];
-    // res = client->subscribe("1234");
+    for (int i = 0; i < 100; i += 1) {
+        // snprintf(payload, 16, "message-%d", i);
+        // res = client->publish(payload);
 
-    // for (int i = 0; i < 100; i += 1) {
-    //     snprintf(payload, 16, "message-%d", i);
-    //     res = client->publish(payload);
+        // [!] The received data can also be obtained below
+        char* news = (char*)client->amessage.payload;
+        std::string nnn(news);
+        print(nnn);
 
-    //     // [!] The received data can also be obtained below
-    //     char* news = (char*)client->message.payload;
-    //     std::string nnn(news);
-    //     print(nnn);
-
-    //     sleep(1);
-    // }
+        sleep(1);
+    }
 
     delete client;
     return 0;

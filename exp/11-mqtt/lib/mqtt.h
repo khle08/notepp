@@ -60,6 +60,8 @@ private:
 
     static void disconnect(void* context, char* cause);
 
+    static void onConnect(void* context, MQTTAsync_successData* response);
+    static void onConnectFailure(void* context, MQTTAsync_failureData* response);
     static void onDisconnect(void* context, MQTTAsync_successData* response);
     static void onDisconnectFailure(void* context, MQTTAsync_failureData* response);
     static void onSubscribe(void* context, MQTTAsync_successData* response);
@@ -67,6 +69,9 @@ private:
 
     static int received(void* context, char* topic, int topicLen,
                         MQTTClient_message* message);
+    static int areceived(void* context, char* topicName, int topicLen, 
+                         MQTTAsync_message* message);
+
 };
 
 
