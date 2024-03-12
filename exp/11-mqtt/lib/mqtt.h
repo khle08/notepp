@@ -41,17 +41,19 @@ public:
     const char* address;
     const char* clientID;
 
+    int connected = 0;  // 0: false / 1: true
     std::map<std::string, std::string> news;
 
     int connect();
     int subscribe(const char* topic);
     int publish(char* payload);
 
+    std::string getMsg();
+
 private:
     int QoS = 0;
     int timeout = 10000L;
     int finished = 0;
-    int connected = 0;
 
     bool isAsync = false;
 

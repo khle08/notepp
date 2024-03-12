@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 
-// #define DEBUG_PRINT_LOG
+#define DEBUG_PRINT_LOG
 
 
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
@@ -176,6 +176,34 @@ int MqttCli::publish(char* payload)
 }
 
 
+std::string MqttCli::getMsg()
+{
+    std::string none = "";
+
+    int len; char* news;
+    if (isAsync) {
+    	len = amessage.payloadlen;
+    } else {
+    	len = message.payloadlen;
+    }
+
+    if (len > 0) {
+    	if (isAsync) {
+    		news = (char*)amessage.payload;
+    	} else {
+    		news = (char*)message.payload;
+    	}
+
+    	std::string out(news);
+    	if (out == " ") {
+            return none;
+        }
+        return out;
+    }
+    return none;
+}
+
+
 void MqttCli::disconnect(void* context, char* cause)
 {
 #ifdef DEBUG_PRINT_LOG
@@ -205,6 +233,8 @@ void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
 #ifdef DEBUG_PRINT_LOG
     printf("-- [O] Successful connection\n");
 #endif
+
+//     MqttCli* client = (MqttCli*)context;
 
 //     [!] Subscribe here because of async client (still do not know why not working this way ?????)
 //     MQTTAsync cli = (MQTTAsync)context;
@@ -266,7 +296,7 @@ int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_m
 {
 #ifdef DEBUG_PRINT_LOG
     char* payload = (char*)msg->payload;
-    printf("Received `%s` from topic: `%s` \n", payload, topicName);
+    printf("Received `%s` from topic: `%s`\n", payload, topicName);
 #endif
 
     MqttCli* client = (MqttCli*)context;
@@ -281,7 +311,7 @@ int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_m
 {
 #ifdef DEBUG_PRINT_LOG
     char* payload = (char*)amsg->payload;
-    printf("Received `%s` from topic: `%s` \n", payload, topicName);
+    printf("Received `%s` from topic: `%s`\n", payload, topicName);
 #endif
 
     MqttCli* client = (MqttCli*)context;
