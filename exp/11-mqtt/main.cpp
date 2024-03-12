@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
         return -1;
     }
 
+    sleep(1);
+
     char payload[16];
     res = client->subscribe("1234");
     // if (res != 0) {
@@ -36,8 +38,10 @@ int main(int argc, char *argv[])
 
         // [!] The received data can also be obtained below
         char* news = (char*)client->amessage.payload;
-        std::string nnn(news);
-        print(nnn);
+	    printf("Received: `%s`\n", news);
+
+        // std::string nnn(news);
+        // print(news);
 
         sleep(1);
     }

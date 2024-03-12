@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 
-#define DEBUG_PRINT_LOG
+// #define DEBUG_PRINT_LOG
 
 
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
@@ -21,6 +21,8 @@ MqttCli::MqttCli(const char* address, const char* clientID, const char* username
         aconnOpts.password = password;
         aconnOpts.connectTimeout = 10;
         aconnOpts.keepAliveInterval = 20;
+        aconnOpts.onSuccess = onConnect;
+        aconnOpts.onFailure = onConnectFailure;
 
         adisConnOpts = MQTTAsync_disconnectOptions_initializer;
         adisConnOpts.onSuccess = onDisconnect;
@@ -83,7 +85,7 @@ MqttCli::~MqttCli()
 int MqttCli::connect()
 {
     if (isAsync) {
-        MQTTAsync_setCallbacks(aclient, aclient, disconnect, areceived, NULL);
+        MQTTAsync_setCallbacks(aclient, this, disconnect, areceived, NULL);
 
         int rc = MQTTAsync_connect(aclient, &aconnOpts);
         if (rc != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
@@ -94,7 +96,7 @@ int MqttCli::connect()
         }
 
     } else {
-        MQTTClient_setCallbacks(client, NULL, disconnect, received, NULL);
+        MQTTClient_setCallbacks(client, this, disconnect, received, NULL);
 
         int rc = MQTTClient_connect(client, &connOpts);
         if (rc != MQTTCLIENT_SUCCESS) {  // MQTTCLIENT_SUCCESS == 0
@@ -118,27 +120,26 @@ int MqttCli::subscribe(const char* topic)
 
     int res = 0;
     if (isAsync) {
+        print("-- [INFO] Async client will auto subscribe the topic after connected");
+
         res = MQTTAsync_subscribe(aclient, topic, QoS, &aresOpts);
         if (res != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
 #ifdef DEBUG_PRINT_LOG
-            print("-- [X] Failed to connect aclient, return code: " << res);
+            print("-- [X] Failed to subscribe aclient, return code: " << res);
 #endif
         }
 
     } else {
         res = MQTTClient_subscribe(client, topic, QoS);
-        if (res != MQTTCLIENT_SUCCESS) { // MQTTCLIENT_SUCCESS == 0
 #ifdef DEBUG_PRINT_LOG
-            print("-- [X] Failed to connect client, return code: " << res);
-#endif
+        if (res != MQTTCLIENT_SUCCESS) { // MQTTCLIENT_SUCCESS == 0
+            print("-- [X] Failed to subscribe client, return code: " << res);
+        } else {
+            print("-- [O] Successful subscribe");
         }
+#endif
     }
 
-    if (res == MQTTCLIENT_SUCCESS) {  // MQTTCLIENT_SUCCESS == 0
-#ifdef DEBUG_PRINT_LOG
-        print("-- [O] Successful subscribe");
-#endif
-    }
     return res;
 }
 
@@ -146,6 +147,17 @@ int MqttCli::subscribe(const char* topic)
 int MqttCli::publish(char* payload)
 {
     if (isAsync) {
+        MQTTAsync_responseOptions aresOpts2 = MQTTAsync_responseOptions_initializer;
+        aresOpts2.onSuccess = onSend;
+        aresOpts2.onFailure = onSendFailure;
+        aresOpts2.context = aclient;  // Do not know what is the effect of this line ?????
+
+        amessage.qos = QoS;
+        amessage.payload = payload;
+        amessage.retained = 0;
+        amessage.payloadlen = strlen(payload);
+
+        MQTTAsync_sendMessage(aclient, topic, &amessage, &aresOpts2);
 
     } else {
         message.qos = QoS;
@@ -172,11 +184,41 @@ void MqttCli::disconnect(void* context, char* cause)
 }
 
 
+void MqttCli::onSend(void* context, MQTTAsync_successData* response)
+{
+// #ifdef DEBUG_PRINT_LOG
+//     printf("-- [O] Successful send\n");
+// #endif
+}
+
+
+void MqttCli::onSendFailure(void* context, MQTTAsync_failureData* response)
+{
+// #ifdef DEBUG_PRINT_LOG
+//     printf("-- [X] Send failed, rc: %d\n", response->code);
+// #endif
+}
+
+
 void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
 {
 #ifdef DEBUG_PRINT_LOG
     printf("-- [O] Successful connection\n");
 #endif
+
+//     [!] Subscribe here because of async client (still do not know why not working this way ?????)
+//     MQTTAsync cli = (MQTTAsync)context;
+//     MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
+//     opts.onSuccess = onSubscribe;
+//     opts.onFailure = onSubscribeFailure;
+//     opts.context = cli;
+// 
+//     int res = MQTTAsync_subscribe(cli, "1234", 0, &opts);
+//     if (res != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
+// #ifdef DEBUG_PRINT_LOG
+//         print("-- [X] Failed to subscribe aclient, return code: " << res);
+// #endif
+//     }
 }
 
 
@@ -220,27 +262,31 @@ void MqttCli::onSubscribeFailure(void* context, MQTTAsync_failureData* response)
 }
 
 
-int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_message* message)
+int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_message* msg)
 {
 #ifdef DEBUG_PRINT_LOG
-    char* payload = (char*)message->payload;
-    printf("Received `%s` from `%s` topic \n", payload, topicName);
+    char* payload = (char*)msg->payload;
+    printf("Received `%s` from topic: `%s` \n", payload, topicName);
 #endif
 
-    MQTTClient_freeMessage(&message);
+    MqttCli* client = (MqttCli*)context;
+    client->message = *msg;
+    MQTTClient_freeMessage(&msg);
     MQTTClient_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive
 }
 
 
-int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_message* amessage)
+int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_message* amsg)
 {
 #ifdef DEBUG_PRINT_LOG
-    char* payload = (char*)amessage->payload;
-    printf("Received `%s` from `%s` topic \n", payload, topicName);
+    char* payload = (char*)amsg->payload;
+    printf("Received `%s` from topic: `%s` \n", payload, topicName);
 #endif
 
-    MQTTAsync_freeMessage(&amessage);
+    MqttCli* client = (MqttCli*)context;
+    client->amessage = *amsg;
+    MQTTAsync_freeMessage(&amsg);
     MQTTAsync_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive
 }

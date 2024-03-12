@@ -15,6 +15,12 @@
 #define TIMEOUT     10000L
 
 
+void disconnect(void* context, char* cause)
+{
+    printf("-- [X] Disconnected cause: %s\n", cause);
+}
+
+
 void publish(MQTTClient client, const char *topic, char *payload, int qos,
              MQTTClient_message &message, MQTTClient_deliveryToken &token)
 {
@@ -61,7 +67,7 @@ int main(int argc, char *argv[])
 
 
     // connect
-    MQTTClient_setCallbacks(client, NULL, NULL, on_message, NULL);
+    MQTTClient_setCallbacks(client, NULL, disconnect, on_message, NULL);
 
     int rc = MQTTClient_connect(client, &conn_opts);
     if (rc != MQTTCLIENT_SUCCESS) {

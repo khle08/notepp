@@ -49,7 +49,9 @@ find_package(Threads REQUIRED)
 
 list(APPEND SOURCE
     main.cpp
-    # example.cpp
+    # examples/example.cpp
+    # examples/async1.cpp
+    # examples/async2.cpp
 )
 
 add_executable(exe ${SOURCE})

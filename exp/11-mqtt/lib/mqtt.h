@@ -51,6 +51,7 @@ private:
     int QoS = 0;
     int timeout = 10000L;
     int finished = 0;
+    int connected = 0;
 
     bool isAsync = false;
 
@@ -60,12 +61,16 @@ private:
 
     static void disconnect(void* context, char* cause);
 
+    // Callback funcs only for
+    static void onSend(void* context, MQTTAsync_successData* response);
     static void onConnect(void* context, MQTTAsync_successData* response);
-    static void onConnectFailure(void* context, MQTTAsync_failureData* response);
-    static void onDisconnect(void* context, MQTTAsync_successData* response);
-    static void onDisconnectFailure(void* context, MQTTAsync_failureData* response);
     static void onSubscribe(void* context, MQTTAsync_successData* response);
+    static void onDisconnect(void* context, MQTTAsync_successData* response);
+
+    static void onSendFailure(void* context, MQTTAsync_failureData* response);
+    static void onConnectFailure(void* context, MQTTAsync_failureData* response);
     static void onSubscribeFailure(void* context, MQTTAsync_failureData* response);
+    static void onDisconnectFailure(void* context, MQTTAsync_failureData* response);
 
     static int received(void* context, char* topic, int topicLen,
                         MQTTClient_message* message);
