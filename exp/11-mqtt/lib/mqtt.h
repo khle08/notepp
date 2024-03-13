@@ -44,7 +44,6 @@ public:
     std::map<std::string, std::string> news;
 
     int connect(std::vector<std::string>& topicVec);
-    int subscribe(std::string& topic);
     int publish(std::string& topic, char* payload);
 
     std::string getMsg(std::string& topic);
@@ -62,6 +61,8 @@ private:
     std::vector<std::string> topicVec;
 
     int init();
+    int subscribe(std::string& topic);
+
     static void disconnect(void* context, char* cause);
 
     // Callback funcs only for

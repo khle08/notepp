@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
                                   "public",
                                   true);
 
-    std::vector<std::string> topicVec = {"1234", "5678"};
+    std::vector<std::string> topicVec = {"/jw/jiushengyan/online-status/online", "5678"};
     int res = -1;
     while (res < 0) {
         res = client->connect(topicVec);
@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
         // [!] The received data can be obtained below (only English and characters)
         for (int i = 0; i < topicVec.size(); i++) {
             // test: send
-            snprintf(payload, 16, "message-%d:%d", i, cnt);
-            res = client->publish(topicVec[i], payload);
+            // snprintf(payload, 16, "message-%d:%d", i, cnt);
+            // res = client->publish(topicVec[i], payload);
 
             // test: receive
             std::string _news = client->getMsg(topicVec[i]);
