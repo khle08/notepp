@@ -204,7 +204,7 @@ void MqttCli::disconnect(void* context, char* cause)
     }
 #endif
 
-    client->connected = 0;  // not working ?????
+    client->connected = 0;
 
     int res = -1;
     if (client->isAsync) {
@@ -216,7 +216,7 @@ void MqttCli::disconnect(void* context, char* cause)
             // Keep re-connecting to the broker until connected
             client->init();
             res = client->connect(client->topicVec);
-            sleep(1);
+            sleep(client->interval);
         }
     }
 }
@@ -248,6 +248,7 @@ void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
 
     // [!] Subscribe here because of async client
     MqttCli* client = (MqttCli*)context;  // void* context <- should be assinged "this" class
+    client->connected = 1;
 
     MQTTAsync_responseOptions aresOpts = MQTTAsync_responseOptions_initializer;
     aresOpts.context = client;
@@ -271,7 +272,7 @@ void MqttCli::onConnectFailure(void* context, MQTTAsync_failureData* response)
     // Failed to connect to broker at the 1st time. Or, when the re-connection failed again.
     client->init();
     int res = client->connect(client->topicVec);
-    sleep(1);
+    sleep(client->interval);
 }
 
 
@@ -334,6 +335,7 @@ int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_m
         client->news[tpc] = "";
     }
 
+    client->hasmsg = 1;
     MQTTClient_freeMessage(&msg);
     MQTTClient_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive
@@ -367,6 +369,7 @@ int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_m
         client->news[tpc] = "";
     }
 
+    client->hasmsg = 1;
     MQTTAsync_freeMessage(&amsg);
     MQTTAsync_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive

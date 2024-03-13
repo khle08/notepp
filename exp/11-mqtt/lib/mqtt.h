@@ -36,10 +36,12 @@ public:
     MQTTAsync_message amessage;
     MQTTAsync_disconnectOptions adisConnOpts;
 
+    int interval = 3;
     const char* address;
     const char* clientID;
 
     int days = 3;       // Maximum keep alive time period
+    int hasmsg = 0;     // 0: false / 1: true
     int connected = 0;  // 0: false / 1: true
     std::map<std::string, std::string> news;
 
@@ -51,7 +53,6 @@ public:
 private:
     int QoS = 0;
     int timeout = 86400L;
-    int finished = 0;
 
     bool isAsync = false;
 

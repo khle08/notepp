@@ -17,11 +17,11 @@ int main(int argc, char *argv[])
                                   "public",
                                   true);
 
-    std::vector<std::string> topicVec = {"/jw/jiushengyan/online-status/online", "5678"};
+    std::vector<std::string> topicVec = {"1234", "5678"};
     int res = -1;
     while (res < 0) {
         res = client->connect(topicVec);
-        sleep(1);
+        sleep(client->interval);
     }
 
     int cnt = 1;
@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
             }
         }
 
-        print("status: " << client->connected);
+        print("status: " << client->connected << " | " << client->hasmsg);
         cnt += 1;
-        sleep(1);
+        sleep(client->interval);
     }
 
     delete client;
