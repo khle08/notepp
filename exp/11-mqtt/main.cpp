@@ -17,36 +17,33 @@ int main(int argc, char *argv[])
                                   "public",
                                   true);
 
-    int res = client->connect();
+    std::vector<std::string> topicVec = {"1234", "5678"};
+    int res = client->connect(topicVec);
     if (res != 0) {
         delete client;
         return -1;
     }
 
-    sleep(1);
-
-    std::vector<std::string> topicVec = {"1234", "5678"};
-    for (int i = 0; i < topicVec.size(); i++) {
-        res = client->subscribe(topicVec[i]);
-    }
-
+    int cnt = 1;
     char payload[16];
     std::vector<std::string> newsVec = {"", ""};
     // for (int i = 0; i < 100; i += 1)
     while (true) {
-        // snprintf(payload, 16, "message-%d", i);
-        // res = client->publish(payload);
-
         // [!] The received data can be obtained below (only English and characters)
         for (int i = 0; i < topicVec.size(); i++) {
-        	std::string _news = client->getMsg(topicVec[i]);
+            // test: send
+            snprintf(payload, 16, "message-%d:%d", i, cnt);
+            res = client->publish(topicVec[i], payload);
 
-        	if (_news.size() > 0 && _news != newsVec[i]) {
-        		print("received: " << _news);
-        		newsVec[i] = _news;
-        	}
+            // test: receive
+            std::string _news = client->getMsg(topicVec[i]);
+            if (_news.size() > 0 && _news != newsVec[i]) {
+                print(">> get: " << _news);
+                newsVec[i] = _news;
+            }
         }
 
+        cnt += 1;
         sleep(1);
     }
 

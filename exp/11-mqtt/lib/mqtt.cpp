@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 
-#define DEBUG_PRINT_LOG
+// #define DEBUG_PRINT_LOG
 
 
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
@@ -13,57 +13,7 @@ MqttCli::MqttCli(const char* address, const char* clientID, const char* username
     // MQTTCLIENT_PERSISTENCE_USER  =  2 - This persistence_type value specifies an application-specific persistence mechanism
     // MQTTCLIENT_PERSISTENCE_ERROR = -2 - Application-specific persistence functions must return this error code if there is a problem executing the function.
 
-    if (isAsync) {
-        MQTTAsync_create(&aclient, address, clientID, 0, NULL);
-
-        aconnOpts = MQTTAsync_connectOptions_initializer;
-        aconnOpts.username = username;
-        aconnOpts.password = password;
-        aconnOpts.connectTimeout = 10;
-        aconnOpts.keepAliveInterval = 20;
-        aconnOpts.onSuccess = onConnect;
-        aconnOpts.onFailure = onConnectFailure;
-
-        adisConnOpts = MQTTAsync_disconnectOptions_initializer;
-        adisConnOpts.onSuccess = onDisconnect;
-        adisConnOpts.onFailure = onDisconnectFailure;
-        adisConnOpts.context = aclient;
-
-        aresOpts = MQTTAsync_responseOptions_initializer;
-        aresOpts.onSuccess = onSubscribe;
-        aresOpts.onFailure = onSubscribeFailure;
-        aresOpts.context = aclient;
-
-        amessage = MQTTAsync_message_initializer;
-
-#ifdef USE_SSL
-        MQTTAsync_SSLOptions assl_opts = MQTTAsync_SSLOptions_initializer;
-        assl_opts.enableServerCertAuth = 1;
-        // [!] The path of server CA
-        // ssl_opts.trustStore = CA_CERTIFICATE_FILE_PATH;
-        aconnOpts.ssl = assl_opts;
-#endif
-
-    } else {
-        MQTTClient_create(&client, address, clientID, 0, NULL);
-
-        // Attrs in: "include/MQTTAsync.h"
-        connOpts = MQTTClient_connectOptions_initializer;
-        connOpts.username = username;
-        connOpts.password = password;
-        connOpts.connectTimeout = 10;
-        connOpts.keepAliveInterval = 20;
-
-        message = MQTTClient_message_initializer;
-
-#ifdef USE_SSL
-        MQTTClient_SSLOptions ssl_opts = MQTTClient_SSLOptions_initializer;
-        ssl_opts.enableServerCertAuth = 1;
-        // [!] The path of server CA
-        // ssl_opts.trustStore = CA_CERTIFICATE_FILE_PATH;
-        connOpts.ssl = ssl_opts;
-#endif
-    }
+    this->init();
 }
 
 
@@ -75,28 +25,78 @@ MqttCli::~MqttCli()
         MQTTAsync_destroy(&aclient);
 
     } else {
-        MQTTClient_unsubscribe(client, topic);
+        for (int i = 0; i < topicVec.size(); i++) {
+            MQTTClient_unsubscribe(client, topicVec[i].c_str());
+        }
         MQTTClient_disconnect(client, timeout);
         MQTTClient_destroy(&client);
     }
 }
 
 
-int MqttCli::connect()
+int MqttCli::init()
 {
+    if (isAsync) {
+        MQTTAsync_create(&aclient, address, clientID, 0, NULL);
+
+        adisConnOpts = MQTTAsync_disconnectOptions_initializer;
+        adisConnOpts.context = this;  // to avoid non-static error, send class to the func
+        adisConnOpts.onSuccess = onDisconnect;
+        adisConnOpts.onFailure = onDisconnectFailure;
+
+        amessage = MQTTAsync_message_initializer;
+
+    } else {
+        MQTTClient_create(&client, address, clientID, 0, NULL);
+        message = MQTTClient_message_initializer;
+    }
+
+    return 0;
+}
+
+
+int MqttCli::connect(std::vector<std::string>& topicVec)
+{
+    this->topicVec = topicVec;
+
     if (isAsync) {
         MQTTAsync_setCallbacks(aclient, this, disconnect, areceived, NULL);
 
-        int rc = MQTTAsync_connect(aclient, &aconnOpts);
-        if (rc != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
-#ifdef DEBUG_PRINT_LOG
-            print("-- [X] Failed to connect, return code: " << rc);
+        MQTTAsync_connectOptions aconnOpts = MQTTAsync_connectOptions_initializer;
+        aconnOpts.context = this;  // to avoid non-static error, send class to the func
+        aconnOpts.username = username;
+        aconnOpts.password = password;
+        aconnOpts.connectTimeout = timeout;
+        aconnOpts.keepAliveInterval = (int)(86400 * days);
+        aconnOpts.onSuccess = onConnect;
+        aconnOpts.onFailure = onConnectFailure;
+#ifdef USE_SSL
+        MQTTAsync_SSLOptions assl_opts = MQTTAsync_SSLOptions_initializer;
+        assl_opts.enableServerCertAuth = 1;
+        // [!] The path of server CA
+        // ssl_opts.trustStore = CA_CERTIFICATE_FILE_PATH;
+        aconnOpts.ssl = assl_opts;
 #endif
-            return -1;
-        }
+
+        // Connection callback can only be defined in "aconnOpts"
+        int rc = MQTTAsync_connect(aclient, &aconnOpts);
 
     } else {
         MQTTClient_setCallbacks(client, this, disconnect, received, NULL);
+
+        // Attrs in: "include/MQTTAsync.h"
+        MQTTClient_connectOptions connOpts = MQTTClient_connectOptions_initializer;
+        connOpts.username = username;
+        connOpts.password = password;
+        connOpts.connectTimeout = timeout;
+        connOpts.keepAliveInterval = (int)(86400 * days);
+#ifdef USE_SSL
+        MQTTClient_SSLOptions ssl_opts = MQTTClient_SSLOptions_initializer;
+        ssl_opts.enableServerCertAuth = 1;
+        // [!] The path of server CA
+        // ssl_opts.trustStore = CA_CERTIFICATE_FILE_PATH;
+        connOpts.ssl = ssl_opts;
+#endif
 
         int rc = MQTTClient_connect(client, &connOpts);
         if (rc != MQTTCLIENT_SUCCESS) {  // MQTTCLIENT_SUCCESS == 0
@@ -104,30 +104,29 @@ int MqttCli::connect()
             print("-- [X] Failed to connect, return code: " << rc);
 #endif
             return -1;
+        } else {
+#ifdef DEBUG_PRINT_LOG
+            print("-- [O] Successful connection");
+#endif
+        }
+
+        // Only non-async mode can subscribe here
+        for (int i = 0; i < topicVec.size(); i++) {
+            this->subscribe(topicVec[i]);
         }
     }
 
-#ifdef DEBUG_PRINT_LOG
-    print("-- [O] Connected to MQTT Broker");
-#endif
     return 0;
 }
 
 
 int MqttCli::subscribe(std::string& topic)
 {
-    this->topic = topic.c_str();
+    // this->topic = topic.c_str();  // useless
 
     int res = 0;
     if (isAsync) {
         print("-- [INFO] Async client will auto subscribe the topic after connected");
-
-        res = MQTTAsync_subscribe(aclient, topic.c_str(), QoS, &aresOpts);
-        if (res != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
-#ifdef DEBUG_PRINT_LOG
-            print("-- [X] Failed to subscribe aclient, return code: " << res);
-#endif
-        }
 
     } else {
         res = MQTTClient_subscribe(client, topic.c_str(), QoS);
@@ -144,20 +143,22 @@ int MqttCli::subscribe(std::string& topic)
 }
 
 
-int MqttCli::publish(char* payload)
+int MqttCli::publish(std::string& topic, char* payload)
 {
     if (isAsync) {
         MQTTAsync_responseOptions aresOpts2 = MQTTAsync_responseOptions_initializer;
+        aresOpts2.context = this;  // to avoid non-static error, send class to the func
         aresOpts2.onSuccess = onSend;
         aresOpts2.onFailure = onSendFailure;
-        aresOpts2.context = aclient;  // Do not know what is the effect of this line ?????
 
         amessage.qos = QoS;
         amessage.payload = payload;
         amessage.retained = 0;
         amessage.payloadlen = strlen(payload);
 
-        MQTTAsync_sendMessage(aclient, topic, &amessage, &aresOpts2);
+        MQTTAsync_sendMessage(aclient, topic.c_str(), &amessage, &aresOpts2);
+
+        // Only async client can auto reconnect after connecting back to online
 
     } else {
         message.qos = QoS;
@@ -165,7 +166,7 @@ int MqttCli::publish(char* payload)
         message.retained = 0;
         message.payloadlen = strlen(payload);
 
-        MQTTClient_publishMessage(client, topic, &message, &token);
+        MQTTClient_publishMessage(client, topic.c_str(), &message, &token);
         MQTTClient_waitForCompletion(client, token, timeout);
     }
 
@@ -194,46 +195,54 @@ void MqttCli::disconnect(void* context, char* cause)
 #ifdef DEBUG_PRINT_LOG
     printf("-- [X] Disconnected cause: %s\n", cause);
 #endif
+
+    // Callback for failed connection (for both async and non-async cases)
+    MqttCli* client = (MqttCli*)context;
+
+    int res = -1;
+    while (res < 0) {
+        client->init();
+        client->connect(client->topicVec);
+        sleep(1);
+    }
 }
 
 
 void MqttCli::onSend(void* context, MQTTAsync_successData* response)
 {
-// #ifdef DEBUG_PRINT_LOG
-//     printf("-- [O] Successful send\n");
-// #endif
+#ifdef DEBUG_PRINT_LOG
+    printf("-- [O] Successful send       (async)\n");
+#endif
 }
 
 
 void MqttCli::onSendFailure(void* context, MQTTAsync_failureData* response)
 {
-// #ifdef DEBUG_PRINT_LOG
-//     printf("-- [X] Send failed, rc: %d\n", response->code);
-// #endif
+#ifdef DEBUG_PRINT_LOG
+    printf("-- [X] Send failed, rc: %d\n", response->code);
+#endif
+
+    // [!] Disconnect the internet will not raise this func
 }
 
 
 void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
 {
 #ifdef DEBUG_PRINT_LOG
-    printf("-- [O] Successful connection\n");
+    printf("-- [O] Successful connection (async)\n");
 #endif
 
-//     MqttCli* client = (MqttCli*)context;
+    // [!] Subscribe here because of async client
+    MqttCli* client = (MqttCli*)context;  // void* context <- should be assinged "this" class
 
-//     [!] Subscribe here because of async client (still do not know why not working this way ?????)
-//     MQTTAsync cli = (MQTTAsync)context;
-//     MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
-//     opts.onSuccess = onSubscribe;
-//     opts.onFailure = onSubscribeFailure;
-//     opts.context = cli;
-// 
-//     int res = MQTTAsync_subscribe(cli, "1234", 0, &opts);
-//     if (res != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
-// #ifdef DEBUG_PRINT_LOG
-//         print("-- [X] Failed to subscribe aclient, return code: " << res);
-// #endif
-//     }
+    MQTTAsync_responseOptions aresOpts = MQTTAsync_responseOptions_initializer;
+    aresOpts.context = client;
+    aresOpts.onSuccess = client->onSubscribe;
+    aresOpts.onFailure = client->onSubscribeFailure;
+
+    for (int i = 0; i < client->topicVec.size(); i++) {
+        MQTTAsync_subscribe(client->aclient, client->topicVec[i].c_str(), client->QoS, &aresOpts);
+    }
 }
 
 
@@ -264,7 +273,7 @@ void MqttCli::onDisconnectFailure(void* context, MQTTAsync_failureData* response
 void MqttCli::onSubscribe(void* context, MQTTAsync_successData* response)
 {
 #ifdef DEBUG_PRINT_LOG
-    printf("-- [O] Successful Subscribe\n");
+    printf("-- [O] Successful subscribe  (async)\n");
 #endif
 }
 

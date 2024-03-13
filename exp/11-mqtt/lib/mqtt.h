@@ -30,38 +30,38 @@ public:
     MQTTClient client;
     MQTTClient_message message;
     MQTTClient_deliveryToken token;
-    MQTTClient_connectOptions connOpts;
 
     MQTTAsync aclient;
     MQTTAsync_token atoken;
     MQTTAsync_message amessage;
-    MQTTAsync_connectOptions aconnOpts;
-    MQTTAsync_responseOptions aresOpts;
     MQTTAsync_disconnectOptions adisConnOpts;
 
     const char* address;
     const char* clientID;
 
+    int days = 3;       // Maximum keep alive time period
     int connected = 0;  // 0: false / 1: true
     std::map<std::string, std::string> news;
 
-    int connect();
+    int connect(std::vector<std::string>& topicVec);
     int subscribe(std::string& topic);
-    int publish(char* payload);
+    int publish(std::string& topic, char* payload);
 
     std::string getMsg(std::string& topic);
 
 private:
     int QoS = 0;
-    int timeout = 10000L;
+    int timeout = 86400L;
     int finished = 0;
 
     bool isAsync = false;
 
-    const char* topic;
+    // const char* topic;  // useless
     const char* username;
     const char* password;
+    std::vector<std::string> topicVec;
 
+    int init();
     static void disconnect(void* context, char* cause);
 
     // Callback funcs only for
