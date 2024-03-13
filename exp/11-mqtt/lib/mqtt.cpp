@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 
-// #define DEBUG_PRINT_LOG
+#define DEBUG_PRINT_LOG
 
 
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
@@ -67,7 +67,7 @@ int MqttCli::connect(std::vector<std::string>& topicVec)
         aconnOpts.username = username;
         aconnOpts.password = password;
         aconnOpts.connectTimeout = timeout;
-        aconnOpts.keepAliveInterval = (int)(86400 * days);
+        aconnOpts.keepAliveInterval = (int)(86400 * days);  // (int)(86400 * days);
         aconnOpts.onSuccess = onConnect;
         aconnOpts.onFailure = onConnectFailure;
 #ifdef USE_SSL
@@ -108,6 +108,7 @@ int MqttCli::connect(std::vector<std::string>& topicVec)
 #ifdef DEBUG_PRINT_LOG
             print("-- [O] Successful connection");
 #endif
+        	connected = 1;
         }
 
         // Only non-async mode can subscribe here
@@ -192,18 +193,31 @@ std::string MqttCli::getMsg(std::string& topic)
 
 void MqttCli::disconnect(void* context, char* cause)
 {
-#ifdef DEBUG_PRINT_LOG
-    printf("-- [X] Disconnected cause: %s\n", cause);
-#endif
-
     // Callback for failed connection (for both async and non-async cases)
     MqttCli* client = (MqttCli*)context;
 
+#ifdef DEBUG_PRINT_LOG
+    if (client->isAsync) {
+        printf("-- [X] Disconnected cause    (async): %s\n", cause);
+    } else {
+        printf("-- [X] Disconnected cause: %s\n", cause);
+    }
+#endif
+
+    client->connected = 0;  // not working ?????
+
     int res = -1;
-    while (res < 0) {
+    if (client->isAsync) {
         client->init();
-        client->connect(client->topicVec);
-        sleep(1);
+        res = client->connect(client->topicVec);
+
+    } else {
+        while (res < 0) {
+            // Keep re-connecting to the broker until connected
+            client->init();
+            res = client->connect(client->topicVec);
+            sleep(1);
+        }
     }
 }
 
@@ -249,8 +263,15 @@ void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
 void MqttCli::onConnectFailure(void* context, MQTTAsync_failureData* response)
 {
 #ifdef DEBUG_PRINT_LOG
-    printf("-- [X] Connect failed, rc: %d\n", response->code);
+    printf("-- [X] Connect failed        (async), rc: %d\n", response->code);
 #endif
+
+    MqttCli* client = (MqttCli*)context;  // void* context <- should be assinged "this" class
+
+    // Failed to connect to broker at the 1st time. Or, when the re-connection failed again.
+    client->init();
+    int res = client->connect(client->topicVec);
+    sleep(1);
 }
 
 

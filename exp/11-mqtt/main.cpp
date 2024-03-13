@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
                                   true);
 
     std::vector<std::string> topicVec = {"1234", "5678"};
-    int res = client->connect(topicVec);
-    if (res != 0) {
-        delete client;
-        return -1;
+    int res = -1;
+    while (res < 0) {
+        res = client->connect(topicVec);
+        sleep(1);
     }
 
     int cnt = 1;
@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
             }
         }
 
+        print("status: " << client->connected);
         cnt += 1;
         sleep(1);
     }
