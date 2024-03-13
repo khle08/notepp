@@ -157,6 +157,9 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
   /usr/include/sys/qos.h \
   /usr/include/sys/_types/_mach_port_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/thread \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string \
@@ -226,7 +229,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
   /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTAsync.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h \
@@ -243,8 +245,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h:
 
 /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
 
 /usr/include/sys/_types/_errno_t.h:
 
@@ -279,6 +279,8 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 /usr/include/xlocale/_wchar.h:
 
 /usr/include/xlocale/_time.h:
+
+/usr/include/xlocale/_string.h:
 
 /usr/include/xlocale/_stdlib.h:
 
@@ -317,10 +319,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 /usr/include/_types/_wctrans_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h:
-
-/usr/include/sys/_types/_pid_t.h:
-
-/usr/include/xlocale/_stdio.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cwctype:
 
@@ -600,8 +598,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 
 /usr/include/sys/_types/_int16_t.h:
 
-/usr/include/xlocale/_string.h:
-
 /usr/include/sys/_types/_fd_copy.h:
 
 /usr/include/sys/_types/_off_t.h:
@@ -619,6 +615,10 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdarg.h:
 
 /usr/include/sys/_types/_ct_rune_t.h:
+
+/usr/include/xlocale/_stdio.h:
+
+/usr/include/sys/_types/_pid_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:
 
@@ -670,6 +670,10 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 
 /usr/include/sys/_types/_null.h:
 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:
+
 /usr/include/sys/_types/_ucontext.h:
 
 /usr/include/sys/_types/_wint_t.h:
@@ -677,6 +681,8 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp
 /usr/include/machine/types.h:
 
 /usr/include/machine/_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:
 
 /usr/include/sys/select.h:
 

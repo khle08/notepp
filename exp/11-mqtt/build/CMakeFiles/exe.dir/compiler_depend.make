@@ -167,6 +167,9 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
   /usr/include/wctype.h \
   /usr/include/_types/_wctrans_t.h \
   /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/lib/mqtt.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer \
   /usr/include/unistd.h \
   /usr/include/sys/unistd.h \
   /usr/include/sys/_types/_posix_vdisable.h \
@@ -226,7 +229,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
   /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTAsync.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h \
@@ -243,8 +245,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h:
 
 /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
 
 /usr/include/sys/_types/_errno_t.h:
 
@@ -279,6 +279,8 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 /usr/include/xlocale/_wchar.h:
 
 /usr/include/xlocale/_time.h:
+
+/usr/include/xlocale/_string.h:
 
 /usr/include/xlocale/_stdlib.h:
 
@@ -317,10 +319,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 /usr/include/_types/_wctrans_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h:
-
-/usr/include/sys/_types/_pid_t.h:
-
-/usr/include/xlocale/_stdio.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cwctype:
 
@@ -602,8 +600,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 
 /usr/include/sys/_types/_int16_t.h:
 
-/usr/include/xlocale/_string.h:
-
 /usr/include/sys/_types/_fd_copy.h:
 
 /usr/include/sys/_types/_off_t.h:
@@ -642,6 +638,10 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 
 /usr/include/sys/_types/_ct_rune_t.h:
 
+/usr/include/xlocale/_stdio.h:
+
+/usr/include/sys/_types/_pid_t.h:
+
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:
 
 /usr/include/sys/signal.h:
@@ -664,6 +664,10 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 
 /usr/include/Availability.h:
 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:
+
 /usr/include/sys/_types/_ucontext.h:
 
 /usr/include/sys/_types/_wint_t.h:
@@ -685,6 +689,8 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-m
 /usr/include/machine/types.h:
 
 /usr/include/machine/_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:
 
 /usr/include/sys/select.h:
 

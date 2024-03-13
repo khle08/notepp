@@ -121,6 +121,9 @@ CMakeFiles/exe.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h \
   /usr/include/wctype.h /usr/include/_types/_wctrans_t.h \
   /Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/lib/mqtt.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer \
   /usr/include/unistd.h /usr/include/sys/unistd.h \
   /usr/include/sys/_types/_posix_vdisable.h \
   /usr/include/sys/_types/_seek_set.h /usr/include/sys/_types/_gid_t.h \
@@ -160,7 +163,6 @@ CMakeFiles/exe.dir/main.cpp.o: \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTAsync.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h \
   /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h \

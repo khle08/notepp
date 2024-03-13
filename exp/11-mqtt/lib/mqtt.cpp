@@ -114,15 +114,15 @@ int MqttCli::connect()
 }
 
 
-int MqttCli::subscribe(const char* topic)
+int MqttCli::subscribe(std::string& topic)
 {
-    this->topic = topic;
+    this->topic = topic.c_str();
 
     int res = 0;
     if (isAsync) {
         print("-- [INFO] Async client will auto subscribe the topic after connected");
 
-        res = MQTTAsync_subscribe(aclient, topic, QoS, &aresOpts);
+        res = MQTTAsync_subscribe(aclient, topic.c_str(), QoS, &aresOpts);
         if (res != MQTTASYNC_SUCCESS) {  // MQTTASYNC_SUCCESS == 0
 #ifdef DEBUG_PRINT_LOG
             print("-- [X] Failed to subscribe aclient, return code: " << res);
@@ -130,7 +130,7 @@ int MqttCli::subscribe(const char* topic)
         }
 
     } else {
-        res = MQTTClient_subscribe(client, topic, QoS);
+        res = MQTTClient_subscribe(client, topic.c_str(), QoS);
 #ifdef DEBUG_PRINT_LOG
         if (res != MQTTCLIENT_SUCCESS) { // MQTTCLIENT_SUCCESS == 0
             print("-- [X] Failed to subscribe client, return code: " << res);
@@ -176,30 +176,15 @@ int MqttCli::publish(char* payload)
 }
 
 
-std::string MqttCli::getMsg()
+std::string MqttCli::getMsg(std::string& topic)
 {
     std::string none = "";
 
-    int len; char* news;
-    if (isAsync) {
-    	len = amessage.payloadlen;
-    } else {
-    	len = message.payloadlen;
+    int res = std::distance(news.begin(), news.find(topic));
+    if (res != news.size()) {
+        return news[topic];
     }
 
-    if (len > 0) {
-    	if (isAsync) {
-    		news = (char*)amessage.payload;
-    	} else {
-    		news = (char*)message.payload;
-    	}
-
-    	std::string out(news);
-    	if (out == " ") {
-            return none;
-        }
-        return out;
-    }
     return none;
 }
 
@@ -299,8 +284,26 @@ int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_m
     printf("Received `%s` from topic: `%s`\n", payload, topicName);
 #endif
 
+    // Contributed by CWZ (non-static function)
     MqttCli* client = (MqttCli*)context;
     client->message = *msg;
+
+    std::string tpc(topicName);
+    int len = client->message.payloadlen;
+    if (len > 0) {
+        char* info = (char*)client->message.payload;
+        std::string out(info);
+
+        if (out == " ") {  // Filter out the key values
+            client->news[tpc] = "";
+        } else {
+            client->news[tpc] = out;
+        }
+
+    } else {
+        client->news[tpc] = "";
+    }
+
     MQTTClient_freeMessage(&msg);
     MQTTClient_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive
@@ -314,8 +317,26 @@ int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_m
     printf("Received `%s` from topic: `%s`\n", payload, topicName);
 #endif
 
+    // Contributed by CWZ (non-static function)
     MqttCli* client = (MqttCli*)context;
     client->amessage = *amsg;
+
+    std::string tpc(topicName);
+    int len = client->amessage.payloadlen;
+    if (len > 0) {
+        char* info = (char*)client->amessage.payload;
+        std::string out(info);
+
+        if (out == " ") {
+            client->news[tpc] = "";
+        } else {
+            client->news[tpc] = out;
+        }
+
+    } else {
+        client->news[tpc] = "";
+    }
+
     MQTTAsync_freeMessage(&amsg);
     MQTTAsync_free(topicName);
     return 1;  // 0: topic will be erased after one request; 1: topic will keep alive

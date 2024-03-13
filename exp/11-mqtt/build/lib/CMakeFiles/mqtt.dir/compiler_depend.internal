@@ -158,6 +158,9 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o
  /usr/include/sys/qos.h
  /usr/include/sys/_types/_mach_port_t.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/thread
+ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector
+ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference
+ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string
@@ -227,7 +230,6 @@ lib/CMakeFiles/mqtt.dir/mqtt.cpp.o
  /usr/include/_types/_nl_item.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference
  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTAsync.h
  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTExportDeclarations.h
  /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/include/MQTTProperties.h

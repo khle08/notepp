@@ -4,6 +4,7 @@
 #include <map>
 #include <mutex>
 #include <thread>
+#include <vector>
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,10 +46,10 @@ public:
     std::map<std::string, std::string> news;
 
     int connect();
-    int subscribe(const char* topic);
+    int subscribe(std::string& topic);
     int publish(char* payload);
 
-    std::string getMsg();
+    std::string getMsg(std::string& topic);
 
 private:
     int QoS = 0;
