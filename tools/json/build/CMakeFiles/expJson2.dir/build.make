@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json
+CMAKE_SOURCE_DIR = /Users/kcl/Documents/Cpp_Projects/notepp/tools/json
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build
+CMAKE_BINARY_DIR = /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/expJson2.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/expJson2.dir/progress.make
 include CMakeFiles/expJson2.dir/flags.make
 
 CMakeFiles/expJson2.dir/main2.cpp.o: CMakeFiles/expJson2.dir/flags.make
-CMakeFiles/expJson2.dir/main2.cpp.o: /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/main2.cpp
+CMakeFiles/expJson2.dir/main2.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/main2.cpp
 CMakeFiles/expJson2.dir/main2.cpp.o: CMakeFiles/expJson2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/expJson2.dir/main2.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/expJson2.dir/main2.cpp.o -MF CMakeFiles/expJson2.dir/main2.cpp.o.d -o CMakeFiles/expJson2.dir/main2.cpp.o -c /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/main2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/expJson2.dir/main2.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/expJson2.dir/main2.cpp.o -MF CMakeFiles/expJson2.dir/main2.cpp.o.d -o CMakeFiles/expJson2.dir/main2.cpp.o -c /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/main2.cpp
 
 CMakeFiles/expJson2.dir/main2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/expJson2.dir/main2.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/main2.cpp > CMakeFiles/expJson2.dir/main2.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/main2.cpp > CMakeFiles/expJson2.dir/main2.cpp.i
 
 CMakeFiles/expJson2.dir/main2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/expJson2.dir/main2.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/main2.cpp -o CMakeFiles/expJson2.dir/main2.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/main2.cpp -o CMakeFiles/expJson2.dir/main2.cpp.s
 
 CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o: CMakeFiles/expJson2.dir/flags.make
-CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o: /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/jsoncpp.cpp
+CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/jsoncpp.cpp
 CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o: CMakeFiles/expJson2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o -MF CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o.d -o CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o -c /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/jsoncpp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o -MF CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o.d -o CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o -c /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/jsoncpp.cpp
 
 CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/jsoncpp.cpp > CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/jsoncpp.cpp > CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.i
 
 CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/jsoncpp.cpp -o CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/jsoncpp.cpp -o CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.s
 
 # Object files for target expJson2
 expJson2_OBJECTS = \
@@ -109,7 +109,7 @@ expJson2: CMakeFiles/expJson2.dir/main2.cpp.o
 expJson2: CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o
 expJson2: CMakeFiles/expJson2.dir/build.make
 expJson2: CMakeFiles/expJson2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable expJson2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable expJson2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/expJson2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/expJson2.dir/clean:
 .PHONY : CMakeFiles/expJson2.dir/clean
 
 CMakeFiles/expJson2.dir/depend:
-	cd /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/build/CMakeFiles/expJson2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kcl/Documents/Cpp_Projects/notepp/tools/json /Users/kcl/Documents/Cpp_Projects/notepp/tools/json /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles/expJson2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/expJson2.dir/depend
 

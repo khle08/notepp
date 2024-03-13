@@ -1,6 +1,6 @@
 CMakeFiles/expJson2.dir/dist/jsoncpp.cpp.o: \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/jsoncpp.cpp \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/json/json.h \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/jsoncpp.cpp \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/json/json.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstring \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string.h \

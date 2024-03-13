@@ -8,6 +8,9 @@
 //     g++ streamWrite.cpp -ljsoncpp -std=c++11 -o streamWrite
 //     ./streamWrite
 
+// Ref:
+//   - Converting a Json::Value to std::string? - https://stackoverflow.com/questions/29710306/converting-a-jsonvalue-to-stdstring
+
 #include <vector>
 #include <fstream>
 #include <iostream>
@@ -48,6 +51,14 @@ int main() {
     // }
     print("===== start =====");
     print("j1[\"vec\"][1] = " << j1["vec"][1]);  // out: 2
+
+    // Transform json data into string in following 2 ways
+    Json::FastWriter fw;
+    std::string outs = fw.write(j1);
+    print(outs);
+
+    std::string outstyle = j1.toStyledString();
+    print(outstyle);
     print("=====  end  =====\n");
 
     // Json also can be assigned into another json

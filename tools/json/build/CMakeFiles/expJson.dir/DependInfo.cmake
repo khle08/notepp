@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/dist/jsoncpp.cpp" "CMakeFiles/expJson.dir/dist/jsoncpp.cpp.o" "gcc" "CMakeFiles/expJson.dir/dist/jsoncpp.cpp.o.d"
-  "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp8-json/main.cpp" "CMakeFiles/expJson.dir/main.cpp.o" "gcc" "CMakeFiles/expJson.dir/main.cpp.o.d"
+  "/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist/jsoncpp.cpp" "CMakeFiles/expJson.dir/dist/jsoncpp.cpp.o" "gcc" "CMakeFiles/expJson.dir/dist/jsoncpp.cpp.o.d"
+  "/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/main.cpp" "CMakeFiles/expJson.dir/main.cpp.o" "gcc" "CMakeFiles/expJson.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

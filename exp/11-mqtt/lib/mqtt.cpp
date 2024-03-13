@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 
-#define DEBUG_PRINT_LOG
+// #define DEBUG_PRINT_LOG
 
 
 MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
