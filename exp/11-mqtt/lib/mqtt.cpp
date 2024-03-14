@@ -327,12 +327,15 @@ int MqttCli::received(void* context, char* topicName, int topicLen, MQTTClient_m
 
         if (out == " ") {  // Filter out the key values
             client->news[tpc] = "";
+            client->hasmsgs[tpc] = 0;
         } else {
             client->news[tpc] = out;
+            client->hasmsgs[tpc] = 1;
         }
 
     } else {
         client->news[tpc] = "";
+        client->hasmsgs[tpc] = 0;
     }
 
     client->hasmsg = 1;
@@ -361,12 +364,15 @@ int MqttCli::areceived(void* context, char* topicName, int topicLen, MQTTAsync_m
 
         if (out == " ") {
             client->news[tpc] = "";
+            client->hasmsgs[tpc] = 0;
         } else {
             client->news[tpc] = out;
+            client->hasmsgs[tpc] = 1;
         }
 
     } else {
         client->news[tpc] = "";
+        client->hasmsgs[tpc] = 0;
     }
 
     client->hasmsg = 1;

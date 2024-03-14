@@ -43,6 +43,8 @@ public:
     int days = 3;       // Maximum keep alive time period
     int hasmsg = 0;     // 0: false / 1: true
     int connected = 0;  // 0: false / 1: true
+
+    std::map<std::string, int> hasmsgs;
     std::map<std::string, std::string> news;
 
     int connect(std::vector<std::string>& topicVec);
