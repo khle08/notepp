@@ -26,7 +26,7 @@
 int main() {
 
     Daemon& dm = Daemon::instance();
-    int fd = open("daemon.log", O_CREAT | O_WRONLY | O_APPEND);
+    int fd = open("/home/kcl/Documents/notepp/tools/daemon/daemon.log", O_CREAT | O_WRONLY | O_APPEND);
 
     int count = 0;
     while (dm.IsRunning()) {

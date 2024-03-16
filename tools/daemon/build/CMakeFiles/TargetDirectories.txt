@@ -1,8 +1,8 @@
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/name.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/exeName.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/edit_cache.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/rebuild_cache.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/list_install_components.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/install.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/install/local.dir
-/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/install/strip.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/name.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/exeName.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/edit_cache.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/rebuild_cache.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/list_install_components.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/install.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/install/local.dir
+/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/install/strip.dir

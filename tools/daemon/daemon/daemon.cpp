@@ -9,9 +9,9 @@
 Daemon::Daemon() {
     m_isRunning = true;
     m_reload = false;
-    signal(SIGINT, Daemon::signalHandler);
-    signal(SIGTERM, Daemon::signalHandler);
-    signal(SIGHUP, Daemon::signalHandler);
+    signal(SIGINT, Daemon::signalHandler);   // ctrl + C
+    signal(SIGTERM, Daemon::signalHandler);  // systemctl stop
+    signal(SIGHUP, Daemon::signalHandler);   // When closing the terminal window
 }
 
 void Daemon::setReloadFunction(std::function<void()> func) {
@@ -31,8 +31,8 @@ void Daemon::signalHandler(int signal) {
     switch (signal) {
         case SIGINT:
         case SIGTERM: {
-            Daemon::instance().m_isRunning = true;  // default: false
-            break;
+            Daemon::instance().m_isRunning = false;  // default: false
+            break;  // Help to break the while loop
         }
         case SIGHUP: {
             Daemon::instance().m_isRunning = true;  // default: m_reload

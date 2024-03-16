@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1299/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1299/bin/cmake -E rm -f
+RM = /usr/local/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubt/Documents/c++/notepp/tools/daemon
+CMAKE_SOURCE_DIR = /home/kcl/Documents/notepp/tools/daemon
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubt/Documents/c++/notepp/tools/daemon/build
+CMAKE_BINARY_DIR = /home/kcl/Documents/notepp/tools/daemon/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/name.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/name.dir/progress.make
 include CMakeFiles/name.dir/flags.make
 
 CMakeFiles/name.dir/daemon/daemon.cpp.o: CMakeFiles/name.dir/flags.make
-CMakeFiles/name.dir/daemon/daemon.cpp.o: /home/ubt/Documents/c++/notepp/tools/daemon/daemon/daemon.cpp
+CMakeFiles/name.dir/daemon/daemon.cpp.o: /home/kcl/Documents/notepp/tools/daemon/daemon/daemon.cpp
 CMakeFiles/name.dir/daemon/daemon.cpp.o: CMakeFiles/name.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/name.dir/daemon/daemon.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/name.dir/daemon/daemon.cpp.o -MF CMakeFiles/name.dir/daemon/daemon.cpp.o.d -o CMakeFiles/name.dir/daemon/daemon.cpp.o -c /home/ubt/Documents/c++/notepp/tools/daemon/daemon/daemon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/name.dir/daemon/daemon.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/name.dir/daemon/daemon.cpp.o -MF CMakeFiles/name.dir/daemon/daemon.cpp.o.d -o CMakeFiles/name.dir/daemon/daemon.cpp.o -c /home/kcl/Documents/notepp/tools/daemon/daemon/daemon.cpp
 
 CMakeFiles/name.dir/daemon/daemon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/name.dir/daemon/daemon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubt/Documents/c++/notepp/tools/daemon/daemon/daemon.cpp > CMakeFiles/name.dir/daemon/daemon.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kcl/Documents/notepp/tools/daemon/daemon/daemon.cpp > CMakeFiles/name.dir/daemon/daemon.cpp.i
 
 CMakeFiles/name.dir/daemon/daemon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/name.dir/daemon/daemon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubt/Documents/c++/notepp/tools/daemon/daemon/daemon.cpp -o CMakeFiles/name.dir/daemon/daemon.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kcl/Documents/notepp/tools/daemon/daemon/daemon.cpp -o CMakeFiles/name.dir/daemon/daemon.cpp.s
 
 # Object files for target name
 name_OBJECTS = \
@@ -93,7 +93,7 @@ name_EXTERNAL_OBJECTS =
 libname.a: CMakeFiles/name.dir/daemon/daemon.cpp.o
 libname.a: CMakeFiles/name.dir/build.make
 libname.a: CMakeFiles/name.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libname.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libname.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/name.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/name.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/name.dir/clean:
 .PHONY : CMakeFiles/name.dir/clean
 
 CMakeFiles/name.dir/depend:
-	cd /home/ubt/Documents/c++/notepp/tools/daemon/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubt/Documents/c++/notepp/tools/daemon /home/ubt/Documents/c++/notepp/tools/daemon /home/ubt/Documents/c++/notepp/tools/daemon/build /home/ubt/Documents/c++/notepp/tools/daemon/build /home/ubt/Documents/c++/notepp/tools/daemon/build/CMakeFiles/name.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kcl/Documents/notepp/tools/daemon/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kcl/Documents/notepp/tools/daemon /home/kcl/Documents/notepp/tools/daemon /home/kcl/Documents/notepp/tools/daemon/build /home/kcl/Documents/notepp/tools/daemon/build /home/kcl/Documents/notepp/tools/daemon/build/CMakeFiles/name.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/name.dir/depend
 

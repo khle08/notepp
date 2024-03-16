@@ -1,4 +1,4 @@
-sudo rm /tmp/daemon.log
+# sudo rm /tmp/daemon.log
 mkdir build
 cd build
 

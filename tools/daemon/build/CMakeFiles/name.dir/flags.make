@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ubt/Documents/c++/notepp/tools/daemon/daemon
+CXX_INCLUDES = -I/home/kcl/Documents/notepp/tools/daemon/daemon
 
 CXX_FLAGS =  -std=c++14
 

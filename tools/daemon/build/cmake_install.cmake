@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubt/Documents/c++/notepp/tools/daemon
+# Install script for directory: /home/kcl/Documents/notepp/tools/daemon
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,7 +51,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/etc/daemon-template" TYPE FILE FILES "/home/ubt/Documents/c++/notepp/tools/daemon/daemon/resource/config/daemon-template.conf")
+  file(INSTALL DESTINATION "/etc/daemon-template" TYPE FILE FILES "/home/kcl/Documents/notepp/tools/daemon/daemon/resource/config/daemon-template.conf")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -63,7 +63,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/etc/systemd/system" TYPE FILE FILES "/home/ubt/Documents/c++/notepp/tools/daemon/daemon/resource/systemd/exeName.service")
+  file(INSTALL DESTINATION "/etc/systemd/system" TYPE FILE FILES "/home/kcl/Documents/notepp/tools/daemon/daemon/resource/systemd/exeName.service")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -81,7 +81,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/bin" TYPE EXECUTABLE FILES "/home/ubt/Documents/c++/notepp/tools/daemon/build/exeName")
+  file(INSTALL DESTINATION "/usr/bin" TYPE EXECUTABLE FILES "/home/kcl/Documents/notepp/tools/daemon/build/exeName")
   if(EXISTS "$ENV{DESTDIR}/usr/bin/exeName" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/bin/exeName")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -98,5 +98,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ubt/Documents/c++/notepp/tools/daemon/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kcl/Documents/notepp/tools/daemon/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubt/Documents/c++/notepp/tools/daemon/daemon/daemon.cpp" "CMakeFiles/name.dir/daemon/daemon.cpp.o" "gcc" "CMakeFiles/name.dir/daemon/daemon.cpp.o.d"
+  "/home/kcl/Documents/notepp/tools/daemon/daemon/daemon.cpp" "CMakeFiles/name.dir/daemon/daemon.cpp.o" "gcc" "CMakeFiles/name.dir/daemon/daemon.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
