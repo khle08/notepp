@@ -1,4 +1,4 @@
-/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/build/CMakeFiles/timer.dir
-/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/build/CMakeFiles/exe.dir
-/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/build/CMakeFiles/edit_cache.dir
-/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/build/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/build/CMakeFiles/timer.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/build/CMakeFiles/exe.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/build/CMakeFiles/rebuild_cache.dir

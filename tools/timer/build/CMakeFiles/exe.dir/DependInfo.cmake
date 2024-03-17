@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/main.cpp" "CMakeFiles/exe.dir/main.cpp.o" "gcc" "CMakeFiles/exe.dir/main.cpp.o.d"
+  "/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/main.cpp" "CMakeFiles/exe.dir/main.cpp.o" "gcc" "CMakeFiles/exe.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/build/CMakeFiles/timer.dir/DependInfo.cmake"
+  "/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/build/CMakeFiles/timer.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

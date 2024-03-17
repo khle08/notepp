@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/timer.cpp" "CMakeFiles/timer.dir/timer.cpp.o" "gcc" "CMakeFiles/timer.dir/timer.cpp.o.d"
+  "/Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/timer.cpp" "CMakeFiles/timer.dir/timer.cpp.o" "gcc" "CMakeFiles/timer.dir/timer.cpp.o.d"
   )
 
 # Targets to which this target links.

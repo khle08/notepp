@@ -88,3 +88,4 @@ std::string Time::zeroFmt(int num, int n)
     } else {
         return std::to_string(n);
     }
+}

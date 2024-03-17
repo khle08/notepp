@@ -92,12 +92,6 @@ exe_EXTERNAL_OBJECTS =
 
 exe: CMakeFiles/exe.dir/main.cpp.o
 exe: CMakeFiles/exe.dir/build.make
-exe: /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib/libpaho-mqtt3a.1.3.13.dylib
-exe: /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib/libpaho-mqtt3a.1.dylib
-exe: /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib/libpaho-mqtt3a.dylib
-exe: /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib/libpaho-mqtt3c.1.3.13.dylib
-exe: /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib/libpaho-mqtt3c.1.dylib
-exe: /Users/kcl/Documents/Cpp_Projects/library/paho.mqtt.c/mac/lib/libpaho-mqtt3c.dylib
 exe: lib/libmqtt.1.0.dylib
 exe: CMakeFiles/exe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kcl/Documents/Cpp_Projects/notepp/exp/11-mqtt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable exe"

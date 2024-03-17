@@ -11,10 +11,10 @@ int main(int argc, char *argv[])
 {
     print("compiled successfully");
     
-    MqttCli* client = new MqttCli("tcp://guardingeyeai.com:8883",
-                                  "mqttx_38c419c3",
-                                  "emqx",
-                                  "public",
+    MqttCli* client = new MqttCli("tcp://guardingeyeai.com:8883",  // address
+                                  "mqttx_38c419c3",                // clientid
+                                  "emqx",                          // username
+                                  "public",                        // password
                                   true);
 
     std::vector<std::string> topicVec = {"1234", "5678"};

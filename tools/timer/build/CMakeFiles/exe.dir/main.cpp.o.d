@@ -1,5 +1,5 @@
 CMakeFiles/exe.dir/main.cpp.o: \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/main.cpp \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/main.cpp \
   /usr/include/unistd.h /usr/include/_types.h /usr/include/sys/_types.h \
   /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
   /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
@@ -31,7 +31,7 @@ CMakeFiles/exe.dir/main.cpp.o: \
   /usr/include/sys/_types/_fd_copy.h /usr/include/sys/_select.h \
   /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
   /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/timer.h \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/timer.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd \

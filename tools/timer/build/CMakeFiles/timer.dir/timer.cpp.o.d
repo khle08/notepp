@@ -1,6 +1,6 @@
 CMakeFiles/timer.dir/timer.cpp.o: \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/timer.cpp \
-  /Users/kcl/Documents/Cpp_Projects/cpp_notes/exp10-timer/timer.h \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/timer.cpp \
+  /Users/kcl/Documents/Cpp_Projects/notepp/tools/timer/timer.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd \
