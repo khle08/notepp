@@ -1,4 +1,4 @@
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles/expJson.dir
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles/expJson2.dir
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles/edit_cache.dir
-/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/build/CMakeFiles/rebuild_cache.dir
+/home/kcl/Documents/notepp/tools/json/build/CMakeFiles/expJson.dir
+/home/kcl/Documents/notepp/tools/json/build/CMakeFiles/expJson2.dir
+/home/kcl/Documents/notepp/tools/json/build/CMakeFiles/edit_cache.dir
+/home/kcl/Documents/notepp/tools/json/build/CMakeFiles/rebuild_cache.dir
