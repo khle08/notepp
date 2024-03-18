@@ -27,14 +27,19 @@ std::string exec(const char* cmd) {
 
 
 int main() {
+    // Purely run the CMD without knowing the output logs
     // int s = std::system("ps aux | grep nginx");  // Linux / Mac
     // WinExec("cmd", 1);     // Win
 
     // Get the output of CMDs
-    std::string outputs = exec("ps aux | grep nginx");  // Linux / Mac
+    // std::string outputs = exec("ps aux | grep MediaServer");  // Linux / Mac
+    // std::string outputs = exec("cd /home/kcl/Documents/algorithm/adasAlgo && ./build/bin/serverController");
+
+    // std::system("cd /home/kcl/Documents/algorithm/adasAlgo && ./build/bin/serverController");
+    std::system("cd /home/kcl/Documents/libs/ZLMediaKit/release/linux/Debug && ./MediaServer -d &");
 
     print("=====");
-    print(outputs);
-    print(outputs.size());
+    // print(outputs);
+    // print(outputs.size());
     return 0;
 }
