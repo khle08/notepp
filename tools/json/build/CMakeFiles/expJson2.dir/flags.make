@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/kcl/Documents/Cpp_Projects/notepp/tools/json/dist
+CXX_INCLUDES = -I/Users/kcl/Documents/Cpp_Projects/notepp/tools/json
 
-CXX_FLAGS = -std=gnu++14
+CXX_FLAGS = -std=gnu++11
 

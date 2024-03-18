@@ -27,12 +27,13 @@
  * 20
  */
 int main() {
-//    const std::string rawJson = "{\"Age\": 20, \"Name\": \"colin\"}";
-    const std::string rawJson = "{\"encoding\" : \"UTF-8\", \"plug-ins\" : [\"python\", \"c++\", \"ruby\"\n"
-                                "        ], \"indent\" : { \"length\" : 3, \"use_space\": true } }";
-//    std::const_pointer_c>()
+    std::string rawJson = "{\"mykey\" : \"myvalue\"}";
+    // const std::string rawJson = "{\"Age\": 20, \"Name\": \"colin\"}";
+    // const std::string rawJson = "{\"encoding\" : \"UTF-8\", \"plug-ins\" : [\"python\", \"c++\", \"ruby\"\n"
+    //                             "        ], \"indent\" : { \"length\" : 3, \"use_space\": true } }";
+    // std::const_pointer_c>()
     const int rawJsonLength = static_cast<int>(rawJson.length());
-    bool shouldUseOldWay = false;
+    bool shouldUseOldWay = true;
     JSONCPP_STRING err;
     Json::Value root;
 
@@ -49,10 +50,11 @@ int main() {
         }
         delete reader;
     }
-    const std::string name = root["plug-ins"][0].asString();
-    const int age = root["indent"]["length"].asInt();
+    // const std::string name = root["plug-ins"][0].asString();
+    // const int age = root["indent"]["length"].asInt();
 
-    std::cout << name << std::endl;
-    std::cout << age << std::endl;
+    std::cout << root["mykey"].asString() << std::endl;
+    // std::cout << name << std::endl;
+    // std::cout << age << std::endl;
     return EXIT_SUCCESS;
 }
