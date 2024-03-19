@@ -1,8 +1,10 @@
 
 // link: https://stackoverflow.com/questions/31201631/execute-cmd-commands-using-c
 
+#include <thread>
 #include <string>
 #include <iostream>
+#include <unistd.h>    // for "usleep"
 // #include <windows.h>
 
 #define print(x) std::cout << x << std::endl
@@ -33,10 +35,20 @@ int main() {
 
     // Get the output of CMDs
     // std::string outputs = exec("ps aux | grep MediaServer");  // Linux / Mac
-    // std::string outputs = exec("cd /home/kcl/Documents/algorithm/adasAlgo && ./build/bin/serverController");
 
+    // [!] When running a program using CMD in c++ code, this main thread will be stucked
+    //     and wait for the end of this execution. To prevend this, use thread
     // std::system("cd /home/kcl/Documents/algorithm/adasAlgo && ./build/bin/serverController");
-    std::system("cd /home/kcl/Documents/libs/ZLMediaKit/release/linux/Debug && ./MediaServer -d &");
+    // std::string outputs = exec("cd /home/kcl/Documents/algorithm/adasAlgo && ./build/bin/serverController");
+    // std::system("./cmd.sh");
+
+    std::thread worker(exec, "./cmd.sh");
+    // worker.join();
+    worker.detach();
+
+    // This program should wait for a time period or the target program will not be started
+    usleep(5 * 1000 * 1000);    // 1s
+
 
     print("=====");
     // print(outputs);
