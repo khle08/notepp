@@ -43,7 +43,7 @@ int main() {
     // std::system("./cmd.sh");
 
     std::thread worker(exec, "cd /home/kcl/Documents/algorithm/adasAlgo/ && ./scripts/zlmedia.sh /home/kcl/Documents/libs/ZLMediaKit/release/linux/Debug");
-    // std::thread worker(exec, "./cmd.sh");
+    // std::thread worker(exec, "./cmd.sh jetson 123456 0");
     // worker.join();
     worker.detach();
 
