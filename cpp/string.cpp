@@ -77,13 +77,16 @@ int main()
 
     sprintf(buffer, "my age is %d", age);
     print(buffer);
+    std::string sbuffer(buffer);
+    std::string sbuffer1 = "my age is 23";
+    print(sbuffer.compare(sbuffer1));  // 0: equal / other number: not equal
 
 
     // Concate the string list altogether
     // std::vector<std::string> sv = {"1920", "x", "1080"};
     // std::string s1 = strConcat({1920, "x", 1080});
     // print(s1.c_str());
-    strFind();
+    // strFind();
 
     return 0;
 }

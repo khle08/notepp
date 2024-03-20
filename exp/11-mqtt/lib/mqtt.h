@@ -23,7 +23,8 @@ class MqttCli
 {
 public:
     MqttCli(const char* address, const char* clientID,
-            const char* username, const char* password, bool isAsync);
+            const char* username, const char* password,
+            std::string validateTopic, bool isAsync);
     ~MqttCli();
 
     // The core objects in order to send or receive msg
@@ -49,6 +50,7 @@ public:
 
     int connect(std::vector<std::string>& topicVec);
     int publish(std::string& topic, char* payload);
+    int reconnect(char* payload);
 
     std::string getMsg(std::string& topic);
 
@@ -61,7 +63,9 @@ private:
     // const char* topic;  // useless
     const char* username;
     const char* password;
+    std::string validateTopic;
     std::vector<std::string> topicVec;
+
 
     int init();
     int subscribe(std::string& topic);

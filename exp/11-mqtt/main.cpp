@@ -11,10 +11,12 @@ int main(int argc, char *argv[])
 {
     print("compiled successfully");
     
+    std::string uniqueId = "WEQFRE";
     MqttCli* client = new MqttCli("tcp://guardingeyeai.com:8883",  // address
                                   "mqttx_38c419c3",                // clientid
                                   "emqx",                          // username
                                   "public",                        // password
+                                  uniqueId,
                                   true);
 
     std::vector<std::string> topicVec = {"1234", "5678"};
@@ -42,6 +44,9 @@ int main(int argc, char *argv[])
                 newsVec[i] = _news;
             }
         }
+
+        // snprintf(payload, 16, "test-%d", cnt);
+        // client->reconnect(payload);
 
         print("status: " << client->connected << " | " << client->hasmsg);
         cnt += 1;

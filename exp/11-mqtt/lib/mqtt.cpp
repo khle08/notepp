@@ -4,8 +4,9 @@
 // #define DEBUG_PRINT_LOG
 
 
-MqttCli::MqttCli(const char* address, const char* clientID, const char* username, const char* password, bool isAsync)
-        : address(address), clientID(clientID), username(username), password(password), isAsync(isAsync)
+MqttCli::MqttCli(const char* address, const char* clientID, const char* username,
+                 const char* password, std::string validateTopic, bool isAsync)
+        : address(address), clientID(clientID), username(username), password(password), validateTopic(validateTopic), isAsync(isAsync)
 {
     // [!] The forth param in order to create mqtt client.
     // MQTTCLIENT_PERSISTENCE_NONE  =  0 - This persistence_type value specifies the default file system-based persistence mechanism
@@ -115,6 +116,8 @@ int MqttCli::connect(std::vector<std::string>& topicVec)
         for (int i = 0; i < topicVec.size(); i++) {
             this->subscribe(topicVec[i]);
         }
+        // Subscribe this topic only for checking online status
+        this->subscribe(validateTopic);
     }
 
     return 0;
@@ -174,6 +177,23 @@ int MqttCli::publish(std::string& topic, char* payload)
 #ifdef DEBUG_PRINT_LOG
     print("Send " << payload << " to topic " << topic);
 #endif
+    return 0;
+}
+
+
+int MqttCli::reconnect(char* payload)
+{
+    std::string original(payload);
+    this->publish(validateTopic, payload);
+    usleep(1 * 1000 * 1000);
+
+    std::string obtained = this->getMsg(validateTopic);
+    if (original.compare(obtained) != 0) {
+        // Can not get what being send, which means irregular connection
+        this->init();
+        int res = this->connect(topicVec);
+        return -1;
+    }
     return 0;
 }
 
@@ -258,6 +278,8 @@ void MqttCli::onConnect(void* context, MQTTAsync_successData* response)
     for (int i = 0; i < client->topicVec.size(); i++) {
         MQTTAsync_subscribe(client->aclient, client->topicVec[i].c_str(), client->QoS, &aresOpts);
     }
+    // Subscribe this topic only for checking online status
+    MQTTAsync_subscribe(client->aclient, client->validateTopic.c_str(), client->QoS, &aresOpts);
 }
 
 
