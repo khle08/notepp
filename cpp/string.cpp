@@ -81,6 +81,17 @@ int main()
     std::string sbuffer1 = "my age is 23";
     print(sbuffer.compare(sbuffer1));  // 0: equal / other number: not equal
 
+    bool aaa = true;
+    bool bbb = false;
+    bool ccc = !bbb;
+    print(!aaa);  // 0 false
+    print(!bbb);  // 1 true
+    print(!ccc << "\n---");  // 0 false
+
+    int xxx = 1;
+    int yyy = 0;
+
+    print(!xxx);
 
     // Concate the string list altogether
     // std::vector<std::string> sv = {"1920", "x", "1080"};
