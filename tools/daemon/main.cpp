@@ -24,6 +24,25 @@
 #define print(x) std::cout << x << std::endl
 
 
+int sudo(const char* cmd)
+{
+    pid_t pid = fork();
+    if (pid == 0) {
+        // ... and run this part next.
+        // Child process
+        execlp("sudo", "sudo", "sh", "-c", cmd, NULL);
+    } else if (pid > 0) {
+        // Run this part first, ...
+        // Parent process
+        // Wait for the child to finish
+        wait(NULL);
+    } else {
+        // Error occurred and handle error
+    }
+    return 0;    
+}
+
+
 int main() {
 
     Daemon& dm = Daemon::instance();
@@ -34,14 +53,7 @@ int main() {
         LOG_DEBUG("count: ", count++);
 
         // =============================================================
-        pid_t pid = fork();
-        if (pid == 0) {
-            execlp("sudo", "sudo", "echo 255 > /sys/devices/pwm-fan/target_pwm", NULL);
-        } else if (pid > 0) {
-            wait(NULL);
-        } else {
-            // Error occurred and handle error
-        }
+        sudo("./fan.sh 0");
         // =============================================================
 
         std::string info = "testing another ... " + std::to_string(count) + "\n";
