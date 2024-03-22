@@ -14,8 +14,9 @@
 #include <thread>
 #include <cstring>    // strlen
 #include <fcntl.h>    // O_CREAT ... 
-#include <unistd.h>   // write / close / usleep
+#include <unistd.h>   // write / close / usleep / fork
 #include <iostream>
+#include <sys/wait.h>
 
 #include "log.hpp"
 #include "daemon.hpp"
@@ -31,6 +32,17 @@ int main() {
     int count = 0;
     while (dm.IsRunning()) {
         LOG_DEBUG("count: ", count++);
+
+        // =============================================================
+        pid_t pid = fork();
+        if (pid == 0) {
+            execlp("sudo", "sudo", "echo 255 > /sys/devices/pwm-fan/target_pwm", NULL);
+        } else if (pid > 0) {
+            wait(NULL);
+        } else {
+            // Error occurred and handle error
+        }
+        // =============================================================
 
         std::string info = "testing another ... " + std::to_string(count) + "\n";
         write(fd, info.c_str(), strlen(info.c_str()));
