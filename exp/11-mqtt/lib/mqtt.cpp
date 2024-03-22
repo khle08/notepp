@@ -189,9 +189,24 @@ int MqttCli::reconnect(char* payload)
 
     std::string obtained = this->getMsg(validateTopic);
     if (original.compare(obtained) != 0) {
+        if (isAsync) {
+            // MQTTAsync_unsubscribe(aclient, topic);
+            MQTTAsync_disconnect(aclient, &adisConnOpts);
+            MQTTAsync_destroy(&aclient);
+
+        } else {
+            for (int i = 0; i < topicVec.size(); i++) {
+                MQTTClient_unsubscribe(client, topicVec[i].c_str());
+            }
+            MQTTClient_unsubscribe(client, validateTopic.c_str());
+            MQTTClient_disconnect(client, timeout);
+            MQTTClient_destroy(&client);
+        }
+
         // Can not get what being send, which means irregular connection
         this->init();
         int res = this->connect(topicVec);
+        sleep(this->interval);
         return -1;
     }
     return 0;
