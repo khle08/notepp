@@ -11,13 +11,6 @@
 #define print(x) std::cout << x << std::endl
 
 
-<<<<<<< HEAD
-std::string exec(const char* cmd)
-{
-    // [!] This func can only run "non-sudo" cmd. 
-    //     To check fun that can run "sudo" cmd, go to "tools/daemon/main.cpp"
-
-=======
 int strSplit(std::string& str, std::string delim, std::vector<std::string>& strVec)
 {
     auto start = 0U;
@@ -34,8 +27,11 @@ int strSplit(std::string& str, std::string delim, std::vector<std::string>& strV
 }
 
 
-std::string exec(const char* cmd) {
->>>>>>> 0c15412e47f36aa4982416b0392fe994593f7030
+std::string exec(const char* cmd)
+{
+    // [!] This func can only run "non-sudo" cmd. 
+    //     To check fun that can run "sudo" cmd, go to "tools/daemon/main.cpp"
+
     char buffer[128];
     std::string result = "";
     FILE* pipe = popen(cmd, "r");
