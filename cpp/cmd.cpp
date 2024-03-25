@@ -10,7 +10,11 @@
 #define print(x) std::cout << x << std::endl
 
 
-std::string exec(const char* cmd) {
+std::string exec(const char* cmd)
+{
+    // [!] This func can only run "non-sudo" cmd. 
+    //     To check fun that can run "sudo" cmd, go to "tools/daemon/main.cpp"
+
     char buffer[128];
     std::string result = "";
     FILE* pipe = popen(cmd, "r");
