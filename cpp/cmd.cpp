@@ -40,7 +40,11 @@ int strSplit(std::string& str, std::string delim, std::vector<std::string>& strV
 }
 
 
-std::string exec(const char* cmd) {
+std::string exec(const char* cmd)
+{
+    // [!] This func can only run "non-sudo" cmd. 
+    //     To check fun that can run "sudo" cmd, go to "tools/daemon/main.cpp"
+
     char buffer[128];
     std::string result = "";
     FILE* pipe = popen(cmd, "r");
