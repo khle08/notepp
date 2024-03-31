@@ -5,7 +5,7 @@
 
 int randint(int n1, int n2, int total, std::vector<int>& vec)
 {
-	std::random_device os_seed;
+    std::random_device os_seed;
     const uint_least32_t seed = os_seed();
     
     std::mt19937 generator( seed );
