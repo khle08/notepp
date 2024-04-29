@@ -25,35 +25,39 @@ int main(int argc, char const *argv[])
     print("\n===== OpenCV testing [start] =====");
 
     std::string pth = "/Users/kcl/Desktop/family.jpg";
-
     cv::Mat img = cv::imread(pth, 1);
+
     if (img.empty()) {
         print("[ERROR] Failed to load image: " << pth << " " << img.size());
+
     } else {
         print("[SUCCESS] image size: " << img.size());
-    }
 
+        img = ColorTemperature(img, 20);
+        cv::imshow("abc", img);
+        cv::waitKey(0);
+    }
 
     print("\n===== OpenCV rotating [start] =====");
 
-    // cv::imshow("abc", img);
-    // cv::waitKey(0);
+   //  // cv::imshow("abc", img);
+   //  // cv::waitKey(0);
 
-    int angle = 90;
-    cv::Point2f center((img.cols - 1) / 2.0, (img.rows - 1) / 2.0);
-    cv::Mat rot = cv::getRotationMatrix2D(center, angle, 1.0);
+   //  int angle = 90;
+   //  cv::Point2f center((img.cols - 1) / 2.0, (img.rows - 1) / 2.0);
+   //  cv::Mat rot = cv::getRotationMatrix2D(center, angle, 1.0);
 
-   // determine bounding rectangle, center not relevant
-    cv::Rect2f bbox = cv::RotatedRect(cv::Point2f(), img.size(), angle).boundingRect2f();
-    // adjust transformation matrix
-    rot.at<double>(0,2) += bbox.width / 2.0 - img.cols / 2.0;
-    rot.at<double>(1,2) += bbox.height / 2.0 - img.rows / 2.0;
+   // // determine bounding rectangle, center not relevant
+   //  cv::Rect2f bbox = cv::RotatedRect(cv::Point2f(), img.size(), angle).boundingRect2f();
+   //  // adjust transformation matrix
+   //  rot.at<double>(0,2) += bbox.width / 2.0 - img.cols / 2.0;
+   //  rot.at<double>(1,2) += bbox.height / 2.0 - img.rows / 2.0;
 
-    // cv::Mat img;
-    cv::warpAffine(img, img, rot, bbox.size());
+   //  // cv::Mat img;
+   //  cv::warpAffine(img, img, rot, bbox.size());
 
-    cv::imshow("abc", img);
-    cv::waitKey(0);
+   //  cv::imshow("abc", img);
+   //  cv::waitKey(0);
 
     print("\n===== OpenCV rotating [ end ] =====");
 

@@ -2,6 +2,61 @@
 #include "imgReader.h"
 
 
+cv::Mat ColorTemperature(cv::Mat& input, int n)
+{
+    cv::Mat result = input.clone();
+    int row = input.rows;
+    int col = input.cols;
+    int level = n / 2;
+    for (int i = 0; i < row; ++i)
+    {
+        uchar* a = input.ptr<uchar>(i);
+        uchar* r = result.ptr<uchar>(i);
+        for (int j = 0; j < col; ++j)
+        {
+            int R, G, B;
+            // R通道
+            R = a[j * 3 + 2];
+            R = R + level;
+            if (R > 255) {
+                r[j * 3 + 2] = 255;
+            }
+            else if (R < 0) {
+                r[j * 3 + 2] = 0;
+            }
+            else {
+                r[j * 3 + 2] = R;
+            }
+            // G通道
+            G = a[j * 3 + 1];
+            G = G + level;
+            if (G > 255) {
+                r[j * 3 + 1] = 255;
+            }
+            else if (G < 0) {
+                r[j * 3 + 1] = 0;
+            }
+            else {
+                r[j * 3 + 1] = G;
+            }
+            // B通道
+            B = a[j * 3];
+            B = B - level;
+            if (B > 255) {
+                r[j * 3] = 255;
+            }
+            else if (B < 0) {
+                r[j * 3] = 0;
+            }
+            else {
+                r[j * 3] = B;
+            }
+        }
+    }
+    return result;
+}
+
+
 ImgReader::ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images, std::mutex& m)
         : src(src), inputId(inputId)
 {
