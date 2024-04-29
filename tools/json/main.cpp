@@ -51,6 +51,8 @@ int main() {
     // }
     print("===== start =====");
     print("j1[\"vec\"][1] = " << j1["vec"][1]);  // out: 2
+    print("j1[\"vec\"][1] = " << j1["vec"][4]);  // out: null
+    print("j1[\"new\"] = " << j1["new"]);        // out: null
 
     // Transform json data into string in following 2 ways
     Json::FastWriter fw;

@@ -192,6 +192,7 @@ add_executable(exe ${SOURCE})
 # Always require threads
 target_link_libraries(exe ${_INTERFACE_OR_PUBLIC}
     Threads::Threads
+    -lpthread
     # Needed for Windows libs on Mingw, as the pragma comment(lib, "xyz") aren't triggered.
     $<$<PLATFORM_ID:Windows>:ws2_32>
     $<$<PLATFORM_ID:Windows>:crypt32>

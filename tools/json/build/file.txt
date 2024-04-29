@@ -5,9 +5,13 @@
 	{
 		"data" : 12345
 	},
+	"new" : null,
 	"vec" : 
 	[
 		1,
-		2
+		2,
+		null,
+		null,
+		null
 	]
 }

@@ -13,6 +13,9 @@
 #define print(x) std::cout << x << std::endl;
 
 
+cv::Mat ColorTemperature(cv::Mat& input, int n);
+
+
 typedef struct Camera
 {
     int width;
