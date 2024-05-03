@@ -38,6 +38,7 @@ int main(int argc, char const *argv[])
         }
 
         cv::cvtColor(now, gray, cv::COLOR_BGR2GRAY);
+        cv::resize(gray, gray, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
 
         if (!prev.empty()) {
             cv::calcOpticalFlowFarneback(prev, gray, res, 0.5, 3, 15, 3, 5, 1.2, 0);
