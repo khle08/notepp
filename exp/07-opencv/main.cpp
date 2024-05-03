@@ -24,19 +24,56 @@ int main(int argc, char const *argv[])
 
     print("\n===== OpenCV testing [start] =====");
 
-    std::string pth = "/Users/kcl/Desktop/family.jpg";
-    cv::Mat img = cv::imread(pth, 1);
+    cv::Mat prev, gray, now, res;
+    cv::VideoCapture cap("/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov");
 
-    if (img.empty()) {
-        print("[ERROR] Failed to load image: " << pth << " " << img.size());
+    int n = 0;
+    while (cap.isOpened()) {
+        if (n >= 0) {
+            cap.read(now);
+        }
 
-    } else {
-        print("[SUCCESS] image size: " << img.size());
+        if (now.data == NULL) {
+            break;
+        }
 
-        img = ColorTemperature(img, 20);
-        cv::imshow("abc", img);
-        cv::waitKey(0);
+        cv::cvtColor(now, gray, cv::COLOR_BGR2GRAY);
+
+        if (!prev.empty()) {
+            cv::calcOpticalFlowFarneback(prev, gray, res, 0.5, 3, 15, 3, 5, 1.2, 0);
+            // std::cout << res.size() << std::endl;
+
+            for (int y = 0; y < gray.rows; y+=10) {
+                for (int x = 0; x < gray.cols; x += 10) {
+                    const cv::Point2f flowatxy = res.at<cv::Point2f>(y, x) * 4;
+                    cv::line(now, cv::Point(x, y), cv::Point(
+                        cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
+                    cv::circle(now, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
+                }
+            }
+        }
+
+        cv::imshow("flow", now);
+        cv::waitKey(10);
+
+        std::swap(prev, gray);
     }
+
+    // [!] Change color temperature
+
+    // std::string pth = "/Users/kcl/Desktop/family.jpg";
+    // cv::Mat img = cv::imread(pth, 1);
+
+    // if (img.empty()) {
+    //     print("[ERROR] Failed to load image: " << pth << " " << img.size());
+
+    // } else {
+    //     print("[SUCCESS] image size: " << img.size());
+
+    //     img = ColorTemperature(img, 20);
+    //     cv::imshow("abc", img);
+    //     cv::waitKey(0);
+    // }
 
     print("\n===== OpenCV rotating [start] =====");
 
@@ -149,5 +186,6 @@ int main(int argc, char const *argv[])
 
     print(  "===== OpenCV testing [ end ] =====\n");
 
+    cv::destroyAllWindows();
     return 0;
 }

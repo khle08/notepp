@@ -23,6 +23,7 @@ echo "123" | sudo -S apt install -y python3-numpy
 echo "123" | sudo -S apt install -y python3-pip
 echo "123" | sudo -S apt install -y python3-distutils
 echo "123" | sudo -S apt install -y python3-apt
+echo "123" | sudo -S apt install -y libopencv-python
 
 echo "123" | sudo -S apt install -y libtbb2
 echo "123" | sudo -S apt install -y libtbb-dev
@@ -37,3 +38,5 @@ echo "123" | sudo -S apt install -y libatlas-base-dev
 echo "123" | sudo -S apt install -y libopenmpi-bin
 echo "123" | sudo -S apt install -y libopenmpi-dev
 echo "123" | sudo -S apt install -y coinor-clp
+
+echo "123" | sudo -S apt install -y ubuntu-restricted-extras
