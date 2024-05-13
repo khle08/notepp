@@ -3,12 +3,14 @@
 #include <mutex>
 #include <thread>
 #include <string>
+#include <chrono>
 #include <iostream>
 #include <unistd.h>    // for "usleep"
 
 #include <opencv2/opencv.hpp>
 
 #include "imgReader.h"
+typedef std::chrono::high_resolution_clock::time_point chtime;
 
 
 struct Object
@@ -24,8 +26,10 @@ int main(int argc, char const *argv[])
 
     print("\n===== OpenCV testing [start] =====");
 
+    // [!] Test optical flow
     cv::Mat prev, gray, now, res;
-    cv::VideoCapture cap("/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov");
+    // cv::VideoCapture cap("/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov");
+    cv::VideoCapture cap("/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/IMG_4468.MOV");
 
     int n = 0;
     while (cap.isOpened()) {
@@ -39,9 +43,17 @@ int main(int argc, char const *argv[])
 
         cv::cvtColor(now, gray, cv::COLOR_BGR2GRAY);
         cv::resize(gray, gray, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
+        // cv::resize(gray, gray, cv::Size(1024, 576), 0, 0, cv::INTER_LINEAR);
 
         if (!prev.empty()) {
+            chtime t1 = std::chrono::high_resolution_clock::now();
             cv::calcOpticalFlowFarneback(prev, gray, res, 0.5, 3, 15, 3, 5, 1.2, 0);
+            chtime t2 = std::chrono::high_resolution_clock::now();
+
+            std::chrono::duration<double> diff = t2 - t1;
+            print("use " << diff.count() << " s\n");
+            // bool res = diff.count() > 0.0;
+            // print(res);
             // std::cout << res.size() << std::endl;
 
             for (int y = 0; y < gray.rows; y+=10) {
@@ -122,6 +134,10 @@ int main(int argc, char const *argv[])
     // Object obj2{rect1, 1, 0.99};
 
     print("\n===== OpenCV thread [ start ] =====\n");
+
+    // std::string pth = "/Users/kcl/Desktop/family.jpg";
+    // cv::Mat img = cv::imread(pth, 1);
+
     // Cam cam = {-1, -1, img, false};
     // std::vector<Cam> imgVec = {cam};
 
@@ -129,7 +145,11 @@ int main(int argc, char const *argv[])
     // std::condition_variable cvMutex;
     // std::map<int, std::vector<Cam>> images = {};
 
-    // std::vector<std::string> srcVec = {"/Users/kcl/Desktop/ADAS.mov", "1"};
+    // std::vector<std::string> srcVec = {
+    //     "0",
+    //     "/Users/kcl/Desktop/ADAS.mov"
+    //     // "/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/dive.mp4",
+    // };
     // for (int i = 0; i < srcVec.size(); i++) {
     //     ImgReader imr(srcVec[i], i + 1, images, imgMutex);
     // }
@@ -156,10 +176,11 @@ int main(int argc, char const *argv[])
     // }
 
 
-    // 3 ways to put element into map.
+    // // 3 ways to put element into map.
     // images[0] = imgVec;
     // images.insert({1, imgVec});  // if the key is the same, value will be replaced
     // images.insert(std::map<int, std::vector<Cam>>::value_type(2, imgVec));
+
     print("\n===== OpenCV thread [  end  ] =====\n");
 
     // cv::Rect r(300, 20, 5, 5);
