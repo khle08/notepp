@@ -141,6 +141,8 @@ int ImgReader::read(std::string src, int inputId, ImgReader& obj,
         if (cam.frame.size().width > 0 && cam.frame.size().height > 0) {
             m.lock();                                 // method 1
             // std::lock_guard<std::mutex> mutex(m);  // method 2
+
+            cam.took = false;
             cam.width = cam.frame.size().width;
             cam.height = cam.frame.size().height;
 
@@ -158,6 +160,7 @@ int ImgReader::read(std::string src, int inputId, ImgReader& obj,
                     obj.image.status = 0;  // new
                 }
             }
+
             m.unlock();                               // method 1
         }
 
