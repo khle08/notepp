@@ -147,6 +147,10 @@ int main(int argc, char const *argv[])
         print(imrVec[0]->image.prev.size() << " " << ZZZ);
         ZZZ += 1;
 
+        if (ZZZ > 50) {
+            imrVec[0]->stopAlgo("opticalFlow", false, imgMutex);
+        }
+
         // [!] Should not put algo here since it needs to init new thread everytime when started, which is inefficient.
         // if (imrVec[0]->firstFrame || imrVec[0]->image.status == 1) {
         //     int res = imrVec[0]->runAlgo(640, 360, "opticalFlow", imgMutex);

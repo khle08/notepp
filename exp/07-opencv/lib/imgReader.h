@@ -49,12 +49,15 @@ public:
 
     bool firstFrame = true;
     int runAlgo(int width, int height, std::string name, std::mutex& m);
+    int stopAlgo(std::string name, bool stopAll, std::mutex& m);
 
 private:
     int inputId = -1;
     std::string src = "";
 
     bool isRunningAlgo = false;
+    bool isRunningOpticalFlow = false;
+
     int algoWidth = 640;
     int algoHeight = 360;
 

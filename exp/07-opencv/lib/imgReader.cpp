@@ -183,6 +183,10 @@ int ImgReader::runAlgo(int width, int height, std::string name, std::mutex& m)
     this->algoHeight = height;
     this->image.status = 0;      // new
     this->isRunningAlgo = true;
+
+    if (name.compare("opticalFlow") == 0) {
+        this->isRunningOpticalFlow = true;
+    }
     m.unlock();
 
     if (name.compare("opticalFlow") == 0) {
@@ -195,9 +199,28 @@ int ImgReader::runAlgo(int width, int height, std::string name, std::mutex& m)
 }
 
 
+int ImgReader::stopAlgo(std::string name, bool stopAll, std::mutex& m)
+{
+    m.lock();
+
+    if (stopAll) {
+        this->isRunningAlgo = false;
+        this->isRunningOpticalFlow = false;
+
+    } else {
+        if (name.compare("opticalFlow") == 0) {
+            this->isRunningOpticalFlow = false;
+        }
+    }
+
+    m.unlock();
+    return 0;
+}
+
+
 int ImgReader::opticalFlow(ImgReader& obj, std::mutex& m)
 {
-    while (true) {
+    while (obj.isRunningOpticalFlow) {
         if (obj.firstFrame || obj.image.status == 0) {
             if (obj.image.frame.empty()) {
 
