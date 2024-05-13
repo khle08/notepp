@@ -57,9 +57,8 @@ cv::Mat ColorTemperature(cv::Mat& input, int n)
 }
 
 
-ImgReader::ImgReader(std::string src, int inputId, std::string algo,
-                     std::map<int, std::vector<Cam>>& images, std::mutex& m)
-        : src(src), inputId(inputId), algo(algo)
+ImgReader::ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images, std::mutex& m)
+        : src(src), inputId(inputId)
 {
     print("start: " << this->image.frame.size());
 
@@ -149,6 +148,9 @@ int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std:
                 // images[inputId].push_back(cam);
             }
             image.frame = frame.clone();
+            if (image.status == 1) {
+                image.status = 0;  // new
+            }
             m.unlock();                               // method 1
         }
 
@@ -167,8 +169,7 @@ int ImgReader::runAlgo(int width, int height, std::string name, std::mutex& m)
     this->image.status = 0;  // new
 
     if (name.compare("opticalFlow") == 0) {
-        algorithm = std::thread(this->opticalFlow, std::ref(this->image), width, height,
-                                std::ref(this->firstFrame), std::ref(m));
+        algorithm = std::thread(this->opticalFlow, std::ref(*this), width, height, std::ref(m));
         algorithm.detach();
         return 0;
     }
@@ -177,40 +178,51 @@ int ImgReader::runAlgo(int width, int height, std::string name, std::mutex& m)
 }
 
 
-int ImgReader::opticalFlow(Img& image, int width, int height, bool& firstFrame, std::mutex& m)
+int ImgReader::opticalFlow(ImgReader& obj, int width, int height, std::mutex& m)
 {
-    if (image.frame.empty()) {
-        return -1;
-    }
+    while (true) {
+        if (obj.firstFrame || obj.image.status == 0) {
+            if (obj.image.frame.empty()) {
+                std::cout << "~~~~ empty ~~~~~ !!!" << std::endl;
+                usleep(0.1 * 1000 * 1000);
+                continue;
+            }
 
-    cv::Mat gray;
-    cv::cvtColor(image.frame, gray, cv::COLOR_BGR2GRAY);
-    cv::resize(gray, gray, cv::Size(width, height), 0, 0, cv::INTER_LINEAR);
+            cv::Mat gray;
+            cv::resize(obj.image.frame, obj.image.frame, cv::Size(width, height), 0, 0, cv::INTER_LINEAR);
+            cv::cvtColor(obj.image.frame, gray, cv::COLOR_BGR2GRAY);
 
-    if (!image.prev.empty()) {
-        m.lock();
-        cv::calcOpticalFlowFarneback(image.prev, gray, image.flow, 0.5, 3, 15, 3, 5, 1.2, 0);
-        image.status = 1;  // processed
+            if (!obj.image.prev.empty()) {
+                m.lock();
+                cv::calcOpticalFlowFarneback(obj.image.prev, gray, obj.image.flow, 0.5, 3, 15, 3, 5, 1.2, 0);
+                obj.image.status = 1;  // processed
 
-        if (firstFrame) {
-            firstFrame = false;
+                if (obj.firstFrame) {
+                    obj.firstFrame = false;
+                }
+
+                std::cout << "~~~ finished ~~~ OOO" << std::endl;
+                // std::cout << obj.image.flow.size() << std::endl;
+
+                // for (int y = 0; y < gray.rows; y+=10) {
+                //     for (int x = 0; x < gray.cols; x += 10) {
+                //         const cv::Point2f flowatxy = obj.image.flow.at<cv::Point2f>(y, x) * 4;
+                //         cv::line(obj.image.frame, cv::Point(x, y), cv::Point(
+                //             cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
+                //         cv::circle(obj.image.frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
+                //     }
+                // }
+                m.unlock();
+
+            } else {
+                std::cout << "~~~~~ skip ~~~~~ XXX" << std::endl;
+                usleep(0.1 * 1000 * 1000);
+            }
+
+            std::swap(obj.image.prev, gray);
         }
-        m.unlock();
-
-        std::cout << "~~~ finished ~~~ XXX" << std::endl;
-        // std::cout << image.flow.size() << std::endl;
-
-        // for (int y = 0; y < gray.rows; y+=10) {
-        //     for (int x = 0; x < gray.cols; x += 10) {
-        //         const cv::Point2f flowatxy = image.flow.at<cv::Point2f>(y, x) * 4;
-        //         cv::line(image.frame, cv::Point(x, y), cv::Point(
-        //             cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
-        //         cv::circle(image.frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
-        //     }
-        // }
     }
 
-    std::swap(image.prev, gray);
     return 0;
 }
 

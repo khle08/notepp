@@ -134,7 +134,9 @@ int main(int argc, char const *argv[])
 
     for (int i = 0; i < srcVec.size(); i++) {
         // ImgReader imr(srcVec[i], i + 1, images, imgMutex);
-        ImgReader* imr = new ImgReader(srcVec[i], i + 1, "algo", images, imgMutex);
+        ImgReader* imr = new ImgReader(srcVec[i], i + 1, images, imgMutex);
+        imr->runAlgo(640, 360, "opticalFlow", imgMutex);
+
         imrVec.push_back(imr);
     }
     usleep(3 * 1000 * 1000);    // 1s
@@ -145,27 +147,31 @@ int main(int argc, char const *argv[])
         print(imrVec[0]->image.prev.size() << " " << ZZZ);
         ZZZ += 1;
 
-        if (imrVec[0]->firstFrame || imrVec[0]->image.status == 1) {
-            int res = imrVec[0]->runAlgo(640, 360, "opticalFlow", imgMutex);
-            print("in algo ~~~~~~~~ OOO");
-        }
+        // [!] Should not put algo here since it needs to init new thread everytime when started, which is inefficient.
+        // if (imrVec[0]->firstFrame || imrVec[0]->image.status == 1) {
+        //     int res = imrVec[0]->runAlgo(640, 360, "opticalFlow", imgMutex);
+        //     print("in algo ~~~~~~~~ OOO");
+        // }
 
-        if (!imrVec[0]->image.flow.empty()) {
-            for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
-                for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
-                    // cv::Mat flow = imrVec[0]->image.flow.clone();
+        // [!] Visualize the optical flow
+        // if (!imrVec[0]->image.flow.empty()) {
+        //     imgMutex.lock();
+        //     for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
+        //         for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
+        //             // cv::Mat flow = imrVec[0]->image.flow.clone();
 
-                    // cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
-                    // cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
-                    //     cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
-                    // cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
-                }
-            }
-        }
+        //             cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
+        //             cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
+        //                 cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
+        //             cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
+        //         }
+        //     }
+        //     imgMutex.unlock();
+        // }
             
         cv::imshow("flow", images[1][0].frame);
         cv::waitKey(30);
-        usleep(0.1 * 1000 * 1000);    // 1s
+        usleep(0.01 * 1000 * 1000);    // 1s
     }
 
     // [!] Test if frame data is loaded into map successfully in thread

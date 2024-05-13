@@ -40,8 +40,7 @@ typedef struct Image
 class ImgReader
 {
 public:
-    ImgReader(std::string src, int inputId, std::string algo,
-              std::map<int, std::vector<Cam>>& images, std::mutex& m);
+    ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images, std::mutex& m);
     ~ImgReader();
 
     Img image;
@@ -61,7 +60,7 @@ private:
     static int read(std::string src, int inputId, Img& image, 
                     std::map<int, std::vector<Cam>>& images, std::mutex& m);
 
-    static int opticalFlow(Img& image, int width, int height, bool& firstFrame, std::mutex& m);
+    static int opticalFlow(ImgReader& obj, int width, int height, std::mutex& m);
     // ... error: reference to non-static member function must be called;
 };
 
