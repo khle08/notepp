@@ -1,4 +1,6 @@
 
+#define MY_inner_DEBUG
+
 #include "imgReader.h"
 
 
@@ -198,7 +200,11 @@ int ImgReader::opticalFlow(ImgReader& obj, std::mutex& m)
     while (true) {
         if (obj.firstFrame || obj.image.status == 0) {
             if (obj.image.frame.empty()) {
+
+                #ifdef MY_inner_DEBUG
                 std::cout << "~~~~ empty ~~~~~ !!!" << std::endl;
+                #endif
+
                 usleep(0.1 * 1000 * 1000);
                 continue;
             }
@@ -215,8 +221,10 @@ int ImgReader::opticalFlow(ImgReader& obj, std::mutex& m)
                     obj.firstFrame = false;
                 }
 
+                #ifdef MY_inner_DEBUG
                 std::cout << "~~~ finished ~~~ OOO" << std::endl;
                 // std::cout << obj.image.flow.size() << std::endl;
+                #endif
 
                 // for (int y = 0; y < gray.rows; y+=10) {
                 //     for (int x = 0; x < gray.cols; x += 10) {
@@ -229,7 +237,10 @@ int ImgReader::opticalFlow(ImgReader& obj, std::mutex& m)
                 m.unlock();
 
             } else {
+                #ifdef MY_inner_DEBUG
                 std::cout << "~~~~~ skip ~~~~~ XXX" << std::endl;
+                #endif
+
                 usleep(0.1 * 1000 * 1000);
             }
 
