@@ -53,14 +53,17 @@ public:
 private:
     int inputId = -1;
     std::string src = "";
-    std::string algo = "";
+
+    bool isRunningAlgo = false;
+    int algoWidth = 640;
+    int algoHeight = 360;
 
     // static must be defined here or ...
     static bool isInt(std::string s);
-    static int read(std::string src, int inputId, Img& image, 
+    static int read(std::string src, int inputId, ImgReader& obj, 
                     std::map<int, std::vector<Cam>>& images, std::mutex& m);
 
-    static int opticalFlow(ImgReader& obj, int width, int height, std::mutex& m);
+    static int opticalFlow(ImgReader& obj, std::mutex& m);
     // ... error: reference to non-static member function must be called;
 };
 

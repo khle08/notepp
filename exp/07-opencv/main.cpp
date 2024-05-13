@@ -154,20 +154,20 @@ int main(int argc, char const *argv[])
         // }
 
         // [!] Visualize the optical flow
-        // if (!imrVec[0]->image.flow.empty()) {
-        //     imgMutex.lock();
-        //     for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
-        //         for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
-        //             // cv::Mat flow = imrVec[0]->image.flow.clone();
+        if (!imrVec[0]->image.flow.empty()) {
+            imgMutex.lock();
+            for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
+                for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
+                    // cv::Mat flow = imrVec[0]->image.flow.clone();
 
-        //             cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
-        //             cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
-        //                 cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
-        //             cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
-        //         }
-        //     }
-        //     imgMutex.unlock();
-        // }
+                    cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
+                    cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
+                        cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
+                    cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
+                }
+            }
+            imgMutex.unlock();
+        }
             
         cv::imshow("flow", images[1][0].frame);
         cv::waitKey(30);

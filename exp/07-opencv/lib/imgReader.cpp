@@ -63,7 +63,7 @@ ImgReader::ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam
     print("start: " << this->image.frame.size());
 
     this->image.status = 0;
-    reader = std::thread(this->read, src, inputId, std::ref(this->image), std::ref(images), std::ref(m));
+    reader = std::thread(this->read, src, inputId, std::ref(*this), std::ref(images), std::ref(m));
     reader.detach();
 }
 
@@ -85,11 +85,13 @@ bool ImgReader::isInt(std::string s)
 }
 
 
-int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std::vector<Cam>>& images, std::mutex& m)
+int ImgReader::read(std::string src, int inputId, ImgReader& obj,
+                    std::map<int, std::vector<Cam>>& images, std::mutex& m)
 {
     int cnt = 1;
     cv::Mat frame;
     cv::VideoCapture cap;
+    Cam cam = {-1, -1, frame, false};
 
     if (isInt(src)) {
         cap = cv::VideoCapture(std::stoi(src));
@@ -110,7 +112,7 @@ int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std:
             usleep(0.1 * 1000 * 1000);
         }
 
-        if (!cap.read(frame)) {
+        if (!cap.read(cam.frame)) {
             std::cout << "\ncap.read: false | from: " << src << std::endl;
             cap.release();
             if (isInt(src)) {
@@ -121,7 +123,7 @@ int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std:
             usleep(0.1 * 1000 * 1000);
         }
 
-        if (frame.data == NULL) {
+        if (cam.frame.data == NULL) {
             std::cout << "\nframe.data: false | from: " << src << std::endl;
             cap.release();
             if (isInt(src)) {
@@ -132,14 +134,16 @@ int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std:
             usleep(0.1 * 1000 * 1000);
         }
 
-        if (!frame.empty()) {
-            cv::resize(frame, frame, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
+        if (!cam.frame.empty()) {
+            cv::resize(cam.frame, cam.frame, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
         }
 
-        Cam cam = {-1, -1, frame.clone(), false};
-        if (frame.size().width > 0 && frame.size().height > 0) {
+        if (cam.frame.size().width > 0 && cam.frame.size().height > 0) {
             m.lock();                                 // method 1
             // std::lock_guard<std::mutex> mutex(m);  // method 2
+            cam.width = cam.frame.size().width;
+            cam.height = cam.frame.size().height;
+
             if (cnt == 1) {
                 images[inputId] = {cam};
                 cnt += 1;
@@ -147,9 +151,12 @@ int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std:
                 images[inputId] = {cam};
                 // images[inputId].push_back(cam);
             }
-            image.frame = frame.clone();
-            if (image.status == 1) {
-                image.status = 0;  // new
+
+            if (obj.isRunningAlgo) {
+                cv::resize(cam.frame, obj.image.frame, cv::Size(obj.algoWidth, obj.algoHeight), 0, 0, cv::INTER_LINEAR);
+                if (obj.image.status == 1) {
+                    obj.image.status = 0;  // new
+                }
             }
             m.unlock();                               // method 1
         }
@@ -166,10 +173,15 @@ int ImgReader::read(std::string src, int inputId, Img& image, std::map<int, std:
 
 int ImgReader::runAlgo(int width, int height, std::string name, std::mutex& m)
 {
-    this->image.status = 0;  // new
+    m.lock();
+    this->algoWidth = width;
+    this->algoHeight = height;
+    this->image.status = 0;      // new
+    this->isRunningAlgo = true;
+    m.unlock();
 
     if (name.compare("opticalFlow") == 0) {
-        algorithm = std::thread(this->opticalFlow, std::ref(*this), width, height, std::ref(m));
+        algorithm = std::thread(this->opticalFlow, std::ref(*this), std::ref(m));
         algorithm.detach();
         return 0;
     }
@@ -178,7 +190,7 @@ int ImgReader::runAlgo(int width, int height, std::string name, std::mutex& m)
 }
 
 
-int ImgReader::opticalFlow(ImgReader& obj, int width, int height, std::mutex& m)
+int ImgReader::opticalFlow(ImgReader& obj, std::mutex& m)
 {
     while (true) {
         if (obj.firstFrame || obj.image.status == 0) {
@@ -189,7 +201,6 @@ int ImgReader::opticalFlow(ImgReader& obj, int width, int height, std::mutex& m)
             }
 
             cv::Mat gray;
-            cv::resize(obj.image.frame, obj.image.frame, cv::Size(width, height), 0, 0, cv::INTER_LINEAR);
             cv::cvtColor(obj.image.frame, gray, cv::COLOR_BGR2GRAY);
 
             if (!obj.image.prev.empty()) {
