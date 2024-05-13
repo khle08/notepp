@@ -7,6 +7,7 @@
 #include <string>
 #include <unistd.h>
 #include <iostream>
+#include <condition_variable>
 
 #include <opencv2/opencv.hpp>
 
@@ -25,22 +26,43 @@ typedef struct Camera
 }Cam;
 
 
+typedef struct Image
+{
+    // {{x1, y1}, {x2, y2}, {x3, y3}, ...}
+    std::vector<std::vector<float>> coords;
+    cv::Mat frame;
+    cv::Mat prev;
+    cv::Mat flow;
+    int status;  // 0: new / 1: processed / 2: ... more
+}Img;
+
+
 class ImgReader
 {
 public:
-    ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images, std::mutex& m);
+    ImgReader(std::string src, int inputId, std::string algo,
+              std::map<int, std::vector<Cam>>& images, std::mutex& m);
     ~ImgReader();
 
+    Img image;
     std::thread reader;
+    std::thread algorithm;
+
+    bool firstFrame = true;
+    int runAlgo(int width, int height, std::string name, std::mutex& m);
 
 private:
     int inputId = -1;
     std::string src = "";
+    std::string algo = "";
 
     // static must be defined here or ...
-    // error: reference to non-static member function must be called;
     static bool isInt(std::string s);
-    static int read(std::string src, int inputId, std::map<int, std::vector<Cam>>& images, std::mutex& m);
+    static int read(std::string src, int inputId, Img& image, 
+                    std::map<int, std::vector<Cam>>& images, std::mutex& m);
+
+    static int opticalFlow(Img& image, int width, int height, bool& firstFrame, std::mutex& m);
+    // ... error: reference to non-static member function must be called;
 };
 
 
