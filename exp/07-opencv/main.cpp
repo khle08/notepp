@@ -26,55 +26,10 @@ int main(int argc, char const *argv[])
 
     print("\n===== OpenCV testing [start] =====");
 
-<<<<<<< HEAD
     // [!] Test optical flow
-    cv::Mat prev, gray, now, res;
-    // cv::VideoCapture cap("/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov");
-    cv::VideoCapture cap("/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/IMG_4468.MOV");
-
-    int n = 0;
-    while (cap.isOpened()) {
-        if (n >= 0) {
-            cap.read(now);
-        }
-
-        if (now.data == NULL) {
-            break;
-        }
-
-        cv::cvtColor(now, gray, cv::COLOR_BGR2GRAY);
-        cv::resize(gray, gray, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
-        // cv::resize(gray, gray, cv::Size(1024, 576), 0, 0, cv::INTER_LINEAR);
-
-        if (!prev.empty()) {
-            chtime t1 = std::chrono::high_resolution_clock::now();
-            cv::calcOpticalFlowFarneback(prev, gray, res, 0.5, 3, 15, 3, 5, 1.2, 0);
-            chtime t2 = std::chrono::high_resolution_clock::now();
-
-            std::chrono::duration<double> diff = t2 - t1;
-            print("use " << diff.count() << " s\n");
-            // bool res = diff.count() > 0.0;
-            // print(res);
-            // std::cout << res.size() << std::endl;
-
-            for (int y = 0; y < gray.rows; y+=10) {
-                for (int x = 0; x < gray.cols; x += 10) {
-                    const cv::Point2f flowatxy = res.at<cv::Point2f>(y, x) * 4;
-                    cv::line(now, cv::Point(x, y), cv::Point(
-                        cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
-                    cv::circle(now, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
-                }
-            }
-        }
-
-        cv::imshow("flow", now);
-        cv::waitKey(10);
-
-        std::swap(prev, gray);
-    }
-=======
     // cv::Mat prev, gray, now, res;
-    // cv::VideoCapture cap("/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov");
+    // // cv::VideoCapture cap("/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov");
+    // cv::VideoCapture cap("/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/IMG_4468.MOV");
 
     // int n = 0;
     // while (cap.isOpened()) {
@@ -88,9 +43,17 @@ int main(int argc, char const *argv[])
 
     //     cv::cvtColor(now, gray, cv::COLOR_BGR2GRAY);
     //     cv::resize(gray, gray, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
+    //     // cv::resize(gray, gray, cv::Size(1024, 576), 0, 0, cv::INTER_LINEAR);
 
     //     if (!prev.empty()) {
+    //         chtime t1 = std::chrono::high_resolution_clock::now();
     //         cv::calcOpticalFlowFarneback(prev, gray, res, 0.5, 3, 15, 3, 5, 1.2, 0);
+    //         chtime t2 = std::chrono::high_resolution_clock::now();
+
+    //         std::chrono::duration<double> diff = t2 - t1;
+    //         print("use " << diff.count() << " s\n");
+    //         // bool res = diff.count() > 0.0;
+    //         // print(res);
     //         // std::cout << res.size() << std::endl;
 
     //         for (int y = 0; y < gray.rows; y+=10) {
@@ -108,7 +71,6 @@ int main(int argc, char const *argv[])
 
     //     std::swap(prev, gray);
     // }
->>>>>>> f55e2b806cf4271ee17331f8a3cea036735f5e94
 
     // [!] Change color temperature
 
@@ -173,35 +135,15 @@ int main(int argc, char const *argv[])
     // Object obj2{rect1, 1, 0.99};
 
     print("\n===== OpenCV thread [ start ] =====\n");
-<<<<<<< HEAD
 
-    // std::string pth = "/Users/kcl/Desktop/family.jpg";
-    // cv::Mat img = cv::imread(pth, 1);
-
-    // Cam cam = {-1, -1, img, false};
-    // std::vector<Cam> imgVec = {cam};
-=======
-    Cam cam = {-1, -1, img, false};
-    std::vector<Cam> imgVec = {cam};
     std::vector<ImgReader*> imrVec;
-    std::vector<std::string> srcVec = {"/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov"};
->>>>>>> f55e2b806cf4271ee17331f8a3cea036735f5e94
+    // std::vector<std::string> srcVec = {"/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov"};
+    std::vector<std::string> srcVec = {"/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/IMG_4468.MOV"};
 
     std::mutex imgMutex;
     std::condition_variable cvMutex;
     std::map<int, std::vector<Cam>> images = {};
 
-<<<<<<< HEAD
-    // std::vector<std::string> srcVec = {
-    //     "0",
-    //     "/Users/kcl/Desktop/ADAS.mov"
-    //     // "/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/dive.mp4",
-    // };
-    // for (int i = 0; i < srcVec.size(); i++) {
-    //     ImgReader imr(srcVec[i], i + 1, images, imgMutex);
-    // }
-    // usleep(3 * 1000 * 1000);    // 1s
-=======
     for (int i = 0; i < srcVec.size(); i++) {
         // ImgReader imr(srcVec[i], i + 1, images, imgMutex);
         ImgReader* imr = new ImgReader(srcVec[i], i + 1, images, imgMutex);
@@ -212,14 +154,17 @@ int main(int argc, char const *argv[])
     usleep(3 * 1000 * 1000);    // 1s
     print(imrVec[0]->image.frame.size());  // check if the frame is being copied to class struct attribute
 
+    cv::Mat mainFrame;
+
     int ZZZ = 0;
     while (true) {
         print(imrVec[0]->image.prev.size() << " " << ZZZ);
         ZZZ += 1;
 
-        if (ZZZ > 50) {
-            imrVec[0]->stopAlgo("opticalFlow", false, imgMutex);
-        }
+        // [!] Test if the algo can be stopped successfully here
+        // if (ZZZ > 50) {
+        //     imrVec[0]->stopAlgo("opticalFlow", false, imgMutex);
+        // }
 
         // [!] Should not put algo here since it needs to init new thread everytime when started, which is inefficient.
         // if (imrVec[0]->firstFrame || imrVec[0]->image.status == 1) {
@@ -228,28 +173,30 @@ int main(int argc, char const *argv[])
         // }
 
         // [!] Visualize the optical flow
-        if (!imrVec[0]->image.flow.empty()) {
-            imgMutex.lock();
-            for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
-                for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
-                    // cv::Mat flow = imrVec[0]->image.flow.clone();
+        // if (!imrVec[0]->image.flow.empty()) {
+        //     imgMutex.lock();
+        //     for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
+        //         for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
+        //             // cv::Mat flow = imrVec[0]->image.flow.clone();
 
-                    cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
-                    cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
-                        cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
-                    cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
-                }
-            }
-            imgMutex.unlock();
-        }
-            
-        cv::imshow("flow", images[1][0].frame);
-        cv::waitKey(30);
+        //             cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
+        //             cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
+        //                 cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
+        //             cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
+        //         }
+        //     }
+        //     imgMutex.unlock();
+        // }
+        
+        // [!] "imshow" can not be run on MAC with the following error info:
+        //      Terminating app due to uncaught exception 'NSInternalInconsistencyException',
+        //      reason: 'nextEventMatchingMask should only be called from the Main Thread!'
+        // cv::imshow("flow", images[1][0].frame);
+        // cv::waitKey(30);
         usleep(0.01 * 1000 * 1000);    // 1s
     }
 
     // [!] Test if frame data is loaded into map successfully in thread
->>>>>>> f55e2b806cf4271ee17331f8a3cea036735f5e94
 
     // std::map<int, std::vector<Cam>>::iterator it;
     // for (it = images.begin(); it != images.end(); it++) {
@@ -273,6 +220,8 @@ int main(int argc, char const *argv[])
 
 
     // // 3 ways to put element into map.
+    // Cam cam = {-1, -1, img, false};
+    // std::vector<Cam> imgVec = {cam};
     // images[0] = imgVec;
     // images.insert({1, imgVec});  // if the key is the same, value will be replaced
     // images.insert(std::map<int, std::vector<Cam>>::value_type(2, imgVec));
