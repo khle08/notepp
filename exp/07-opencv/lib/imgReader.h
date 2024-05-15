@@ -15,6 +15,7 @@
 
 
 cv::Mat ColorTemperature(cv::Mat& input, int n);
+std::string rtsp_str(std::string url, int iwidth, int iheight, int bitrate, std::string speed);
 
 
 typedef struct Camera

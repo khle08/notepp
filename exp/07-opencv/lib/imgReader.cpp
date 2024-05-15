@@ -59,6 +59,17 @@ cv::Mat ColorTemperature(cv::Mat& input, int n)
 }
 
 
+std::string rtsp_str(std::string url, int iwidth, int iheight, int bitrate, std::string speed)
+{
+    // [!] speed mode: ultrafast / superfast / veryfast / 
+    std::string src = "appsrc ! videoconvert ! videoscale";
+    src += " ! video/x-raw,width=" + std::to_string(iwidth) + ",height=" + std::to_string(iheight);
+    src += " ! x264enc speed-preset=" + speed + " tune=zerolatency bitrate=" + std::to_string(bitrate)
+    src += " ! rtspclientsink location=" + url + " ";
+    return src;
+}
+
+
 ImgReader::ImgReader(std::string src, int inputId, std::map<int, std::vector<Cam>>& images, std::mutex& m)
         : src(src), inputId(inputId)
 {
@@ -137,7 +148,7 @@ int ImgReader::read(std::string src, int inputId, ImgReader& obj,
         }
 
         if (!cam.frame.empty()) {
-            cv::resize(cam.frame, cam.frame, cv::Size(640, 320), 0, 0, cv::INTER_LINEAR);
+            cv::resize(cam.frame, cam.frame, cv::Size(640, 360), 0, 0, cv::INTER_LINEAR);
         }
 
         if (cam.frame.size().width > 0 && cam.frame.size().height > 0) {

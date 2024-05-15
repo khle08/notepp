@@ -26,7 +26,7 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 # Option 2. cv::imread load empty image
 # [!] Settings for the directory of OpenCV library
-set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/build460/stereo-triangulate)
+set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/build460/tracker)
 # set(opencv_dir /Users/kcl/Documents/Cpp_Projects/library/opencv/opencv-4.6.0/triangulate/install)
 # set(opencv_dir /home/ubt/Documents/library/opencv/opencv-4.3.0/ubuntu/install)  # dell xps13 new
 

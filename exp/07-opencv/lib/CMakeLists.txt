@@ -1,9 +1,9 @@
 
 add_library(imgReader SHARED imgReader.cpp)
 target_link_libraries(imgReader PRIVATE
-	                  ${CMAKE_THREAD_LIBS_INIT}
+                      ${CMAKE_THREAD_LIBS_INIT}
                       ${EXTRA_LIBS}
-	                  opencv_calib3d
+                      opencv_calib3d
                       opencv_core
                       # opencv_features2d
                       # opencv_flann
