@@ -49,6 +49,12 @@ public:
     std::thread algorithm;
 
     bool firstFrame = true;
+
+    int startRecording(int width, int height, float interval, bool isCycling, float maxStorage, float maxFileNum);
+    int stopRecording(float interval);
+    int startStreaming(int width, int height, std::string url, std::string protocol);
+    int stopStreaming();
+
     int runAlgo(int width, int height, std::string name, std::mutex& m);
     int stopAlgo(std::string name, bool stopAll, std::mutex& m);
 
@@ -56,11 +62,15 @@ private:
     int inputId = -1;
     std::string src = "";
 
-    bool isRunningAlgo = false;
-    bool isRunningOpticalFlow = false;
+    int rsWidth = 640;
+    int rsHeight = 360;
+    bool isRecording = false;
+    bool isStreaming = false;
 
     int algoWidth = 640;
     int algoHeight = 360;
+    bool isRunningAlgo = false;
+    bool isRunningOpticalFlow = false;
 
     // static must be defined here or ...
     static bool isInt(std::string s);

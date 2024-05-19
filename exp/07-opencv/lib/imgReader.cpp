@@ -64,7 +64,7 @@ std::string rtsp_str(std::string url, int iwidth, int iheight, int bitrate, std:
     // [!] speed mode: ultrafast / superfast / veryfast / 
     std::string src = "appsrc ! videoconvert ! videoscale";
     src += " ! video/x-raw,width=" + std::to_string(iwidth) + ",height=" + std::to_string(iheight);
-    src += " ! x264enc speed-preset=" + speed + " tune=zerolatency bitrate=" + std::to_string(bitrate)
+    src += " ! x264enc speed-preset=" + speed + " tune=zerolatency bitrate=" + std::to_string(bitrate);
     src += " ! rtspclientsink location=" + url + " ";
     return src;
 }
