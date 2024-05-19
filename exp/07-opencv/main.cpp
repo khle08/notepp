@@ -232,7 +232,7 @@ int main(int argc, char const *argv[])
         //     }
         //     imgMutex.unlock();
         // }
-        
+
         // // [!] "imshow" can not be run on MAC with the following error info:
         // //      Terminating app due to uncaught exception 'NSInternalInconsistencyException',
         // //      reason: 'nextEventMatchingMask should only be called from the Main Thread!'
