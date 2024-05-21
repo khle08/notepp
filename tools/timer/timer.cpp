@@ -37,9 +37,9 @@ std::string Time::getTime()
     m = std::stoi(YMDHMS[4]);  // minute
     s = std::stoi(YMDHMS[5]);  // second
 
-    std::string info = zeroFmt(4, Y) + "-" + zeroFmt(2, M) + "-" + zeroFmt(2, D);
-    info += "_" + zeroFmt(2, h) + "-" + zeroFmt(2, m) + "-" + zeroFmt(2, s);
-    return info;
+    this->info = zeroFmt(4, Y) + "-" + zeroFmt(2, M) + "-" + zeroFmt(2, D);
+    this->info += "_" + zeroFmt(2, h) + "-" + zeroFmt(2, m) + "-" + zeroFmt(2, s);
+    return this->info;
 }
 
 

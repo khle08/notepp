@@ -17,6 +17,7 @@
 class Time
 {
 public:
+    std::string info;
     int Y, M, D, h, m, s;
 
     int getSeconds();
