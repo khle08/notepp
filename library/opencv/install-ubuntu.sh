@@ -23,7 +23,12 @@ echo "123" | sudo -S apt install -y python3-numpy
 echo "123" | sudo -S apt install -y python3-pip
 echo "123" | sudo -S apt install -y python3-distutils
 echo "123" | sudo -S apt install -y python3-apt
-echo "123" | sudo -S apt install -y libopencv-python
+
+# [!] For jetpack, install these 2 libs
+# echo "123" | sudo -S apt install -y libopencv-python
+# echo "123" | sudo -S apt install -y gstreamer1.0-rtsp
+# echo "123" | sudo -S apt install -y gstreamer1.0-plugins-good
+# echo "123" | sudo -S apt install -y gstreamer1.0-plugins-ugly
 
 echo "123" | sudo -S apt install -y libtbb2
 echo "123" | sudo -S apt install -y libtbb-dev
