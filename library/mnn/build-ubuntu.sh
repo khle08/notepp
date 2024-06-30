@@ -44,7 +44,7 @@ echo "MNN compiled successfully !"
 
 # [CONVERTION]
 # To convert onnx file into .mnn file, use the following CMD:
-#   $ ./MNNConvert -f ONNX --modelFile xxx/xxx/xxx.onnx --MNNModel xxx.mnn --bizCode MNN
+#   $ ./MNNConvert -f ONNX --modelFile xxx/xxx/xxx.onnx --MNNModel xxx.mnn --bizCode MNN --fp16
 
 # Results:
 # The device support i8sdot:0, support fp16:0, support i8mm: 0
