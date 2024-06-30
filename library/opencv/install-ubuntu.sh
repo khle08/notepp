@@ -16,6 +16,7 @@ echo "1234567" | sudo -S apt install -y libavcodec-dev
 echo "1234567" | sudo -S apt install -y libavformat-dev
 echo "1234567" | sudo -S apt install -y libswscale-dev
 
+<<<<<<< HEAD
 echo "1234567" | sudo -S apt install -y python-dev
 echo "1234567" | sudo -S apt install -y python-numpy
 echo "1234567" | sudo -S apt install -y python3-dev
@@ -24,6 +25,21 @@ echo "1234567" | sudo -S apt install -y python3-pip
 echo "1234567" | sudo -S apt install -y python3-distutils
 echo "1234567" | sudo -S apt install -y python3-apt
 # echo "1234567" | sudo -S apt install -y libopencv-python
+=======
+echo "123" | sudo -S apt install -y python-dev
+echo "123" | sudo -S apt install -y python-numpy
+echo "123" | sudo -S apt install -y python3-dev
+echo "123" | sudo -S apt install -y python3-numpy
+echo "123" | sudo -S apt install -y python3-pip
+echo "123" | sudo -S apt install -y python3-distutils
+echo "123" | sudo -S apt install -y python3-apt
+
+# [!] For jetpack, install these 2 libs
+# echo "123" | sudo -S apt install -y libopencv-python
+# echo "123" | sudo -S apt install -y gstreamer1.0-rtsp
+# echo "123" | sudo -S apt install -y gstreamer1.0-plugins-good
+# echo "123" | sudo -S apt install -y gstreamer1.0-plugins-ugly
+>>>>>>> f66872360bab37a51caf1fb686626e3b2363678c
 
 echo "1234567" | sudo -S apt install -y libtbb2
 echo "1234567" | sudo -S apt install -y libtbb-dev
