@@ -26,11 +26,11 @@ int main()
     };
 
     // Connect to the host (with a custom buffer size).
-    tcpSocket.Connect("192.168.110.25", 8888, [&] {
+    tcpSocket.Connect("192.168.110.64", 8888, [&] {
         cout << "Connected to the server successfully." << endl;
 
         // Send String:
-        tcpSocket.Send("Hello Server!");
+        tcpSocket.Send("OK?");
     },
     [](int errorCode, std::string errorMessage){
         // CONNECTION FAILED
