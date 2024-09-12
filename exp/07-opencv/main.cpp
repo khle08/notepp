@@ -4,6 +4,7 @@
 #include <thread>
 #include <string>
 #include <chrono>
+#include <fstream>
 #include <iostream>
 #include <unistd.h>    // for "usleep"
 
@@ -119,9 +120,44 @@ void testColorTemperature()
 
 int main(int argc, char const *argv[])
 {
-    std::string pth = "/Users/kcl/Desktop/family.jpg";
-    // std::string pth = "/home/ubt/Documents/c++/adasAlgo/data/image/pX.jpg";
-    cv::Mat img = cv::imread(pth, 1);
+    // std::string pth = "/Users/kcl/Desktop/family.jpg";
+    // // std::string pth = "/home/ubt/Documents/c++/adasAlgo/data/image/pX.jpg";
+    // cv::Mat img = cv::imread(pth, 1);
+
+    print("\n===== OpenCV YUV [start] =====");
+
+    int width = 1280;
+    int height = 640;
+
+    // Size for YUV420: width * height for Y + (width/2 * height/2) for U and V
+    size_t frameSize = width * height + 2 * (width / 2) * (height / 2);
+
+    // Read YUV file
+    std::ifstream yuvFile("../data/test1.yuv", std::ios::binary);
+    if (!yuvFile.is_open()) {
+        std::cerr << "Error opening YUV file!" << std::endl;
+    }
+
+    // Allocate buffer to hold raw YUV data
+    std::vector<uint8_t> buffer(frameSize);
+    yuvFile.read(reinterpret_cast<char*>(buffer.data()), frameSize);
+
+    if (buffer.empty()) {
+        std::cerr << "Error reading YUV file!" << std::endl;
+    }
+
+    // Create OpenCV Mat for YUV image
+    cv::Mat yuvImage(height + height / 2, width, CV_8UC1, buffer.data());
+
+    // Convert YUV to BGR
+    cv::Mat bgrImage;
+    cv::cvtColor(yuvImage, bgrImage, cv::COLOR_YUV2BGR_I420);
+
+    // Save as JPEG
+    cv::imwrite("output_image.jpg", bgrImage);
+
+    print("\n===== OpenCV YUV [ end ] =====");
+
 
     print("\n===== OpenCV testing [start] =====");
 
@@ -179,67 +215,67 @@ int main(int argc, char const *argv[])
     // Object obj1 = Object{rect1, 1, 0.88};
     // Object obj2{rect1, 1, 0.99};
 
-    print("\n===== OpenCV thread [ start ] =====\n");
+    print("\n===== OpenCV thread [ start ] =====");
 
-    std::vector<ImgReader*> imrVec;
-    // std::vector<std::string> srcVec = {"/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov"};
-    std::vector<std::string> srcVec = {"/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/IMG_4468.MOV"};
+    // std::vector<ImgReader*> imrVec;
+    // // std::vector<std::string> srcVec = {"/home/ubt/Documents/c++/adasAlgo/data/video/IMG_4468.mov"};
+    // std::vector<std::string> srcVec = {"/Users/kcl/Documents/Cpp_Projects/_algorithm/adasAlgo/data/video/IMG_4468.MOV"};
 
-    std::mutex imgMutex;
-    std::condition_variable cvMutex;
-    std::map<int, std::vector<Cam>> images = {};
+    // std::mutex imgMutex;
+    // std::condition_variable cvMutex;
+    // std::map<int, std::vector<Cam>> images = {};
 
-    for (int i = 0; i < srcVec.size(); i++) {
-        // ImgReader imr(srcVec[i], i + 1, images, imgMutex);
-        ImgReader* imr = new ImgReader(srcVec[i], i + 1, images, imgMutex);
-        imr->runAlgo(640, 360, "opticalFlow", imgMutex);
+    // for (int i = 0; i < srcVec.size(); i++) {
+    //     // ImgReader imr(srcVec[i], i + 1, images, imgMutex);
+    //     ImgReader* imr = new ImgReader(srcVec[i], i + 1, images, imgMutex);
+    //     imr->runAlgo(640, 360, "opticalFlow", imgMutex);
 
-        imrVec.push_back(imr);
-    }
-    usleep(3 * 1000 * 1000);    // 1s
-    print(imrVec[0]->image.frame.size());  // check if the frame is being copied to class struct attribute
+    //     imrVec.push_back(imr);
+    // }
+    // usleep(3 * 1000 * 1000);    // 1s
+    // print(imrVec[0]->image.frame.size());  // check if the frame is being copied to class struct attribute
 
-    cv::Mat mainFrame;
+    // cv::Mat mainFrame;
 
-    int ZZZ = 0;
-    while (true) {
-        print(imrVec[0]->image.prev.size() << " " << ZZZ);
-        ZZZ += 1;
+    // int ZZZ = 0;
+    // while (true) {
+    //     print(imrVec[0]->image.prev.size() << " " << ZZZ);
+    //     ZZZ += 1;
 
-        // [!] Test if the algo can be stopped successfully here
-        // if (ZZZ > 50) {
-        //     imrVec[0]->stopAlgo("opticalFlow", false, imgMutex);
-        // }
+    //     // [!] Test if the algo can be stopped successfully here
+    //     // if (ZZZ > 50) {
+    //     //     imrVec[0]->stopAlgo("opticalFlow", false, imgMutex);
+    //     // }
 
-        // [!] Should not put algo here since it needs to init new thread everytime when started, which is inefficient.
-        // if (imrVec[0]->firstFrame || imrVec[0]->image.status == 1) {
-        //     int res = imrVec[0]->runAlgo(640, 360, "opticalFlow", imgMutex);
-        //     print("in algo ~~~~~~~~ OOO");
-        // }
+    //     // [!] Should not put algo here since it needs to init new thread everytime when started, which is inefficient.
+    //     // if (imrVec[0]->firstFrame || imrVec[0]->image.status == 1) {
+    //     //     int res = imrVec[0]->runAlgo(640, 360, "opticalFlow", imgMutex);
+    //     //     print("in algo ~~~~~~~~ OOO");
+    //     // }
 
-        // [!] Visualize the optical flow
-        // if (!imrVec[0]->image.flow.empty()) {
-        //     imgMutex.lock();
-        //     for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
-        //         for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
-        //             // cv::Mat flow = imrVec[0]->image.flow.clone();
+    //     // [!] Visualize the optical flow
+    //     // if (!imrVec[0]->image.flow.empty()) {
+    //     //     imgMutex.lock();
+    //     //     for (int y = 0; y < imrVec[0]->image.prev.rows; y+=10) {
+    //     //         for (int x = 0; x < imrVec[0]->image.prev.cols; x += 10) {
+    //     //             // cv::Mat flow = imrVec[0]->image.flow.clone();
 
-        //             cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
-        //             cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
-        //                 cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
-        //             cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
-        //         }
-        //     }
-        //     imgMutex.unlock();
-        // }
+    //     //             cv::Point2f flowatxy = imrVec[0]->image.flow.at<cv::Point2f>(y, x) * 4;
+    //     //             cv::line(images[1][0].frame, cv::Point(x, y), cv::Point(
+    //     //                 cvRound(x + flowatxy.x), cvRound(y + flowatxy.y)), cv::Scalar(0, 0, 255));
+    //     //             cv::circle(images[1][0].frame, cv::Point(x, y), 1, cv::Scalar(0, 0, 0), -1);
+    //     //         }
+    //     //     }
+    //     //     imgMutex.unlock();
+    //     // }
 
-        // // [!] "imshow" can not be run on MAC with the following error info:
-        // //      Terminating app due to uncaught exception 'NSInternalInconsistencyException',
-        // //      reason: 'nextEventMatchingMask should only be called from the Main Thread!'
-        // cv::imshow("flow", images[1][0].frame);
-        // cv::waitKey(30);
-        usleep(0.01 * 1000 * 1000);    // 1s
-    }
+    //     // // [!] "imshow" can not be run on MAC with the following error info:
+    //     // //      Terminating app due to uncaught exception 'NSInternalInconsistencyException',
+    //     // //      reason: 'nextEventMatchingMask should only be called from the Main Thread!'
+    //     // cv::imshow("flow", images[1][0].frame);
+    //     // cv::waitKey(30);
+    //     usleep(0.01 * 1000 * 1000);    // 1s
+    // }
 
     // [!] Test if frame data is loaded into map successfully in thread
 
