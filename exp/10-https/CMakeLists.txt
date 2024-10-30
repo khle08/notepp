@@ -17,6 +17,12 @@ else()
     message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+
+# Add include directory
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
 # Setup where the compiled libraries will be installed
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
@@ -41,7 +47,7 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 # The value is used in the install CMake config file.
 option(HTTPLIB_NO_EXCEPTIONS "Disable the use of C++ exceptions" OFF)
 # Allow for a build to require OpenSSL to pass, instead of just being optional
-option(HTTPLIB_REQUIRE_OPENSSL "Requires OpenSSL to be found & linked, or fails build." OFF)
+option(HTTPLIB_REQUIRE_OPENSSL "Requires OpenSSL to be found & linked, or fails build." ON)
 option(HTTPLIB_REQUIRE_ZLIB "Requires ZLIB to be found & linked, or fails build." OFF)
 # Allow for a build to casually enable OpenSSL/ZLIB support, but silently continue if not found.
 # Make these options so their automatic use can be specifically disabled (as needed)
