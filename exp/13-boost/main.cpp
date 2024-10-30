@@ -13,7 +13,7 @@ namespace net = boost::asio;               // boost/asio.hpp
 using tcp = net::ip::tcp;                  // boost/asio/ip/tcp.hpp
 
 
-void websocket_client(const std::string& host, const std::string& port) {
+void websocket_client(const std::string& host, const std::string& port, const std::string& router) {
     try {
         // The io_context is required for all I/O
         net::io_context ioc;
@@ -29,7 +29,7 @@ void websocket_client(const std::string& host, const std::string& port) {
         net::connect(ws.next_layer(), results.begin(), results.end());
 
         // Perform the WebSocket handshake
-        ws.handshake(host, "/ws/abcd");
+        ws.handshake(host, router);
 
         // Send a message
         std::string text = "Hello from WebSocket client";
@@ -38,9 +38,16 @@ void websocket_client(const std::string& host, const std::string& port) {
         // Buffer to hold the incoming message
         beast::flat_buffer buffer;
 
-        // Receive WebSocket response
-        ws.read(buffer);
-        std::cout << "Received: " << beast::make_printable(buffer.data()) << std::endl;
+        while (true) {
+            // Receive WebSocket response
+            ws.read(buffer);
+            std::cout << "Received: " << beast::make_printable(buffer.data()) << std::endl;
+            
+            std::string result(static_cast<const char*>(buffer.data().data()), buffer.size());
+            if (result == "quit" || result == "exit") {
+                break
+            }
+        }
 
         // Close the WebSocket connection
         ws.close(websocket::close_code::normal);
@@ -55,10 +62,10 @@ void websocket_client(const std::string& host, const std::string& port) {
 
 int main(int argc, char const *argv[])
 {
-    std::string host = "localhost";  // Change to your server's IP/hostname
-    std::string port = "8000";       // Change to your server's port
+    // std::string host = "192.168.110.50";  // Change to your server's IP/hostname
+    // std::string port = "8000";            // Change to your server's port
 
-    websocket_client(host, port);
+    websocket_client("192.168.110.50", "8000", "/ws/abcd");
 
     return 0;
 }
