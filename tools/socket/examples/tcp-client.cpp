@@ -26,7 +26,7 @@ int main()
     };
 
     // Connect to the host (with a custom buffer size).
-    tcpSocket.Connect("192.168.110.64", 8888, [&] {
+    tcpSocket.Connect("192.168.110.50", 8888, [&] {
         cout << "Connected to the server successfully." << endl;
 
         // Send String:
