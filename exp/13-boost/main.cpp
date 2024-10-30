@@ -29,7 +29,7 @@ void websocket_client(const std::string& host, const std::string& port) {
         net::connect(ws.next_layer(), results.begin(), results.end());
 
         // Perform the WebSocket handshake
-        ws.handshake(host, "/");
+        ws.handshake(host, "/ws/abcd");
 
         // Send a message
         std::string text = "Hello from WebSocket client";

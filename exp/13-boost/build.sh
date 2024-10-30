@@ -1,4 +1,9 @@
 
+# To install boost from source code, here are the steps:
+#   1. ...
+#   2. ...
+
+
 mkdir build
 cd build
 
@@ -12,3 +17,4 @@ cmake ..
 make -j4
 
 ./exe
+
