@@ -35,17 +35,17 @@ void websocket_client(const std::string& host, const std::string& port, const st
         std::string text = "Hello from WebSocket client";
         ws.write(net::buffer(text));
 
-        // Buffer to hold the incoming message
-        beast::flat_buffer buffer;
-
         while (true) {
+            // Buffer to hold the incoming message
+            beast::flat_buffer buffer;
+
             // Receive WebSocket response
             ws.read(buffer);
             std::cout << "Received: " << beast::make_printable(buffer.data()) << std::endl;
             
             std::string result(static_cast<const char*>(buffer.data().data()), buffer.size());
             if (result == "quit" || result == "exit") {
-                break
+                break;
             }
         }
 
