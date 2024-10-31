@@ -61,7 +61,7 @@ void Listener::accept()
 {
     acceptor_.async_accept(socket_, [&](beast::error_code ec) {
         if (!ec) std::make_shared<Session>(std::move(socket_))->start();
-        accept();
-    }
+            accept();
+    });
 }
 

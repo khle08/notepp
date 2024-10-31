@@ -19,6 +19,11 @@ find_package(Boost REQUIRED COMPONENTS system filesystem)
 # include_directories(BEFORE /usr/include)
 # link_directories(/usr/lib)
 
+# If this (below) is defined in lib/CMakeLists.txt, exe will not know how to include
+include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+add_subdirectory(lib)
+
 list(APPEND SOURCE
     main.cpp
 )

@@ -57,23 +57,4 @@ private:
 };
 
 
-int main() {
-    try {
-        // Setup the I/O context and listener
-        auto const address = net::ip::make_address("0.0.0.0");
-        unsigned short port = 8080;
-
-        net::io_context ioc{1};
-
-        // Create and start the listener
-        std::make_shared<Listener>(ioc, tcp::endpoint{address, port})->start();
-
-        // Run the I/O service
-        ioc.run();
-    } catch (std::exception const& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return EXIT_FAILURE;
-    }
-}
-
 #endif
