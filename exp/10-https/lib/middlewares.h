@@ -6,14 +6,13 @@
 
 #include <httplib.h>
 
-using namespace httplib;
-
 
 // Function to validate the authentication token
-bool authenticate(const Request& req);
+bool authenticate(const httplib::Request& req);
 
 // Middleware function for authentication
-void authentication_middleware(const Request& req, Response& res,
+void authentication_middleware(const httplib::Request& req,
+                               httplib::Response& res,
                                std::function<void()> next);
 
 #endif // MIDDLEWARES_H

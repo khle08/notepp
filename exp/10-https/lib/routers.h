@@ -1,6 +1,4 @@
 
-// ref: https://github.com/yhirose/cpp-httplib
-
 #ifndef ROUTES_H
 #define ROUTES_H
 

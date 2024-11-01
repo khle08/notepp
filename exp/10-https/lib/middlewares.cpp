@@ -1,13 +1,11 @@
 
-// ref: https://github.com/yhirose/cpp-httplib
-
 #include "middlewares.h"
 
 #define printMiddleware(x) std::cout << x << std::endl;
 
 
 // Function to validate the authentication token
-bool authenticate(const Request& req)
+bool authenticate(const httplib::Request& req)
 {
     // Extract token from headers (e.g., Authorization header)
     auto auth_header = req.get_header_value("Authorization");
@@ -19,7 +17,8 @@ bool authenticate(const Request& req)
 
 
 // Middleware function for authentication
-void authentication_middleware(const Request& req, Response& res,
+void authentication_middleware(const httplib::Request& req,
+                               httplib::Response& res,
                                std::function<void()> next)
 {
     if (authenticate(req)) {
