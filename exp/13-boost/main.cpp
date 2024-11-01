@@ -76,7 +76,7 @@ int main(int argc, char const *argv[])
 
         net::io_context ioc;
         HttpServer server(ioc, address, port);
-        
+
         std::cout << "Starting server on " << address << ":" << port << std::endl;
         server.run();
         ioc.run();

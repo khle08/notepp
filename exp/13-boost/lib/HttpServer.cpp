@@ -70,4 +70,4 @@ void HttpServer::handle_request(beast::tcp_stream& stream, http::request<http::s
     http::write(stream, res);
     stream.socket().shutdown(tcp::socket::shutdown_send);
 }
-jc
+
