@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib//CMakeFiles/progress.marks
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,68 +148,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named exe
+# Convenience name for target.
+lib/CMakeFiles/HttpKits.dir/rule:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/HttpKits.dir/rule
+.PHONY : lib/CMakeFiles/HttpKits.dir/rule
 
-# Build rule for target.
-exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exe
-.PHONY : exe
-
-# fast build rule for target.
-exe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/build
-.PHONY : exe/fast
-
-#=============================================================================
-# Target rules for targets named HttpKits
-
-# Build rule for target.
-HttpKits: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HttpKits
+# Convenience name for target.
+HttpKits: lib/CMakeFiles/HttpKits.dir/rule
 .PHONY : HttpKits
 
 # fast build rule for target.
 HttpKits/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/build
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/build
 .PHONY : HttpKits/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+middlewares.o: middlewares.cpp.o
+.PHONY : middlewares.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/main.cpp.o
-.PHONY : main.cpp.o
+middlewares.cpp.o:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/middlewares.cpp.o
+.PHONY : middlewares.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+middlewares.i: middlewares.cpp.i
+.PHONY : middlewares.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/main.cpp.i
-.PHONY : main.cpp.i
+middlewares.cpp.i:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/middlewares.cpp.i
+.PHONY : middlewares.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+middlewares.s: middlewares.cpp.s
+.PHONY : middlewares.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/main.cpp.s
-.PHONY : main.cpp.s
+middlewares.cpp.s:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/middlewares.cpp.s
+.PHONY : middlewares.cpp.s
+
+routers.o: routers.cpp.o
+.PHONY : routers.o
+
+# target to build an object file
+routers.cpp.o:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/routers.cpp.o
+.PHONY : routers.cpp.o
+
+routers.i: routers.cpp.i
+.PHONY : routers.i
+
+# target to preprocess a source file
+routers.cpp.i:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/routers.cpp.i
+.PHONY : routers.cpp.i
+
+routers.s: routers.cpp.s
+.PHONY : routers.s
+
+# target to generate assembly for a file
+routers.cpp.s:
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/HttpKits.dir/build.make lib/CMakeFiles/HttpKits.dir/routers.cpp.s
+.PHONY : routers.cpp.s
 
 # Help Target
 help:
@@ -224,10 +236,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... HttpKits"
-	@echo "... exe"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... middlewares.o"
+	@echo "... middlewares.i"
+	@echo "... middlewares.s"
+	@echo "... routers.o"
+	@echo "... routers.i"
+	@echo "... routers.s"
 .PHONY : help
 
 
@@ -239,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

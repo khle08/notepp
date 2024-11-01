@@ -130,6 +130,24 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h \
   /usr/include/wctype.h \
   /usr/include/_types/_wctrans_t.h \
+  /usr/include/unistd.h \
+  /usr/include/sys/unistd.h \
+  /usr/include/sys/_types/_posix_vdisable.h \
+  /usr/include/sys/_types/_seek_set.h \
+  /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_useconds_t.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/_types/_fd_def.h \
+  /usr/include/sys/_types/_suseconds_t.h \
+  /usr/include/sys/_types/_fd_setsize.h \
+  /usr/include/sys/_types/_fd_set.h \
+  /usr/include/sys/_types/_fd_clr.h \
+  /usr/include/sys/_types/_fd_isset.h \
+  /usr/include/sys/_types/_fd_zero.h \
+  /usr/include/sys/_types/_fd_copy.h \
+  /usr/include/sys/_select.h \
+  /usr/include/sys/_types/_uuid_t.h \
+  /usr/include/gethostuuid.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale \
@@ -193,22 +211,12 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
   /usr/include/sys/_types/_caddr_t.h \
   /usr/include/sys/_types/_blkcnt_t.h \
   /usr/include/sys/_types/_blksize_t.h \
-  /usr/include/sys/_types/_gid_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
   /usr/include/sys/_types/_in_port_t.h \
   /usr/include/sys/_types/_ino_t.h \
   /usr/include/sys/_types/_ino64_t.h \
   /usr/include/sys/_types/_key_t.h \
   /usr/include/sys/_types/_nlink_t.h \
-  /usr/include/sys/_types/_useconds_t.h \
-  /usr/include/sys/_types/_suseconds_t.h \
-  /usr/include/sys/_types/_fd_def.h \
-  /usr/include/sys/_types/_fd_setsize.h \
-  /usr/include/sys/_types/_fd_set.h \
-  /usr/include/sys/_types/_fd_clr.h \
-  /usr/include/sys/_types/_fd_zero.h \
-  /usr/include/sys/_types/_fd_isset.h \
-  /usr/include/sys/_types/_fd_copy.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
   /usr/include/sys/_types/_fsfilcnt_t.h \
   /usr/include/_types/_nl_item.h \
@@ -236,7 +244,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
   /usr/include/net/if_var.h \
   /usr/include/sys/time.h \
   /usr/include/sys/_types/_timeval64.h \
-  /usr/include/sys/_select.h \
   /usr/include/sys/queue.h \
   /usr/include/sys/_types/_timeval32.h \
   /usr/include/netdb.h \
@@ -244,14 +251,7 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/csignal \
   /usr/include/signal.h \
   /usr/include/sys/mman.h \
-  /usr/include/sys/select.h \
   /usr/include/sys/un.h \
-  /usr/include/unistd.h \
-  /usr/include/sys/unistd.h \
-  /usr/include/sys/_types/_posix_vdisable.h \
-  /usr/include/sys/_types/_seek_set.h \
-  /usr/include/sys/_types/_uuid_t.h \
-  /usr/include/gethostuuid.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/array \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cassert \
   /usr/include/assert.h \
@@ -282,8 +282,11 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/thread \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/unordered_map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__hash_table \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/unordered_set
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/unordered_set \
+  /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/lib/middlewares.h
 
+
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/lib/middlewares.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/unordered_set:
 
@@ -309,12 +312,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /usr/include/fcntl.h:
 
-/usr/include/sys/_types/_posix_vdisable.h:
-
-/usr/include/sys/un.h:
-
-/usr/include/sys/select.h:
-
 /usr/include/sys/mman.h:
 
 /usr/include/signal.h:
@@ -324,8 +321,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /usr/include/sys/_types/_timeval32.h:
 
 /usr/include/sys/queue.h:
-
-/usr/include/sys/_select.h:
 
 /usr/include/sys/_types/_timeval64.h:
 
@@ -351,51 +346,33 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
 
-/usr/include/sys/_types/_fd_copy.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/math.h:
-
-/usr/include/sys/_types/_fd_isset.h:
-
-/usr/include/sys/_types/_fd_zero.h:
-
-/usr/include/sys/_types/_fd_clr.h:
-
-/usr/include/sys/_types/_fd_setsize.h:
-
-/usr/include/sys/_types/_fd_def.h:
-
-/usr/local/include/openssl/opensslv.h:
-
-/usr/include/sys/_types/_suseconds_t.h:
-
 /usr/include/sys/_types/_ino64_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/set:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/new:
-
-/usr/include/sys/_types/_ino_t.h:
+/usr/include/sys/_types/_in_port_t.h:
 
 /usr/include/sys/_types/_in_addr_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:
-
-/usr/include/sys/_pthread/_pthread_t.h:
-
-/usr/include/sys/_types/_blksize_t.h:
+/usr/include/sys/_types/_blkcnt_t.h:
 
 /usr/include/sys/_types/_caddr_t.h:
 
-/usr/include/sys/_types/_useconds_t.h:
+/usr/include/sys/_types/_u_int.h:
 
-/usr/include/sys/_types/_u_short.h:
+/usr/include/sys/_types/_u_char.h:
 
 /usr/include/sys/types.h:
+
+/usr/include/sys/_types/_s_ifmt.h:
+
+/usr/include/nl_types.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/locale:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ostream:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/istream:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/streambuf:
 
 /usr/include/xlocale/_wctype.h:
 
@@ -419,9 +396,11 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:
 
-/usr/include/sys/qos.h:
+/usr/include/sys/_types/_blksize_t.h:
 
-/usr/include/pthread/qos.h:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:
+
+/usr/include/sys/_pthread/_pthread_t.h:
 
 /usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
@@ -481,6 +460,34 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:
 
+/usr/include/wchar.h:
+
+/usr/include/gethostuuid.h:
+
+/usr/include/sys/_select.h:
+
+/usr/include/sys/qos.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/math.h:
+
+/usr/include/sys/_types/_fd_isset.h:
+
+/usr/include/sys/_types/_fd_clr.h:
+
+/usr/include/pthread/qos.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cerrno:
+
+/usr/include/sys/_types/_fd_set.h:
+
+/usr/include/sys/un.h:
+
+/usr/include/sys/_types/_posix_vdisable.h:
+
+/usr/include/i386/signal.h:
+
+/usr/include/sys/unistd.h:
+
 /usr/include/sys/_types/_fsfilcnt_t.h:
 
 /usr/include/i386/endian.h:
@@ -503,6 +510,10 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:
 
+/usr/include/sys/_types/_u_short.h:
+
+/usr/include/sys/_types/_useconds_t.h:
+
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config:
 
 /usr/include/wctype.h:
@@ -514,6 +525,10 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /usr/include/sys/_types/_o_sync.h:
 
 /usr/include/__wctype.h:
+
+/usr/local/include/openssl/opensslv.h:
+
+/usr/include/sys/_types/_suseconds_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cmath:
 
@@ -529,6 +544,8 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /usr/include/xlocale/_string.h:
 
+/usr/include/sys/_types/_fd_copy.h:
+
 /usr/include/sys/_types/_off_t.h:
 
 /usr/include/xlocale/_ctype.h:
@@ -536,8 +553,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tuple:
 
 /usr/include/sys/stdio.h:
-
-/usr/include/sys/_types/_u_int.h:
 
 /usr/include/i386/_limits.h:
 
@@ -570,6 +585,8 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdint:
+
+/usr/include/sys/_types/_fd_def.h:
 
 /usr/include/math.h:
 
@@ -609,8 +626,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /usr/include/_types/_uintmax_t.h:
 
-/usr/include/sys/_types/_blkcnt_t.h:
-
 /usr/include/_types/_intmax_t.h:
 
 /usr/include/sys/_types/_null.h:
@@ -639,8 +654,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /usr/include/_types/_uint8_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/istream:
-
 /usr/include/sys/_types/_fsblkcnt_t.h:
 
 /usr/include/runetype.h:
@@ -651,31 +664,25 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wchar.h:
 
+/usr/include/sys/select.h:
+
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__undef_min_max:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h:
 
+/usr/include/sys/_types/_fd_setsize.h:
+
 /usr/include/sys/_types/_sigset_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/errno.h:
+
+/usr/include/unistd.h:
 
 /usr/include/i386/limits.h:
 
 /usr/include/sys/_pthread/_pthread_attr_t.h:
 
-/usr/include/sys/_types/_u_char.h:
-
-/usr/include/sys/_types/_s_ifmt.h:
-
-/usr/include/nl_types.h:
-
 /usr/include/i386/_mcontext.h:
-
-/usr/include/sys/_types/_fd_set.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cerrno:
-
-/usr/include/gethostuuid.h:
-
-/usr/include/wchar.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset:
 
@@ -733,8 +740,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /usr/include/machine/types.h:
 
-/usr/include/sys/_types/_in_port_t.h:
-
 /usr/include/sys/_types/_va_list.h:
 
 /usr/include/machine/_mcontext.h:
@@ -759,11 +764,15 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 
 /usr/include/sys/_pthread/_pthread_mutex_t.h:
 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/set:
+
+/usr/include/sys/_types/_ino_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/new:
+
 /usr/include/Availability.h:
 
 /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/main.cpp:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/streambuf:
 
 /usr/include/sys/signal.h:
 
@@ -778,6 +787,8 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/lib/httplib.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/initializer_list:
+
+/usr/include/sys/_types/_fd_zero.h:
 
 /usr/include/i386/_types.h:
 
@@ -796,10 +807,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__threading_support:
 
 /usr/include/stdint.h:
-
-/usr/include/unistd.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/errno.h:
 
 /usr/include/sys/_types/_int8_t.h:
 
@@ -840,10 +847,6 @@ CMakeFiles/exe.dir/main.cpp.o: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-h
 /usr/local/include/openssl/opensslconf.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string.h:
-
-/usr/include/sys/unistd.h:
-
-/usr/include/i386/signal.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/csignal:
 

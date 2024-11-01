@@ -1,3 +1,14 @@
 /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/exe.dir
 /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/edit_cache.dir
 /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/list_install_components.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/install.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/install/local.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/install/strip.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/HttpKits.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/list_install_components.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/install.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/install/local.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/lib/CMakeFiles/install/strip.dir
