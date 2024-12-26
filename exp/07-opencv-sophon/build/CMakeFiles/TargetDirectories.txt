@@ -1,0 +1,14 @@
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/exe.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/edit_cache.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/rebuild_cache.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/list_install_components.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/install.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/install/local.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/CMakeFiles/install/strip.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/imgReader.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/edit_cache.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/rebuild_cache.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/list_install_components.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/install.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/install/local.dir
+/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/CMakeFiles/install/strip.dir

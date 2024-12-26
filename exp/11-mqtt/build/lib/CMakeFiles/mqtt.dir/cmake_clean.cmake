@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mqtt.dir/mqtt.cpp.o"
   "CMakeFiles/mqtt.dir/mqtt.cpp.o.d"
-  "libmqtt.1.0.dylib"
-  "libmqtt.1.dylib"
-  "libmqtt.dylib"
   "libmqtt.pdb"
+  "libmqtt.so"
+  "libmqtt.so.1"
+  "libmqtt.so.1.0"
 )
 
 # Per-language clean rules from dependency scanning.
