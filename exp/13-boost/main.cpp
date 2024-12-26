@@ -7,7 +7,7 @@
 #include <boost/asio/connect.hpp>
 #include <boost/beast/websocket.hpp>
 
-#include "http.h"
+#include "HttpServer.h"
 
 namespace beast = boost::beast;            // boost/beast.hpp
 namespace websocket = beast::websocket;    // boost/beast/websocket.hpp
@@ -64,27 +64,26 @@ void websocket_client(const std::string& host, const std::string& port, const st
 
 int main(int argc, char const *argv[])
 {
+    // [!] WebSocket client demo
     // std::string host = "192.168.110.50";  // Change to your server's IP/hostname
     // std::string port = "8000";            // Change to your server's port
-    websocket_client("192.168.110.50", "8000", "/ws/abcd");
+    // websocket_client("192.168.110.50", "8000", "/ws/abcd");
 
-    // BUG ?????
-    // try {
-    //     // Setup the I/O context and listener
-    //     auto const address = net::ip::make_address("0.0.0.0");
-    //     unsigned short port = 8002;
+    // [!] Http server demo
+    try {
+        const std::string address = "0.0.0.0";
+        unsigned short port = 8080;
 
-    //     net::io_context ioc{1};
+        net::io_context ioc;
+        HttpServer server(ioc, address, port);
 
-    //     // Create and start the listener
-    //     std::make_shared<Listener>(ioc, tcp::endpoint{address, port})->start();
+        std::cout << "Starting server on " << address << ":" << port << std::endl;
+        server.run();
+        ioc.run();
 
-    //     // Run the I/O service
-    //     ioc.run();
-    // } catch (std::exception const& e) {
-    //     std::cerr << "Error: " << e.what() << std::endl;
-    //     return EXIT_FAILURE;
-    // }
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
     return 0;
 }

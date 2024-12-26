@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     
     std::string uniqueId = "WEQFRE";
     MqttCli* client = new MqttCli("tcp://192.168.110.50:1883",  // address
-                                  "mqttx_38c419c4",                // clientid
+                                  "mqttx_38c419c3",                // clientid
                                   "emqx",                          // username
                                   "public",                        // password
                                   uniqueId,

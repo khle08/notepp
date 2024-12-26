@@ -26,18 +26,18 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is AppleClang, found in "/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl
+Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_99340/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_99340.dir/build.make CMakeFiles/cmTC_99340.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl'
-Building C object CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -v -Wl,-v -MD -MT CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_d3e79/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_d3e79.dir/build.make CMakeFiles/cmTC_d3e79.dir/build
+gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp'
+Building C object CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -v -Wl,-v -MD -MT CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c
 Apple LLVM version 9.0.0 (clang-900.0.39.2)
 Target: x86_64-apple-darwin17.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl/CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp/CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c
 clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0
 #include "..." search starts here:
 #include <...> search starts here:
@@ -48,14 +48,14 @@ clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17
  /System/Library/Frameworks (framework directory)
  /Library/Frameworks (framework directory)
 End of search list.
-Linking C executable cmTC_99340
-/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99340.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl,-v CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -o cmTC_99340 
+Linking C executable cmTC_d3e79
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3e79.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl,-v CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -o cmTC_d3e79 
 Apple LLVM version 9.0.0 (clang-900.0.39.2)
 Target: x86_64-apple-darwin17.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_99340 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_d3e79 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-305
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
 Library search paths:
@@ -65,7 +65,7 @@ Library search paths:
 Framework search paths:
 	/Library/Frameworks/
 	/System/Library/Frameworks/
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl'
+gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp'
 
 
 
@@ -86,18 +86,18 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl]
+  ignore line: [Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp]
   ignore line: []
-  ignore line: [Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_99340/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_99340.dir/build.make CMakeFiles/cmTC_99340.dir/build]
-  ignore line: [gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl']
-  ignore line: [Building C object CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -v -Wl -v -MD -MT CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_d3e79/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_d3e79.dir/build.make CMakeFiles/cmTC_d3e79.dir/build]
+  ignore line: [gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp']
+  ignore line: [Building C object CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -v -Wl -v -MD -MT CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
   ignore line: [Target: x86_64-apple-darwin17.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
   ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl/CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-e6mCFl -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp/CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-hXcyQp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
@@ -108,14 +108,14 @@ Parsed C implicit link information from above output:
   ignore line: [ /System/Library/Frameworks (framework directory)]
   ignore line: [ /Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [Linking C executable cmTC_99340]
-  ignore line: [/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99340.dir/link.txt --verbose=1]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl -search_paths_first -Wl -headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl -v CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -o cmTC_99340 ]
+  ignore line: [Linking C executable cmTC_d3e79]
+  ignore line: [/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3e79.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl -search_paths_first -Wl -headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl -v CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -o cmTC_d3e79 ]
   ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
   ignore line: [Target: x86_64-apple-darwin17.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_99340 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_d3e79 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -126,12 +126,12 @@ Parsed C implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.13.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_99340] ==> ignore
+    arg [cmTC_d3e79] ==> ignore
     arg [-L/usr/local/opt/openssl@1.1/lib] ==> dir [/usr/local/opt/openssl@1.1/lib]
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_99340.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_d3e79.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/usr/local/opt/openssl@1.1/lib;/usr/lib;/usr/local/lib]
@@ -151,18 +151,18 @@ Parsed C implicit link information from above output:
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y
+Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_d6e96/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_d6e96.dir/build.make CMakeFiles/cmTC_d6e96.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y'
-Building CXX object CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -v -Wl,-v -MD -MT CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_12338/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_12338.dir/build.make CMakeFiles/cmTC_12338.dir/build
+gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY'
+Building CXX object CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -v -Wl,-v -MD -MT CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
 Apple LLVM version 9.0.0 (clang-900.0.39.2)
 Target: x86_64-apple-darwin17.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y/CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -stdlib=libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY/CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -stdlib=libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
 clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0
 ignoring nonexistent directory "/usr/include/c++/v1"
 #include "..." search starts here:
@@ -175,14 +175,14 @@ ignoring nonexistent directory "/usr/include/c++/v1"
  /System/Library/Frameworks (framework directory)
  /Library/Frameworks (framework directory)
 End of search list.
-Linking CXX executable cmTC_d6e96
-/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6e96.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl,-v CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d6e96 
+Linking CXX executable cmTC_12338
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12338.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl,-v CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_12338 
 Apple LLVM version 9.0.0 (clang-900.0.39.2)
 Target: x86_64-apple-darwin17.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_d6e96 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_12338 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-305
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
 Library search paths:
@@ -192,7 +192,7 @@ Library search paths:
 Framework search paths:
 	/Library/Frameworks/
 	/System/Library/Frameworks/
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y'
+gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY'
 
 
 
@@ -215,18 +215,18 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y]
+  ignore line: [Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY]
   ignore line: []
-  ignore line: [Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_d6e96/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_d6e96.dir/build.make CMakeFiles/cmTC_d6e96.dir/build]
-  ignore line: [gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -v -Wl -v -MD -MT CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_12338/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_12338.dir/build.make CMakeFiles/cmTC_12338.dir/build]
+  ignore line: [gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY']
+  ignore line: [Building CXX object CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -v -Wl -v -MD -MT CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
   ignore line: [Target: x86_64-apple-darwin17.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
   ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y/CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -stdlib=libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-M9056Y -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY/CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -stdlib=libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-0SHYnY -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0]
   ignore line: [ignoring nonexistent directory "/usr/include/c++/v1"]
   ignore line: [#include "..." search starts here:]
@@ -239,14 +239,14 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /System/Library/Frameworks (framework directory)]
   ignore line: [ /Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [Linking CXX executable cmTC_d6e96]
-  ignore line: [/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6e96.dir/link.txt --verbose=1]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl -search_paths_first -Wl -headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl -v CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d6e96 ]
+  ignore line: [Linking CXX executable cmTC_12338]
+  ignore line: [/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12338.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl -search_paths_first -Wl -headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib -v -Wl -v CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_12338 ]
   ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
   ignore line: [Target: x86_64-apple-darwin17.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_d6e96 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_12338 -L/usr/local/opt/openssl@1.1/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -257,12 +257,12 @@ Parsed CXX implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.13.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d6e96] ==> ignore
+    arg [cmTC_12338] ==> ignore
     arg [-L/usr/local/opt/openssl@1.1/lib] ==> dir [/usr/local/opt/openssl@1.1/lib]
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_d6e96.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_12338.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
@@ -283,48 +283,48 @@ Parsed CXX implicit link information from above output:
 
 
 Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4emPQ
+Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-AQXTZ9
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_c6ffd/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_c6ffd.dir/build.make CMakeFiles/cmTC_c6ffd.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4emPQ'
-Building CXX object CMakeFiles/cmTC_c6ffd.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DCOMPILER_SUPPORTS_CXX11  -std=c++11 -MD -MT CMakeFiles/cmTC_c6ffd.dir/src.cxx.o -MF CMakeFiles/cmTC_c6ffd.dir/src.cxx.o.d -o CMakeFiles/cmTC_c6ffd.dir/src.cxx.o -c /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4emPQ/src.cxx
-Linking CXX executable cmTC_c6ffd
-/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6ffd.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib  CMakeFiles/cmTC_c6ffd.dir/src.cxx.o -o cmTC_c6ffd 
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4emPQ'
+Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_263c5/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_263c5.dir/build.make CMakeFiles/cmTC_263c5.dir/build
+gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-AQXTZ9'
+Building CXX object CMakeFiles/cmTC_263c5.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DCOMPILER_SUPPORTS_CXX11  -std=c++11 -MD -MT CMakeFiles/cmTC_263c5.dir/src.cxx.o -MF CMakeFiles/cmTC_263c5.dir/src.cxx.o.d -o CMakeFiles/cmTC_263c5.dir/src.cxx.o -c /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-AQXTZ9/src.cxx
+Linking CXX executable cmTC_263c5
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_263c5.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib  CMakeFiles/cmTC_263c5.dir/src.cxx.o -o cmTC_263c5 
+gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-AQXTZ9'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wz1AAV
+Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-ROUVHy
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_c882a/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_c882a.dir/build.make CMakeFiles/cmTC_c882a.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wz1AAV'
-Building CXX object CMakeFiles/cmTC_c882a.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DCOMPILER_SUPPORTS_CXX0X  -std=c++0x -MD -MT CMakeFiles/cmTC_c882a.dir/src.cxx.o -MF CMakeFiles/cmTC_c882a.dir/src.cxx.o.d -o CMakeFiles/cmTC_c882a.dir/src.cxx.o -c /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wz1AAV/src.cxx
-Linking CXX executable cmTC_c882a
-/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c882a.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib  CMakeFiles/cmTC_c882a.dir/src.cxx.o -o cmTC_c882a 
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wz1AAV'
+Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_33350/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_33350.dir/build.make CMakeFiles/cmTC_33350.dir/build
+gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-ROUVHy'
+Building CXX object CMakeFiles/cmTC_33350.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DCOMPILER_SUPPORTS_CXX0X  -std=c++0x -MD -MT CMakeFiles/cmTC_33350.dir/src.cxx.o -MF CMakeFiles/cmTC_33350.dir/src.cxx.o.d -o CMakeFiles/cmTC_33350.dir/src.cxx.o -c /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-ROUVHy/src.cxx
+Linking CXX executable cmTC_33350
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33350.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib  CMakeFiles/cmTC_33350.dir/src.cxx.o -o cmTC_33350 
+gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-ROUVHy'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4FC5R
+Change Dir: /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wPabF9
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_f6564/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_f6564.dir/build.make CMakeFiles/cmTC_f6564.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4FC5R'
-Building C object CMakeFiles/cmTC_f6564.dir/src.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_f6564.dir/src.c.o -MF CMakeFiles/cmTC_f6564.dir/src.c.o.d -o CMakeFiles/cmTC_f6564.dir/src.c.o -c /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4FC5R/src.c
-Linking C executable cmTC_f6564
-/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6564.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib  CMakeFiles/cmTC_f6564.dir/src.c.o -o cmTC_f6564 
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-c4FC5R'
+Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_72e43/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_72e43.dir/build.make CMakeFiles/cmTC_72e43.dir/build
+gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wPabF9'
+Building C object CMakeFiles/cmTC_72e43.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_72e43.dir/src.c.o -MF CMakeFiles/cmTC_72e43.dir/src.c.o.d -o CMakeFiles/cmTC_72e43.dir/src.c.o -c /Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wPabF9/src.c
+Linking C executable cmTC_72e43
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72e43.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib  CMakeFiles/cmTC_72e43.dir/src.c.o -o cmTC_72e43 
+gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/notepp/exp/10-https/build/CMakeFiles/CMakeScratch/TryCompile-wPabF9'
 
 
 Source file was:

@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib CMakeFiles/exe.dir/main.cpp.o -o exe  lib/libjsoncpp.a lib/libzltoolkit.a lib/ZLMediaKit/libzlmediakit.a lib/libjsoncpp.a lib/libzltoolkit.a 

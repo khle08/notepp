@@ -2,11 +2,13 @@
 // ref: https://github.com/yhirose/cpp-httplib
 
 #include <string>
+#include <unistd.h>    // for "usleep"
 #include <iostream>
 // #include <base64.h>
 #include <openssl/sha.h>
 
 #include <httplib.h>
+// #include "middlewares.h"
 
 #define print(x) std::cout << x << std::endl;
 
@@ -45,15 +47,48 @@
 // }
 
 
+// Function to validate the authentication token
+bool authenticate(const httplib::Request& req)
+{
+    // Extract token from headers (e.g., Authorization header)
+    auto auth_header = req.get_header_value("Authorization");
+    const std::string expected_token = "Bearer YOUR_SECRET_TOKEN";
+
+    // Check if the token matches the expected one
+    return auth_header == expected_token;
+}
+
+
+// Middleware function for authentication
+void authentication_middleware(const httplib::Request& req,
+                               httplib::Response& res,
+                               std::function<void()> next)
+{
+    if (authenticate(req)) {
+        // If authenticated, call the next handler
+        next();
+    } else {
+        // If not authenticated, set 401 Unauthorized status
+        res.status = 401;
+        res.set_content("Unauthorized", "text/plain");
+    }
+}
+
+
 // Server
 int main(int argc, char const *argv[])
 {
     using namespace httplib;
+    float xxx = 3.1415926;
 
     httplib::Server svr;
 
-    svr.Get("/hi", [](const Request& req, Response& res) {
-        res.set_content("Hello World!", "text/plain");
+    svr.Get("/hi", [&](const Request& req, Response& res) {
+        // Wrap the actual handler with the authentication middleware
+        authentication_middleware(req, res, [&]() {
+            // This is the actual handler for /protected
+            res.set_content("Hello World!", "text/plain");
+        });
     });
 
     // Match the request path against a regular expression
@@ -84,6 +119,6 @@ int main(int argc, char const *argv[])
         svr.stop();
     });
 
-    svr.listen("localhost", 1234);
+    svr.listen("0.0.0.0", 1234);
 }
 
