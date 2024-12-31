@@ -123,7 +123,7 @@ int post_proc()
 
             if (k > (num_classes - 1) && conf_max > conf_thres) {
                 float data = std::exp(tensor[idx]);
-                
+
                 outputs.emplace_back(data);
                 exp_indices.emplace_back(idx_exp);
                 conv_weight.emplace_back(cnt - 1);

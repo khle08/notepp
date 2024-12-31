@@ -2,6 +2,6 @@
 #include <iostream>
 
 int hello::say_hello() {
-	std::cout << "successful compile !" << std::endl;
+	std::cout << "successful compile !??" << std::endl;
 	return 0;
 }

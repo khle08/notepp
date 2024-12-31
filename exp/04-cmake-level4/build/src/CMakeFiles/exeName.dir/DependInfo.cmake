@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kcl/Documents/Cpp_Projects/_learn/exp4/src/main.cpp" "src/CMakeFiles/exeName.dir/main.cpp.o" "gcc" "src/CMakeFiles/exeName.dir/main.cpp.o.d"
+  "/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/src/main.cpp" "src/CMakeFiles/exeName.dir/main.cpp.o" "gcc" "src/CMakeFiles/exeName.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/lib/CMakeFiles/say-hello.dir/DependInfo.cmake"
+  "/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/lib/CMakeFiles/say-hello.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
