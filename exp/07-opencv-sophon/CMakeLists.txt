@@ -23,7 +23,7 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 # ======================================================================
 
 set(CMAKE_INSTALL_RPATH $ORIGIN/lib)
-set(SDK_DIR /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk)
+set(SDK_DIR /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk)
 
 include_directories(${SDK_DIR}/include)
 link_directories(${SDK_DIR}/lib)

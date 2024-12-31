@@ -1,0 +1,66 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-2H4SXg
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7818b/fast && /usr/bin/make  -f CMakeFiles/cmTC_7818b.dir/build.make CMakeFiles/cmTC_7818b.dir/build
+make[1]: Entering directory '/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-2H4SXg'
+Building C object CMakeFiles/cmTC_7818b.dir/src.c.o
+/usr/bin/aarch64-linux-gnu-gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7818b.dir/src.c.o -c /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-2H4SXg/src.c
+Linking C executable cmTC_7818b
+/home/ubt/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7818b.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc CMakeFiles/cmTC_7818b.dir/src.c.o -o cmTC_7818b 
+CMakeFiles/cmTC_7818b.dir/src.c.o: In function `main':
+src.c:(.text+0x48): undefined reference to `pthread_create'
+src.c:(.text+0x50): undefined reference to `pthread_detach'
+src.c:(.text+0x58): undefined reference to `pthread_cancel'
+src.c:(.text+0x64): undefined reference to `pthread_join'
+src.c:(.text+0x74): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7818b.dir/build.make:98: recipe for target 'cmTC_7818b' failed
+make[1]: *** [cmTC_7818b] Error 1
+make[1]: Leaving directory '/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-2H4SXg'
+Makefile:127: recipe for target 'cmTC_7818b/fast' failed
+make: *** [cmTC_7818b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-inX4eD
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_20c15/fast && /usr/bin/make  -f CMakeFiles/cmTC_20c15.dir/build.make CMakeFiles/cmTC_20c15.dir/build
+make[1]: Entering directory '/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-inX4eD'
+Building C object CMakeFiles/cmTC_20c15.dir/CheckFunctionExists.c.o
+/usr/bin/aarch64-linux-gnu-gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_20c15.dir/CheckFunctionExists.c.o -c /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-inX4eD/CheckFunctionExists.c
+Linking C executable cmTC_20c15
+/home/ubt/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20c15.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_20c15.dir/CheckFunctionExists.c.o -o cmTC_20c15  -lpthreads 
+/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20c15.dir/build.make:98: recipe for target 'cmTC_20c15' failed
+make[1]: *** [cmTC_20c15] Error 1
+make[1]: Leaving directory '/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/CMakeFiles/CMakeScratch/TryCompile-inX4eD'
+Makefile:127: recipe for target 'cmTC_20c15/fast' failed
+make: *** [cmTC_20c15/fast] Error 2
+
+
+

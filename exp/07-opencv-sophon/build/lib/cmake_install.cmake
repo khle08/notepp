@@ -1,8 +1,8 @@
-# Install script for directory: /home/kcl/Documents/algorithm/sophon/cross-compile/lib
+# Install script for directory: /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kcl/Documents/algorithm/sophon/cross-compile/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/libimgReader.so.1.0"
-    "/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/libimgReader.so.1"
+    "/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/lib/libimgReader.so.1.0"
+    "/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/lib/libimgReader.so.1"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimgReader.so.1.0"
@@ -66,7 +66,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/lib:/home/kcl/Documents/algorithm/sophon/cross-compile/lib:"
+           OLD_RPATH "/home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/lib:/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/lib:"
            NEW_RPATH "$ORIGIN/lib")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/aarch64-linux-gnu-strip" "${file}")
@@ -82,12 +82,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimgReader.so"
          RPATH "$ORIGIN/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/kcl/Documents/algorithm/sophon/cross-compile/build/lib/libimgReader.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/build/lib/libimgReader.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimgReader.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimgReader.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimgReader.so"
-         OLD_RPATH "/home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/lib:/home/kcl/Documents/algorithm/sophon/cross-compile/lib:"
+         OLD_RPATH "/home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/lib:/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/lib:"
          NEW_RPATH "$ORIGIN/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/aarch64-linux-gnu-strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimgReader.so")
@@ -96,6 +96,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/kcl/Documents/algorithm/sophon/cross-compile/lib/imgReader.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/lib/imgReader.h")
 endif()
 
