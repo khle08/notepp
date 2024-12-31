@@ -1,11 +1,10 @@
 file(REMOVE_RECURSE
-  ".1"
   "CMakeFiles/munkres.dir/munkres.cpp.o"
   "CMakeFiles/munkres.dir/munkres.cpp.o.d"
+  "libmunkres.1.0.dylib"
+  "libmunkres.1.dylib"
+  "libmunkres.dylib"
   "libmunkres.pdb"
-  "libmunkres.so"
-  "libmunkres.so.1"
-  "libmunkres.so.1.0"
 )
 
 # Per-language clean rules from dependency scanning.

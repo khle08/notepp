@@ -1,0 +1,10 @@
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/CMakeFiles/exe.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/CMakeFiles/jsoncpp.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/CMakeFiles/zltoolkit.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/ZLMediaKit/CMakeFiles/zlmediakit.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/ZLMediaKit/CMakeFiles/edit_cache.dir
+/Users/kcl/Documents/Cpp_Projects/notepp/exp/14-zlmHttp/build/lib/ZLMediaKit/CMakeFiles/rebuild_cache.dir

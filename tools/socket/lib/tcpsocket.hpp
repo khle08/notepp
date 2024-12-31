@@ -1,10 +1,12 @@
 #pragma once
 
 #include "basesocket.hpp"
+#include <thread>
 #include <string>
+#include <iostream>
+#include <unistd.h>    // for "usleep"
 #include <string.h>
 #include <functional>
-#include <thread>
 
 template <uint16_t BUFFER_SIZE = AS_DEFAULT_BUFFER_SIZE>
 class TCPSocket : public BaseSocket
@@ -30,6 +32,8 @@ public:
     // Connect to a TCP Server with `uint32_t ipv4` & `uint16_t port` values
     void Connect(uint32_t ipv4, uint16_t port, std::function<void()> onConnected = [](){}, FDR_ON_ERROR)
     {
+        // std::cout << "1 conn" << std::endl;
+
         this->address.sin_family = AF_INET;
         this->address.sin_port = htons(port);
         this->address.sin_addr.s_addr = ipv4;
@@ -56,6 +60,8 @@ public:
     // Connect to a TCP Server with `const char* host` & `uint16_t port` values
     void Connect(const char* host, uint16_t port, std::function<void()> onConnected = [](){}, FDR_ON_ERROR)
     {
+        // std::cout << "2 conn" << std::endl;
+
         struct addrinfo hints, *res, *it;
         memset(&hints, 0, sizeof(hints));
         hints.ai_family = AF_INET;
@@ -83,6 +89,7 @@ public:
     // Connect to a TCP Server with `const std::string& ipv4` & `uint16_t port` values
     void Connect(const std::string& host, uint16_t port, std::function<void()> onConnected = [](){}, FDR_ON_ERROR)
     {
+        // std::cout << "3 conn" << std::endl;
         this->Connect(host.c_str(), port, onConnected, onError);
     }
 

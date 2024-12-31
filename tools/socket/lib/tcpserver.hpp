@@ -39,9 +39,13 @@ public:
     // Send raw bytes
     bool SendAll(const char* bytes, size_t byteslength)
     {
+        std::vector<int> descVec;
         for (IP_MAP::iterator it = ipPortMap.begin(); it != ipPortMap.end(); it++) {
-            send(it->second, bytes, byteslength, 0);
-            // std::cout << it->second << std::endl;
+            if (std::find(descVec.begin(), descVec.end(), it->second) == descVec.end()) {
+                // Server send msg based on 'newSocketFileDescriptor' code but not ip+port
+                send(it->second, bytes, byteslength, 0);                
+            }
+            descVec.push_back(it->second);
         }
         return true;
     }
@@ -97,11 +101,11 @@ public:
         t.detach();
     }
 
-private:
     // =================================================================
     IP_MAP ipPortMap;
     // =================================================================
 
+private:
     static void Accept(TCPServer<BUFFER_SIZE>* server, IP_MAP& ipm, FDR_ON_ERROR)
     {
         sockaddr_in newSocketInfo;
@@ -131,8 +135,31 @@ private:
             // =========================================================
             std::pair<std::string, int> p = std::make_pair(newSocket->remoteAddress(),
                                                            newSocket->remotePort());
-            ipm[p] = newSocketFileDescriptor;
-            // std::cout << p.first << ":" << p.second << std::endl;
+
+            // 1. If the key exists, check if 'newSocketFileDescriptor' has been recorded before
+            IP_MAP::iterator it = ipm.begin();
+            bool found = false;
+
+            for (it = ipm.begin(); it != ipm.end(); it++) {
+                if (it->second == newSocketFileDescriptor) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                // 2. If 'newSocketFileDescriptor' has been recorded, erase the pair
+                ipm.erase(it);
+                // 3. Record the new ip+port to the map along with 'newSocketFileDescriptor'
+                ipm[p] = newSocketFileDescriptor;
+            }
+
+            // 4. Check if ip+port pair exists
+            if (ipm.count(p) == 0) {
+                // 5. If the key is not exists, record the key-value pair to the map
+                ipm[p] = newSocketFileDescriptor;
+                // std::cout << p.first << ":" << p.second << " " << newSocketFileDescriptor << std::endl;
+            }
             // =========================================================
         }
     }

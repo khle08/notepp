@@ -17,11 +17,18 @@ else()
     message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+
+# Add include directory
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
 # Setup where the compiled libraries will be installed
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 
-# ======================================================================
+##############################################################################
+
 # Build options:
 #   * BUILD_SHARED_LIBS (default off) builds as a shared library (if HTTPLIB_COMPILE is ON)
 #   * HTTPLIB_USE_OPENSSL_IF_AVAILABLE (default on)
@@ -41,7 +48,7 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 # The value is used in the install CMake config file.
 option(HTTPLIB_NO_EXCEPTIONS "Disable the use of C++ exceptions" OFF)
 # Allow for a build to require OpenSSL to pass, instead of just being optional
-option(HTTPLIB_REQUIRE_OPENSSL "Requires OpenSSL to be found & linked, or fails build." OFF)
+option(HTTPLIB_REQUIRE_OPENSSL "Requires OpenSSL to be found & linked, or fails build." ON)
 option(HTTPLIB_REQUIRE_ZLIB "Requires ZLIB to be found & linked, or fails build." OFF)
 # Allow for a build to casually enable OpenSSL/ZLIB support, but silently continue if not found.
 # Make these options so their automatic use can be specifically disabled (as needed)
@@ -57,6 +64,8 @@ option(HTTPLIB_USE_BROTLI_IF_AVAILABLE "Uses Brotli (if available) to enable Bro
 option(HTTPLIB_USE_CERTS_FROM_MACOSX_KEYCHAIN "Enable feature to load system certs from the Apple Keychain." ON)
 # Defaults to static library
 option(BUILD_SHARED_LIBS "Build the library as a shared library instead of static. Has no effect if using header-only." OFF)
+
+# ============================================================================
 
 if (BUILD_SHARED_LIBS AND WIN32 AND HTTPLIB_COMPILE)
     # Necessary for Windows if building shared libs
@@ -165,10 +174,9 @@ target_include_directories(${PROJECT_NAME} SYSTEM ${_INTERFACE_OR_PUBLIC}
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
+##############################################################################
 
-# ======================================================================
-
-
+add_subdirectory(lib)
 
 # If this (below) is defined in lib/CMakeLists.txt, exe will not know how to include
 include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/lib)
@@ -181,40 +189,35 @@ list(APPEND SOURCE
 
 add_executable(exe ${SOURCE})
 
-# target_link_libraries(exe PRIVATE 
-#                       ${CMAKE_THREAD_LIBS_INIT}
-#                       )
-
-
-
 # ======================================================================
 
 # Always require threads
 target_link_libraries(exe ${_INTERFACE_OR_PUBLIC}
-    Threads::Threads
-    -lpthread
-    # Needed for Windows libs on Mingw, as the pragma comment(lib, "xyz") aren't triggered.
-    $<$<PLATFORM_ID:Windows>:ws2_32>
-    $<$<PLATFORM_ID:Windows>:crypt32>
-    # Needed for API from MacOS Security framework
-    "$<$<AND:$<PLATFORM_ID:Darwin>,$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>,$<BOOL:${HTTPLIB_USE_CERTS_FROM_MACOSX_KEYCHAIN}>>:-framework CoreFoundation -framework Security>"
-    # Can't put multiple targets in a single generator expression or it bugs out.
-    $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:Brotli::common>
-    $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:Brotli::encoder>
-    $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:Brotli::decoder>
-    $<$<BOOL:${HTTPLIB_IS_USING_ZLIB}>:ZLIB::ZLIB>
-    $<$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>:OpenSSL::SSL>
-    $<$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>:OpenSSL::Crypto>
+    # Threads::Threads
+    # -lpthread
+    HttpKits
+    # # Needed for Windows libs on Mingw, as the pragma comment(lib, "xyz") aren't triggered.
+    # $<$<PLATFORM_ID:Windows>:ws2_32>
+    # $<$<PLATFORM_ID:Windows>:crypt32>
+    # # Needed for API from MacOS Security framework
+    # "$<$<AND:$<PLATFORM_ID:Darwin>,$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>,$<BOOL:${HTTPLIB_USE_CERTS_FROM_MACOSX_KEYCHAIN}>>:-framework CoreFoundation -framework Security>"
+    # # Can't put multiple targets in a single generator expression or it bugs out.
+    # $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:Brotli::common>
+    # $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:Brotli::encoder>
+    # $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:Brotli::decoder>
+    # $<$<BOOL:${HTTPLIB_IS_USING_ZLIB}>:ZLIB::ZLIB>
+    # $<$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>:OpenSSL::SSL>
+    # $<$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>:OpenSSL::Crypto>
 )
 
-# Set the definitions to enable optional features
-target_compile_definitions(${PROJECT_NAME} ${_INTERFACE_OR_PUBLIC}
-    $<$<BOOL:${HTTPLIB_NO_EXCEPTIONS}>:CPPHTTPLIB_NO_EXCEPTIONS>
-    $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:CPPHTTPLIB_BROTLI_SUPPORT>
-    $<$<BOOL:${HTTPLIB_IS_USING_ZLIB}>:CPPHTTPLIB_ZLIB_SUPPORT>
-    $<$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>:CPPHTTPLIB_OPENSSL_SUPPORT>
-    $<$<AND:$<PLATFORM_ID:Darwin>,$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>,$<BOOL:${HTTPLIB_IS_USING_CERTS_FROM_MACOSX_KEYCHAIN}>>:CPPHTTPLIB_USE_CERTS_FROM_MACOSX_KEYCHAIN>
-)
+# # Set the definitions to enable optional features
+# target_compile_definitions(${PROJECT_NAME} ${_INTERFACE_OR_PUBLIC}
+#     $<$<BOOL:${HTTPLIB_NO_EXCEPTIONS}>:CPPHTTPLIB_NO_EXCEPTIONS>
+#     $<$<BOOL:${HTTPLIB_IS_USING_BROTLI}>:CPPHTTPLIB_BROTLI_SUPPORT>
+#     $<$<BOOL:${HTTPLIB_IS_USING_ZLIB}>:CPPHTTPLIB_ZLIB_SUPPORT>
+#     $<$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>:CPPHTTPLIB_OPENSSL_SUPPORT>
+#     $<$<AND:$<PLATFORM_ID:Darwin>,$<BOOL:${HTTPLIB_IS_USING_OPENSSL}>,$<BOOL:${HTTPLIB_IS_USING_CERTS_FROM_MACOSX_KEYCHAIN}>>:CPPHTTPLIB_USE_CERTS_FROM_MACOSX_KEYCHAIN>
+# )
 
 # [!] ARCH_INDEPENDENT option of write_basic_package_version_file() requires Cmake v3.14
 # if(HTTPLIB_COMPILE)

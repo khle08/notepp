@@ -17,7 +17,7 @@ using namespace std;
 int main()
 {
     // Our constants:
-    constexpr const char* IP = "192.168.111.254";
+    constexpr const char* IP = "192.168.110.64";
     constexpr uint16_t PORT = 19999;
 
     // Initialize socket.
@@ -72,13 +72,14 @@ int main()
     {
         // print_bytes(input);
         
+        udpSocket.Send(input);
 
         // uint8_t msg[3000] = {0xFe, 0x5c, 93, 0, 0, 0};
         // size_t length = sizeof(msg);
         // udpSocket.Send(msg, length);
 
-        BUFFER_INFO b = interCodeBuffer(1, input.c_str(), "eng");
-        udpSocket.Send(b.arrchBuffer, b.nLen);
+        // BUFFER_INFO b = interCodeBuffer(1, input.c_str(), "eng");
+        // udpSocket.Send(b.arrchBuffer, b.nLen);
         getline(cin, input);
     }
 
