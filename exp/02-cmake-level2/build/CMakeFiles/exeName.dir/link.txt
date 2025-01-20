@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++14   CMakeFiles/exeName.dir/main.cpp.o  -o exeName liblib-name.a 
+/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-g++  -std=c++14 CMakeFiles/exeName.dir/main.cpp.o -o exeName  liblib-name.a 

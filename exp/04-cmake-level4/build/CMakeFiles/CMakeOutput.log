@@ -1,6 +1,7 @@
-The system is: Darwin - 17.4.0 - x86_64
+The target system is: Linux -  - arm
+The host system is: Linux - 5.4.0-150-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Compiler: /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-gcc 
 Build flags: 
 Id flags:  
 
@@ -10,10 +11,10 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is AppleClang, found in "/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/3.22.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/3.25.0/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+Compiler: /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-g++ 
 Build flags: 
 Id flags:  
 
@@ -23,254 +24,387 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is AppleClang, found in "/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/3.22.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/3.25.0/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-v4RaHM
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_65c7e/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_65c7e.dir/build.make CMakeFiles/cmTC_65c7e.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -v -Wl,-v -MD -MT CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c
-Apple LLVM version 9.0.0 (clang-900.0.39.2)
-Target: x86_64-apple-darwin17.4.0
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_be70e/fast && /usr/bin/make  -f CMakeFiles/cmTC_be70e.dir/build.make CMakeFiles/cmTC_be70e.dir/build
+make[1]: Entering directory '/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-v4RaHM'
+Building C object CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o
+/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o -c /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
+Target: arm-linux-gnueabihf
+Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c,c++,fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)'
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c
-clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0
+gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/cc1 -quiet -v -iprefix /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/ -isysroot ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mabi=aapcs-linux -mfpu=neon-vfpv4 -marm -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o -version -o /tmp/cca0IuQy.s
+GNU C17 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.1, GMP version 4.3.2, MPFR version 3.1.6, MPC version 0.8.2, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include"
+ignoring nonexistent directory "../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/local/include
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
- /usr/include
- /System/Library/Frameworks (framework directory)
- /Library/Frameworks (framework directory)
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include
+ ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include
 End of search list.
-Linking C executable cmTC_65c7e
-/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65c7e.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -o cmTC_65c7e 
-Apple LLVM version 9.0.0 (clang-900.0.39.2)
-Target: x86_64-apple-darwin17.4.0
+GNU C17 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.1, GMP version 4.3.2, MPFR version 3.1.6, MPC version 0.8.2, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 7f73d02f5a647c367ef9cbd0ddc0248c
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o /tmp/cca0IuQy.s
+GNU assembler version 2.32.0 (arm-linux-gnueabihf) using BFD version (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 2.32.0.20190321
+COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+Linking C executable cmTC_be70e
+/home/ubt/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be70e.dir/link.txt --verbose=1
+/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-gcc  -v CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o -o cmTC_be70e 
+Using built-in specs.
+COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
+COLLECT_LTO_WRAPPER=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c,c++,fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)'
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_65c7e -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
-@(#)PROGRAM:ld  PROJECT:ld64-305
-configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
-Library search paths:
-	/usr/lib
-	/usr/local/lib
-Framework search paths:
-	/Library/Frameworks/
-	/System/Library/Frameworks/
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp'
+gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 
+COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-o' 'cmTC_be70e' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/collect2 -plugin /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsNT5gM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_be70e /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0 -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-o' 'cmTC_be70e' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+make[1]: Leaving directory '/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-v4RaHM'
 
 
 
 Parsed C implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/local/include]
-    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include]
-    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-    add: [/usr/include]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include]
+    add: [../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
   end of search list found
-  collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include]
-  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-  collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;/usr/include]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include]
+  collapse relative include dir [../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include] ==> [/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  implicit include dirs: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include;/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-v4RaHM]
   ignore line: []
-  ignore line: [Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_65c7e/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_65c7e.dir/build.make CMakeFiles/cmTC_65c7e.dir/build]
-  ignore line: [gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -v -Wl -v -MD -MT CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
-  ignore line: [Target: x86_64-apple-darwin17.4.0]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_be70e/fast && /usr/bin/make  -f CMakeFiles/cmTC_be70e.dir/build.make CMakeFiles/cmTC_be70e.dir/build]
+  ignore line: [make[1]: Entering directory '/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-v4RaHM']
+  ignore line: [Building C object CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o -c /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c c++ fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)']
   ignore line: [Thread model: posix]
-  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0]
+  ignore line: [gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/cc1 -quiet -v -iprefix /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/ -isysroot ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mabi=aapcs-linux -mfpu=neon-vfpv4 -marm -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o -version -o /tmp/cca0IuQy.s]
+  ignore line: [GNU C17 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.1  GMP version 4.3.2  MPFR version 3.1.6  MPC version 0.8.2  isl version isl-0.15-1-g835ea3a-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include"]
+  ignore line: [ignoring nonexistent directory "../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/local/include]
-  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include]
-  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-  ignore line: [ /usr/include]
-  ignore line: [ /System/Library/Frameworks (framework directory)]
-  ignore line: [ /Library/Frameworks (framework directory)]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include]
+  ignore line: [ ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
   ignore line: [End of search list.]
-  ignore line: [Linking C executable cmTC_65c7e]
-  ignore line: [/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65c7e.dir/link.txt --verbose=1]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -o cmTC_65c7e ]
-  ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
-  ignore line: [Target: x86_64-apple-darwin17.4.0]
+  ignore line: [GNU C17 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.1  GMP version 4.3.2  MPFR version 3.1.6  MPC version 0.8.2  isl version isl-0.15-1-g835ea3a-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 7f73d02f5a647c367ef9cbd0ddc0248c]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o /tmp/cca0IuQy.s]
+  ignore line: [GNU assembler version 2.32.0 (arm-linux-gnueabihf) using BFD version (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 2.32.0.20190321]
+  ignore line: [COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_dc8b7.dir/CMakeCCompilerABI.c.o' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  ignore line: [Linking C executable cmTC_be70e]
+  ignore line: [/home/ubt/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be70e.dir/link.txt --verbose=1]
+  ignore line: [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-gcc  -v CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o -o cmTC_be70e ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c c++ fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)']
   ignore line: [Thread model: posix]
-  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_65c7e -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
-    arg [-demangle] ==> ignore
-    arg [-lto_library] ==> ignore, skip following value
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
-    arg [-dynamic] ==> ignore
-    arg [-arch] ==> ignore
-    arg [x86_64] ==> ignore
-    arg [-macosx_version_min] ==> ignore
-    arg [10.13.0] ==> ignore
+  ignore line: [gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) ]
+  ignore line: [COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-o' 'cmTC_be70e' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  link line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/collect2 -plugin /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsNT5gM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_be70e /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0 -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccsNT5gM.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_65c7e] ==> ignore
-    arg [-search_paths_first] ==> ignore
-    arg [-headerpad_max_install_names] ==> ignore
-    arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_65c7e.dir/CMakeCCompilerABI.c.o] ==> ignore
-    arg [-lSystem] ==> lib [System]
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
-  Library search paths: [;/usr/lib;/usr/local/lib]
-  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
-  remove lib [System]
-  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
-  collapse library dir [/usr/lib] ==> [/usr/lib]
-  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
-  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
-  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
-  implicit libs: []
-  implicit objs: []
-  implicit dirs: [/usr/lib;/usr/local/lib]
-  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+    arg [cmTC_be70e] ==> ignore
+    arg [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o] ==> obj [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o]
+    arg [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o] ==> obj [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o]
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o] ==> obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o]
+    arg [-L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0] ==> dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0]
+    arg [-L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc] ==> dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc]
+    arg [-L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib] ==> dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib]
+    arg [-L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+    arg [-L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_be70e.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o] ==> obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o]
+    arg [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o] ==> obj [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+  collapse obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o]
+  collapse obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o]
+  collapse library dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0]
+  collapse library dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc]
+  collapse library dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/lib]
+  collapse library dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+  implicit dirs: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/lib;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit fwks: []
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-qkNtS2
 
-Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_300f0/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_300f0.dir/build.make CMakeFiles/cmTC_300f0.dir/build
-gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -v -Wl,-v -MD -MT CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Apple LLVM version 9.0.0 (clang-900.0.39.2)
-Target: x86_64-apple-darwin17.4.0
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ca8e8/fast && /usr/bin/make  -f CMakeFiles/cmTC_ca8e8.dir/build.make CMakeFiles/cmTC_ca8e8.dir/build
+make[1]: Entering directory '/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-qkNtS2'
+Building CXX object CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o
+/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-g++   -v -o CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o -c /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++
+Target: arm-linux-gnueabihf
+Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c,c++,fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)'
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -stdlib=libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0
-ignoring nonexistent directory "/usr/include/c++/v1"
+gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/cc1plus -quiet -v -iprefix /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/ -isysroot ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot -D_GNU_SOURCE /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mabi=aapcs-linux -mfpu=neon-vfpv4 -marm -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccZq4WRA.s
+GNU C++14 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.1, GMP version 4.3.2, MPFR version 3.1.6, MPC version 0.8.2, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/backward"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include"
+ignoring nonexistent directory "../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed"
+ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
- /usr/local/include
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
- /usr/include
- /System/Library/Frameworks (framework directory)
- /Library/Frameworks (framework directory)
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/backward
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include
+ ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include
 End of search list.
-Linking CXX executable cmTC_300f0
-/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_300f0.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_300f0 
-Apple LLVM version 9.0.0 (clang-900.0.39.2)
-Target: x86_64-apple-darwin17.4.0
+GNU C++14 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.1, GMP version 4.3.2, MPFR version 3.1.6, MPC version 0.8.2, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 8a85cb0d2d2ff66df776d19db4ea2416
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZq4WRA.s
+GNU assembler version 2.32.0 (arm-linux-gnueabihf) using BFD version (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 2.32.0.20190321
+COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+Linking CXX executable cmTC_ca8e8
+/home/ubt/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca8e8.dir/link.txt --verbose=1
+/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-g++  -v CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ca8e8 
+Using built-in specs.
+COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++
+COLLECT_LTO_WRAPPER=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c,c++,fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)'
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_300f0 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
-@(#)PROGRAM:ld  PROJECT:ld64-305
-configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
-Library search paths:
-	/usr/lib
-	/usr/local/lib
-Framework search paths:
-	/Library/Frameworks/
-	/System/Library/Frameworks/
-gmake[1]: Leaving directory '/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp'
+gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 
+COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-o' 'cmTC_ca8e8' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/collect2 -plugin /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cceefROO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_ca8e8 /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0 -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-o' 'cmTC_ca8e8' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+make[1]: Leaving directory '/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-qkNtS2'
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1]
-    add: [/usr/local/include]
-    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include]
-    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-    add: [/usr/include]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/backward]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed]
+    add: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include]
+    add: [../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
   end of search list found
-  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1]
-  collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include]
-  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-  collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1;/usr/local/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;/usr/include]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.3.0]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/backward] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.3.0/backward]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed]
+  collapse include dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include]
+  collapse relative include dir [../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include] ==> [/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  implicit include dirs: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.3.0;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.3.0/backward;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include;/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-qkNtS2]
   ignore line: []
-  ignore line: [Run Build Command(s):/opt/local/bin/gmake -f Makefile cmTC_300f0/fast && /opt/local/bin/gmake  -f CMakeFiles/cmTC_300f0.dir/build.make CMakeFiles/cmTC_300f0.dir/build]
-  ignore line: [gmake[1]: Entering directory '/Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -v -Wl -v -MD -MT CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
-  ignore line: [Target: x86_64-apple-darwin17.4.0]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_ca8e8/fast && /usr/bin/make  -f CMakeFiles/cmTC_ca8e8.dir/build.make CMakeFiles/cmTC_ca8e8.dir/build]
+  ignore line: [make[1]: Entering directory '/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/build/CMakeFiles/CMakeScratch/TryCompile-qkNtS2']
+  ignore line: [Building CXX object CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-g++   -v -o CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o -c /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c c++ fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)']
   ignore line: [Thread model: posix]
-  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.13.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-cpu penryn -target-linker-version 305 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0 -dependency-file CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -stdlib=libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/kcl/Documents/Cpp_Projects/_learn/exp4/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fobjc-runtime=macosx-10.13.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [clang -cc1 version 9.0.0 (clang-900.0.39.2) default target x86_64-apple-darwin17.4.0]
-  ignore line: [ignoring nonexistent directory "/usr/include/c++/v1"]
+  ignore line: [gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/cc1plus -quiet -v -iprefix /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/ -isysroot ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot -D_GNU_SOURCE /home/ubt/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mabi=aapcs-linux -mfpu=neon-vfpv4 -marm -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccZq4WRA.s]
+  ignore line: [GNU C++14 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.1  GMP version 4.3.2  MPFR version 3.1.6  MPC version 0.8.2  isl version isl-0.15-1-g835ea3a-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/backward"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include"]
+  ignore line: [ignoring nonexistent directory "../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1]
-  ignore line: [ /usr/local/include]
-  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include]
-  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-  ignore line: [ /usr/include]
-  ignore line: [ /System/Library/Frameworks (framework directory)]
-  ignore line: [ /Library/Frameworks (framework directory)]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/arm-linux-gnueabihf]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include/c++/8.3.0/backward]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed]
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/include]
+  ignore line: [ ../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
   ignore line: [End of search list.]
-  ignore line: [Linking CXX executable cmTC_300f0]
-  ignore line: [/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_300f0.dir/link.txt --verbose=1]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_300f0 ]
-  ignore line: [Apple LLVM version 9.0.0 (clang-900.0.39.2)]
-  ignore line: [Target: x86_64-apple-darwin17.4.0]
+  ignore line: [GNU C++14 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) version 8.3.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.1  GMP version 4.3.2  MPFR version 3.1.6  MPC version 0.8.2  isl version isl-0.15-1-g835ea3a-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 8a85cb0d2d2ff66df776d19db4ea2416]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  ignore line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZq4WRA.s]
+  ignore line: [GNU assembler version 2.32.0 (arm-linux-gnueabihf) using BFD version (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) 2.32.0.20190321]
+  ignore line: [COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:../../../../../../../../../../../thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-c' '-o' 'CMakeFiles/cmTC_2db4e.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  ignore line: [Linking CXX executable cmTC_ca8e8]
+  ignore line: [/home/ubt/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca8e8.dir/link.txt --verbose=1]
+  ignore line: [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/bin/arm-linux-gnueabihf-g++  -v CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ca8e8 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/thomas/rv1126/repo_new/buildroot/../prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: /tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/src/gcc/configure --target=arm-linux-gnueabihf --prefix= --with-sysroot=/arm-linux-gnueabihf/libc --with-build-sysroot=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/install//arm-linux-gnueabihf/libc --with-bugurl=https://bugs.linaro.org/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c c++ fortran --with-gmp=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpfr=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-mpc=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-isl=/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--arm-linux-gnueabihf/build/build-arm-linux-gnueabihf/host-tools --with-arch=armv7-a --with-fpu=neon --with-float=hard --with-arch=armv7-a --with-pkgversion='GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)']
   ignore line: [Thread model: posix]
-  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_300f0 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
-    arg [-demangle] ==> ignore
-    arg [-lto_library] ==> ignore, skip following value
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
-    arg [-dynamic] ==> ignore
-    arg [-arch] ==> ignore
-    arg [x86_64] ==> ignore
-    arg [-macosx_version_min] ==> ignore
-    arg [10.13.0] ==> ignore
+  ignore line: [gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) ]
+  ignore line: [COMPILER_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/:/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon-vfpv4' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-o' 'cmTC_ca8e8' '-shared-libgcc' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+  link line: [ /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/collect2 -plugin /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cceefROO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_ca8e8 /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0 -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc -L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o /home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../libexec/gcc/arm-linux-gnueabihf/8.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cceefROO.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_300f0] ==> ignore
-    arg [-search_paths_first] ==> ignore
-    arg [-headerpad_max_install_names] ==> ignore
-    arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_300f0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-    arg [-lc++] ==> lib [c++]
-    arg [-lSystem] ==> lib [System]
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
-  Library search paths: [;/usr/lib;/usr/local/lib]
-  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
-  remove lib [System]
-  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
-  collapse library dir [/usr/lib] ==> [/usr/lib]
-  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
-  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
-  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
-  implicit libs: [c++]
-  implicit objs: []
-  implicit dirs: [/usr/lib;/usr/local/lib]
-  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+    arg [cmTC_ca8e8] ==> ignore
+    arg [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o] ==> obj [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o]
+    arg [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o] ==> obj [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o]
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o] ==> obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o]
+    arg [-L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0] ==> dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0]
+    arg [-L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc] ==> dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc]
+    arg [-L/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib] ==> dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib]
+    arg [-L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+    arg [-L/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_ca8e8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o] ==> obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o]
+    arg [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o] ==> obj [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+  collapse obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o]
+  collapse obj [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o]
+  collapse library dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0]
+  collapse library dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc]
+  collapse library dir [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/8.3.0/../../../../arm-linux-gnueabihf/lib] ==> [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/lib]
+  collapse library dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crt1.o;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crti.o;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtbegin.o;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0/crtend.o;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/crtn.o]
+  implicit dirs: [/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.3.0;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/lib/gcc;/home/thomas/rv1126/repo_new/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/lib;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/lib;/home/thomas/rv1126/repo_new/buildroot/output/rockchip_rv1126_rv1109/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit fwks: []
 
 

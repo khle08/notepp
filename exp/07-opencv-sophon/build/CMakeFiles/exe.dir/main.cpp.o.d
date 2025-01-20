@@ -1,5 +1,5 @@
 CMakeFiles/exe.dir/main.cpp.o: \
- /home/kcl/Documents/algorithm/sophon/cross-compile/main.cpp \
+ /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/main.cpp \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /usr/aarch64-linux-gnu/include/c++/7/map \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_tree.h \
@@ -209,10 +209,10 @@ CMakeFiles/exe.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/confname.h \
  /usr/aarch64-linux-gnu/include/bits/getopt_posix.h \
  /usr/aarch64-linux-gnu/include/bits/getopt_core.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/opencv.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/opencv_modules.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cvdef.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/opencv.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/opencv_modules.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cvdef.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/7/include-fixed/limits.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/7/include-fixed/syslimits.h \
  /usr/aarch64-linux-gnu/include/limits.h \
@@ -222,20 +222,20 @@ CMakeFiles/exe.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/posix2_lim.h \
  /usr/aarch64-linux-gnu/include/bits/xopen_lim.h \
  /usr/aarch64-linux-gnu/include/bits/uio_lim.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/hal/interface.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/hal/interface.h \
  /usr/aarch64-linux-gnu/include/c++/7/cstddef \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/7/include/arm_neon.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/7/include/arm_fp16.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/version.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/base.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/version.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/base.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/climits \
  /usr/aarch64-linux-gnu/include/c++/7/algorithm \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_algo.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/algorithmfwd.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_heap.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/uniform_int_dist.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cvstd.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cvstd.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/cstring \
  /usr/aarch64-linux-gnu/include/string.h \
  /usr/aarch64-linux-gnu/include/strings.h \
@@ -249,67 +249,67 @@ CMakeFiles/exe.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/mathcalls-helper-functions.h \
  /usr/aarch64-linux-gnu/include/bits/mathcalls.h \
  /usr/aarch64-linux-gnu/include/bits/iscanonical.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/neon_utils.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/neon_utils.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/vsx_utils.hpp \
  /usr/aarch64-linux-gnu/include/assert.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/check.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/traits.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/matx.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/saturate.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/fast_math.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/types.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/check.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/traits.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/matx.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/saturate.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/fast_math.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/types.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/cfloat \
  /usr/lib/gcc-cross/aarch64-linux-gnu/7/include/float.h \
  /usr/aarch64-linux-gnu/include/c++/7/vector \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_vector.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_bvector.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/vector.tcc \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/mat.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/bufferpool.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/bmcv_api.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/bmlib_runtime.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/mat.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/bufferpool.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/bmcv_api.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/bmlib_runtime.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/7/include/stdbool.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/bmcv_api_ext.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/bmcv_api_ext.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavcodec/avcodec.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/samplefmt.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/avutil.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/common.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/bmcv_api_ext.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/bmcv_api_ext.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavcodec/avcodec.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/samplefmt.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/avutil.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/common.h \
  /usr/aarch64-linux-gnu/include/inttypes.h \
  /usr/aarch64-linux-gnu/include/c++/7/math.h \
  /usr/aarch64-linux-gnu/include/c++/7/stdlib.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/attributes.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/macros.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/version.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/avconfig.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/mem.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/error.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/rational.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/mathematics.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/intfloat.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/log.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/pixfmt.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/attributes.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/avutil.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/buffer.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/cpu.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/channel_layout.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/dict.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/frame.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/buffer.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/dict.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/samplefmt.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/hwcontext.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/frame.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/log.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/pixfmt.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/rational.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavcodec/version.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/libavutil/version.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/mat.inl.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/hal.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/ion.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/attributes.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/macros.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/version.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/avconfig.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/mem.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/error.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/rational.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/mathematics.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/intfloat.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/log.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/pixfmt.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/attributes.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/avutil.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/buffer.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/cpu.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/channel_layout.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/dict.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/frame.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/buffer.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/dict.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/samplefmt.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/hwcontext.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/frame.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/log.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/pixfmt.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/rational.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavcodec/version.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/libavutil/version.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/mat.inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/hal.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/ion.hpp \
  /usr/aarch64-linux-gnu/include/linux/ioctl.h \
  /usr/aarch64-linux-gnu/include/asm/ioctl.h \
  /usr/aarch64-linux-gnu/include/asm-generic/ioctl.h \
@@ -323,64 +323,64 @@ CMakeFiles/exe.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/linux/stddef.h \
  /usr/aarch64-linux-gnu/include/asm/posix_types.h \
  /usr/aarch64-linux-gnu/include/asm-generic/posix_types.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/av.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/bmcv.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/persistence.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/operations.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/av.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/bmcv.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/persistence.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/operations.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cvstd.inl.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/complex \
  /usr/aarch64-linux-gnu/include/c++/7/sstream \
  /usr/aarch64-linux-gnu/include/c++/7/bits/sstream.tcc \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/utility.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/utility.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/functional \
  /usr/aarch64-linux-gnu/include/c++/7/bits/std_function.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/optim.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/ovx.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cvdef.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cv_bmcpu.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/calib3d.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/features2d.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/miniflann.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/defines.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/config.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/affine.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/dnn.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/../dnn/version.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/dict.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/layer.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/dnn.inl.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/dnn/utils/../dnn.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/flann_base.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/optim.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/ovx.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cvdef.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cv_bmcpu.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/calib3d.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/features2d.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/miniflann.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/defines.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/config.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/affine.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/dnn.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/../dnn/version.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/dict.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/layer.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/dnn/utils/../dnn.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/flann_base.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/cassert \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/general.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/matrix.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/params.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/any.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/defines.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/saving.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/nn_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/result_set.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/general.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/matrix.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/params.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/any.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/defines.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/saving.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/nn_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/result_set.h \
  /usr/aarch64-linux-gnu/include/c++/7/set \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_set.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_multiset.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/all_indices.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/kdtree_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/dynamic_bitset.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/dist.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/heap.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/allocator.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/random.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/kdtree_single_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/kmeans_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/logger.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/composite_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/linear_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/lsh_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/lsh_table.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/all_indices.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/kdtree_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/dynamic_bitset.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/dist.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/heap.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/allocator.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/random.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/kdtree_single_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/kmeans_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/logger.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/composite_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/linear_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/lsh_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/lsh_table.h \
  /usr/aarch64-linux-gnu/include/c++/7/iomanip \
  /usr/aarch64-linux-gnu/include/c++/7/locale \
  /usr/aarch64-linux-gnu/include/c++/7/bits/locale_facets_nonio.h \
@@ -398,50 +398,50 @@ CMakeFiles/exe.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/c++/7/bits/hashtable.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/hashtable_policy.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/unordered_map.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/autotuned_index.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/ground_truth.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/index_testing.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/timer.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/flann/sampling.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/highgui.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/imgcodecs.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/videoio.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/imgproc.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/imgproc/vpp.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/types_c.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/ml.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/ml/ml.inl.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/objdetect.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/photo.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/warpers.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/warpers.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cuda.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cuda_types.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/core/cuda.inl.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/warpers.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/matchers.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/matchers.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/util.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/autotuned_index.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/ground_truth.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/index_testing.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/timer.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/flann/sampling.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/highgui.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/imgcodecs.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/videoio.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/imgproc.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/imgproc/vpp.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/types_c.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/ml.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/ml/ml.inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/objdetect.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/photo.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/warpers.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cuda.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cuda_types.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/core/cuda.inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/util.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/list \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_list.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/list.tcc \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
  /usr/aarch64-linux-gnu/include/c++/7/queue \
  /usr/aarch64-linux-gnu/include/c++/7/deque \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_deque.h \
  /usr/aarch64-linux-gnu/include/c++/7/bits/deque.tcc \
  /usr/aarch64-linux-gnu/include/c++/7/bits/stl_queue.h \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/camera.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/blenders.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/stitching/detail/camera.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/video.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/video/tracking.hpp \
- /home/kcl/Documents/tools/Sophon-SDK-24.04.01/sophon-img_20240624_155933/soc-sdk/include/opencv4/opencv2/video/background_segm.hpp \
- /home/kcl/Documents/algorithm/sophon/cross-compile/lib/imgReader.h \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/video.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/video/tracking.hpp \
+ /home/ubt/Documents/compilation/Sophon-SDK-24.04.01/soc-sdk/include/opencv4/opencv2/video/background_segm.hpp \
+ /home/ubt/Documents/algorithm/C++/notepp/exp/07-opencv-sophon/lib/imgReader.h \
  /usr/aarch64-linux-gnu/include/c++/7/condition_variable

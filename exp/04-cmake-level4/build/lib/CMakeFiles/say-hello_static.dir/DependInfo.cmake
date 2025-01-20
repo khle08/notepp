@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kcl/Documents/Cpp_Projects/_learn/exp4/lib/say-hello/hello.cpp" "lib/CMakeFiles/say-hello_static.dir/say-hello/hello.cpp.o" "gcc" "lib/CMakeFiles/say-hello_static.dir/say-hello/hello.cpp.o.d"
+  "/home/ubt/Documents/algorithm/C++/notepp/exp/04-cmake-level4/lib/say-hello/hello.cpp" "lib/CMakeFiles/say-hello_static.dir/say-hello/hello.cpp.o" "gcc" "lib/CMakeFiles/say-hello_static.dir/say-hello/hello.cpp.o.d"
   )
 
 # Targets to which this target links.
