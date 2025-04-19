@@ -126,37 +126,125 @@ int main(int argc, char const *argv[])
 
     print("\n===== OpenCV YUV [start] =====");
 
-    int width = 1280;
-    int height = 640;
+    // int width = 1280;
+    // int height = 640;
 
-    // Size for YUV420: width * height for Y + (width/2 * height/2) for U and V
-    size_t frameSize = width * height + 2 * (width / 2) * (height / 2);
+    // // Size for YUV420: width * height for Y + (width/2 * height/2) for U and V
+    // size_t frameSize = width * height + 2 * (width / 2) * (height / 2);
 
-    // Read YUV file
-    std::ifstream yuvFile("../data/test1.yuv", std::ios::binary);
-    if (!yuvFile.is_open()) {
-        std::cerr << "Error opening YUV file!" << std::endl;
-    }
+    // // Read YUV file
+    // std::ifstream yuvFile("../data/test1.yuv", std::ios::binary);
+    // if (!yuvFile.is_open()) {
+    //     std::cerr << "Error opening YUV file!" << std::endl;
+    // }
 
-    // Allocate buffer to hold raw YUV data
-    std::vector<uint8_t> buffer(frameSize);
-    yuvFile.read(reinterpret_cast<char*>(buffer.data()), frameSize);
+    // // Allocate buffer to hold raw YUV data
+    // std::vector<uint8_t> buffer(frameSize);
+    // yuvFile.read(reinterpret_cast<char*>(buffer.data()), frameSize);
 
-    if (buffer.empty()) {
-        std::cerr << "Error reading YUV file!" << std::endl;
-    }
+    // if (buffer.empty()) {
+    //     std::cerr << "Error reading YUV file!" << std::endl;
+    // }
 
-    // Create OpenCV Mat for YUV image
-    cv::Mat yuvImage(height + height / 2, width, CV_8UC1, buffer.data());
+    // // Create OpenCV Mat for YUV image
+    // cv::Mat yuvImage(height + height / 2, width, CV_8UC1, buffer.data());
 
-    // Convert YUV to BGR
-    cv::Mat bgrImage;
-    cv::cvtColor(yuvImage, bgrImage, cv::COLOR_YUV2BGR_I420);
+    // // Convert YUV to BGR
+    // cv::Mat bgrImage;
+    // cv::cvtColor(yuvImage, bgrImage, cv::COLOR_YUV2BGR_I420);
 
-    // Save as JPEG
-    cv::imwrite("output_image.jpg", bgrImage);
+    // // Save as JPEG
+    // cv::imwrite("output_image.jpg", bgrImage);
 
     print("\n===== OpenCV YUV [ end ] =====");
+
+
+    // 1. 读取原始图像
+    cv::Mat src = cv::imread("../data/02.jpg");
+    if (src.empty()) {
+        std::cerr << "Error: Could not load image." << std::endl;
+        return -1;
+    }
+
+    // 2. 确保图像是彩色格式（3 通道）
+    cv::Mat srcColor;
+    if (src.channels() == 1) {
+        cv::cvtColor(src, srcColor, cv::COLOR_GRAY2BGR);
+    } else {
+        srcColor = src.clone();
+    }
+
+    // 3. 定义原始矩形的左上和右下角点
+    cv::Point2f p1(100, 100);  // 左上角
+    cv::Point2f p2(400, 300);  // 右下角
+
+    // 4. 推导出原始矩形的四个角点
+    std::vector<cv::Point2f> srcRect = {
+        p1,                       // 左上
+        cv::Point2f(p2.x, p1.y),  // 右上
+        p2,                       // 右下
+        cv::Point2f(p1.x, p2.y)   // 左下
+    };
+
+    // 5. 定义透视变换的源和目标四边形（不规则形状）
+    std::vector<cv::Point2f> srcQuad = {
+        cv::Point2f(50, 80),    // 左上
+        cv::Point2f(500, 60),   // 右上
+        cv::Point2f(600, 400),  // 右下
+        cv::Point2f(120, 450)   // 左下
+    };
+    std::vector<cv::Point2f> dstQuad = {
+        cv::Point2f(30, 50),    // 左上
+        cv::Point2f(550, 150),  // 右上
+        cv::Point2f(450, 400),  // 右下
+        cv::Point2f(100, 350)   // 左下
+    };
+
+    // 6. 计算透视变换矩阵
+    cv::Mat warpMatrix = cv::getPerspectiveTransform(srcQuad, dstQuad);
+
+    // 7. 应用透视变换
+    cv::Mat dst;
+    cv::warpPerspective(srcColor, dst, warpMatrix, cv::Size(600, 500), cv::INTER_LINEAR);
+
+    // 8. 将原始矩形的四个角点进行透视变换
+    std::vector<cv::Point2f> transformedRect;
+    cv::perspectiveTransform(srcRect, transformedRect, warpMatrix);
+
+    // 9. 找到变换后四个点的最小包围矩形
+    float minX = transformedRect[0].x, maxX = transformedRect[0].x;
+    float minY = transformedRect[0].y, maxY = transformedRect[0].y;
+    for (const auto& pt : transformedRect) {
+        minX = std::min(minX, pt.x);
+        maxX = std::max(maxX, pt.x);
+        minY = std::min(minY, pt.y);
+        maxY = std::max(maxY, pt.y);
+    }
+
+    // 10. 定义新的左上和右下角点
+    cv::Point newP1(static_cast<int>(minX), static_cast<int>(minY));
+    cv::Point newP2(static_cast<int>(maxX), static_cast<int>(maxY));
+
+    // 11. 调试：打印新矩形坐标
+    std::cout << "New rectangle: Top-left (" << newP1.x << ", " << newP1.y << "), "
+              << "Bottom-right (" << newP2.x << ", " << newP2.y << ")" << std::endl;
+
+    // 12. 在变换后图像上画出新的方正矩形（绿色，线宽 2）
+    cv::rectangle(dst, newP1, newP2, cv::Scalar(0, 255, 0), 2);
+    cv::rectangle(srcColor, p1, p2, cv::Scalar(0, 255, 0), 2);
+
+    // 13. 显示结果
+    cv::imshow("Original Image", srcColor);
+    cv::imshow("Warped Image with Rectangle", dst);
+    cv::waitKey(0);
+
+    // 14. 保存结果
+    bool success = cv::imwrite("warped_image_with_rect.jpg", dst);
+    if (success) {
+        std::cout << "Saved image with rectangle to warped_image_with_rect.jpg" << std::endl;
+    } else {
+        std::cerr << "Error: Failed to save image." << std::endl;
+    }
 
 
     print("\n===== OpenCV testing [start] =====");

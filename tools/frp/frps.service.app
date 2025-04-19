@@ -6,6 +6,7 @@ After=network.target
 ExecStart=/root/remote/frp_0.61.1/frps -c /root/remote/frp_0.61.1/frps.toml
 WorkingDirectory=/root/remote/frp_0.61.1
 Restart=always
+RestartSec=5
 User=root
 Group=root
 
