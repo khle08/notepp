@@ -182,7 +182,8 @@ int Param::setValue(std::string key, std::string value)
         return 0;
     }
 
-    // key already exists, failed to setup value
+    params[key] = value;
+    // key already exists, same func as "updateValue"
     return -1;
 }
 
