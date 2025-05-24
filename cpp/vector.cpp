@@ -95,5 +95,10 @@ int main()
 		print(f);
 	}
 
+
+    std::vector<std::vector<std::vector<float>>> areaList(20);
+	print(areaList.size());
+	print(areaList[0].size());
+
 	return 0;
 }
