@@ -7,6 +7,7 @@ sudo chmod -R 755 /root/docker/n8n
 
 docker run -d --name n8n -p 5678:5678 \
            -v /root/docker/n8n:/home/node/.n8n \
+           -e GENERIC_TIMEZONE=Asia/Shanghai \
            -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
            -e N8N_SECURE_COOKIE=false \
            -e N8N_RUNNERS_ENABLED=true \
