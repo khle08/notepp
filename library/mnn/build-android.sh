@@ -2,7 +2,7 @@
 # More tags to control the compilation process please reference the following link:
 #   - https://mnn-docs.readthedocs.io/en/latest/compile/cmake.html
 
-NDK_PATH="/Users/kcl/Library/Android/sdk/ndk/21.4.7075529"
+NDK_PATH="/Users/guojunlin/Library/Android/sdk/ndk/21.4.7075529"
 CMAKE_TOOLCHAIN_PATH="${NDK_PATH}/build/cmake/android.toolchain.cmake"
 
 echo "building MNN for Ubuntu ..."

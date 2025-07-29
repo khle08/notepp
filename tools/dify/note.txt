@@ -1,0 +1,14 @@
+
+# line 454
+    # ...
+    EXPOSE_NGINX_PORT: ${EXPOSE_NGINX_PORT:-8880}
+    EXPOSE_NGINX_SSL_PORT: ${EXPOSE_NGINX_SSL_PORT:-8443}
+
+
+# line 837
+    # ...
+    ports:
+      - '8880:80'
+      - '${EXPOSE_NGINX_SSL_PORT:-8443}:${NGINX_SSL_PORT:-443}'
+
+
