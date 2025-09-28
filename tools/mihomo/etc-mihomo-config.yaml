@@ -1,0 +1,71 @@
+mixed-port: 7890  # HTTP 和 SOCKS5 代理端口
+allow-lan: false  # 是否允许局域网访问
+bind-address: "*"  # 绑定地址
+mode: rule        # 规则模式（支持 rule/global/direct）
+log-level: info   # 日志级别（可设为 debug 便于排查问题）
+external-controller: 127.0.0.1:9090  # RESTful API 端口
+ipv6: false       # 禁用 IPv6（可根据需要启用）
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/16
+  default-nameserver:
+    - 223.5.5.5
+    - 1.1.1.1
+  nameserver:
+    - 223.5.5.5
+    - 180.76.76.76
+  fallback:
+    - tls://1.1.1.1
+    - tls://8.8.8.8
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+
+# 机场订阅
+proxy-providers:
+  doggy_airport:
+    type: http
+    url: YOUR_SUBSCRIPTION_URL  # 替换为狗狗机场的订阅链接
+    path: ./doggy.yaml
+    interval: 86400  # 订阅更新间隔（秒）
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.gstatic.com/generate_204
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    use:
+      - doggy_airport
+    proxies:
+      - Direct
+  - name: Direct
+    type: select
+    proxies:
+      - DIRECT
+  - name: AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - Proxy
+      - Direct
+  - name: Fallback
+    type: select
+    proxies:
+      - Proxy
+      - Direct
+
+rules:
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOSITE,private,DIRECT,no-resolve
+  - GEOSITE,category-ads-all,AdBlock
+  - GEOSITE,cn,Direct
+  - GEOSITE,google,Proxy
+  - GEOSITE,telegram,Proxy
+  - GEOSITE,openai,Proxy
+  - GEOIP,CN,Direct
+  - MATCH,Fallback

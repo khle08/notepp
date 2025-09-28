@@ -1,0 +1,14 @@
+[Unit]
+Description=zlm - Media Server
+After=network.target
+
+[Service]
+ExecStart=/home/jw/.adas/zlm/MediaServer
+WorkingDirectory=/home/jw/.adas/zlm
+Restart=always
+RestartSec=5
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

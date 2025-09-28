@@ -1,0 +1,9 @@
+serverAddr = "14.22.84.144"
+serverPort = 20150
+
+[[proxies]]
+name = "beijing-rendafuzhong"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 5003
