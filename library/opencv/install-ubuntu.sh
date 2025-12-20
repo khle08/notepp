@@ -15,6 +15,7 @@ echo "ai4swim111" | sudo -S apt install -y pkg-config
 echo "ai4swim111" | sudo -S apt install -y libavcodec-dev
 echo "ai4swim111" | sudo -S apt install -y libavformat-dev
 echo "ai4swim111" | sudo -S apt install -y libswscale-dev
+echo "ai4swim111" | sudo -S apt install -y libeigen3-dev
 
 echo "ai4swim111" | sudo -S apt install -y python-dev
 echo "ai4swim111" | sudo -S apt install -y python-numpy
