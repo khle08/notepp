@@ -14,6 +14,10 @@
 #                                     OUT 网段的设备就把回包发回本机, 不会走它自己的默认网关发丢
 #   4) 端口转发(DNAT, 可选)            "访问 本机IN侧IP:端口 → 转到 OUT 网段某台机器:端口",
 #                                     适合摄像头这类没法加静态路由的设备(把报警地址填成本机 IN 侧 IP 即可)
+#   5) 替身地址(1:1 映射, 可选)        给 OUT 网段的某台设备在 IN 网段认领一个空闲地址(本机网卡辅助 IP /32),
+#                                     IN 侧访问替身地址 = 访问那台 OUT 设备的全部端口/协议(含 ping)。
+#                                     IN 侧设备什么都不用改(替身和它同网段, 不经网关) —— 光猫加不了路由时就靠它。
+#                                     默认"末位相同": 192.168.110.N ↔ 192.168.1.N, 加之前用 arping 查冲突。
 #   IN 侧设备要访问整个 OUT 网段(不只是转发端口)时, 还得让它们知道"去 OUT 网段找本机":
 #     光猫/上级路由加静态路由  <OUT网段> via <本机IN侧IP>   (全网生效)
 #     或单台电脑: ip route add <OUT网段> via <本机IN侧IP>
@@ -23,6 +27,10 @@
 #   ./subnet_relay.sh forward add 3546 192.168.110.204:3546 [tcp|udp] 端口转发
 #   ./subnet_relay.sh forward del 3546 [tcp|udp]
 #   ./subnet_relay.sh forward list
+#   ./subnet_relay.sh map add 192.168.110.204 [192.168.1.204]           替身地址(不给 IN 地址则末位相同)
+#   ./subnet_relay.sh map del 192.168.110.204
+#   ./subnet_relay.sh map list
+#   ./subnet_relay.sh scan                                            列出 IN 网段已被占用的地址
 #   ./subnet_relay.sh status                                         看规则/网卡/提示
 #   ./subnet_relay.sh down                                           撤销本脚本加的全部规则(不碰 Docker 等其他规则)
 #   ./subnet_relay.sh enable-boot | disable-boot                    开机自动恢复(systemd, 在 docker 之后)
@@ -46,7 +54,8 @@ die() { echo "错误: $*" >&2; exit 1; }
 info() { echo "[$TAG] $*"; }
 
 # ---------- 配置读写 ----------
-IN_IF=""; OUT_IF=""; FORWARDS=()   # FORWARDS 元素: "proto port dest_ip:dest_port"
+IN_IF=""; OUT_IF=""; FORWARDS=(); MAPS=()   # FORWARDS: "proto port dest_ip:dest_port"; MAPS: "out_ip in_ip"
+ALIAS_LABEL_SUFFIX=":sr"   # 替身辅助 IP 的网卡标签后缀, down 时据此精确删除
 
 load_conf() {
     [ -f "$CONF" ] || return 0
@@ -55,6 +64,7 @@ load_conf() {
             IN_IF=*)  IN_IF="${line#IN_IF=}" ;;
             OUT_IF=*) OUT_IF="${line#OUT_IF=}" ;;
             FORWARD=*) FORWARDS+=("${line#FORWARD=}") ;;
+            MAP=*)     MAPS+=("${line#MAP=}") ;;
         esac
     done < "$CONF"
 }
@@ -65,12 +75,25 @@ save_conf() {
         echo "IN_IF=$IN_IF"
         echo "OUT_IF=$OUT_IF"
         for f in "${FORWARDS[@]+"${FORWARDS[@]}"}"; do echo "FORWARD=$f"; done
+        for m in "${MAPS[@]+"${MAPS[@]}"}"; do echo "MAP=$m"; done
     } | $S tee "$CONF" >/dev/null
 }
 
 # 网卡 → 网段(如 192.168.1.0/24) / 本机地址
-if_net()  { ip -4 -o addr show dev "$1" 2>/dev/null | awk '{print $4}' | head -1 | python3 -c "import ipaddress,sys; s=sys.stdin.read().strip(); print(ipaddress.ip_interface(s).network if s else '')"; }
-if_addr() { ip -4 -o addr show dev "$1" 2>/dev/null | awk '{print $4}' | head -1 | cut -d/ -f1; }
+if_net()  { { ip -4 -o addr show dev "$1" 2>/dev/null | grep -v -- "$ALIAS_LABEL_SUFFIX" || true; } | awk '{print $4}' | head -1 | python3 -c "import ipaddress,sys; s=sys.stdin.read().strip(); print(ipaddress.ip_interface(s).network if s else '')"; }
+if_addr() { { ip -4 -o addr show dev "$1" 2>/dev/null | grep -v -- "$ALIAS_LABEL_SUFFIX" || true; } | awk '{print $4}' | head -1 | cut -d/ -f1; }
+
+in_net_of() { python3 -c "import ipaddress,sys; print(ipaddress.ip_address(sys.argv[1]) in ipaddress.ip_network(sys.argv[2]))" "$1" "$2"; }
+
+# 替身辅助 IP: 只删/加带本脚本标签的, 不碰网卡原有地址
+purge_aliases() {
+    local dev line addr
+    for dev in $(ip -o link show | awk -F': ' '{print $2}' | cut -d@ -f1); do
+        { ip -4 -o addr show dev "$dev" 2>/dev/null | grep -- "$ALIAS_LABEL_SUFFIX" || true; } | awk '{print $4}' | while read -r addr; do
+            $S ip addr del "$addr" dev "$dev" 2>/dev/null || true
+        done
+    done
+}
 
 need_ifs() {
     [ -n "$IN_IF" ] && [ -n "$OUT_IF" ] || die "未指定网卡。先执行: $0 up --in <IN侧网卡> --out <OUT侧网卡>"
@@ -99,7 +122,8 @@ add_rule() {   # add_rule <table> <chain> <规则参数...>
 # 按标签删掉本脚本在某表所有链里加的规则
 purge_table() {
     local t="$1" rule
-    # 【|| true 不能省】set -o pipefail 下, 没有旧规则时 grep 返回 1 会让整个脚本静默退出(实测踩过)
+    # 【|| true 不能省】set -o pipefail 下, grep 无匹配返回 1 会让整个脚本静默退出(实测踩过两次:
+    #  purge_table 无旧规则、purge_aliases 无旧替身)。本文件凡是 grep 进管道的都要带 || true。
     { ipt -t "$t" -S 2>/dev/null | grep -- "--comment $TAG" || true; } | sed 's/^-A /-D /' | while read -r rule; do
         eval "$S iptables -t $t $rule" 2>/dev/null || true
     done
@@ -113,7 +137,7 @@ apply_rules() {
     $S sysctl -qw net.ipv4.ip_forward=1
     echo "net.ipv4.ip_forward = 1" | $S tee "$SYSCTL_FILE" >/dev/null
 
-    purge_table filter; purge_table nat   # 先清旧的(网卡/网段可能变了), 再按当前配置重建
+    purge_table filter; purge_table nat; purge_aliases   # 先清旧的(网卡/网段可能变了), 再按当前配置重建
 
     # IN → OUT 放行, 以及回程
     add_rule filter "$C" -i "$IN_IF" -o "$OUT_IF" -s "$IN_NET" -d "$OUT_NET" -j ACCEPT
@@ -130,7 +154,17 @@ apply_rules() {
         # 目标若不在 OUT 网段的直连范围内也能回: 统一伪装成本机 OUT 侧地址
         add_rule nat POSTROUTING -o "$OUT_IF" -p "$proto" -d "${dest%:*}" --dport "${dest##*:}" -j MASQUERADE
     done
-    info "已应用: $IN_IF($IN_NET, 本机 $IN_ADDR) → $OUT_IF($OUT_NET, 本机 $OUT_ADDR), 转发链 $C, 端口转发 ${#FORWARDS[@]} 条"
+    # 替身地址: 本机 IN 网卡加 /32 辅助 IP 认领它(会回应 ARP), 进来的包 DNAT 到 OUT 设备;
+    # 放行与伪装沿用上面 IN_NET→OUT_NET 的两条, 不用另加
+    local m oip iip
+    for m in "${MAPS[@]+"${MAPS[@]}"}"; do
+        read -r oip iip <<< "$m"
+        $S ip addr add "$iip/32" dev "$IN_IF" label "${IN_IF}${ALIAS_LABEL_SUFFIX}" 2>/dev/null || true
+        add_rule nat PREROUTING -i "$IN_IF" -d "$iip" -j DNAT --to-destination "$oip"
+        # 宣告一下, 让 IN 网段设备刷新 ARP 缓存(之前若有人缓存过这个地址的旧 MAC)
+        command -v arping >/dev/null && $S arping -q -U -c 1 -I "$IN_IF" "$iip" >/dev/null 2>&1 || true
+    done
+    info "已应用: $IN_IF($IN_NET, 本机 $IN_ADDR) → $OUT_IF($OUT_NET, 本机 $OUT_ADDR), 转发链 $C, 端口转发 ${#FORWARDS[@]} 条, 替身 ${#MAPS[@]} 个"
 }
 
 cmd_up() {
@@ -176,8 +210,63 @@ cmd_forward() {
     esac
 }
 
+cmd_map() {
+    load_conf
+    local sub="${1:-list}"; shift || true
+    case "$sub" in
+        add)
+            local oip="${1:-}" iip="${2:-}"
+            [[ "$oip" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]] || die "用法: map add <OUT侧设备IP> [IN侧替身IP]"
+            need_ifs
+            [ "$(in_net_of "$oip" "$OUT_NET")" = True ] || die "$oip 不在 OUT 网段 $OUT_NET"
+            # 默认末位相同: 110.N → 1.N
+            [ -n "$iip" ] || iip="$(python3 -c "import ipaddress,sys; n=ipaddress.ip_network(sys.argv[1]); print(n.network_address + int(sys.argv[2].split('.')[-1]))" "$IN_NET" "$oip")"
+            [ "$(in_net_of "$iip" "$IN_NET")" = True ] || die "替身 $iip 不在 IN 网段 $IN_NET"
+            [ "$iip" != "$IN_ADDR" ] || die "替身 $iip 是本机 IN 侧地址, 换一个"
+            local m kept=()
+            for m in "${MAPS[@]+"${MAPS[@]}"}"; do
+                [[ "$m" == "$oip "* ]] && continue                      # 同一台设备重映射: 覆盖
+                [[ "$m" == *" $iip" ]] && die "替身 $iip 已经映射给 ${m%% *} 了"
+                kept+=("$m")
+            done
+            # 冲突检测: 替身地址在 IN 网段不能已有人用(本机已认领的除外)
+            if ! ip -4 -o addr show dev "$IN_IF" | grep -q " $iip/"; then
+                if command -v arping >/dev/null; then
+                    $S arping -q -D -c 2 -w 3 -I "$IN_IF" "$iip" || die "$iip 在 IN 网段已有设备在用(arping 有应答), 换一个: map add $oip <空闲IP>"
+                else
+                    ping -c1 -W1 -I "$IN_IF" "$iip" >/dev/null 2>&1 && die "$iip 在 IN 网段已有设备在用, 换一个"
+                fi
+            fi
+            MAPS=("${kept[@]+"${kept[@]}"}" "$oip $iip")
+            save_conf; apply_rules
+            info "IN 侧访问 $iip  ⇄  $oip (全部端口/协议)" ;;
+        del)
+            local oip="${1:-}" kept=() m
+            [ -n "$oip" ] || die "用法: map del <OUT侧设备IP>"
+            for m in "${MAPS[@]+"${MAPS[@]}"}"; do [[ "$m" == "$oip "* ]] || kept+=("$m"); done
+            MAPS=("${kept[@]+"${kept[@]}"}")
+            save_conf; apply_rules ;;
+        list)
+            [ ${#MAPS[@]} -eq 0 ] && { echo "(没有替身地址)"; return; }
+            local oip iip
+            for m in "${MAPS[@]}"; do read -r oip iip <<< "$m"; echo "  $iip  →  $oip"; done ;;
+        *) die "map 子命令: add | del | list" ;;
+    esac
+}
+
+# 列出 IN 网段已占用的地址(ping 扫一遍触发 ARP; 挡 ping 的设备也会回 ARP, 所以照样能看到)
+cmd_scan() {
+    load_conf; need_ifs
+    local base; base="${IN_NET%.*}"
+    info "扫描 $IN_NET (经 $IN_IF) ..."
+    for i in $(seq 1 254); do ping -c1 -W1 -I "$IN_IF" "$base.$i" >/dev/null 2>&1 & done; wait
+    echo "已占用: $IN_ADDR(本机) $({ ip neigh show dev "$IN_IF" | grep lladdr | grep -v FAILED || true; } | awk '{print $1}' | { grep -v : || true; } | sort -t. -k4 -n | tr '\n' ' ')"
+    [ ${#MAPS[@]} -gt 0 ] && echo "本机替身: $(for m in "${MAPS[@]}"; do echo -n "${m##* } "; done)"
+    return 0
+}
+
 cmd_down() {
-    purge_table filter; purge_table nat
+    purge_table filter; purge_table nat; purge_aliases
     info "已撤销本脚本加的全部 iptables 规则(配置文件 $CONF 保留, 可用 apply 恢复)"
     info "ip_forward 未关闭(Docker 等也依赖它); 确需关闭: sudo sysctl -w net.ipv4.ip_forward=0 && sudo rm -f $SYSCTL_FILE"
 }
@@ -193,6 +282,7 @@ cmd_status() {
     { ipt -S; ipt -t nat -S; } 2>/dev/null | grep -- "--comment $TAG" || echo "(当前未生效)"
     echo "== 开机自启: $(systemctl is-enabled subnet-relay 2>/dev/null || echo 未安装)"
     echo "== 端口转发"; cmd_forward list
+    echo "== 替身地址"; cmd_map list
 }
 
 hint_routes() {
@@ -242,9 +332,11 @@ case "${1:-}" in
     up)           shift; cmd_up "$@" ;;
     apply)        load_conf; apply_rules ;;
     forward)      shift; cmd_forward "$@" ;;
+    map)          shift; cmd_map "$@" ;;
+    scan)         cmd_scan ;;
     down)         cmd_down ;;
     status)       cmd_status ;;
     enable-boot)  cmd_enable_boot ;;
     disable-boot) cmd_disable_boot ;;
-    *) sed -n '2,32p' "$SELF" | sed 's/^# \{0,1\}//'; exit 1 ;;
+    *) sed -n '2,41p' "$SELF" | sed 's/^# \{0,1\}//'; exit 1 ;;
 esac
